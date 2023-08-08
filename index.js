@@ -34,7 +34,7 @@ const recipeSchema = new mongoose.Schema({
         type: String
     },
     prepTime: {
-        type: Number
+        type: String
     },
     ingredients: {
         type: Array
@@ -57,6 +57,26 @@ app.get('/', (req, res) => {
         msg:'ok'
     })
 }) 
+
+
+// POST DATA REQUEST
+
+app.post('/', (req, res) => {
+    const recipeData = req.body
+    const newRecipe = new Recipe(recipeData)
+
+// SAVE NEW DATA IN DATABASE
+    newRecipe.save()
+    .then(result => {
+        res.status(200).json(recipeData)
+    })
+    .catch(err => {
+        res.json({
+            status: 'error', 
+            error: err
+        })
+    })
+})
 
 
 
