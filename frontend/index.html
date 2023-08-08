@@ -14,12 +14,45 @@
                 <span class="close">&times;</span>
 
                 <form method="POST" action="/api/Recipe">
-                    <label for="">Recipe name:</label>
-                    <input type="text" name="firstname" id=""><br>
-                    <label for="">Lastname</label>
-                    <input type="text" name="lastname" id=""><br>
-                    <input type="submit">
-                </form>
+                    <form id="survey-form">
+                        <div class="form-group">
+                          <label id="name-label" for="name">Name</label>
+                          <input type="text" name="name" id="name" class="form-control" placeholder="Enter recipe name" required="">
+                        </div>
+                        <div class="form-group">
+                            <p>Which best describes your recipe?</p>
+                            <select id="dropdown" name="category" class="form-control" required="">
+                              <option disabled="disabled" selected="selected" value="">Select category</option>
+                              <option value="Breakfast">Breakfast</option>
+                              <option value="Appetizers">Appetizers</option>
+                              <option value="Cold">Cold meals</option>
+                              <option value="Warm">Warm meals</option>
+                              <option value="Vegetarian">Vegetarian</option>
+                              <option value="Dessert">Dessert</option>
+                              <option value="other">Other</option>
+                            </select>
+                          </div>
+                        <div class="form-group">
+                          <label id="prep-time-label">Prep time</label>
+                          <input type="text" name="prep-time" id="prep-time" class="form-control" placeholder="Enter prep time" required="">
+                        </div>
+                        <div class="form-group">
+                          <label id="ingredients-label" for="ingrdients">Ingredients</label>
+                          <input type="text" name="ingrdients" id="number"class="form-control" placeholder="Enter ingredients">
+                        </div>
+                        
+                
+                        <div class="form-group">
+                          <p>Instructions</p>
+                          <textarea id="instructions" class="input-textarea" name="instructions" placeholder="Enter instructions here..."></textarea>
+                        </div>
+                
+                        <div class="form-group">
+                          <button type="submit" id="submit" class="submit-button">
+                            create recipe
+                          </button>
+                        </div>
+                      </form>
 
             </div>
         </div>
