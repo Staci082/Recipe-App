@@ -45,7 +45,6 @@ const recipeSchema = new mongoose.Schema({
 
 const Recipe = mongoose.model("Recipe", recipeSchema);
 
-
 // GET ALL DATA REQUEST
 
 app.get("/", (req, res) => {
@@ -145,9 +144,9 @@ app.delete("/:id", (req, res) => {
 
 // })
 
-
 // CONNECTING TO SERVER
 
 app.listen(3000, () => {
     console.log("App is running, woohoo!");
 });
+

@@ -3,6 +3,13 @@
 $color1: #faabf1;
 $color2: #fadea5;
 
+@mixin boxStyle {
+    border: 3px solid black;
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 8px 8px 0 black;
+}
+
 
 body {
     display: flex;
@@ -43,14 +50,12 @@ body {
 }
 
 .modal {
+    display: none;
     width: 35%;
     position: relative;
     padding: 3rem 5rem;
-    border: 3px solid black;
-    border-radius: 5px;
-    background: white;
+    @include boxStyle;
     box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.2);
-    border-radius: 0.25rem;
 }
 #form {
     display: flex;
@@ -58,7 +63,7 @@ body {
     align-items: center; 
 }
 
-.close {
+#close-add-modal {
     position: absolute;
     top: 5px;
     right: 15px;
@@ -101,11 +106,9 @@ button {
     font-family: inherit;
     font-size: inherit;
     padding: 0.3rem 3.5rem;
-    border: 3px solid black;
-    box-shadow: 6px 6px 0 0 black;
+    @include boxStyle;
     transition: all 0.2s;
     &:hover {
-        box-shadow: 0.4rem 0.4rem 0 black;
         transform: translate(-0.4rem, -0.4rem);
     }
     &:active {
@@ -124,7 +127,6 @@ button {
     width: 100%;
     padding: .2rem .5rem;
     color: #495057;
-    background-color: #fff;
     background-clip: padding-box;
     border: 1px solid #ced4da;
     border-radius: 0.25rem;
