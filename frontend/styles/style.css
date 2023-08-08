@@ -1,14 +1,13 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap");
 body {
-  background: rgb(115, 115, 196);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   font-family: "Poppins", sans-serif;
   font-size: 1.5rem;
-  background-color: #fad7a5;
-  background-image: linear-gradient(45deg, #eaabfa 25%, transparent 25%, transparent 75%, #eaabfa 75%, #eaabfa), linear-gradient(-45deg, #eaabfa 25%, transparent 25%, transparent 75%, #eaabfa 75%, #eaabfa);
+  background-color: #fadea5;
+  background-image: linear-gradient(45deg, #faabf1 25%, transparent 25%, transparent 75%, #faabf1 75%, #faabf1), linear-gradient(-45deg, #faabf1 25%, transparent 25%, transparent 75%, #faabf1 75%, #faabf1);
   background-size: 60px 60px;
   background-position: 0 0;
   animation: slide 8s infinite linear;
@@ -23,14 +22,8 @@ body {
   }
 }
 .modal {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  width: 35%;
+  position: relative;
   padding: 3rem 5rem;
   border: 3px solid black;
   border-radius: 5px;
@@ -39,25 +32,27 @@ body {
   border-radius: 0.25rem;
 }
 
-h1 {
-  font-weight: 400;
-  line-height: 1.2;
+#form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-p {
-  font-size: 1.5rem;
+.close {
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  cursor: pointer;
 }
 
 h1,
 p {
-  margin-top: 0;
   margin-bottom: 0.5rem;
 }
 
 label {
   display: flex;
   align-items: center;
-  font-size: 1.5rem;
   margin-bottom: 0.5rem;
 }
 
@@ -65,7 +60,6 @@ input,
 button,
 select,
 textarea {
-  margin: 0;
   font-family: inherit;
   font-size: 1rem;
   line-height: inherit;
@@ -74,10 +68,8 @@ textarea {
 button {
   font-family: inherit;
   font-size: inherit;
-  background: white;
-  padding: 0.3rem 3.4rem;
+  padding: 0.3rem 3.5rem;
   border: 3px solid black;
-  margin-right: 2.6rem;
   box-shadow: 6px 6px 0 0 black;
   transition: all 0.2s;
 }
@@ -91,8 +83,8 @@ button:active {
 }
 
 .form-group {
-  margin: 0 auto 1.25rem auto;
-  padding: 0.25rem;
+  width: 70%;
+  margin-bottom: 1.5rem;
 }
 
 .form-control {
@@ -108,19 +100,28 @@ button:active {
 }
 
 .form-control:focus {
-  border-color: #80bdff;
+  border-color: #faabf1;
   outline: 0;
-  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  box-shadow: 0 0 0 0.2rem rgba(250, 171, 241, 0.25);
 }
 
 .input-textarea {
   min-height: 120px;
   width: 100%;
-  padding: 0.625rem;
+  padding: 0.6rem;
   resize: vertical;
 }
+.input-textarea:focus {
+  border-color: #faabf1;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(250, 171, 241, 0.25);
+}
 
-.submit-button {
-  width: 100%;
+#submit-container {
+  display: flex;
+  justify-content: center;
+}
+#submit-container .submit-button {
+  width: 80%;
   cursor: pointer;
 }/*# sourceMappingURL=style.css.map */
