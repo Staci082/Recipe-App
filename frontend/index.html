@@ -7,9 +7,23 @@
         <link rel="stylesheet" href="./styles/style.css" />
     </head>
     <body>
+        <button id="add-recipe">Add recipe</button>
 
+        <div id="addModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
 
-        
+                <form method="POST" action="/api/Recipe">
+                    <label for="">Recipe name:</label>
+                    <input type="text" name="firstname" id=""><br>
+                    <label for="">Lastname</label>
+                    <input type="text" name="lastname" id=""><br>
+                    <input type="submit">
+                </form>
+
+            </div>
+        </div>
+
         <script src="index.js"></script>
     </body>
 </html>
