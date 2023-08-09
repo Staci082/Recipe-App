@@ -8,7 +8,10 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
     <body>
-        <button id="add-recipe">add recipe</button>
+
+        <button id="add-button" class="main-button">add recipe</button>
+        <button id="view-button" class="main-button">view recipes</button>
+        <button id="search-button" class="main-button">search recipes</button>
 
         <div id="addModal" class="modal">
                 <span id="close-add-modal" class="close">&times;</span>
@@ -34,11 +37,6 @@
                         </div>
 
                         <div class="form-group">
-                            <label id="prep-time-label">Prep time</label>
-                            <input type="text" name="prep-time" id="prep-time" class="form-control" placeholder="Enter prep time" required="">
-                        </div>
-
-                        <div class="form-group">
                             <div class="label-button">
                             <label id="ingredients-label" for="ingrdients">Ingredients</label> <i class="fa-solid fa-circle-plus"></i>
                             </div>
@@ -55,7 +53,16 @@
                             <button type="submit" id="submit" class="submit-button">create recipe</button>
                         </div>
                 </form>
-    </div>
+        </div>
+
+        <div id="viewModal" class="modal">
+            <span id="close-view-modal" class="close">&times;</span>
+        </div>
+
+
+        <div id="searchModal" class="modal">
+            <span id="close-search-modal" class="close">&times;</span>
+        </div>
 
         <script src="../index.js"></script>
         <script src="../app.js"></script>

@@ -4,6 +4,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 100vh;
   font-family: "Poppins", sans-serif;
   font-size: 1.5rem;
   background-color: #fadea5;
@@ -21,10 +22,19 @@ body {
     background-position: -120px 60px;
   }
 }
+.main-button {
+  margin: 2rem;
+  width: 300px;
+}
+
 .modal {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: 3em 0;
   display: none;
   width: 35%;
-  position: relative;
+  height: auto;
   padding: 3rem 5rem;
   border: 3px solid black;
   border-radius: 5px;
@@ -39,7 +49,7 @@ body {
   align-items: center;
 }
 
-#close-add-modal {
+.close {
   position: absolute;
   top: 5px;
   right: 15px;
@@ -81,6 +91,7 @@ button {
   font-family: inherit;
   font-size: inherit;
   padding: 0.3rem 3.5rem;
+  width: 300px;
   border: 3px solid black;
   border-radius: 5px;
   background: #fff;

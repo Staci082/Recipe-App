@@ -1,13 +1,18 @@
-// GETTING MODULES
+// // GETTING MODULES
+
+// const express = require("express");
+// const mongoose = require("mongoose");
+// require("dotenv").config();
+// const app = express();
+
+// // PARSING JSON DATA
+
+// app.use(express.json());
 
 const express = require("express");
+const app = express();
 const mongoose = require("mongoose");
 require("dotenv").config();
-const app = express();
-
-// PARSING JSON DATA
-
-app.use(express.json());
 
 // MAKING MONGO.DB CONNECTION
 
@@ -28,9 +33,6 @@ const recipeSchema = new mongoose.Schema({
         trim: true,
     },
     category: {
-        type: String,
-    },
-    prepTime: {
         type: String,
     },
     ingredients: {
@@ -83,17 +85,18 @@ app.post("/", (req, res) => {
         });
 });
 
-// FIND DATA BY ID
+// FIND DATA BY ID ( works alone but not together with find function)
 
-app.get("/:id", (req, res) => {
-    const { id } = req.params;
-    Recipe.findById(id).then((result) => {
-        res.json({
-            msg: "recipe found successfully",
-            recipe: result,
-        });
-    });
-});
+// app.get('/:id', (req, res) => {
+//     const { id } = req.params;
+//     Recipe.findById(id)
+//     .then((result => {
+//         res.json({
+//             msg: "recipe found successfully",
+//             recipe: result,
+//         })
+//     })
+// )})
 
 // DELETE DATA BY ID
 
@@ -117,36 +120,24 @@ app.delete("/:id", (req, res) => {
 
 // http://localhost:3000/find?q=Banana
 
-// app.get('/find',(req,res)=>{
-//     const {q} = req.query
-//     // http://localhost:3000/find?q=Vue.js
-//     if(q){
-//         Recipe.find({
-//             "name":{ "$regex": q, "$options": "i" }
-//         })
-//         .then(result=>{
-//             res.json({
-//                 msg:'success',
-//                 recipe:result
-//             })
-//         })
-//         .catch(err=>{
-//             res.json({
-//                 msg:'failure',
-//                 error:err
-//             })
-//         })
-//     }else{
-//         res.json({
-//             msg:'You must send req with q='
-//         })
-//     }
-
-// })
+app.get("/find", (req, res) => {
+    const { q } = req.query;
+    Recipe.find({"name":{ "$regex": q, "$options": "i" }})
+    .then(result=>{
+        res.json({
+            recipes:result
+        })
+    })
+    .catch(err=>{
+        res.json({
+            error:err
+        })
+    })
+});
 
 // CONNECTING TO SERVER
 
-app.listen(3000, () => {
+app.listen(3001, () => {
     console.log("App is running, woohoo!");
 });
 
