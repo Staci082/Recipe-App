@@ -1,5 +1,7 @@
 // OPEN/CLOSE MODALS
 
+let modal = document.querySelector(".modal")
+
 const addModal = document.querySelector("#addModal");
 const viewModal = document.querySelector("#viewModal");
 const searchModal = document.querySelector("#searchModal");
@@ -40,7 +42,7 @@ closeSearchModal.addEventListener("click", () => {
 
 // CLOSE MODAL BY CLICKING OUTSIDE OF MODAL
 window.onclick = function (event) {
-    if (event.target == addModal) {
-        addModal.style.display = "none";
+    if (event.target == modal) {
+        modal.style.display = "none";
     }
 };

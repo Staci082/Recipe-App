@@ -1,18 +1,13 @@
-// // GETTING MODULES
-
-// const express = require("express");
-// const mongoose = require("mongoose");
-// require("dotenv").config();
-// const app = express();
-
-// // PARSING JSON DATA
-
-// app.use(express.json());
+// GETTING MODULES
 
 const express = require("express");
-const app = express();
 const mongoose = require("mongoose");
 require("dotenv").config();
+const app = express();
+
+// PARSING JSON DATA
+
+app.use(express.json());
 
 // MAKING MONGO.DB CONNECTION
 
@@ -85,18 +80,17 @@ app.post("/", (req, res) => {
         });
 });
 
-// FIND DATA BY ID ( works alone but not together with find function)
+// FIND DATA BY ID
 
-// app.get('/:id', (req, res) => {
+// app.get("/:id", (req, res) => {
 //     const { id } = req.params;
-//     Recipe.findById(id)
-//     .then((result => {
+//     Recipe.findById(id).then((result) => {
 //         res.json({
 //             msg: "recipe found successfully",
 //             recipe: result,
-//         })
-//     })
-// )})
+//         });
+//     });
+// });
 
 // DELETE DATA BY ID
 
@@ -137,7 +131,7 @@ app.get("/find", (req, res) => {
 
 // CONNECTING TO SERVER
 
-app.listen(3001, () => {
+app.listen(3000, () => {
     console.log("App is running, woohoo!");
 });
 

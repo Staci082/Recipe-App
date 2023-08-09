@@ -64,7 +64,6 @@ p {
 label {
   display: flex;
   align-items: center;
-  margin-bottom: 0.5rem;
 }
 
 input,
@@ -73,7 +72,6 @@ select,
 textarea {
   font-family: inherit;
   font-size: 1rem;
-  line-height: inherit;
 }
 
 .label-button {
