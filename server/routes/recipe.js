@@ -13,6 +13,11 @@ router.get('/add', recipeController.addRecipe)
 // POST RECIPE FORM DATA
 router.post('/add', recipeController.postRecipe)
 
+// VIEW ALL RECIPES PAGE
+router.get('/view', recipeController.viewRecipes)
+
+// SEARCH RECIPES PAGE
+router.get('/search', recipeController.searchRecipes)
 
 
 // EXPORT
