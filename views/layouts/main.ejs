@@ -3,19 +3,13 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Recipe App</title>
-        <link rel="stylesheet" href="./styles/style.css" />
+        <title><%= locals.title %></title>
+        <link rel="stylesheet" href="/styles/style.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
     <body>
-<a href="./new.html" id="add-button" class="main-button">add recipe</a>
-        <a href="./view.html" id="view-button" class="main-button">add recipe</a>
-        <a href="./search.html" id="search-button" class="main-button">add recipe</a>
-        <!-- <button id="add-button" class="main-button">add recipe</button>
-        <button id="view-button" class="main-button">view recipes</button>
-        <button id="search-button" class="main-button">search recipes</button> -->
 
+        <%- body %>
 
-        <script src="app.js"></script>
     </body>
 </html>

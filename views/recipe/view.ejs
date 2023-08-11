@@ -1,0 +1,21 @@
+
+<div id="viewModal" class="modal">
+    <span id="close-view-modal" class="close">&times;</span>
+    <form method="GET" action="/category" class="form">
+        <div class="form-group">
+            <select id="dropdown" name="category" class="form-control">
+                <option disabled="disabled" selected="selected" value=""
+                    >Select category</option
+                >
+                <option value="Breakfast">Breakfast</option>
+                <option value="Appetizers">Appetizers</option>
+                <option value="Cold">Cold meals</option>
+                <option value="Warm">Warm meals</option>
+                <option value="Vegetarian">Vegetarian</option>
+                <option value="Dessert">Dessert</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+    </form>
+    <div id="recipe-container"></div>
+</div>
