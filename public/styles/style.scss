@@ -28,7 +28,7 @@ body {
     height: 100vh;
     @include flex;
     justify-content: center;
-    font-family: "Poppins", sans-serif;
+    font-family: "Poppins", Verdana;
     font-size: 1.5rem;
     background-color: $color2;
     background-image: linear-gradient(

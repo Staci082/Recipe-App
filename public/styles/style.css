@@ -10,7 +10,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins", Verdana;
   font-size: 1.5rem;
   background-color: #fcdd87;
   background-image: linear-gradient(45deg, #faf691 25%, transparent 25%, transparent 75%, #faf691 75%, #faf691), linear-gradient(-45deg, #faf691 25%, transparent 25%, transparent 75%, #faf691 75%, #faf691);
