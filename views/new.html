@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Recipe App</title>
+        <link rel="stylesheet" href="./styles/style.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+        <div id="addModal" class="modal">
+            <span id="close-add-modal" class="close">&times;</span>
+
+            <form method="POST" action="/api/Recipe" id="form">
+                <div class="form-group">
+                    <label id="name-label" for="name">Name</label>
+                    <input type="text" name="name" id="name" class="form-control" placeholder="Enter recipe name" required="" />
+                </div>
+
+                <div class="form-group">
+                    <p>Which best describes your recipe?</p>
+                    <select id="dropdown" name="category" class="form-control" required="">
+                        <option disabled="disabled" selected="selected" value="">Select category</option>
+                        <option value="Breakfast">Breakfast</option>
+                        <option value="Appetizers">Appetizers</option>
+                        <option value="Cold">Cold meals</option>
+                        <option value="Warm">Warm meals</option>
+                        <option value="Vegetarian">Vegetarian</option>
+                        <option value="Dessert">Dessert</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <div class="label-button">
+                        <label id="ingredients-label" for="ingrdients">Ingredients</label>
+                        <i class="fa-solid fa-circle-plus"></i>
+                    </div>
+                    <input type="text" name="ingredients" id="number" class="form-control" placeholder="Enter ingredients" />
+                    <div id="ingredients-list"></div>
+                </div>
+
+                <div class="form-group">
+                    <p>Instructions</p>
+                    <textarea id="instructions" class="input-textarea" name="instructions" placeholder="Enter instructions here..."></textarea>
+                </div>
+
+                <div class="form-group" id="submit-container">
+                    <button type="submit" id="submit" class="submit-button">create recipe</button>
+                </div>
+            </form>
+        </div>
+
+        <script src="app.js"></script>
+    </body>
+</html>

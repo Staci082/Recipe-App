@@ -28,9 +28,6 @@ body {
 }
 
 .modal {
-  position: absolute;
-  top: 0;
-  bottom: 0;
   margin: 3em 0;
   display: none;
   width: 35%;
@@ -43,7 +40,7 @@ body {
   box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-.form {
+#form {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -67,11 +64,11 @@ label {
 }
 
 input,
+button,
 select,
 textarea {
   font-family: inherit;
   font-size: 1rem;
-  margin-bottom: 1.5rem;
 }
 
 .label-button {
@@ -90,7 +87,6 @@ button {
   font-size: inherit;
   padding: 0.3rem 3.5rem;
   width: 300px;
-  margin-top: 1.5rem;
   border: 3px solid black;
   border-radius: 5px;
   background: #fff;
@@ -107,15 +103,7 @@ button:active {
 
 .form-group {
   width: 70%;
-}
-
-#search-form-group {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-#search-form-group #search-submit {
-  margin-top: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .form-control {
@@ -151,11 +139,7 @@ button:active {
   display: flex;
   justify-content: center;
 }
-
-.submit-button {
-  width: 70%;
+#submit-container .submit-button {
+  width: 80%;
   cursor: pointer;
-}
-.submit-button:hover {
-  box-shadow: 8px 8px 0 #faabf1;
 }/*# sourceMappingURL=style.css.map */

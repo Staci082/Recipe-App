@@ -55,9 +55,6 @@ body {
 }
 
 .modal {
-    position: absolute;
-    top: 0;
-    bottom: 0;
     margin: 3em 0;
     display: none;
     width: 35%;
@@ -66,7 +63,7 @@ body {
     @include boxStyle;
     box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.2);
 }
-.form {
+#form {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -90,11 +87,11 @@ label {
 }
 
 input,
+button,
 select,
 textarea {
     font-family: inherit;
     font-size: 1rem;
-    margin-bottom: 1.5rem;
 }
 .label-button {
     display: flex;
@@ -113,7 +110,6 @@ button {
     font-size: inherit;
     padding: 0.3rem 3.5rem;
     width: 300px;
-    margin-top: 1.5rem;
     @include boxStyle;
     transition: all 0.2s;
     &:hover {
@@ -127,15 +123,7 @@ button {
 
 .form-group {
     width: 70%;
-}
-
-#search-form-group {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    #search-submit {
-        margin-top: 1rem;
-    }
+    margin-bottom: 1.5rem;
 }
 
 .form-control {
@@ -170,11 +158,9 @@ button {
 #submit-container {
     display: flex;
     justify-content: center;
-}
-.submit-button {
-    width: 70%;
-    cursor: pointer;
-    &:hover {
-            box-shadow: 8px 8px 0 $color1;
+
+    .submit-button {
+        width: 80%;
+        cursor: pointer;
     }
 }

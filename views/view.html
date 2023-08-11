@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Recipe App</title>
+        <link rel="stylesheet" href="./styles/style.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+
+        <div id="viewModal" class="modal">
+            <span id="close-view-modal" class="close">&times;</span>
+            <form method="GET" action="/category" class="form">
+                <div class="form-group">
+                    <select id="dropdown" name="category" class="form-control">
+                        <option disabled="disabled" selected="selected" value=""
+                            >Select category</option
+                        >
+                        <option value="Breakfast">Breakfast</option>
+                        <option value="Appetizers">Appetizers</option>
+                        <option value="Cold">Cold meals</option>
+                        <option value="Warm">Warm meals</option>
+                        <option value="Vegetarian">Vegetarian</option>
+                        <option value="Dessert">Dessert</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+            </form>
+            <div id="recipe-container"></div>
+        </div>
+
+
+        <script src="app.js"></script>
+    </body>
+</html>
