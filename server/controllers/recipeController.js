@@ -85,17 +85,46 @@ exports.viewRecipes = async (req, res) => {
 }
 
 
-// GET /
+// GET / 
 // SEARCH RECIPES PAGE
 exports.searchRecipes = async (req, res) => {
-
+    
     const locals = {
-        title: "Search recipes"
+        title: "Search recipes"  // check if needed after all is done pls
     }
 
     try {
         
         let searchTerm = req.body.searchTerm || ""  // adding the empty string will fix the error of 'undefined replace()'
+        const searchNoSpecialChar = searchTerm.replace(/[^a-zA-Z0-9 ]/g, "")  // disallow special characters
+
+        // SEARCH THROUGH THESE PARAMS WITHOUT SPECIAL CHARACTERS
+        const recipes = await Recipe.find({
+            $or: [
+                {name: new RegExp(searchNoSpecialChar, "i") },
+                {category: new RegExp(searchNoSpecialChar, "i") },
+                {ingredients: new RegExp(searchNoSpecialChar, "i") }
+            ]
+        })
+
+        res.render('recipe/search', {locals, recipes})
+        
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+// POST /
+// RETRIEVE SEARCH RECIPES DATA
+exports.postSearchRecipes = async (req, res) => {
+
+    const locals = {
+        title: "Search recipes"  // check if needed after all is done pls
+    }
+
+    try {
+        
+        let searchTerm = req.body.searchTerm // || ""  // adding the empty string will fix the error of 'undefined replace()'
         const searchNoSpecialChar = searchTerm.replace(/[^a-zA-Z0-9 ]/g, "")  // disallow special characters
 
         // SEARCH THROUGH THESE PARAMS WITHOUT SPECIAL CHARACTERS

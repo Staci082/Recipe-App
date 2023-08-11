@@ -16,8 +16,11 @@ router.post('/add', recipeController.postRecipe)
 // VIEW ALL RECIPES PAGE
 router.get('/view', recipeController.viewRecipes)
 
-// SEARCH RECIPES PAGE
+// SEARCH PAGE
 router.get('/search', recipeController.searchRecipes)
+
+// SEARCH RECIPES
+router.post('/search', recipeController.postSearchRecipes)
 
 
 // EXPORT
