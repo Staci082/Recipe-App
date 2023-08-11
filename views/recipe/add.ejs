@@ -8,7 +8,7 @@
         </div>
 
         <div class="form-group">
-            <p>Which best describes your recipe?</p>
+            <label>Which best describes your recipe?</label>
             <select id="dropdown" name="category" class="form-control" required>
                 <option disabled="disabled" selected="selected" value="">Select category</option>
                 <option value="Breakfast">Breakfast</option>
@@ -22,21 +22,19 @@
         </div>
 
         <div class="form-group">
-            <div class="label-button">
-                <label id="ingredients-label" for="ingrdients">Ingredients</label>
-                <i class="fa-solid fa-circle-plus"></i>
-            </div>
+                <label>Ingredients<i class="fa-solid fa-circle-plus"></i></label>
+                
             <input type="text" name="ingredients" class="form-control" placeholder="Enter ingredients" value="" required/>
             <div id="ingredients-list"></div>
         </div>
 
         <div class="form-group">
-            <p>Instructions</p>
+            <label>Instructions</label>
             <textarea id="instructions" class="input-textarea" name="instructions" placeholder="Enter instructions here..." value="" required></textarea>
         </div>
 
-        <div class="form-group" id="submit-container">
-            <button type="submit" id="submit" class="submit-button">create recipe</button>
+        <div class="form-group" id="create-button-container">
+            <button type="submit" class="submit-button">create recipe</button>
         </div>
     </form>
 </div>

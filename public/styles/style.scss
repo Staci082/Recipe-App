@@ -76,7 +76,7 @@ body {
     min-width: 350px;
     height: auto;
     @include boxStyle;
-    padding: 3rem 0.5rem;
+    padding: 3rem 0;
     box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.2);
 }
 form {
@@ -84,11 +84,11 @@ form {
     width: 70%;
 }
 .form-group {
+    @include flex;
     width: 100%;
     margin-bottom: 1.5rem;
 }
 .form-control {
-    border: green 2px solid;
     width: 90%;
     padding: 0.2rem 0.5rem;
     color: #495057;
@@ -110,14 +110,13 @@ form {
     cursor: pointer;
 }
 
-h1,
-p {
-    margin-bottom: 0.5rem;
-}
+
 
 label {
+    width: 93%;
     display: flex;
     align-items: center;
+    margin-bottom: 0.5rem;
 }
 a {
     color: inherit;
@@ -130,23 +129,17 @@ textarea {
     font-family: inherit;
     font-size: 1rem;
 }
-.label-button {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-
-    .fa-circle-plus {
-        color: $color3;
-        cursor: pointer;
-        margin-bottom: 4px;
-    }
+.fa-circle-plus {
+    color: $color3;
+    cursor: pointer;
+    margin: 0 0 3px 8px;
 }
 
 button {
     cursor: pointer;
     font-family: inherit;
     font-size: inherit;
-    width: 300px;
+    width: 250px;
     @include boxStyle;
     transition: all 0.2s;
     &:hover {
@@ -168,6 +161,10 @@ textarea {
         outline: 0;
         box-shadow: 0 0 0 0.2rem rgba($color3, 0.25);
     }
+}
+#create-button-container {
+    display: flex;
+    justify-content: center;
 }
 .option-container {
     width: 80%;
