@@ -1,6 +1,8 @@
 
-<div id="viewModal" class="modal">
-    <span id="close-view-modal" class="close">&times;</span>
+<div class="modal">
+    <a href="/" class="close">&times;</a>
+
+<div class="option-container">
     <form method="GET" action="/category" class="form">
         <div class="form-group">
             <select id="dropdown" name="category" class="form-control">
@@ -17,5 +19,15 @@
             </select>
         </div>
     </form>
+    <form method="POST" action="/search" class="form">
+        <div class="form-group" id="search-form-group">
+            <input type="search" name="searchTerm" class="form-control" placeholder="Search.." aria-label="Search"/>
+            <button type="submit" id="search-submit" class="submit-button">search recipes</button>
+        </div>
+    </form>
+</div>
+
+
+
     <div id="recipe-container"></div>
 </div>

@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
 @import url("https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap");
 
 $color1: #faf691;
@@ -11,13 +17,15 @@ $color3: #faabf1;
     box-shadow: 8px 8px 0 black;
     padding: 0.5rem 0;
 }
-
-body {
+@mixin flex {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    height: 100vh;
+}
+
+body {
+    @include flex;
+    justify-content: center;
     font-family: "Poppins", sans-serif;
     font-size: 1.5rem;
     background-color: $color2;
@@ -54,25 +62,46 @@ body {
 .main-button {
     margin: 2rem;
     width: 300px;
-    text-decoration: none;
     text-align: center;
     @include boxStyle;
 }
 
 .modal {
+    @include flex;
+    position: relative;
     margin: 3em 0;
     width: 35%;
+    min-width: 350px;
     height: auto;
     @include boxStyle;
     padding: 3rem 0.5rem;
     box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.2);
 }
-#form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+form {
+    @include flex;
+    width: 70%;
+}
+.form-group {
+    width: 100%;
+    margin-bottom: 1.5rem;
+
+}
+.form-control {
+    border: green 2px solid;
+    width: 90%;
+    padding: 0.2rem 0.5rem;
+    color: #495057;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
+.form-control:focus {
+    border-color: $color3;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba($color3, 0.25);
+}
 .close {
     position: absolute;
     top: 5px;
@@ -91,6 +120,7 @@ label {
 }
 a {
     color: inherit;
+    text-decoration: none;
 }
 input,
 button,
@@ -126,31 +156,9 @@ button {
     }
 }
 
-.form-group {
-    width: 70%;
-    margin-bottom: 1.5rem;
-}
-
-.form-control {
-    display: block;
-    width: 100%;
-    padding: 0.2rem 0.5rem;
-    color: #495057;
-    background-clip: padding-box;
-    border: 1px solid #ced4da;
-    border-radius: 0.25rem;
-    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-}
-
-.form-control:focus {
-    border-color: $color3;
-    outline: 0;
-    box-shadow: 0 0 0 0.2rem rgba($color3, 0.25);
-}
-
 textarea {
     min-height: 120px;
-    width: 100%;
+    width: 90%;
     padding: 0.6rem;
     resize: vertical;
     &:focus {
@@ -159,7 +167,10 @@ textarea {
         box-shadow: 0 0 0 0.2rem rgba($color3, 0.25);
     }
 }
-
+.option-container {
+    display: flex;
+    flex-basis: 100%;
+}
 #submit-container {
     display: flex;
     justify-content: center;
