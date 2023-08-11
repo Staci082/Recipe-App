@@ -4,7 +4,7 @@
 
 <div class="option-container">
     <form method="GET" action="/category" class="form">
-        <div class="form-group">
+        <div class="form-group view-group">
             <select id="dropdown" name="category" class="form-control">
                 <option disabled="disabled" selected="selected" value=""
                     >Select category</option
@@ -20,9 +20,8 @@
         </div>
     </form>
     <form method="POST" action="/search" class="form">
-        <div class="form-group" id="search-form-group">
+        <div class="form-group view-group" id="search-form-group">
             <input type="search" name="searchTerm" class="form-control" placeholder="Search.." aria-label="Search"/>
-            <button type="submit" id="search-submit" class="submit-button">search recipes</button>
         </div>
     </form>
 </div>

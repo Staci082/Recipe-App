@@ -127,6 +127,7 @@ textarea {
 }
 
 button {
+  cursor: pointer;
   font-family: inherit;
   font-size: inherit;
   width: 300px;
@@ -158,15 +159,12 @@ textarea:focus {
 }
 
 .option-container {
-  display: flex;
-  flex-basis: 100%;
-}
-
-#submit-container {
+  width: 80%;
   display: flex;
   justify-content: center;
+  flex-basis: 100%;
 }
-#submit-container .submit-button {
-  width: 80%;
-  cursor: pointer;
+.option-container .view-group {
+  display: flex;
+  justify-content: center;
 }/*# sourceMappingURL=style.css.map */

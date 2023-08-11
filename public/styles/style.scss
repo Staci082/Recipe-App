@@ -86,7 +86,6 @@ form {
 .form-group {
     width: 100%;
     margin-bottom: 1.5rem;
-
 }
 .form-control {
     border: green 2px solid;
@@ -144,6 +143,7 @@ textarea {
 }
 
 button {
+    cursor: pointer;
     font-family: inherit;
     font-size: inherit;
     width: 300px;
@@ -170,15 +170,14 @@ textarea {
     }
 }
 .option-container {
-    display: flex;
-    flex-basis: 100%;
-}
-#submit-container {
+    width: 80%;
     display: flex;
     justify-content: center;
+    flex-basis: 100%;
 
-    .submit-button {
-        width: 80%;
-        cursor: pointer;
+    .view-group {
+        display: flex;
+        justify-content: center;
     }
 }
+
