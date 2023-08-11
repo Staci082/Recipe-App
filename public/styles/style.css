@@ -166,4 +166,32 @@ textarea:focus {
 .option-container .view-group {
   display: flex;
   justify-content: center;
+}
+
+#recipe-container {
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100px, 100%), 1fr));
+  gap: 15px;
+  grid-auto-rows: minmax(100px, auto);
+  margin-top: 2em;
+}
+
+.item {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: bold;
+  padding: 5px;
+  font-size: 1rem;
+  max-width: 150px;
+  border-radius: 5px;
+  background: rgba(250, 171, 241, 0.3);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.item:hover {
+  transform: translateY(-3px);
 }/*# sourceMappingURL=style.css.map */

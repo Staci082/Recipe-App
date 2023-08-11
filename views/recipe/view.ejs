@@ -28,5 +28,9 @@
 
 
 
-    <div id="recipe-container"></div>
+    <div id="recipe-container">
+        <% recipes.forEach(element => { %>
+            <div class="item"><%= element.name %></div>
+        <% }) %>
+    </div>
 </div>

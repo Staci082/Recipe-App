@@ -177,4 +177,27 @@ textarea {
         justify-content: center;
     }
 }
-
+#recipe-container {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100px, 100%), 1fr));
+    gap: 15px;
+    grid-auto-rows: minmax(100px, auto);
+    margin-top: 2em;
+}
+.item {
+    cursor: pointer;
+    @include flex;
+    justify-content: center;
+    text-align: center;
+    font-weight: bold;
+    padding: 5px;
+    font-size: 1rem;
+    max-width: 150px;
+    border-radius: 5px;
+    background: rgb($color3, 0.3);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    &:hover {
+        transform: translateY(-3px);
+    }
+}

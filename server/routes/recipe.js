@@ -16,11 +16,17 @@ router.post('/add', recipeController.postRecipe)
 // VIEW ALL RECIPES PAGE
 router.get('/view', recipeController.viewRecipes)
 
+// // SORT RECIPES BY CATEGORY
+// router.post('/view', recipeController.sortRecipes)
+
 // SEARCH PAGE
-router.get('/search', recipeController.searchRecipes)
+// router.get('/view', recipeController.searchRecipes)
 
 // SEARCH RECIPES
-router.post('/search', recipeController.postSearchRecipes)
+router.post('/search', recipeController.searchRecipes)
+
+// GET RANDOM RECIPE
+router.get('/random', recipeController.randomRecipe)
 
 
 // EXPORT
