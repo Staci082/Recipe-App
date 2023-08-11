@@ -33,6 +33,5 @@ const recipeSchema = new Schema({
 
 
 // COMPILE SCHEMA TO MODEL
-
 module.exports = mongoose.model("Recipe", recipeSchema) // value + function
 

@@ -9,6 +9,7 @@ $color3: #faabf1;
     border-radius: 5px;
     background: #fff;
     box-shadow: 8px 8px 0 black;
+    padding: 0.5rem 0;
 }
 
 body {
@@ -53,14 +54,17 @@ body {
 .main-button {
     margin: 2rem;
     width: 300px;
+    text-decoration: none;
+    text-align: center;
+    @include boxStyle;
 }
 
 .modal {
     margin: 3em 0;
     width: 35%;
     height: auto;
-    padding: 3rem 5rem;
     @include boxStyle;
+    padding: 3rem 0.5rem;
     box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.2);
 }
 #form {
@@ -85,7 +89,9 @@ label {
     display: flex;
     align-items: center;
 }
-
+a {
+    color: inherit;
+}
 input,
 button,
 select,
@@ -108,7 +114,6 @@ textarea {
 button {
     font-family: inherit;
     font-size: inherit;
-    padding: 0.3rem 3.5rem;
     width: 300px;
     @include boxStyle;
     transition: all 0.2s;

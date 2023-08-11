@@ -25,17 +25,25 @@ body {
 .main-button {
   margin: 2rem;
   width: 300px;
+  text-decoration: none;
+  text-align: center;
+  border: 3px solid black;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 8px 8px 0 black;
+  padding: 0.5rem 0;
 }
 
 .modal {
   margin: 3em 0;
   width: 35%;
   height: auto;
-  padding: 3rem 5rem;
   border: 3px solid black;
   border-radius: 5px;
   background: #fff;
   box-shadow: 8px 8px 0 black;
+  padding: 0.5rem 0;
+  padding: 3rem 0.5rem;
   box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -62,6 +70,10 @@ label {
   align-items: center;
 }
 
+a {
+  color: inherit;
+}
+
 input,
 button,
 select,
@@ -84,12 +96,12 @@ textarea {
 button {
   font-family: inherit;
   font-size: inherit;
-  padding: 0.3rem 3.5rem;
   width: 300px;
   border: 3px solid black;
   border-radius: 5px;
   background: #fff;
   box-shadow: 8px 8px 0 black;
+  padding: 0.5rem 0;
   transition: all 0.2s;
 }
 button:hover {
