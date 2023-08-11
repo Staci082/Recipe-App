@@ -7,8 +7,8 @@ body {
   height: 100vh;
   font-family: "Poppins", sans-serif;
   font-size: 1.5rem;
-  background-color: #fadea5;
-  background-image: linear-gradient(45deg, #faabf1 25%, transparent 25%, transparent 75%, #faabf1 75%, #faabf1), linear-gradient(-45deg, #faabf1 25%, transparent 25%, transparent 75%, #faabf1 75%, #faabf1);
+  background-color: #fcdd87;
+  background-image: linear-gradient(45deg, #faf691 25%, transparent 25%, transparent 75%, #faf691 75%, #faf691), linear-gradient(-45deg, #faf691 25%, transparent 25%, transparent 75%, #faf691 75%, #faf691);
   background-size: 60px 60px;
   background-position: 0 0;
   animation: slide 8s infinite linear;
@@ -29,7 +29,6 @@ body {
 
 .modal {
   margin: 3em 0;
-  display: none;
   width: 35%;
   height: auto;
   padding: 3rem 5rem;
@@ -123,13 +122,13 @@ button:active {
   box-shadow: 0 0 0 0.2rem rgba(250, 171, 241, 0.25);
 }
 
-.input-textarea {
+textarea {
   min-height: 120px;
   width: 100%;
   padding: 0.6rem;
   resize: vertical;
 }
-.input-textarea:focus {
+textarea:focus {
   border-color: #faabf1;
   outline: 0;
   box-shadow: 0 0 0 0.2rem rgba(250, 171, 241, 0.25);

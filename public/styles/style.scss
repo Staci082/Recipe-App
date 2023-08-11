@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap");
 
-$color1: #faabf1;
-$color2: #fadea5;
+$color1: #faf691;
+$color2: #fcdd87;
+$color3: #faabf1;
 
 @mixin boxStyle {
     border: 3px solid black;
@@ -56,7 +57,6 @@ body {
 
 .modal {
     margin: 3em 0;
-    display: none;
     width: 35%;
     height: auto;
     padding: 3rem 5rem;
@@ -99,7 +99,7 @@ textarea {
     gap: 15px;
 
     .fa-circle-plus {
-        color: $color1;
+        color: $color3;
         cursor: pointer;
         margin-bottom: 4px;
     }
@@ -138,20 +138,20 @@ button {
 }
 
 .form-control:focus {
-    border-color: $color1;
+    border-color: $color3;
     outline: 0;
-    box-shadow: 0 0 0 0.2rem rgba($color1, 0.25);
+    box-shadow: 0 0 0 0.2rem rgba($color3, 0.25);
 }
 
-.input-textarea {
+textarea {
     min-height: 120px;
     width: 100%;
     padding: 0.6rem;
     resize: vertical;
     &:focus {
-        border-color: $color1;
+        border-color: $color3;
         outline: 0;
-        box-shadow: 0 0 0 0.2rem rgba($color1, 0.25);
+        box-shadow: 0 0 0 0.2rem rgba($color3, 0.25);
     }
 }
 

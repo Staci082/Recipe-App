@@ -14,8 +14,8 @@ const mongoose = require('mongoose')
 
 
 // CREATE DATA SCHEMA
-
-const recipeSchema = new mongoose.Schema({
+const Schema = mongoose.Schema
+const recipeSchema = new Schema({
     name: {
         type: String,
         trim: true,
@@ -34,5 +34,5 @@ const recipeSchema = new mongoose.Schema({
 
 // COMPILE SCHEMA TO MODEL
 
-const Recipe = mongoose.model("Recipe", recipeSchema) // value + function
+module.exports = mongoose.model("Recipe", recipeSchema) // value + function
 
