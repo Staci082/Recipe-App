@@ -253,4 +253,37 @@ textarea:focus {
   top: -2px;
   left: -2px;
   font-size: clamp(1.5rem, 3vw, 3rem);
+}
+
+#selected-recipe-container {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  gap: 4rem;
+  margin-top: 6rem;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+}
+
+#selected-recipe-list {
+  list-style: none;
+  text-align: left;
+  border: 3px solid black;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 8px 8px 0 black;
+  padding: 0.5rem 0;
+  width: 30%;
+  border: #fcdd87 6px solid;
+  padding: 1em 0 0 2rem;
+}
+
+#recipe-intructions {
+  border: 3px solid black;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 8px 8px 0 black;
+  padding: 0.5rem 0;
+  border: 6px solid #faabf1;
+  width: 70%;
+  padding: 1em 2rem;
 }/*# sourceMappingURL=style.css.map */

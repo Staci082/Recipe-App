@@ -234,5 +234,32 @@ textarea {
     position: absolute;
     top: -2px;
     left: -2px;
-    font-size: clamp(1.5rem, 3vw,3rem)
+    font-size: clamp(1.5rem, 3vw,3rem);
+}
+#selected-recipe-container {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    gap: 4rem;
+    margin-top: 6rem;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+
+}
+
+#selected-recipe-list {
+    list-style:none;
+    text-align: left;
+    @include boxStyle;
+    width: 30%;
+    border: $orange 6px solid;
+    padding: 1em 0 0 2rem;
+
+}
+
+
+#recipe-intructions {
+    @include boxStyle;
+    border: 6px solid $pink;
+    width: 70%;
+    padding: 1em 2rem;
 }
