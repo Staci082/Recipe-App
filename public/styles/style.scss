@@ -181,7 +181,7 @@ textarea {
     width: 100px;
     font-size: 0.8rem;
     margin-left: 1rem;
-    box-shadow: 4px 4px 0 black;
+    box-shadow: 4px 2px 0 black;
     &:hover {
         transform: translate(-0.2rem, -0.2rem);
     }
@@ -206,7 +206,7 @@ textarea {
     width: 80%;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(min(100px, 100%), 1fr));
-    gap: 15px;
+    gap: 1.5rem;
     grid-auto-rows: minmax(100px, auto);
     margin-top: 2em;
 }
@@ -216,14 +216,17 @@ textarea {
     justify-content: center;
     text-align: center;
     font-weight: bold;
-    padding: 5px;
     font-size: 1rem;
-    max-width: 150px;
-    border-radius: 5px;
-    background: rgb($pink, 0.3);
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    max-width: 180px;
+    @include boxStyle;
+    box-shadow: 4px 2px 0 black;
+    padding: 5px;
     &:hover {
         transform: translateY(-3px);
+    }
+    &:active {
+        box-shadow: 0 0 0 black;
+        transform: translate(0, 0);
     }
 }
 #recipe-modal {
@@ -240,10 +243,9 @@ textarea {
     font-size: clamp(1.5rem, 3vw,3rem);
 }
 #selected-recipe-container {
-    width: 90%;
     display: flex;
-    justify-content: space-between;
-    gap: 4rem;
+    width: 90%;
+    gap: 5rem;
     margin-top: 6rem;
     font-size: clamp(1rem, 2vw, 1.2rem);
 }
@@ -252,9 +254,8 @@ textarea {
     list-style:none;
     text-align: left;
     @include boxStyle;
-    width: 30%;
+    width: 250px;
     padding: 1em 0 0 2rem;
-
 }
 
 
