@@ -10,6 +10,12 @@ router.get('/', recipeController.homepage)
 // ADD RECIPE PAGE
 router.get('/add', recipeController.addRecipe)
 
+// // GET INGRDIENTS
+// router.get('/add', recipeController.getIngredients)
+
+// // POST NEW INGREDIENT
+// router.post('/add', recipeController.postIngredients)
+
 // POST RECIPE FORM DATA
 router.post('/add', recipeController.postRecipe)
 

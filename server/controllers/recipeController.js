@@ -1,6 +1,7 @@
 
 const Recipe = require('../models/Recipe')
-const mongoose = require('mongoose')
+
+// const mongoose = require('mongoose')
 
 
 // GET /
@@ -46,7 +47,7 @@ exports.postRecipe = async (req, res) => {
     const newRecipe = new Recipe({  // use schema to retrieve data
         name: req.body.name,
         category: req.body.category,
-        ingredients: req.body.ingredients,
+        ingredients: IngredientsList,
         instructions: req.body.instructions
     })
 

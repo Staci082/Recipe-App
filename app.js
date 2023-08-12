@@ -21,8 +21,7 @@ app.use(methodOverride('_method'))  // allows use of http methods where client u
 
 
 // STATIC FILES
-app.use(express.static('public'))  // let's us access this folder through http 
-
+app.use(express.static(__dirname + '/public' ));  // let's us access this folder through http 
 
 // TEMPLATE ENGINE 
 app.use(expressLayout)

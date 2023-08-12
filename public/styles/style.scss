@@ -3,12 +3,12 @@
     padding: 0;
 }
 
-
 @import url("https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap");
 
-$color1: #faf691;
-$color2: #fcdd87;
-$color3: #faabf1;
+$yellow: #faf691;
+$orange: #fcdd87;
+$pink: #faabf1;
+$grey: #495057;
 
 @mixin boxStyle {
     border: 3px solid black;
@@ -16,6 +16,16 @@ $color3: #faabf1;
     background: #fff;
     box-shadow: 8px 8px 0 black;
     padding: 0.5rem 0;
+}
+
+@mixin input {
+    width: 90%;
+    padding: 0.2rem 0.5rem;
+    color: $grey;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
 @mixin flex {
@@ -30,23 +40,8 @@ body {
     justify-content: center;
     font-family: "Poppins", Verdana;
     font-size: 1.5rem;
-    background-color: $color2;
-    background-image: linear-gradient(
-            45deg,
-            $color1 25%,
-            transparent 25%,
-            transparent 75%,
-            $color1 75%,
-            $color1
-        ),
-        linear-gradient(
-            -45deg,
-            $color1 25%,
-            transparent 25%,
-            transparent 75%,
-            $color1 75%,
-            $color1
-        );
+    background-color: $orange;
+    background-image: linear-gradient(45deg, $yellow 25%, transparent 25%, transparent 75%, $yellow 75%, $yellow), linear-gradient(-45deg, $yellow 25%, transparent 25%, transparent 75%, $yellow 75%, $yellow);
     background-size: 60px 60px;
     background-position: 0 0;
     animation: slide 8s infinite linear;
@@ -89,19 +84,13 @@ form {
     margin-bottom: 1.5rem;
 }
 .form-control {
-    width: 90%;
-    padding: 0.2rem 0.5rem;
-    color: #495057;
-    background-clip: padding-box;
-    border: 1px solid #ced4da;
-    border-radius: 0.25rem;
-    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    @include input;
 }
 
 .form-control:focus {
-    border-color: $color3;
+    border-color: $pink;
     outline: 0;
-    box-shadow: 0 0 0 0.2rem rgba($color3, 0.25);
+    box-shadow: 0 0 0 0.2rem rgba($pink, 0.25);
 }
 .close {
     position: absolute;
@@ -109,8 +98,6 @@ form {
     right: 15px;
     cursor: pointer;
 }
-
-
 
 label {
     width: 93%;
@@ -130,7 +117,7 @@ textarea {
     font-size: 1rem;
 }
 .fa-circle-plus {
-    color: $color3;
+    color: $pink;
     cursor: pointer;
     margin: 0 0 3px 8px;
 }
@@ -157,11 +144,46 @@ textarea {
     padding: 0.6rem;
     resize: vertical;
     &:focus {
-        border-color: $color3;
+        border-color: $pink;
         outline: 0;
-        box-shadow: 0 0 0 0.2rem rgba($color3, 0.25);
+        box-shadow: 0 0 0 0.2rem rgba($pink, 0.25);
     }
 }
+
+.ingredients-list {
+    width: 100%;
+}
+
+.ingredient-div {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    @include input;
+    width: 100%;
+    border: none;
+
+    & .fa-ban {
+        cursor: pointer;
+        color: $grey;
+    }
+
+}
+.ingredient-button-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+.ingredient-button {
+    width: 100px;
+    font-size: 0.8rem;
+    margin-left: 1rem;
+    box-shadow: 4px 4px 0 black;
+    &:hover {
+        transform: translate(-0.2rem, -0.2rem);
+    }
+}
+
 #create-button-container {
     display: flex;
     justify-content: center;
@@ -195,7 +217,7 @@ textarea {
     font-size: 1rem;
     max-width: 150px;
     border-radius: 5px;
-    background: rgb($color3, 0.3);
+    background: rgb($pink, 0.3);
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
     &:hover {
         transform: translateY(-3px);
