@@ -85,6 +85,24 @@ exports.viewRecipes = async (req, res) => {
     }
 }
 
+// // GET / 
+// // GET RECIPES BY CATEGORY
+// exports.sortRecipes = async (req,res) => {
+
+//     let selectedCategory = req.params.category
+    
+//     try {
+//             const recipes = await Recipe.find({selectedCategory}).limit(12)
+
+//             res.render('recipe/view', {recipes})
+
+        
+
+//     } catch (error) {
+//         console.log(error)
+//     }
+// }
+
 
 // GET / 
 // GET RECIPE BY ID
@@ -93,7 +111,7 @@ exports.singleRecipe = async (req,res) => {
     const locals = {
         title: "All recipes"
     }
-    
+
     try {
         res.render('recipe/recipe', locals)
     } catch (error) {

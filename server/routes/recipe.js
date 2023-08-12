@@ -23,7 +23,7 @@ router.post('/add', recipeController.postRecipe)
 router.get('/view', recipeController.viewRecipes)
 
 // // SORT RECIPES BY CATEGORY
-// router.post('/view', recipeController.sortRecipes)
+// router.get('/view', recipeController.sortRecipes)
 
 //GET / 
 // GET RECIPE BY ID

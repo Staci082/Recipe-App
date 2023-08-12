@@ -5,7 +5,7 @@
 <div class="option-container">
     <form method="GET" action="/category" class="form">
         <div class="form-group view-group">
-            <select id="dropdown" name="category" class="form-control">
+            <select id="sort-dropdown" name="category" class="form-control">
                 <option disabled="disabled" selected="selected" value=""
                     >Select category</option
                 >
@@ -32,5 +32,16 @@
         <% recipes.forEach(element => { %>
             <div class="item"><%= element.name %></div>
         <% }) %>
+    </div>
+
+    <div class="pagination">
+        <a href="#" class="arrow">&laquo;</a>
+        <a href="#">1</a>
+        <a class="active" href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">6</a>
+        <a href="#" class="arrow">&raquo;</a>
     </div>
 </div>
