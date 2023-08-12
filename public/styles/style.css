@@ -234,4 +234,23 @@ textarea:focus {
 }
 .item:hover {
   transform: translateY(-3px);
+}
+
+#recipe-modal {
+  position: absolute;
+  top: 10rem;
+  width: 50%;
+}
+
+.recipe-title {
+  border: 3px solid black;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 8px 8px 0 black;
+  padding: 0.5rem 0;
+  padding: 0 1rem;
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  font-size: clamp(1.5rem, 3vw, 3rem);
 }/*# sourceMappingURL=style.css.map */

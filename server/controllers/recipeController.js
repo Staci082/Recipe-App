@@ -1,7 +1,7 @@
 
 const Recipe = require('../models/Recipe')
 
-// const mongoose = require('mongoose')
+const mongoose = require('mongoose')
 
 
 // GET /
@@ -47,7 +47,7 @@ exports.postRecipe = async (req, res) => {
     const newRecipe = new Recipe({  // use schema to retrieve data
         name: req.body.name,
         category: req.body.category,
-        ingredients: IngredientsList,
+        ingredients: req.body.ingredients,
         instructions: req.body.instructions
     })
 
@@ -80,6 +80,22 @@ exports.viewRecipes = async (req, res) => {
 
         res.render('recipe/view', {locals, recipes})
 
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+
+// GET / 
+// GET RECIPE BY ID
+exports.singleRecipe = async (req,res) => {
+
+    const locals = {
+        title: "All recipes"
+    }
+    
+    try {
+        res.render('recipe/recipe', locals)
     } catch (error) {
         console.log(error)
     }

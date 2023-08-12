@@ -25,8 +25,9 @@ router.get('/view', recipeController.viewRecipes)
 // // SORT RECIPES BY CATEGORY
 // router.post('/view', recipeController.sortRecipes)
 
-// SEARCH PAGE
-// router.get('/view', recipeController.searchRecipes)
+//GET / 
+// GET RECIPE BY ID
+router.get('/recipe', recipeController.singleRecipe)
 
 // SEARCH RECIPES
 router.post('/search', recipeController.searchRecipes)

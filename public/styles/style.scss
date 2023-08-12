@@ -223,3 +223,16 @@ textarea {
         transform: translateY(-3px);
     }
 }
+#recipe-modal {
+    position: absolute;
+    top: 10rem;
+    width: 50%;
+}
+.recipe-title {
+    @include boxStyle;
+    padding: 0 1rem;
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    font-size: clamp(1.5rem, 3vw,3rem)
+}

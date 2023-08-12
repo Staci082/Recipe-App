@@ -7,9 +7,13 @@ addIngredientBtn.addEventListener('click', function() {
 
     
     let newIngredient = ingredientDiv.cloneNode(true)
+        
     let input = newIngredient.querySelector('input')[0]
 
-    input.value = ""
+    
+
+    
+    console.log("meow")
     ingredientList.appendChild(newIngredient)
 
     console.log("meow")
