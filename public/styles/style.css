@@ -12,8 +12,8 @@ body {
   justify-content: center;
   font-family: "Poppins", Verdana;
   font-size: 1.5rem;
-  background-color: #fcdd87;
-  background-image: linear-gradient(45deg, #faf691 25%, transparent 25%, transparent 75%, #faf691 75%, #faf691), linear-gradient(-45deg, #faf691 25%, transparent 25%, transparent 75%, #faf691 75%, #faf691);
+  background-color: hsl(58, 91%, 90%);
+  background-image: linear-gradient(45deg, hsl(307, 89%, 93%) 25%, transparent 25%, transparent 75%, hsl(58, 91%, 90%) 75%, hsl(58, 91%, 90%)), linear-gradient(-45deg, hsl(307, 89%, 93%) 25%, transparent 25%, transparent 75%, hsl(307, 89%, 93%) 75%, hsl(307, 89%, 93%));
   background-size: 60px 60px;
   background-position: 0 0;
   animation: slide 8s infinite linear;
@@ -273,7 +273,6 @@ textarea:focus {
   box-shadow: 8px 8px 0 black;
   padding: 0.5rem 0;
   width: 30%;
-  border: #fcdd87 6px solid;
   padding: 1em 0 0 2rem;
 }
 
@@ -283,7 +282,6 @@ textarea:focus {
   background: #fff;
   box-shadow: 8px 8px 0 black;
   padding: 0.5rem 0;
-  border: 6px solid #faabf1;
   width: 70%;
   padding: 1em 2rem;
 }/*# sourceMappingURL=style.css.map */

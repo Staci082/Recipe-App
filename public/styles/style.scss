@@ -6,9 +6,11 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap");
 
 $yellow: #faf691;
-$orange: #fcdd87;
+$orange: hsl(44, 95%, 76%);
 $pink: #faabf1;
 $grey: #495057;
+$lightyellow: hsl(58, 91%, 90%);
+$lightpink: hsl(307, 89%, 93%);
 
 @mixin boxStyle {
     border: 3px solid black;
@@ -40,8 +42,8 @@ body {
     justify-content: center;
     font-family: "Poppins", Verdana;
     font-size: 1.5rem;
-    background-color: $orange;
-    background-image: linear-gradient(45deg, $yellow 25%, transparent 25%, transparent 75%, $yellow 75%, $yellow), linear-gradient(-45deg, $yellow 25%, transparent 25%, transparent 75%, $yellow 75%, $yellow);
+    background-color: $lightyellow;
+    background-image: linear-gradient(45deg, $lightpink 25%, transparent 25%, transparent 75%, $lightyellow 75%, $lightyellow), linear-gradient(-45deg, $lightpink 25%, transparent 25%, transparent 75%, $lightpink 75%, $lightpink);
     background-size: 60px 60px;
     background-position: 0 0;
     animation: slide 8s infinite linear;
@@ -73,6 +75,7 @@ body {
     @include boxStyle;
     padding: 3rem 0;
     box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.2);
+    
 }
 form {
     @include flex;
@@ -243,7 +246,6 @@ textarea {
     gap: 4rem;
     margin-top: 6rem;
     font-size: clamp(1rem, 2vw, 1.2rem);
-
 }
 
 #selected-recipe-list {
@@ -251,7 +253,6 @@ textarea {
     text-align: left;
     @include boxStyle;
     width: 30%;
-    border: $orange 6px solid;
     padding: 1em 0 0 2rem;
 
 }
@@ -259,7 +260,7 @@ textarea {
 
 #recipe-intructions {
     @include boxStyle;
-    border: 6px solid $pink;
     width: 70%;
     padding: 1em 2rem;
+
 }
