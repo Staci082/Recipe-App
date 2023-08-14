@@ -1,0 +1,19 @@
+<div class="modal" id="recipe-modal">
+    <a href="/" class="close">&times;</a>
+
+    <h1 class="recipe-title"><%= recipe.name %></h1>
+
+    <div id="selected-recipe-container">
+
+        <ul id="selected-recipe-list">
+            <% for (var i = 0; i < recipe.ingredients.length ; i++) { %>
+                <li> <%= recipe.ingredients[i] %> </li>
+            <% } %>
+        </ul>
+
+        <div id="recipe-intructions">
+            <%= recipe.instructions %>
+        </div>
+
+    </div>
+</div>

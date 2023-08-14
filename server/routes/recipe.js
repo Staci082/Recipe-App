@@ -27,7 +27,7 @@ router.get('/view', recipeController.viewRecipes)
 
 //GET / 
 // GET RECIPE BY ID
-router.get('/recipe', recipeController.singleRecipe)
+router.get('/view/:id', recipeController.singleRecipe)
 
 // SEARCH RECIPES
 router.post('/search', recipeController.searchRecipes)

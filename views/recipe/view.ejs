@@ -30,10 +30,10 @@
 
     <div id="recipe-container">
         <% recipes.forEach(element => { %>
-            <div class="item">
+            <a href="/view/<%= element._id %>" class="item" type="button" >
                 <b><%= element.name %></b>
                 <small><%= element.category %></small>
-            </div>
+            </a>
         <% }) %>
     </div>
 

@@ -85,6 +85,22 @@ exports.viewRecipes = async (req, res) => {
     }
 }
 
+
+// GET / 
+// GET SINGLE RECIPE BY ID
+exports.singleRecipe = async (req, res) => {
+
+    try {
+        recipe = await Recipe.findOne({ _id: req.params.id })
+
+        res.render('recipe/single', recipe )
+    } catch (error) {
+        console.log(error) 
+    }
+}
+
+
+
 // // GET / 
 // // GET RECIPES BY CATEGORY
 // exports.sortRecipes = async (req,res) => {
@@ -102,22 +118,6 @@ exports.viewRecipes = async (req, res) => {
 //         console.log(error)
 //     }
 // }
-
-
-// GET / 
-// GET RECIPE BY ID
-exports.singleRecipe = async (req,res) => {
-
-    const locals = {
-        title: "All recipes"
-    }
-
-    try {
-        res.render('recipe/recipe', locals)
-    } catch (error) {
-        console.log(error)
-    }
-}
 
 
 // POST / 
