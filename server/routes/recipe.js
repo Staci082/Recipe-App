@@ -17,7 +17,7 @@ router.post('/add', recipeController.postRecipe)
 router.get('/view', recipeController.viewRecipes)
 
 // // SORT RECIPES BY CATEGORY
-// router.get('/view', recipeController.sortRecipes)
+// router.get('/view/:category', recipeController.sortRecipes)
 
 //GET / 
 // GET RECIPE BY ID

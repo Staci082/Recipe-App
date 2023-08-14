@@ -71,14 +71,25 @@ exports.postRecipe = async (req, res) => {
 // VIEW ALL RECIPES PAGE
 exports.viewRecipes = async (req, res) => {
 
-    const locals = {
-        title: "All recipes"
-    }
+    let perPage = 12
+    let page = req.query.page = 1
 
     try {
-        const recipes = await Recipe.find({}).limit(12) // empty brackets = find all
+        // Recipe.find({}) // empty brackets = find all (IF NO PAGINATION)
 
-        res.render('recipe/view', {locals, recipes})
+        const recipes = await Recipe.aggregate([ {$sort: { updatedAt: -1}} ]).sort({name:1})
+        .skip(perPage * page - perPage)
+        .limit(perPage)
+        .exec()
+
+        const count = await Recipe.count()
+
+
+        res.render('recipe/view', {
+            recipes,
+            current: page,
+            pages: Math.ceil(count/perPage)
+        })
 
     } catch (error) {
         console.log(error)
@@ -154,14 +165,11 @@ exports.searchRecipes = async (req, res) => {
 // GET RANDOM RECIPE PAGE
 exports.randomRecipe = async (req, res) => {
 
-    const locals = {
-        title: "Random recipe"
-    }
 
     try {
-        const recipes = await Recipe.find({}).limit(120) // empty brackets = find all
+        random = await Recipe.aggregate([{$sample: {size: 1}}])
 
-        res.render('recipe/random', {locals, recipes})
+        res.render('recipe/random', random )
 
     } catch (error) {
         console.log(error)
