@@ -17,10 +17,10 @@
         <div id="recipe-intructions"> <%= single.instructions %> </div>
     </div>
     <div class="recipe-button-container">
-        <a type="button">
+        <a href="/edit/<%= single._id %>" type="button">
             <i class="fa-solid fa-pencil"></i>
         </a>
-        <a type="button">
+        <a href="/delete/<%= single._id %>" type="button">
             <i class="fa-solid fa-ban"></i>
         </a>
     </div>

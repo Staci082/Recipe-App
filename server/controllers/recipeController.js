@@ -189,6 +189,48 @@ exports.searchRecipes = async (req, res) => {
 }
 
 
+// GET /
+// GET EDIT RECIPE FORM PAGE
+
+exports.editPage = async (req, res) => {
+
+    const locals = {
+        title: "Edit recipe",
+    } 
+
+    try {  // FIND ID OF CERTAIN CUSTOMER 
+        const single = await Recipe.findOne({ _id: req.params.id })
+
+        // RENDER DATA
+        res.render('recipe/edit', {
+            locals,
+            single  // data grabbed earlier by finding id
+        })
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+
+// DELETE / 
+// DELETE RECIPE BY ID
+exports.deleteRecipe = async (req, res) => {
+
+    try {  
+
+        // DELETE SELECTED CUSTOMER DATA
+        await Recipe.deleteOne({_id: req.params.id})
+
+        // REDIRECT TO HOMEPAGE
+        res.redirect("/view")
+
+    } catch (error) {
+        console.log(error)
+        // FAIL MESSAGE
+        // await req.flash('info', 'An error occurred while deleting the customer data. Please try again.')
+    }
+}
+
 // GET / 
 // GET RANDOM RECIPE PAGE
 exports.randomRecipe = async (req, res) => {

@@ -26,6 +26,16 @@ router.get('/view/:id', recipeController.singleRecipe)
 // SEARCH RECIPES
 router.post('/search', recipeController.searchRecipes)
 
+// VIEW EDIT RECIPE FORM PAGE
+router.get('/edit/:id', recipeController.editPage)
+
+// EDIT SELECTED RECIPE
+// router.put('/edit/:id', recipeController.editRecipe)
+
+
+// DELETE SELECTED RECIPE
+router.delete('/delete/:id', recipeController.deleteRecipe)
+
 // GET RANDOM RECIPE
 router.get('/random', recipeController.randomRecipe)
 
