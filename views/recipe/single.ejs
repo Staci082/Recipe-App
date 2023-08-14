@@ -1,18 +1,22 @@
 <div class="modal" id="recipe-modal">
-    <a href="/" class="close">&times;</a>
+    <!-- BACK BUTTON -->
+    <a href="/view" class="close">&times;</a>
 
-    <h1 class="recipe-title"><%= recipe.name %></h1>
+    <!-- RECIPE TITLE -->
+    <h1 class="recipe-title"><%= single.name %></h1>
 
     <div id="selected-recipe-container">
 
+        <!-- INGREDIENT LIST CONTAINER-->
         <ul id="selected-recipe-list">
-            <% for (var i = 0; i < recipe.ingredients.length ; i++) { %>
-                <li> <%= recipe.ingredients[i] %> </li>
+            <% for (var i = 0; i < single.ingredients.length ; i++) { %>
+                <li> <%= single.ingredients[i] %> </li>
             <% } %>
         </ul>
 
+        <!-- RECIPE INSTRUCTIONS CONTAINER -->
         <div id="recipe-intructions">
-            <%= recipe.instructions %>
+            <%= single.instructions %>
         </div>
 
     </div>

@@ -227,8 +227,6 @@ textarea:focus {
   cursor: pointer;
   text-align: center;
   font-weight: bold;
-  /* font acting up sometimes when 'type: button' added to element*/
-  font-family: "Poppins", Verdana;
   font-size: 1rem;
   max-width: 180px;
   border: 3px solid black;
@@ -258,6 +256,11 @@ textarea:focus {
 .item:active {
   box-shadow: 0 0 0 black;
   transform: translate(0, 0);
+}
+
+.reset {
+  cursor: pointer;
+  margin: 0 1rem;
 }
 
 .pagination {

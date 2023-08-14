@@ -1,7 +1,9 @@
 
 <div class="modal">
+    <!-- BACK BUTTON -->
     <a href="/" class="close">&times;</a>
 
+<!-- SELECT CATEGORY DROPDOWN -->
 <div class="option-container">
     <form method="GET" action="/category" class="form">
         <div class="form-group view-group">
@@ -19,6 +21,11 @@
             </select>
         </div>
     </form>
+
+    <!-- RESET BUTTON -->
+    <a href="/view" class="reset"><i class="fa-solid fa-arrows-rotate fa-2xs"></i></a>
+
+    <!-- SEARCH BAR -->
     <form method="POST" action="/search" class="form">
         <div class="form-group view-group" id="search-form-group">
             <input type="search" name="searchTerm" class="form-control" placeholder="Search.." aria-label="Search"/>
@@ -27,16 +34,17 @@
 </div>
 
 
-
+<!-- RECIPE LIST CONTAINER -->
     <div id="recipe-container">
         <% recipes.forEach(element => { %>
-            <a href="/view/<%= element._id %>" class="item" type="button" >
+            <a href="/view/<%= element._id %>" class="item">
                 <b><%= element.name %></b>
                 <small><%= element.category %></small>
             </a>
         <% }) %>
     </div>
 
+    <!-- PAGINATION -->
     <div class="pagination">
         <a href="#" class="arrow">&laquo;</a>
         <a href="#">1</a>

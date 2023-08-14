@@ -91,9 +91,9 @@ exports.viewRecipes = async (req, res) => {
 exports.singleRecipe = async (req, res) => {
 
     try {
-        const recipe = await Recipe.findOne({ _id: req.params.id })
+        single = await Recipe.findOne({ _id: req.params.id })  // finding single recipe (added const bugs it for some reason)
 
-        res.render('recipe/single', recipe )
+        res.render('recipe/single', single )
     } catch (error) {
         console.log(error) 
     }
