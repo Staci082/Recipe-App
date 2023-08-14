@@ -30,7 +30,10 @@
 
     <div id="recipe-container">
         <% recipes.forEach(element => { %>
-            <div class="item"><%= element.name %></div>
+            <div class="item">
+                <b><%= element.name %></b>
+                <small><%= element.category %></small>
+            </div>
         <% }) %>
     </div>
 

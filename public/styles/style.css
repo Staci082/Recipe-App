@@ -220,11 +220,11 @@ textarea:focus {
 }
 
 .item {
-  cursor: pointer;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  cursor: pointer;
   text-align: center;
   font-weight: bold;
   font-size: 1rem;
@@ -235,7 +235,19 @@ textarea:focus {
   box-shadow: 8px 8px 0 black;
   padding: 0.5rem 0;
   box-shadow: 4px 2px 0 black;
-  padding: 5px;
+  padding: 10px 5px 5px 5px;
+}
+.item b {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 75%;
+}
+.item small {
+  position: absolute;
+  bottom: 0;
+  font-size: 0.7rem;
 }
 .item:hover {
   transform: translateY(-3px);
@@ -259,6 +271,7 @@ textarea:focus {
   color: black;
   padding: 8px 16px;
   text-decoration: none;
+  border-radius: 5px;
 }
 .pagination a:hover {
   background: #faf691;

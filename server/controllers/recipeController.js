@@ -54,7 +54,7 @@ exports.postRecipe = async (req, res) => {
     try {
         // CREATE NEW DATA 
         await Recipe.create(newRecipe)
-
+        
         // SUCCESS MESSAGE
         console.log('Recipe successfully created!')
 
@@ -159,7 +159,7 @@ exports.randomRecipe = async (req, res) => {
     }
 
     try {
-        const recipes = await Recipe.find({}).limit(12) // empty brackets = find all
+        const recipes = await Recipe.find({}).limit(120) // empty brackets = find all
 
         res.render('recipe/random', {locals, recipes})
 

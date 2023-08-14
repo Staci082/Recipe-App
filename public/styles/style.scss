@@ -58,6 +58,7 @@ body {
     }
 }
 
+
 .main-button {
     margin: 2rem;
     width: 300px;
@@ -212,16 +213,26 @@ textarea {
     margin-top: 2em;
 }
 .item {
-    cursor: pointer;
+    position: relative;
     @include flex;
-    justify-content: center;
+    cursor: pointer;
     text-align: center;
     font-weight: bold;
     font-size: 1rem;
     max-width: 180px;
     @include boxStyle;
     box-shadow: 4px 2px 0 black;
-    padding: 5px;
+    padding: 10px 5px 5px 5px;
+    & b {
+        @include flex;
+        justify-content: center;
+        height: 75%;
+    }
+    & small {
+        position: absolute;
+        bottom: 0;
+        font-size: 0.7rem;
+    }
     &:hover {
         transform: translateY(-3px);
     }
@@ -244,6 +255,7 @@ textarea {
     color: black;
     padding: 8px 16px;
     text-decoration: none;
+    border-radius: 5px;
     &:hover {
         background: $yellow;
     }
@@ -256,6 +268,7 @@ textarea {
 
 .pagination a:hover:not(.active) {
     background-color: $lightyellow;
+
 }
 
 .pagination a:first-child {
