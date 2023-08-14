@@ -228,6 +228,7 @@ textarea {
         height: 75%;
     }
     & small {
+        visibility: hidden;
         text-transform: lowercase;
         position: absolute;
         bottom: 0;
@@ -235,6 +236,9 @@ textarea {
     }
     &:hover {
         transform: translateY(-3px);
+        & small {
+            visibility: visible;
+        }
     }
     &:active {
         box-shadow: 0 0 0 black;

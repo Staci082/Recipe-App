@@ -245,6 +245,7 @@ textarea:focus {
   height: 75%;
 }
 .item small {
+  visibility: hidden;
   text-transform: lowercase;
   position: absolute;
   bottom: 0;
@@ -252,6 +253,9 @@ textarea:focus {
 }
 .item:hover {
   transform: translateY(-3px);
+}
+.item:hover small {
+  visibility: visible;
 }
 .item:active {
   box-shadow: 0 0 0 black;
