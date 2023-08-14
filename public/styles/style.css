@@ -320,11 +320,12 @@ textarea:focus {
 }
 
 #selected-recipe-container {
+  position: relative;
   font-family: inherit;
   display: flex;
   width: 90%;
   gap: 5rem;
-  margin-top: 6rem;
+  margin: 6rem 0 3rem 0;
   font-size: clamp(1rem, 2vw, 1.2rem);
 }
 
@@ -348,4 +349,17 @@ textarea:focus {
   padding: 0.5rem 0;
   width: 70%;
   padding: 1em 2rem;
+}
+
+.recipe-button-container {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+.recipe-button-container a {
+  cursor: pointer;
+  margin: 0 0.5rem;
+}
+.recipe-button-container a:hover {
+  color: #fcdd88;
 }/*# sourceMappingURL=style.css.map */

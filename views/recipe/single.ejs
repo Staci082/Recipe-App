@@ -6,18 +6,22 @@
     <h1 class="recipe-title"><%= single.name %></h1>
 
     <div id="selected-recipe-container">
-
         <!-- INGREDIENT LIST CONTAINER-->
         <ul id="selected-recipe-list">
             <% for (var i = 0; i < single.ingredients.length ; i++) { %>
-                <li> <%= single.ingredients[i] %> </li>
+            <li> <%= single.ingredients[i] %> </li>
             <% } %>
         </ul>
 
         <!-- RECIPE INSTRUCTIONS CONTAINER -->
-        <div id="recipe-intructions">
-            <%= single.instructions %>
-        </div>
-
+        <div id="recipe-intructions"> <%= single.instructions %> </div>
+    </div>
+    <div class="recipe-button-container">
+        <a type="button">
+            <i class="fa-solid fa-pencil"></i>
+        </a>
+        <a type="button">
+            <i class="fa-solid fa-ban"></i>
+        </a>
     </div>
 </div>
