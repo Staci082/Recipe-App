@@ -319,6 +319,7 @@ textarea:focus {
 }
 
 #selected-recipe-container {
+  font-family: inherit;
   display: flex;
   width: 90%;
   gap: 5rem;

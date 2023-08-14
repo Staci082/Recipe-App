@@ -91,7 +91,7 @@ exports.viewRecipes = async (req, res) => {
 exports.singleRecipe = async (req, res) => {
 
     try {
-        recipe = await Recipe.findOne({ _id: req.params.id })
+        const recipe = await Recipe.findOne({ _id: req.params.id })
 
         res.render('recipe/single', recipe )
     } catch (error) {

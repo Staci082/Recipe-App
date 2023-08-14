@@ -297,6 +297,7 @@ textarea {
     font-size: clamp(1.5rem, 3vw, 3rem);
 }
 #selected-recipe-container {
+    font-family: inherit;
     display: flex;
     width: 90%;
     gap: 5rem;
