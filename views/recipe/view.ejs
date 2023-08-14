@@ -8,9 +8,7 @@
     <form method="GET" action="/category" class="form">
         <div class="form-group view-group">
             <select id="sort-dropdown" name="category" class="form-control">
-                <option disabled="disabled" selected="selected" value=""
-                    >Select category</option
-                >
+                <option disabled="disabled" selected="selected" value="">Select category</option>
                 <option value="Breakfast">Breakfast</option>
                 <option value="Appetizers">Appetizers</option>
                 <option value="Cold">Cold meals</option>
@@ -46,14 +44,14 @@
 
     
 <!-- PAGINATION (PAGE LINK BUTTONS) -->
-<% if (recipes.length > 0) { %>
-    <!-- checking if there are actually customers to do pagination -->
+<% if (recipes.length > 0) { %>     <!-- checking if there are actually customers to do pagination -->
     
     <nav class="pagination" aria-label="Pagination">
         
             <!-- FIRST PAGE -->
             <% if (current == 1) { %>
-            <!-- if one first page disable 'first page link' -->
+
+            <!-- IF ON FIRST PAGE DISABLE FIRST PAGE LINK -->
             <a href="#" disabled>&laquo;</a>
             <% } else { %>
             <a href="/view/?page=1">&laquo;</a>
@@ -75,7 +73,8 @@
             <% if (i == Number(current) + 4 && i < pages) { %>
             <a href="#" disabled>...</a>
             <% } %> <% } %> <% if (current == pages) { %>
-            <!-- if one last page disable 'last page link' -->
+
+            <!-- IF ON LAST PAGE DISABLE LAST PAGE LINK -->
             <a href="#" disabled>&raquo;</a>
             <% } else { %>
             <a href="/view/?page=<%= pages %>">&raquo;</a>

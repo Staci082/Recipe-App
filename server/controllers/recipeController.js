@@ -134,10 +134,6 @@ exports.singleRecipe = async (req, res) => {
 // POST / 
 // SEARCH RECIPES PAGE
 exports.searchRecipes = async (req, res) => {
-    
-    const locals = {
-        title: "Search recipes"  // check if needed after all is done pls
-    }
 
     try {
         
@@ -153,7 +149,22 @@ exports.searchRecipes = async (req, res) => {
             ]
         })
 
-        res.render('recipe/view', {locals, recipes})
+        let perPage = 12
+        let page = req.query.page || 1
+
+        const recipeList = await Recipe.aggregate([ {$sort: { updatedAt: -1}} ]).sort({name:1})
+        .skip(perPage * page - perPage)
+        .limit(perPage)
+        .exec()
+
+        const count = await Recipe.count()
+
+        res.render('recipe/view', {
+            recipeList,
+            recipes, 
+            current: page,
+            pages: Math.ceil(count / perPage)
+        })
         
     } catch (error) {
         console.log(error)
