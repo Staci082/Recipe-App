@@ -8,6 +8,7 @@ const mongoose = require('mongoose')
 // HOMEPAGE
 exports.homepage = async (req, res) => {
 
+    // TAB TITLE
     const locals = {
         title: "Home page"
     }
@@ -71,6 +72,10 @@ exports.postRecipe = async (req, res) => {
 // VIEW ALL RECIPES PAGE
 exports.viewRecipes = async (req, res) => {
 
+    const locals = {
+        title: "View recipes"
+    }
+
     let perPage = 12
     let page = req.query.page || 1
 
@@ -86,6 +91,7 @@ exports.viewRecipes = async (req, res) => {
 
 
         res.render('recipe/view', {
+            locals,
             recipes,
             current: page,
             pages: Math.ceil(count/perPage)
@@ -103,8 +109,12 @@ exports.singleRecipe = async (req, res) => {
 
     try {
         single = await Recipe.findOne({ _id: req.params.id })  // finding single recipe (added const bugs it for some reason)
+        
+        const locals = {
+            title: single.name
+        }
 
-        res.render('recipe/single', single )
+        res.render('recipe/single', {locals, single} )
     } catch (error) {
         console.log(error) 
     }
@@ -116,12 +126,14 @@ exports.singleRecipe = async (req, res) => {
 // // GET RECIPES BY CATEGORY
 // exports.sortRecipes = async (req,res) => {
 
-//     let selectedCategory = req.params.category
+//     // let category = req.body.chosenCategory || ""
+//     let category = req.params.category || ""
+
     
 //     try {
-//             const recipes = await Recipe.find({selectedCategory}).limit(12)
+//         const recipes = await Recipe.find({_category: category}).limit(12)
 
-//             res.render('recipe/view', {recipes})
+//         res.render('recipe/view', recipes)
 
         
 
@@ -134,6 +146,10 @@ exports.singleRecipe = async (req, res) => {
 // POST / 
 // SEARCH RECIPES PAGE
 exports.searchRecipes = async (req, res) => {
+    
+    const locals = {
+        title: "Search recipes"
+    }
 
     try {
         
@@ -160,6 +176,7 @@ exports.searchRecipes = async (req, res) => {
         const count = await Recipe.count()
 
         res.render('recipe/view', {
+            locals,
             recipeList,
             recipes, 
             current: page,
@@ -180,7 +197,10 @@ exports.randomRecipe = async (req, res) => {
     try {
         random = await Recipe.aggregate([{$sample: {size: 1}}])
 
-        res.render('recipe/random', random )
+        const locals = {
+            title: random.name
+        }
+        res.render('recipe/random', {locals, random} )
 
     } catch (error) {
         console.log(error)
