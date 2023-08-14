@@ -36,7 +36,7 @@
     <div id="recipe-container">
         <% recipes.forEach(element => { %>
             <a href="/view/<%= element._id %>" class="item">
-                <b><%= element.name %></b>
+                <%= element.name %>
                 <small><%= element.category %></small>
             </a>
         <% }) %>

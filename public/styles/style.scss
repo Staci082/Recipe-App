@@ -214,6 +214,7 @@ textarea {
 .item {
     position: relative;
     @include flex;
+    justify-content: center;
     cursor: pointer;
     text-align: center;
     font-weight: bold;
@@ -222,11 +223,6 @@ textarea {
     @include boxStyle;
     box-shadow: 4px 2px 0 black;
     padding: 10px 5px 5px 5px;
-    & b {
-        @include flex;
-        justify-content: center;
-        height: 75%;
-    }
     & small {
         visibility: hidden;
         text-transform: lowercase;
