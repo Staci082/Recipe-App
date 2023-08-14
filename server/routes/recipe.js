@@ -30,7 +30,7 @@ router.post('/search', recipeController.searchRecipes)
 router.get('/edit/:id', recipeController.editPage)
 
 // EDIT SELECTED RECIPE
-// router.put('/edit/:id', recipeController.editRecipe)
+router.put('/edit/:id', recipeController.editRecipe)
 
 
 // DELETE SELECTED RECIPE

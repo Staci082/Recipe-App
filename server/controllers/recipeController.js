@@ -211,6 +211,24 @@ exports.editPage = async (req, res) => {
     }
 }
 
+exports.editRecipe = async (req, res) => {
+
+
+    try {  // USE SCHEMA TO UPDATE CUSTOMER CONSTRUCTOR
+        await Recipe.findByIdAndUpdate(req.params.id, {
+        name: req.body.name,
+        category: req.body.category,
+        ingredients: req.body.ingredients,
+        instructions: req.body.instructions
+        })
+
+        // REDIRECT TO VIEW PAGE
+        res.redirect(`/view/${req.params.id}`)
+
+    } catch (error) {
+        console.log(error)
+    }
+}
 
 // DELETE / 
 // DELETE RECIPE BY ID

@@ -26,6 +26,14 @@ body {
     background-position: -120px 60px;
   }
 }
+.color-palette {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: black;
+  cursor: pointer;
+}
+
 .main-button {
   margin: 2rem;
   width: 300px;
