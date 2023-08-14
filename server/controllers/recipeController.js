@@ -72,7 +72,7 @@ exports.postRecipe = async (req, res) => {
 exports.viewRecipes = async (req, res) => {
 
     let perPage = 12
-    let page = req.query.page = 1
+    let page = req.query.page || 1
 
     try {
         // Recipe.find({}) // empty brackets = find all (IF NO PAGINATION)
