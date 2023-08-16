@@ -117,7 +117,7 @@ body {
     @include flex;
     position: relative;
     margin: 3em 0;
-    width: 40%;
+    width: clamp(300px, 40%, 1000px);
     min-width: 300px;
     height: auto;
     @include boxStyle;
@@ -385,4 +385,20 @@ textarea {
 
 #delete-modal {
     display: none;
+    position: fixed;
+    width: 60%;
+    font-size: 1rem;
+    padding: 2rem;
+    z-index: 2;
+}
+
+.delete-answers {
+    display: flex;
+    font-weight: bold;
+    font-size: 1rem;
+    gap: 40px;
+    margin-top: 2rem;
+    & a:hover {
+            color: $orange;
+        }
 }

@@ -95,7 +95,7 @@ body {
   align-items: center;
   position: relative;
   margin: 3em 0;
-  width: 40%;
+  width: clamp(300px, 40%, 1000px);
   min-width: 300px;
   height: auto;
   border: 3px solid black;
@@ -413,4 +413,20 @@ textarea:focus {
 
 #delete-modal {
   display: none;
+  position: fixed;
+  width: 60%;
+  font-size: 1rem;
+  padding: 2rem;
+  z-index: 2;
+}
+
+.delete-answers {
+  display: flex;
+  font-weight: bold;
+  font-size: 1rem;
+  gap: 40px;
+  margin-top: 2rem;
+}
+.delete-answers a:hover {
+  color: #fcdd88;
 }/*# sourceMappingURL=style.css.map */

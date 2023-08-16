@@ -18,14 +18,3 @@ addIngredientBtn.addEventListener('click', function() {
 
 
 
-// // DELETE RECIPE MODAL
-
-// const deleteBtn = document.getElementById('#delete-button')
-// const deleteModal = document.querySelector('#delete-modal')
-
-// deleteBtn.addEventListener('click', () => {
-//     deleteModal.style.display = "block";
-//     console.log('clicked')
-// })
-
-
