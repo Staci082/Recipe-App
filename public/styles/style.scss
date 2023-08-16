@@ -5,12 +5,19 @@
 
 @import url("https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap");
 
+
+$largeFont: 1.5rem;
+$mediumFont: 1rem;
+$smallFont: 0.8rem;
+
 $yellow: #faf691;
+$lightyellow: #fdfbce;
 $orange: #fcdd88;
 $pink: #faabf1;
+$lightpink: #fdddf9;
 $grey: #495057;
-$lightyellow: #fdfbce;
-$lightpink: hsl(307, 89%, 93%);
+
+$smallShadow: 4px 2px 0;
 
 @mixin boxStyle {
     border: 3px solid black;
@@ -38,7 +45,6 @@ $lightpink: hsl(307, 89%, 93%);
 
 @mixin button {
     cursor: pointer;
-    font-size: inherit;
     width: 250px;
     transition: all 0.2s;
     &:hover {
@@ -51,7 +57,7 @@ $lightpink: hsl(307, 89%, 93%);
 }
 
 @mixin smallButton {
-    box-shadow: 4px 2px 0 black;
+    box-shadow: $smallShadow black;
     &:hover {
         transform: translate(-0.2rem, -0.2rem);
     }
@@ -63,7 +69,6 @@ body {
     @include flex;
     justify-content: center;
     font-family: "Poppins", Verdana;
-    font-size: 1.5rem;
     background-size: 60px 60px;
     animation: slide 8s infinite linear;
     background-color: $orange;
@@ -79,6 +84,7 @@ body {
     }
 }
 
+// need extra container here because moving body-background wont flex center
 .menu-container {
     height: 100vh;
     @include flex;
@@ -87,8 +93,8 @@ body {
 
 .paint-brush {
     position: absolute;
-    top: 23px;
-    left: 15px;
+    top: 30px;
+    left: 20px;
     color: black;
     cursor: pointer;
     z-index: 2;
@@ -100,7 +106,7 @@ body {
     left: 0px;
     top: 10px;
     width: 60px;
-    padding: 2.1em 0 0.3em 0;
+    padding: 2.7em 0 0.6em 0;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     gap: 10px;
@@ -148,7 +154,7 @@ body {
     min-width: 300px;
     height: auto;
     @include boxStyle;
-    padding: 3rem 0;
+    padding: 2rem 0 1rem 0;
     box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.2);
 }
 form {
@@ -181,19 +187,26 @@ label {
     display: flex;
     align-items: center;
     margin-bottom: 0.5rem;
+    font-size: $largeFont;
 }
 a {
     font-family: inherit;
     color: inherit;
     text-decoration: none;
+    font-size:  $largeFont;
 }
 input,
 button,
 select,
 textarea {
     font-family: inherit;
-    font-size: 1rem;
+    font-size: $mediumFont;
 }
+
+#dropdown {
+    width: 94%;  /* dropdown was smaller for unknown reason */
+}
+
 .fa-circle-plus {
     color: $pink;
     cursor: pointer;
@@ -238,6 +251,10 @@ textarea {
     margin: 0.2rem 0;
 }
 
+.submit-button {
+    font-size: $largeFont;
+}
+
 .ingredient-button-container {
     width: 100%;
     display: flex;
@@ -246,7 +263,7 @@ textarea {
 .ingredient-button {
     @include smallButton;
     width: 100px;
-    font-size: 0.8rem;
+    font-size: $smallFont;
     margin-left: 1rem;
 }
 
@@ -280,17 +297,17 @@ textarea {
     cursor: pointer;
     text-align: center;
     font-weight: bold;
-    font-size: 1rem;
+    font-size: $mediumFont;
     max-width: 200px;
     @include boxStyle;
-    box-shadow: 4px 2px 0 black;
+    box-shadow: $smallShadow black;
     padding: 10px 5px 5px 5px;
     & small {
         visibility: hidden;
         text-transform: lowercase;
         position: absolute;
         bottom: 0;
-        font-size: 0.7rem;
+        font-size: $smallFont;
     }
     &:hover {
         transform: translateY(-3px);
@@ -310,8 +327,7 @@ textarea {
 
 .pagination {
     display: inline-block;
-    margin-top: 6em;
-    font-size: 0.8rem;
+    margin: 2em 0 1em 0;
     font-weight: bold;
     & .arrow {
         font-size: 1rem;
@@ -323,6 +339,7 @@ textarea {
     padding: 8px 16px;
     text-decoration: none;
     border-radius: 5px;
+    font-size: $smallFont;
     &:hover {
         background: $yellow;
     }
@@ -347,7 +364,7 @@ textarea {
     border-bottom-right-radius: 5px;
 }
 
-#recipe-modal {
+.recipe-modal {
     position: absolute;
     top: 10rem;
     width: 50%;
@@ -367,7 +384,7 @@ textarea {
     width: 90%;
     gap: 5rem;
     margin: 6rem 0 3rem 0;
-    font-size: clamp(1rem, 2vw, 1.2rem);
+    font-size: clamp($mediumFont, 2vw, 1.2rem);
 }
 
 #selected-recipe-list {
@@ -401,7 +418,7 @@ textarea {
     display: none;
     position: fixed;
     width: 60%;
-    font-size: 1rem;
+    font-size: $mediumFont;
     padding: 2rem;
     z-index: 2;
 }
@@ -414,10 +431,10 @@ textarea {
         @include smallButton;
         width: 100px;
         font-weight: bold;
-        font-size: 1rem;
+        font-size: $mediumFont;
         &:hover {
             border: $orange 4px solid;
-            box-shadow: 4px 2px 0 $orange;
+            box-shadow: $smallShadow $orange;
         }
     }
 }
@@ -428,10 +445,10 @@ textarea {
     @include smallButton;
     width: 100px;
     font-weight: bold;
-    font-size: 1rem;
+    font-size: $mediumFont;
     text-align: center;
     &:hover {
         border: $orange 4px solid;
-        box-shadow: 4px 2px 0 $orange;
+        box-shadow: $smallShadow $orange;
     }
 }
