@@ -76,7 +76,10 @@ exports.viewRecipes = async (req, res) => {
         title: "View recipes"
     }
 
+    // ITEM PER PAGE LIMIT
     let perPage = 12
+
+    // START PAGE = CURRENT PAGE OR 1 TO START
     let page = req.query.page || 1
 
     try {
@@ -94,7 +97,7 @@ exports.viewRecipes = async (req, res) => {
             locals,
             recipes,
             current: page,
-            pages: Math.ceil(count/perPage)
+            pages: Math.ceil(count/perPage)  //  ROUNDING
         })
 
     } catch (error) {
@@ -108,7 +111,7 @@ exports.viewRecipes = async (req, res) => {
 exports.singleRecipe = async (req, res) => {
 
     try {
-        single = await Recipe.findOne({ _id: req.params.id })  // finding single recipe (added const bugs it for some reason)
+        single = await Recipe.findOne({ _id: req.params.id })  // finding single recipe (adding const bugs it for some reason)
         
         const locals = {
             title: single.name
