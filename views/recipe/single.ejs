@@ -16,11 +16,24 @@
         <!-- RECIPE INSTRUCTIONS CONTAINER -->
         <div id="recipe-intructions"> <%= single.instructions %> </div>
     </div>
+
+    <!-- DELETE RECIPE MODAL -->
+    <div class="modal" id="delete-modal">
+        <!-- BACK BUTTON -->
+        <a href="/view/<%= single.id %>" class="close">&times;</a>
+
+        <h1>Are you sure you want to delete this recipe?</h1>
+    </div>
+
+
+    <!-- EDIT & DELETE BUTTON CONTAINER -->
     <div class="recipe-button-container">
+        <!-- EDIT BUTTON -->
         <a href="/edit/<%= single._id %>" type="button">
             <i class="fa-solid fa-pencil"></i>
         </a>
-        <a href="/delete/<%= single._id %>" type="button">
+        <!-- DELETE BUTTON -->
+        <a id="delete-button" type="button">
             <i class="fa-solid fa-ban"></i>
         </a>
     </div>

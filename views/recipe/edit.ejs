@@ -1,12 +1,17 @@
 <div id="edit-modal" class="modal">
+    <!-- BACK BUTTON -->
     <a href="/" class="close">&times;</a>
 
+    <!-- EDIT NEW RECIPE FORM -->
     <form action="/edit/<%= single._id %>?_method=PUT" method="POST" autocomplete="off">
+        
+        <!-- RECIPE NAME -->
         <div class="form-group">
             <label id="name-label" for="name">Name</label>
             <input type="text" name="name" class="form-control" placeholder="Enter recipe name" value="<%= single.name %>" required />
         </div>
 
+        <!-- RECIPE CATEGORY -->
         <div class="form-group">
             <label>Which best describes your recipe?</label>
             <select id="dropdown" name="category" class="form-control" required>
@@ -22,24 +27,29 @@
             </select>
         </div>
 
+        <!-- RECIPE INGREDIENTS -->
         <div class="form-group">
             <label>Ingredients</label>
             <div class="ingredients-list">
                 <div class="ingredient-div">
                     <input type="text" name="ingredients" class="form-control" value="<%= single.ingredients %>">
-                    <i class="remove-ingredient fa-solid fa-cookie-bite fa-2xs"></i>
+                    <i class="remove-ingredient fa-solid fa-ban fa-2xs"></i>
                 </div>
             </div>
+
+            <!-- ADD INGREDIENT BUTTON -->
             <div class="ingredient-button-container">
                 <button type="button" class="ingredient-button">+ ingredient</button>
             </div>
         </div>
 
+        <!-- RECIPE INSTRUCTIONS -->
         <div class="form-group">
             <label>Instructions</label>
             <textarea id="instructions" class="input-textarea" name="instructions" placeholder="Enter instructions here..." value="<%= single.instructions %>" required></textarea>
         </div>
 
+        <!-- SUBMIT FORM BUTTON -->
         <div class="form-group" id="create-button-container">
             <button type="submit" class="submit-button" id="submit-button">update recipe</button>
         </div>

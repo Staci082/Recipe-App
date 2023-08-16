@@ -1,9 +1,12 @@
 <div class="modal" id="random-modal">
+    <!-- BACK BUTTON -->
     <a href="/" class="close">&times;</a>
 
+    <!-- RECIPE TITLE -->
     <h1 class="recipe-title">Blueberry Pancakes</h1>
 
     <div id="selected-recipe-container">
+        <!-- INGREDIENT LIST CONTAINER-->
         <ul id="selected-recipe-list">
             <li>2 eggs</li>
             <li>1 cup flour</li>
@@ -13,6 +16,7 @@
             <li>1 cup blueberries</li>
         </ul>
 
+        <!-- RECIPE INSTRUCTIONS CONTAINER -->
         <div id="recipe-intructions">
             1.Mix the milk and vinegar and let it sit for a minute or two (you’re making “buttermilk” here). 2. Whisk the dry ingredients together. Whisk the egg, milk, and melted butter into the dry ingredients until just combined. 3.Heat a nonstick pan over medium heat. Melt a little smear of
             butter in the pan (essential for giving a yummy golden brown crust). 4.Pour about 1/3 cup of batter into the hot skillet and spread it flat-like (it will be pretty thick). Arrange a few blueberries on top. Cook until you see little bubbles on top and the edges starting to firm up. Flip
@@ -20,13 +24,21 @@
         </div>
     </div>
 
-    <div> 
-        
-    </div>
+    <!-- DELETE RECIPE MODAL
+    <div class="modal" id="delete-modal">
+
+        <a href="/view" class="close">&times;</a>
+
+        <h1>Are you sure you want to delete this recipe?</h1>
+    </div> -->
+
+<!-- EDIT & DELETE BUTTON CONTAINER -->
     <div class="recipe-button-container">
+        <!-- EDIT BUTTON -->
         <a type="button">
             <i class="fa-solid fa-pencil"></i>
         </a>
+        <!-- DELETE BUTTON -->
         <a type="button">
             <i class="fa-solid fa-ban"></i>
         </a>

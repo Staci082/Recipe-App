@@ -370,4 +370,8 @@ textarea:focus {
 }
 .recipe-button-container a:hover {
   color: #fcdd88;
+}
+
+#delete-modal {
+  display: none;
 }/*# sourceMappingURL=style.css.map */
