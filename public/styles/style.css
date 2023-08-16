@@ -232,10 +232,10 @@ textarea:focus {
 }
 
 .ingredient-button {
+  box-shadow: 4px 2px 0 black;
   width: 100px;
   font-size: 0.8rem;
   margin-left: 1rem;
-  box-shadow: 4px 2px 0 black;
 }
 .ingredient-button:hover {
   transform: translate(-0.2rem, -0.2rem);
@@ -422,11 +422,18 @@ textarea:focus {
 
 .delete-answers {
   display: flex;
-  font-weight: bold;
-  font-size: 1rem;
   gap: 40px;
   margin-top: 2rem;
 }
-.delete-answers a:hover {
-  color: #fcdd88;
+.delete-answers button {
+  box-shadow: 4px 2px 0 black;
+  font-weight: bold;
+  font-size: 1rem;
+}
+.delete-answers button:hover {
+  transform: translate(-0.2rem, -0.2rem);
+}
+.delete-answers button:hover {
+  border: #fcdd88 4px solid;
+  box-shadow: 4px 2px 0 #fcdd88;
 }/*# sourceMappingURL=style.css.map */
