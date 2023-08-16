@@ -77,7 +77,7 @@ exports.viewRecipes = async (req, res) => {
     }
 
     // ITEM PER PAGE LIMIT
-    let perPage = 15
+    let perPage = 12
 
     // START PAGE = CURRENT PAGE OR 1 TO START
     let page = req.query.page || 1

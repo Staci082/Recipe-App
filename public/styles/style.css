@@ -5,7 +5,7 @@
 }
 
 body {
-  height: 100vh;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -26,6 +26,14 @@ body {
     background-position: -120px 60px;
   }
 }
+.menu-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .paint-brush {
   position: absolute;
   top: 23px;
@@ -76,6 +84,13 @@ body {
 
 #yellow {
   color: rgb(255, 192, 3);
+}
+
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
 }
 
 .main-button {
@@ -173,14 +188,14 @@ textarea {
 }
 
 button {
-  cursor: pointer;
-  font-size: inherit;
-  width: 250px;
   border: 3px solid black;
   border-radius: 5px;
   background: #fff;
   box-shadow: 8px 8px 0 black;
   padding: 0.5rem 0;
+  cursor: pointer;
+  font-size: inherit;
+  width: 250px;
   transition: all 0.2s;
 }
 button:hover {
@@ -427,6 +442,7 @@ textarea:focus {
 }
 .delete-answers button {
   box-shadow: 4px 2px 0 black;
+  width: 100px;
   font-weight: bold;
   font-size: 1rem;
 }
@@ -434,6 +450,37 @@ textarea:focus {
   transform: translate(-0.2rem, -0.2rem);
 }
 .delete-answers button:hover {
+  border: #fcdd88 4px solid;
+  box-shadow: 4px 2px 0 #fcdd88;
+}
+
+.no-button {
+  border: 3px solid black;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 8px 8px 0 black;
+  padding: 0.5rem 0;
+  cursor: pointer;
+  font-size: inherit;
+  width: 250px;
+  transition: all 0.2s;
+  box-shadow: 4px 2px 0 black;
+  width: 100px;
+  font-weight: bold;
+  font-size: 1rem;
+  text-align: center;
+}
+.no-button:hover {
+  transform: translate(-0.4rem, -0.4rem);
+}
+.no-button:active {
+  box-shadow: 0 0 0 black;
+  transform: translate(0, 0);
+}
+.no-button:hover {
+  transform: translate(-0.2rem, -0.2rem);
+}
+.no-button:hover {
   border: #fcdd88 4px solid;
   box-shadow: 4px 2px 0 #fcdd88;
 }/*# sourceMappingURL=style.css.map */
