@@ -18,7 +18,7 @@ const Schema = mongoose.Schema
 const recipeSchema = new Schema({
     name: {
         type: String,
-        trim: true,
+        trim: true
     },
     category: {
         type: String,

@@ -160,25 +160,24 @@ textarea {
 }
 
 .ingredients-list {
-    width: 100%;
+    position: relative;
+    @include flex;
+    margin: 1rem 0;
+    @include input;
+    width: 90%;
+    border: none;
 }
 
-.ingredient-div {
-    position: relative;
-    display: flex;
-    align-items: center;
-    margin: 0 0 1rem 0.5rem;
-    @include input;
-    width: 100%;
-    border: none;
+    // & .remove-ingredient {
+    //     position: absolute;
+    //     right: 3rem;
+    //     cursor: pointer;
+    //     color: $grey;
+    //     z-index: 2;
 
-    & .remove-ingredient {
-        position: absolute;
-        right: 3rem;
-        cursor: pointer;
-        color: $grey;
-        z-index: 2;
-    }
+.new-ingredient{
+    width: 80%;
+    margin: 0.2rem 0;
 }
 .ingredient-button-container {
     width: 100%;

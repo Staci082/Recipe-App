@@ -160,14 +160,11 @@ textarea:focus {
 }
 
 .ingredients-list {
-  width: 100%;
-}
-
-.ingredient-div {
   position: relative;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  margin: 0 0 1rem 0.5rem;
+  margin: 1rem 0;
   width: 90%;
   padding: 0.2rem 0.5rem;
   color: #495057;
@@ -175,15 +172,13 @@ textarea:focus {
   border: 1px solid #ced4da;
   border-radius: 0.25rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  width: 100%;
+  width: 90%;
   border: none;
 }
-.ingredient-div .remove-ingredient {
-  position: absolute;
-  right: 3rem;
-  cursor: pointer;
-  color: #495057;
-  z-index: 2;
+
+.new-ingredient {
+  width: 80%;
+  margin: 0.2rem 0;
 }
 
 .ingredient-button-container {
