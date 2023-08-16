@@ -32,9 +32,8 @@ router.get('/edit/:id', recipeController.editPage)
 // EDIT SELECTED RECIPE
 router.put('/edit/:id', recipeController.editRecipe)
 
-
 // DELETE SELECTED RECIPE
-router.delete('/delete/:id', recipeController.deleteRecipe)
+router.delete('/edit/:id', recipeController.deleteRecipe)
 
 // GET RANDOM RECIPE
 router.get('/random', recipeController.randomRecipe)

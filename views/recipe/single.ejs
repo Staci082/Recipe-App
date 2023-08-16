@@ -18,7 +18,7 @@
     </div>
 
     <!-- DELETE RECIPE MODAL -->
-    <div class="modal" id="delete-modal">
+    <div class="modal delete-modal" id="delete-modal">
         <!-- BACK BUTTON -->
         <a href="/view/<%= single.id %>" class="close">&times;</a>
 
@@ -26,7 +26,10 @@
 
         <div class="delete-answers">
             <a href="/view/<%= single.id %>">NO</a>
-            <a href="/delete/<%= single.id %>">YES</a>
+
+            <form action="/edit/<%= single._id %>?_method=DELETE" method="POST">
+                <button type="submit">YES</button>
+            </form>
         </div>
     </div>
 
