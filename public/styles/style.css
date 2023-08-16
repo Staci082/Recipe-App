@@ -28,8 +28,8 @@ body {
 }
 .paint-brush {
   position: absolute;
-  top: 20px;
-  left: 20px;
+  top: 23px;
+  left: 15px;
   color: black;
   cursor: pointer;
   z-index: 2;
@@ -42,11 +42,15 @@ body {
   position: absolute;
   list-style: none;
   left: 0px;
-  top: 50px;
+  top: 13px;
   width: 60px;
-  padding: 0.5em 0;
+  padding: 2em 0 0.5em 0;
   gap: 10px;
   display: none;
+  background: rgba(255, 255, 255, 0.31);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.1px);
+  -webkit-backdrop-filter: blur(7.1px);
 }
 .color-nav li i:hover {
   cursor: pointer;

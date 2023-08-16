@@ -36,9 +36,9 @@ $lightpink: hsl(307, 89%, 93%);
     align-items: center;
 }
 
-@mixin all-transition($time){
-	transition: all $time;
-	-webkit-transition: all $time;
+@mixin all-transition($time) {
+    transition: all $time;
+    -webkit-transition: all $time;
 }
 
 body {
@@ -64,8 +64,8 @@ body {
 
 .paint-brush {
     position: absolute;
-    top: 20px;
-    left: 20px;
+    top: 23px;
+    left: 15px;
     color: black;
     cursor: pointer;
     z-index: 2;
@@ -75,14 +75,18 @@ body {
     position: absolute;
     list-style: none;
     left: 0px;
-    top: 50px;
+    top: 13px;
     width: 60px;
-    padding: 0.5em 0;
+    padding: 2em 0 0.5em 0;
     gap: 10px;
     display: none;
+    background: rgba(255, 255, 255, 0.31);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.1px);
+    -webkit-backdrop-filter: blur(7.1px);
     & li i:hover {
-            cursor: pointer;
-    } 
+        cursor: pointer;
+    }
 }
 #pink {
     color: deeppink;
@@ -111,7 +115,7 @@ body {
     @include flex;
     position: relative;
     margin: 3em 0;
-    width: 40%; 
+    width: 40%;
     min-width: 300px;
     height: auto;
     @include boxStyle;
@@ -203,14 +207,14 @@ textarea {
     border: none;
 }
 
-    // & .remove-ingredient {
-    //     position: absolute;
-    //     right: 3rem;
-    //     cursor: pointer;
-    //     color: $grey;
-    //     z-index: 2;
+// & .remove-ingredient {
+//     position: absolute;
+//     right: 3rem;
+//     cursor: pointer;
+//     color: $grey;
+//     z-index: 2;
 
-.new-ingredient{
+.new-ingredient {
     width: 80%;
     margin: 0.2rem 0;
 }
@@ -315,7 +319,6 @@ textarea {
 
 .pagination a:hover:not(.active) {
     background-color: $lightyellow;
-
 }
 
 .pagination a:first-child {
@@ -380,5 +383,4 @@ textarea {
 
 #delete-modal {
     display: none;
-    
 }
