@@ -10,7 +10,7 @@ exports.homepage = async (req, res) => {
 
     // TAB TITLE
     const locals = {
-        title: "Home page"
+        title: "Fiesta Flavors"
     }
 
     try {
@@ -258,12 +258,17 @@ exports.randomRecipe = async (req, res) => {
 
 
     try {
-        random = await Recipe.aggregate([{$sample: {size: 1}}])
+
+        let count = await Recipe.find().countDocuments()
+        let random = Math.floor(Math.random() * count)
+        let recipe = await Recipe.findOne().skip(random).exec()
+
 
         const locals = {
-            title: random.name
+            title: recipe.name
         }
-        res.render('recipe/random', {locals, random} )
+
+        res.render('recipe/random', {locals, recipe} )
 
     } catch (error) {
         console.log(error)
