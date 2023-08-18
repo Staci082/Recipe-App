@@ -263,7 +263,6 @@ exports.randomRecipe = async (req, res) => {
         let random = Math.floor(Math.random() * count)
         let recipe = await Recipe.findOne().skip(random).exec()
 
-
         const locals = {
             title: recipe.name
         }

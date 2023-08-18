@@ -65,10 +65,6 @@ $smallShadow: 4px 2px 0;
 
 
 body {
-    position: relative;
-    @include flex;
-    justify-content: center;
-    font-family: "Poppins", Verdana;
     background-size: 60px 60px;
     animation: slide 8s infinite linear;
     background-color: $orange;
@@ -84,12 +80,16 @@ body {
     }
 }
 
-// need extra container here because moving body-background wont flex center
-.menu-container {
-    height: 100vh;
+.main-container {
+    height: 100vh;  // transparent container needed to center elements, since body background is always moving
+    width: 100vw;
+    position: relative;
     @include flex;
     justify-content: center;
+    font-family: "Poppins", Verdana;
 }
+
+
 
 .paint-brush {
     position: absolute;
@@ -149,7 +149,6 @@ body {
 .modal {
     @include flex;
     position: relative;
-    margin: 3em 0;
     width: clamp(300px, 40%, 1000px);
     min-width: 300px;
     height: auto;
@@ -451,4 +450,14 @@ textarea {
         border: $orange 4px solid;
         box-shadow: $smallShadow $orange;
     }
+}
+
+.reset-random {
+    @include boxStyle;
+    @include button;
+    width: auto;
+    padding: 0.5em 1em;
+    position: absolute;
+    top: 30px;
+    left: 20px;
 }
