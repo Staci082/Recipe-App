@@ -12,14 +12,16 @@
 .logo {
     display: flex;
     align-items: center;
-    justify-content: center;
     grid-area: 1 / 1 / 2 / 2; 
     background: rgb(255, 255, 255);
+    font-family: gluten, comic sans-serif;
+    gap: 1em;
+    margin-left: 1em;
 }
 
 .search-bar {
     outline: none;
-    height: 50%;
+    height: 60%;
     width: 50%;
     min-width: 250px;
     border-radius: 15px;

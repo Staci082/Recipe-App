@@ -1,8 +1,16 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gluten:wght@500&display=swap");
 .side-menu-container {
   grid-area: 2/1/13/3;
   background: rgb(140, 230, 140);
   border-bottom-left-radius: 15px;
   border-top-left-radius: 15px;
+  padding: 5em 2em;
+}
+
+.menuItem {
+  margin-bottom: 1.5em;
+  font-weight: bold;
 }
 
 .header-container {
@@ -19,14 +27,16 @@
 .logo {
   display: flex;
   align-items: center;
-  justify-content: center;
   grid-area: 1/1/2/2;
   background: rgb(255, 255, 255);
+  font-family: gluten, comic sans-serif;
+  gap: 1em;
+  margin-left: 1em;
 }
 
 .search-bar {
   outline: none;
-  height: 50%;
+  height: 60%;
   width: 50%;
   min-width: 250px;
   border-radius: 15px;
@@ -36,7 +46,6 @@
 
 .categories-container {
   grid-area: 2/3/3/10;
-  background: rgb(7, 51, 15);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -56,13 +65,14 @@
 
 .pagination-container {
   grid-area: 12/3/13/10;
-  background: rgb(191, 244, 202);
   border-bottom-right-radius: 15px;
   text-align: center;
 }
 
 .pagination {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 2em 0 1em 0;
   font-weight: bold;
 }
@@ -76,11 +86,29 @@
   text-decoration: none;
   border-radius: 5px;
 }
+.pagination a:hover {
+  background: rgb(137, 233, 137);
+}
+
+.pagination a.active {
+  background: rgb(34, 230, 34);
+  color: white;
+}
 
 body {
+  font-family: Poppins, sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  list-style: none;
 }
 
 .App {

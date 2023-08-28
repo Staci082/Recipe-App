@@ -1,6 +1,5 @@
 .pagination-container {
     grid-area: 12 / 3 / 13 / 10;
-    background: rgb(191, 244, 202);
     border-bottom-right-radius: 15px;
     text-align: center;
 }
@@ -8,7 +7,9 @@
 
 
 .pagination {
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin: 2em 0 1em 0;
     font-weight: bold;
     & .arrow {
@@ -22,15 +23,17 @@
     text-decoration: none;
     border-radius: 5px;
     // font-size: $smallFont;
-    // &:hover {
-    //     background: $yellow;
-    // }
+    &:hover {
+        background: rgb(137, 233, 137);
+        // background: $yellow;
+    }
 }
 
-// .pagination a.active {
-//     background-color: $orange;
-//     color: white;
-// }
+.pagination a.active {
+    // background-color: $orange;
+    background: rgb(34, 230, 34);
+    color: white;
+}
 
 // .pagination a:hover:not(.active) {
 //     background-color: $lightyellow;
