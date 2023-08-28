@@ -1,0 +1,28 @@
+.header-container {
+    grid-area: 1 / 2 / 2 / 10;
+    background: rgb(116, 234, 116);
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2em;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: 1 / 1 / 2 / 2; 
+    background: rgb(255, 255, 255);
+}
+
+.search-bar {
+    outline: none;
+    height: 50%;
+    width: 50%;
+    min-width: 250px;
+    border-radius: 15px;
+    border: none;
+    padding: 0 1em;
+}

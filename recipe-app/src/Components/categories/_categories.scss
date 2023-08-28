@@ -1,0 +1,15 @@
+.categories-container {
+    grid-area:  2 / 3 / 3 / 10;
+    background: rgb(7, 51, 15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+}
+
+.cat-item-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1em;
+}

@@ -1,0 +1,24 @@
+@import "../Components/sideMenu/sideMenu";
+@import "../Components/header/header";
+@import "../Components/categories/categories";
+@import "../Components/items/items";
+@import "../Components/pagination/pagination";
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.App {
+    width: 94vw;
+    height: 94vh;
+    //background: teal;
+    margin: 10px;
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}

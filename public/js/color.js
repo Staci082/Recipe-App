@@ -1,3 +1,6 @@
+
+// COLOR NAV
+
 const paintBrush = document.getElementById('color-picker')
 const colorNav = document.getElementById('color-nav')
 
@@ -14,8 +17,18 @@ colorNav.addEventListener('mouseout', () => {
 })
 
 
+// COLOR TOGGLES
+
 const pink = document.getElementById('pink')
 const cyan = document.getElementById('cyan')
 const green = document.getElementById('green')
 const purple = document.getElementById('purple')
 const yellow = document.getElementById('yellow')
+
+const body = document.getElementsByTagName('body')
+
+
+yellow.addEventListener('click', () => {
+    body.classList.add('yellow')
+    console.log('yellow')
+})
