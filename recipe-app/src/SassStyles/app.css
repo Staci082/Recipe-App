@@ -13,6 +13,10 @@
   flex-direction: column;
   align-items: center;
   margin-top: 1em;
+  border-radius: 15px;
+}
+.cat-item-container:hover {
+  background: rgb(221, 246, 221);
 }
 
 .cat-item-title {
