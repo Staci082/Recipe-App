@@ -1,33 +1,35 @@
+
 function SideMenu() {
     const menuItems = [
         {
             title: "Dashboard",
-            href: "",
+            href: "/",
             icon: "",
+                // if empty can add something like 'add recipes to fill this space + link to discover'
         },
         {
             title: "Discover",
-            href: "",
+            href: "/discover",
             icon: "",
         },
         {
             title: "My Recipes",
-            href: "",
+            href: "/recipes",
             icon: "",
         },
         {
             title: "Create a Recipe",
-            href: "",
+            href: "/create",
             icon: "",
         },
         {
             title: "Add an Internet Recipe",
-            href: "",
+            href: "/add",
             icon: "",
         },
         {
             title: "Grocery List",
-            href: "",
+            href: "/list",
             icon: "",
         },
     ];

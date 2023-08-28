@@ -2,14 +2,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Gluten:wght@500&display=swap');
 
 
-@import "../Components/sideMenu/sideMenu";
-@import "../Components/header/header";
+// COMPONENT IMPORTS
 @import "../Components/categories/categories";
-@import "../Components/items/items";
+@import "../Components/header/header";
+@import "../Components/login/login";
 @import "../Components/pagination/pagination";
+@import "../Components/recipes/recipes";
+@import "../Components/sideMenu/sideMenu";
 
 
-
+// UNIVERSAL STYLING
 body {
     font-family: Poppins, sans-serif;
     display: flex;
@@ -26,6 +28,13 @@ ul {
     list-style: none;
 }
 
+button {
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+// APP STYLING
 .App {
     width: 94vw;
     height: 94vh;

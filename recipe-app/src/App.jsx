@@ -1,10 +1,11 @@
 
 import "./SassStyles/app.scss";
-import SideMenu from './Components/sideMenu/SideMenu';
-import Header from "./Components/header/Header";
 import Categories from "./Components/categories/Categories";
-import Items from "./Components/items/Items";
+// import Login from "./Components/login/Login";
+import Header from "./Components/header/Header";
 import Pagination from "./Components/pagination/Pagination";
+import Recipes from "./Components/recipes/Recipes";
+import SideMenu from './Components/sideMenu/SideMenu';
 
 function App() {
 
@@ -15,7 +16,7 @@ function App() {
               <Header/>
               <SideMenu/>
               <Categories/>
-              <Items/>
+              <Recipes/>
               <Pagination/>
               
             </div>

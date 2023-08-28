@@ -1,16 +1,27 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Gluten:wght@500&display=swap");
-.side-menu-container {
-  grid-area: 2/1/13/3;
-  background: rgb(140, 230, 140);
-  border-bottom-left-radius: 15px;
-  border-top-left-radius: 15px;
-  padding: 5em 2em;
+.categories-container {
+  grid-area: 2/3/3/10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
 }
 
-.menuItem {
-  margin-bottom: 1.5em;
-  font-weight: bold;
+.cat-item-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1em;
+}
+
+.cat-item-title {
+  font-size: 0.9rem;
+}
+
+.cat-item-img {
+  transform: scale(0.8);
+  margin-bottom: -1em;
 }
 
 .header-container {
@@ -44,23 +55,8 @@
   padding: 0 1em;
 }
 
-.categories-container {
-  grid-area: 2/3/3/10;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2em;
-}
-
-.cat-item-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 1em;
-}
-
-.items-container {
-  grid-area: 2/3/3/10;
+#login-button:hover {
+  color: white;
 }
 
 .pagination-container {
@@ -75,9 +71,6 @@
   justify-content: center;
   margin: 2em 0 1em 0;
   font-weight: bold;
-}
-.pagination .arrow {
-  font-size: 2rem;
 }
 
 .pagination a {
@@ -95,6 +88,24 @@
   color: white;
 }
 
+.items-container {
+  grid-area: 3/3/12/10;
+  padding: 0 2em;
+}
+
+.side-menu-container {
+  grid-area: 2/1/13/3;
+  background: rgb(140, 230, 140);
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
+  padding: 5em 2em;
+}
+
+.menuItem {
+  margin-bottom: 1.5em;
+  font-weight: bold;
+}
+
 body {
   font-family: Poppins, sans-serif;
   display: flex;
@@ -109,6 +120,12 @@ a {
 
 ul {
   list-style: none;
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
 }
 
 .App {
