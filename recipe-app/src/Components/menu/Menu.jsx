@@ -28,7 +28,7 @@ function menu() {
                 <h5>Menu</h5>
                 <ul>
                     {menuItems.map((item) => (
-                        <li className="menuItem">
+                        <li className="menuItem" key={item.title}>
                             <a href={item.href}>{item.title}</a>
                         </li>
                     ))}

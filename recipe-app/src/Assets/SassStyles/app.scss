@@ -14,6 +14,7 @@
 
 @import "../../Pages/create/create";
 @import "../../Pages/edit/edit";
+@import "../../Pages/grocery-list/groceryList";
 @import "../../Pages/login/login";
 @import "../../Pages/recipe/recipe";
 @import "../../Pages/register/register";
@@ -21,7 +22,7 @@
 // GLOBAL STYLING
 html {
     scroll-behavior: smooth;
-    }
+}
 
 body {
     font-family: Poppins, sans-serif;
@@ -43,14 +44,8 @@ button {
     background: none;
 }
 
-.form-back-button {
-    position: absolute;
-    top: 0;
-    right: 0;
-    font-size: 1.5rem;
-}
 
-.big-form-back-button {
+.form-back-button {
     font-size: 1.5rem;
     position: absolute;
     right: 330px;

@@ -10,6 +10,7 @@
 }
 
 .cat-item-container {
+    cursor: pointer;
     width: clamp(1.5rem, 15vw, 6rem);
     display: flex;
     flex-direction: column;

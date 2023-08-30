@@ -2,8 +2,17 @@ console.log('Hello world!')
 
 import express from 'express'
 import bodyParser from 'body-parser'
+
+import ConnectDB from './src/Server/src/config/db.js'
+
+
+
+
 const app = express()
-const port = process.env.PORT
+// const port = 5173
+const port = process.env.VITE_PORT
+
+ConnectDB()
 
 app.use(bodyParser.json())
 app.use(
@@ -13,7 +22,7 @@ app.use(
 )
 
 app.get('/', (req, res) => {
-    response.json({message: 'Backend API'})
+    res.json({message: 'Backend API'})
 })
 
 app.listen(port, () => {

@@ -3,7 +3,7 @@ import { HiPlus } from "react-icons/hi2";
 function Create() {
     return (
         <div className="create-container">
-            <a href="/" className="big-form-back-button ">
+            <a href="/" className="form-back-button ">
                 &times;
             </a>
             <form className="create-form">

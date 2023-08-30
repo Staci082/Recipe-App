@@ -39,7 +39,7 @@ function Categories() {
         <div className="categories-container">
                     
             {categories.map((item) => (
-                <button className="cat-item-container">
+                <button className="cat-item-container" key={item.title}>
                     <img className="cat-item-img" src={item.img} />
                     <h4 className="cat-item-title">{item.title}</h4>
                 </button>
