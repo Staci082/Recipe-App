@@ -6,14 +6,20 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    @include lg {
+        grid-area: 1 / 1 / 5 / 6;
+    }
 }
 
 
 
 .recipe {
     cursor: pointer;
-    width: 20%;
     min-width: 250px;
     height: 60px;
     @include box;
+
+    @include sm {
+        min-width: 300px;
+    }
 }

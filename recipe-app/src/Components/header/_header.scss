@@ -11,7 +11,7 @@
     align-items: center; 
     font-family: gluten, comic sans-serif;
     gap: 1em;
-    @include md {
+    @include lg {
         display: none;
     }
 }
@@ -20,7 +20,7 @@
     display: none;
     font-size: 3rem;
 
-    @include md {
+    @include lg {
         display: flex;
     }
 }

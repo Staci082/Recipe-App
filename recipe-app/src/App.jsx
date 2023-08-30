@@ -14,7 +14,6 @@ function App() {
         <>
             <div className="global-container">
                 <Header />
-                <Categories />
                 <div className="main-container">
                     <Menu />
                     <Recipes />

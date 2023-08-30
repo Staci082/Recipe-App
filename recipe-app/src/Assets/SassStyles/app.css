@@ -4,19 +4,18 @@
 /* use content so we can choose properties when using the mixin instead of hardcoding */
 /* mixin for specific breakpoint (flexible) */
 .categories-container {
+  border: cyan solid 2px;
   display: flex;
   justify-content: center;
   align-items: center;
-  justify-content: flex-end;
-  position: relative;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1em;
-  margin: 2em 2em 3em 0;
-  overflow-x: auto;
-  flex-wrap: nowrap;
+  margin-top: 2em;
 }
 @media (max-width: 720px) {
   .categories-container {
-    margin-right: 1em;
+    width: 100%;
   }
 }
 
@@ -56,7 +55,7 @@
   font-family: gluten, comic sans-serif;
   gap: 1em;
 }
-@media (max-width: 720px) {
+@media (max-width: 960px) {
   .logo {
     display: none;
   }
@@ -66,7 +65,7 @@
   display: none;
   font-size: 3rem;
 }
-@media (max-width: 720px) {
+@media (max-width: 960px) {
   .menu-button {
     display: flex;
   }
@@ -167,15 +166,24 @@
   justify-content: center;
   flex-wrap: wrap;
 }
+@media (max-width: 960px) {
+  .recipe-container {
+    grid-area: 1/1/5/6;
+  }
+}
 
 .recipe {
   cursor: pointer;
-  width: 20%;
   min-width: 250px;
   height: 60px;
   border: 2px black solid;
   box-shadow: 8px 8px 0px 0px rgba(0, 0, 0, 0.75);
   border-radius: 10px;
+}
+@media (max-width: 480px) {
+  .recipe {
+    min-width: 300px;
+  }
 }
 
 .side-container {
@@ -184,14 +192,14 @@
   align-items: flex-start;
   margin-left: 2em;
 }
-@media (max-width: 720px) {
+@media (max-width: 960px) {
   .side-container {
     display: none;
   }
 }
 
 .menu-container {
-  width: 230px;
+  width: 180px;
   height: 330px;
   border: 2px black solid;
   box-shadow: 8px 8px 0px 0px rgba(0, 0, 0, 0.75);
@@ -200,7 +208,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 1.5em 1.5em 0 1.5em;
+  padding: 2em 1.5em 0 1em;
   background: rgb(221, 246, 221);
 }
 
@@ -374,6 +382,10 @@
   transform: scale(1.1);
   border: rgb(74, 180, 74) solid 2px;
   box-shadow: 4px 4px 0px 0px rgba(74, 180, 74, 0.75);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {

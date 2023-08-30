@@ -1,48 +1,25 @@
-
+import Categories from "../categories/Categories";
 
 function Recipes() {
-  return (
-    <div className="recipe-container">
-        
-        <div className="recipe">
+    return (
+        <div className="recipe-container">
+            <Categories />
 
-        </div>
-        <div className="recipe">
-          
-        </div>
-        <div className="recipe">
-          
-        </div>
-        <div className="recipe">
-          
-        </div>
-        <div className="recipe">
-          
-        </div>
-        <div className="recipe">
-          
-        </div>
-        <div className="recipe">
-          
-        </div>
-        <div className="recipe">
-          
-        </div>
-        <div className="recipe">
-          
-        </div>
-        <div className="recipe">
-          
-        </div>
-        <div className="recipe">
-          
-        </div>
-        <div className="recipe">
-          
-        </div>
 
-    </div>
-  )
+            <div className="recipe"></div>
+            <div className="recipe"></div>
+            <div className="recipe"></div>
+            <div className="recipe"></div>
+            <div className="recipe"></div>
+            <div className="recipe"></div>
+            <div className="recipe"></div>
+            <div className="recipe"></div>
+            <div className="recipe"></div>
+            <div className="recipe"></div>
+            <div className="recipe"></div>
+            <div className="recipe"></div>
+        </div>
+    );
 }
 
-export default Recipes
+export default Recipes;

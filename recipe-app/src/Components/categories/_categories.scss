@@ -1,14 +1,12 @@
 .categories-container {
+    border: cyan solid 2px;
     @include flex;
-    justify-content: flex-end;
-    position: relative;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 1em;
-    margin: 2em 2em 3em 0;
-    overflow-x: auto;
-    flex-wrap: nowrap;
-
+    margin-top: 2em;
     @include md {
-        margin-right: 1em;
+        width: 100%;
     }
 }
 

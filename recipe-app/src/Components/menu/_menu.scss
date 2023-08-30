@@ -6,21 +6,21 @@
     display: flex;
     align-items: flex-start;
     margin-left: 2em;
-    @include md {
+    @include lg {
         display: none;
     }
 }
 
 
 .menu-container {
-    width: 230px;
+    width: 180px;
     height: 330px;
     @include box;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    padding: 1.5em 1.5em 0 1.5em;
+    padding: 2em 1.5em 0 1em;
     background: rgb(221, 246, 221);
 }
 
