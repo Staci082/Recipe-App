@@ -19,14 +19,14 @@ function App() {
 
     
 
-            {/* <Edit/> */}
-                {/* <Header />
+            
+                <Header />
                 <div className="main-container">
                     <Menu />
                     <Recipes />
                     <Pagination />
                 </div>
-                 */}
+                
             </div>
         </>
     );
