@@ -5,15 +5,16 @@
 @import "./mixins";
 
 // COMPONENT IMPORTS
-@import "../Components/categories/categories";
-@import "../Components/header/header";
-@import "../Pages/login/login";
-@import "../Components/pagination/pagination";
-@import "../Components/recipes/recipes";
-@import "../Components/sideMenu/sideMenu";
+@import "../../Components/categories/categories";
+@import "../../Components/header/header";
+@import "../../Pages/login/login";
+@import "../../Components/pagination/pagination";
+@import "../../Components/recipes/recipes";
+@import "../../Components/menu/menu";
 
-@import "../Pages/login/login";
-@import "../Pages/register/register";
+@import "../../Pages/create/create";
+@import "../../Pages/login/login";
+@import "../../Pages/register/register";
 
 // GLOBAL STYLING
 body {
@@ -31,11 +32,21 @@ ul {
     list-style: none;
 }
 
+button {
+    border: none;
+    background: none;
+}
+
+.form-back-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 1.5rem;
+}
 
 // APP STYLING
 .global-container {
     width: clamp(300px, 90vw, 1300px);
-
     background: rgb(255, 255, 255);
     @include box;
     margin: 30px;
@@ -52,6 +63,5 @@ ul {
     @include md {
         @include flex;
         flex-direction: column;
-        
     }
 }

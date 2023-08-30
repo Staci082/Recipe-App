@@ -86,13 +86,13 @@
 .login-container {
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 .login-form {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
   outline: none;
   width: clamp(300px, 40vw, 300px);
   flex-direction: column;
@@ -107,14 +107,19 @@
   height: 40px;
   outline: none;
   padding: 0 0.5em;
+  margin: 0.5em 0 1.5em 0;
   width: 90%;
+  font-family: inherit;
+  font-size: 1rem;
+  border: 2px black solid;
+  box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.75);
 }
 .login-form .submit-button {
   margin-top: 1em;
   font-size: 1.5rem;
   border: 2px black solid;
   box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.75);
-  border-radius: 5px;
+  border-radius: 2px;
   cursor: pointer;
   padding: 10px;
   transition: ease-in-out 0.3s;
@@ -208,16 +213,85 @@
   color: rgb(74, 180, 74);
 }
 
+.create-container {
+  display: flex;
+  justify-content: center;
+}
+
+.form-separator {
+  display: flex;
+  justify-content: space-around;
+}
+@media (max-width: 720px) {
+  .form-separator {
+    flex-direction: column;
+  }
+}
+
+.form-inner-separator {
+  position: relative;
+  outline: none;
+  width: clamp(300px, 40vw, 300px);
+  flex-direction: column;
+  margin: 2em;
+  gap: 1em;
+}
+
+.create-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.create-form label {
+  width: 100%;
+  font-size: 1.5rem;
+}
+.create-form input,
+.create-form textarea,
+.create-form select {
+  height: 40px;
+  outline: none;
+  padding: 0 0.5em;
+  margin: 0.5em 0 1.5em 0;
+  width: 90%;
+  font-family: inherit;
+  font-size: 1rem;
+  border: 2px black solid;
+  box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.75);
+}
+.create-form select {
+  width: 96.5%;
+}
+.create-form textarea {
+  height: 200px;
+}
+.create-form .submit-button {
+  margin-top: 1em;
+  font-size: 1.5rem;
+  border: 2px black solid;
+  box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 2px;
+  cursor: pointer;
+  padding: 10px;
+  transition: ease-in-out 0.3s;
+}
+.create-form .submit-button:hover {
+  transform: scale(1.1);
+  border: rgb(74, 180, 74) solid 2px;
+  box-shadow: 4px 4px 0px 0px rgba(74, 180, 74, 0.75);
+}
+
 .login-container {
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 .login-form {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
   outline: none;
   width: clamp(300px, 40vw, 300px);
   flex-direction: column;
@@ -232,14 +306,19 @@
   height: 40px;
   outline: none;
   padding: 0 0.5em;
+  margin: 0.5em 0 1.5em 0;
   width: 90%;
+  font-family: inherit;
+  font-size: 1rem;
+  border: 2px black solid;
+  box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.75);
 }
 .login-form .submit-button {
   margin-top: 1em;
   font-size: 1.5rem;
   border: 2px black solid;
   box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.75);
-  border-radius: 5px;
+  border-radius: 2px;
   cursor: pointer;
   padding: 10px;
   transition: ease-in-out 0.3s;
@@ -253,13 +332,13 @@
 .register-container {
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 .register-form {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
   outline: none;
   width: clamp(300px, 40vw, 300px);
   flex-direction: column;
@@ -274,14 +353,19 @@
   height: 40px;
   outline: none;
   padding: 0 0.5em;
+  margin: 0.5em 0 1.5em 0;
   width: 90%;
+  font-family: inherit;
+  font-size: 1rem;
+  border: 2px black solid;
+  box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.75);
 }
 .register-form .submit-button {
   margin-top: 1em;
   font-size: 1.5rem;
   border: 2px black solid;
   box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.75);
-  border-radius: 5px;
+  border-radius: 2px;
   cursor: pointer;
   padding: 10px;
   transition: ease-in-out 0.3s;
@@ -307,6 +391,18 @@ a {
 
 ul {
   list-style: none;
+}
+
+button {
+  border: none;
+  background: none;
+}
+
+.form-back-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 1.5rem;
 }
 
 .global-container {

@@ -1,0 +1,47 @@
+.create-container {
+    display: flex;
+    justify-content: center;
+}
+
+.form-separator {
+    display: flex;
+    justify-content: space-around;
+    @include md{
+        flex-direction: column;
+    }
+}
+
+.form-inner-separator {
+    @include form;
+}
+
+.create-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    & label {
+        @include label;
+    }
+
+    & input,
+    textarea,
+    select {
+        @include input;
+    }
+
+    & select {
+        width: 96.5%;
+    }
+
+    & textarea {
+        height: 200px;
+    }
+
+    & .submit-button {
+        margin-top: 1em;
+        font-size: 1.5rem;
+        @include button;
+    }
+}

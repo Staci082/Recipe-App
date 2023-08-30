@@ -4,14 +4,15 @@ function Login() {
     <div className="login-container">
 
             <form className="login-form">
-                <h2>Login</h2>
+                <a href="/" className="form-back-button">&times;</a>
+                <h2>Log in</h2>
                 <label htmlFor="name">Username:</label>
                 <input type="text" id="name" name="name"/>
 
                 <label htmlFor="password">Password:</label>
-                <input id="password" name="mpassword"/>
+                <input type="password" id="password" name="password"/>
 
-                <button type="submit" className="submit-button">Submit</button>
+                <button type="submit" className="submit-button">Log in</button>
             </form>
 
         </div>

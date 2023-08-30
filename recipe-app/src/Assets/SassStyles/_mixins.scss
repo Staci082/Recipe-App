@@ -12,8 +12,8 @@
 
 @mixin button {
     border: $border;
-    box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.75);
-    border-radius: 5px;
+    box-shadow: $box-shadow;
+    border-radius: 2px;
     cursor: pointer;
     padding: 10px;
     transition: ease-in-out 0.3s;
@@ -25,6 +25,7 @@
 }
 
 @mixin form {
+    position: relative;
     outline: none;
     width: clamp(300px, 40vw, 300px);
     flex-direction: column;
@@ -41,7 +42,12 @@
     height: 40px;
     outline: none;
     padding: 0 0.5em;
+    margin: .5em 0 1.5em 0;
     width: 90%;
+    font-family: inherit;
+    font-size: 1rem;
+    border: $border;
+    box-shadow: $box-shadow;
 }
 
 /*  MEDIA QUERIES */

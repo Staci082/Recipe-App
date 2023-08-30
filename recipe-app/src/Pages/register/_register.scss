@@ -1,6 +1,8 @@
 
+
 .register-container {
-    @include flex;
+    display: flex; 
+    justify-content: center;
 }
 
 .register-form {
