@@ -17,7 +17,7 @@ function Categories() {
             img: "https://img.icons8.com/wired/64/strawberry-cheesecake.png"
         },
         {
-            title: "Dinner",
+            title: "Dinners",
             img: "https://img.icons8.com/wired/64/spaghetti.png"
         },
         {
@@ -35,7 +35,9 @@ function Categories() {
     ];
 
     return (
+        
         <div className="categories-container">
+                    
             {categories.map((item) => (
                 <button className="cat-item-container">
                     <img className="cat-item-img" src={item.img} />
@@ -43,6 +45,7 @@ function Categories() {
                 </button>
             ))}
         </div>
+       
     );
 }
 

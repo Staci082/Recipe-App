@@ -2,9 +2,45 @@
 
 function Recipes() {
   return (
-    <div className="items-container">
-      {/* <h5>Recipes</h5> */}
+    <div className="recipe-container">
         
+        <div className="recipe">
+
+        </div>
+        <div className="recipe">
+          
+        </div>
+        <div className="recipe">
+          
+        </div>
+        <div className="recipe">
+          
+        </div>
+        <div className="recipe">
+          
+        </div>
+        <div className="recipe">
+          
+        </div>
+        <div className="recipe">
+          
+        </div>
+        <div className="recipe">
+          
+        </div>
+        <div className="recipe">
+          
+        </div>
+        <div className="recipe">
+          
+        </div>
+        <div className="recipe">
+          
+        </div>
+        <div className="recipe">
+          
+        </div>
+
     </div>
   )
 }

@@ -1,12 +1,5 @@
-
 function SideMenu() {
     const menuItems = [
-        {
-            title: "Dashboard",
-            href: "/",
-            icon: "",
-                // if empty can add something like 'add recipes to fill this space + link to discover'
-        },
         {
             title: "Discover",
             href: "/discover",
@@ -35,13 +28,18 @@ function SideMenu() {
     ];
 
     return (
-        <div className="side-menu-container">
-            <h5>Menu</h5>
-            <ul>
-                {menuItems.map((item) => (
-                    <li className="menuItem"><a href={item.href}>{item.title}</a></li>
-                ))}
-            </ul>
+        <div className="side-container">
+            
+            <div className="menu-container">
+                <h5>Menu</h5>
+                <ul>
+                    {menuItems.map((item) => (
+                        <li className="menuItem">
+                            <a href={item.href}>{item.title}</a>
+                        </li>
+                    ))}
+                </ul>
+            </div>
         </div>
     );
 }

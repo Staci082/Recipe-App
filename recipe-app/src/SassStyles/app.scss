@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Gluten:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Gluten:wght@500&display=swap");
 
+@import "./variables";
+@import "./mixins";
 
 // COMPONENT IMPORTS
 @import "../Components/categories/categories";
@@ -10,13 +12,11 @@
 @import "../Components/recipes/recipes";
 @import "../Components/sideMenu/sideMenu";
 
-
-// UNIVERSAL STYLING
+// GLOBAL STYLING
 body {
     font-family: Poppins, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex;
+    background: rgb(255, 224, 254);
 }
 
 a {
@@ -37,13 +37,23 @@ button {
 // APP STYLING
 .App {
     width: 94vw;
-    height: 94vh;
-    //background: teal;
-    margin: 10px;
-    border-radius: 15px;
+    max-width: 1300px;
+    background: rgb(255, 255, 255);
+    @include box;
+    margin: 20px;
+}
+
+.main-container {
+    background: rgb(255, 255, 255);
     display: grid;
-    grid-template-columns: repeat(9, 1fr);
-    grid-template-rows: repeat(12, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
+
+    @include md {
+        @include flex;
+        flex-direction: column;
+        
+    }
 }
