@@ -309,11 +309,85 @@
   right: 15px;
 }
 
-.create-form-back-button {
+.edit-container {
+  display: flex;
+  justify-content: center;
+}
+
+.form-separator {
+  display: flex;
+  justify-content: space-around;
+}
+@media (max-width: 720px) {
+  .form-separator {
+    flex-direction: column;
+  }
+}
+
+.form-inner-separator {
+  position: relative;
+  outline: none;
+  width: clamp(300px, 40vw, 300px);
+  flex-direction: column;
+  margin: 2em;
+  gap: 1em;
+}
+
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.edit-form label {
+  width: 100%;
   font-size: 1.5rem;
+}
+.edit-form input,
+.edit-form textarea,
+.edit-form select {
+  height: 40px;
+  outline: none;
+  padding: 0 0.5em;
+  margin: 0.5em 0 1.5em 0;
+  width: 90%;
+  font-family: inherit;
+  font-size: 1rem;
+  border: 2px black solid;
+  box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.75);
+}
+.edit-form select {
+  width: 96.5%;
+}
+.edit-form textarea {
+  height: 200px;
+  padding-top: 1em;
+}
+.edit-form .submit-button {
+  margin: 1em 0;
+  font-size: 1.5rem;
+  border: 2px black solid;
+  box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 2px;
+  cursor: pointer;
+  padding: 10px;
+  transition: ease-in-out 0.3s;
+}
+.edit-form .submit-button:hover {
+  transform: scale(1.1);
+  border: rgb(74, 180, 74) solid 2px;
+  box-shadow: 4px 4px 0px 0px rgba(74, 180, 74, 0.75);
+}
+
+.add-ingredient-container {
+  position: relative;
+}
+
+.add-ingredient-button {
+  cursor: pointer;
   position: absolute;
-  right: -100px;
-  top: 20px;
+  top: 15px;
+  right: 15px;
 }
 
 .login-container {
@@ -441,6 +515,13 @@ button {
   top: 0;
   right: 0;
   font-size: 1.5rem;
+}
+
+.big-form-back-button {
+  font-size: 1.5rem;
+  position: absolute;
+  right: 330px;
+  top: 50px;
 }
 
 .global-container {

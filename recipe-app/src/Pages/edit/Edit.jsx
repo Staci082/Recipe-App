@@ -1,13 +1,15 @@
 import { HiPlus } from "react-icons/hi2";
 
-function Create() {
+
+function Edit() {
     return (
-        <div className="create-container">
-            <a href="/" className="big-form-back-button ">
-                &times;
-            </a>
-            <form className="create-form">
-                <h2>Create Recipe</h2>
+        <>
+
+        <div className="edit-container">
+        <a href="/" className="big-form-back-button">&times;</a>
+            <form className="edit-form">
+                
+                <h2>Edit Recipe</h2>
 
                 <div className="form-separator">
                     <div className="form-inner-separator">
@@ -30,25 +32,26 @@ function Create() {
 
                         <label>Instructions</label>
                         <textarea id="instructions" className="input-textarea" name="instructions"></textarea>
-                    </div>
 
+                        
+                    </div>
+                    
                     <div className="form-inner-separator">
                         <label>Ingredients</label>
                         <div className="add-ingredient-container">
-                            <input type="text" name="ingredients" className="form-control" id="ingredient-input" />
-                            <button className="add-ingredient-button">
-                                <HiPlus size={28} />
-                            </button>
+                        <input type="text" name="ingredients" className="form-control" id="ingredient-input"/>
+                        <button className="add-ingredient-button"><HiPlus size={28}/></button>
                         </div>
                         <div className="ingredients-list"></div>
                     </div>
                 </div>
                 <button type="submit" className="submit-button">
-                    create
+                    update
                 </button>
             </form>
         </div>
+        </>
     );
 }
 
-export default Create;
+export default Edit;

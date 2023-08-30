@@ -13,7 +13,9 @@
 @import "../../Components/menu/menu";
 
 @import "../../Pages/create/create";
+@import "../../Pages/edit/edit";
 @import "../../Pages/login/login";
+@import "../../Pages/recipe/recipe";
 @import "../../Pages/register/register";
 
 // GLOBAL STYLING
@@ -46,6 +48,13 @@ button {
     top: 0;
     right: 0;
     font-size: 1.5rem;
+}
+
+.big-form-back-button {
+    font-size: 1.5rem;
+    position: absolute;
+    right: 330px;
+    top: 50px;
 }
 
 // APP STYLING
