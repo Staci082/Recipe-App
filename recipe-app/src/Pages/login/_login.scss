@@ -1,0 +1,23 @@
+
+.login-container {
+    @include flex;
+}
+
+.login-form {
+    @include flex;
+    @include form;
+    
+    & label {
+        @include label;
+    }
+
+    & input {
+        @include input;
+    }
+    
+    & .submit-button {
+        margin-top: 1em;
+        font-size: 1.5rem;
+        @include button;
+    }
+}

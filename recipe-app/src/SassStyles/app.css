@@ -83,6 +83,48 @@
   margin-left: -8px;
 }
 
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  width: clamp(300px, 40vw, 300px);
+  flex-direction: column;
+  margin: 2em;
+  gap: 1em;
+}
+.login-form label {
+  width: 100%;
+  font-size: 1.5rem;
+}
+.login-form input {
+  height: 40px;
+  outline: none;
+  padding: 0 0.5em;
+  width: 90%;
+}
+.login-form .submit-button {
+  margin-top: 1em;
+  font-size: 1.5rem;
+  border: 2px black solid;
+  box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px;
+  transition: ease-in-out 0.3s;
+}
+.login-form .submit-button:hover {
+  transform: scale(1.1);
+  border: rgb(74, 180, 74) solid 2px;
+  box-shadow: 4px 4px 0px 0px rgba(74, 180, 74, 0.75);
+}
+
 .pagination-container {
   grid-area: 5/2/6/6;
   border-bottom-right-radius: 15px;
@@ -166,6 +208,90 @@
   color: rgb(74, 180, 74);
 }
 
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  width: clamp(300px, 40vw, 300px);
+  flex-direction: column;
+  margin: 2em;
+  gap: 1em;
+}
+.login-form label {
+  width: 100%;
+  font-size: 1.5rem;
+}
+.login-form input {
+  height: 40px;
+  outline: none;
+  padding: 0 0.5em;
+  width: 90%;
+}
+.login-form .submit-button {
+  margin-top: 1em;
+  font-size: 1.5rem;
+  border: 2px black solid;
+  box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px;
+  transition: ease-in-out 0.3s;
+}
+.login-form .submit-button:hover {
+  transform: scale(1.1);
+  border: rgb(74, 180, 74) solid 2px;
+  box-shadow: 4px 4px 0px 0px rgba(74, 180, 74, 0.75);
+}
+
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.register-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  width: clamp(300px, 40vw, 300px);
+  flex-direction: column;
+  margin: 2em;
+  gap: 1em;
+}
+.register-form label {
+  width: 100%;
+  font-size: 1.5rem;
+}
+.register-form input {
+  height: 40px;
+  outline: none;
+  padding: 0 0.5em;
+  width: 90%;
+}
+.register-form .submit-button {
+  margin-top: 1em;
+  font-size: 1.5rem;
+  border: 2px black solid;
+  box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px;
+  transition: ease-in-out 0.3s;
+}
+.register-form .submit-button:hover {
+  transform: scale(1.1);
+  border: rgb(74, 180, 74) solid 2px;
+  box-shadow: 4px 4px 0px 0px rgba(74, 180, 74, 0.75);
+}
+
 body {
   font-family: Poppins, sans-serif;
   display: flex;
@@ -183,20 +309,13 @@ ul {
   list-style: none;
 }
 
-button {
-  cursor: pointer;
-  background: none;
-  border: none;
-}
-
-.App {
-  width: 94vw;
-  max-width: 1300px;
+.global-container {
+  width: clamp(300px, 90vw, 1300px);
   background: rgb(255, 255, 255);
   border: 2px black solid;
   box-shadow: 8px 8px 0px 0px rgba(0, 0, 0, 0.75);
   border-radius: 10px;
-  margin: 20px;
+  margin: 30px;
 }
 
 .main-container {

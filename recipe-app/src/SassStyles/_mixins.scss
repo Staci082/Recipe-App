@@ -1,5 +1,3 @@
-
-
 @mixin flex {
     display: flex;
     justify-content: center;
@@ -7,12 +5,44 @@
 }
 
 @mixin box {
-    border: 2px black solid;
+    border: $border;
     box-shadow: 8px 8px 0px 0px rgba(0, 0, 0, 0.75);
     border-radius: 10px;
 }
 
+@mixin button {
+    border: $border;
+    box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.75);
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px;
+    transition: ease-in-out 0.3s;
+    &:hover {
+        transform: scale(1.1);
+        border: $green solid 2px;
+        box-shadow: 4px 4px 0px 0px rgba($green, 0.75);
+    }
+}
 
+@mixin form {
+    outline: none;
+    width: clamp(300px, 40vw, 300px);
+    flex-direction: column;
+    margin: 2em;
+    gap: 1em;
+}
+
+@mixin label {
+    width: 100%;
+    font-size: 1.5rem;
+}
+
+@mixin input {
+    height: 40px;
+    outline: none;
+    padding: 0 0.5em;
+    width: 90%;
+}
 
 /*  MEDIA QUERIES */
 $breakpoints: (
@@ -22,11 +52,10 @@ $breakpoints: (
     "xl": 1190px,
 );
 
-
 /* use content so we can choose properties when using the mixin instead of hardcoding */
 @mixin sm {
     @media (max-width: map-get($breakpoints, "sm")) {
-        @content; 
+        @content;
     }
 }
 

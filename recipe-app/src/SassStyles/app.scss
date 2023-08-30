@@ -7,10 +7,13 @@
 // COMPONENT IMPORTS
 @import "../Components/categories/categories";
 @import "../Components/header/header";
-@import "../Components/login/login";
+@import "../Pages/login/login";
 @import "../Components/pagination/pagination";
 @import "../Components/recipes/recipes";
 @import "../Components/sideMenu/sideMenu";
+
+@import "../Pages/login/login";
+@import "../Pages/register/register";
 
 // GLOBAL STYLING
 body {
@@ -28,19 +31,14 @@ ul {
     list-style: none;
 }
 
-button {
-    cursor: pointer;
-    background: none;
-    border: none;
-}
 
 // APP STYLING
-.App {
-    width: 94vw;
-    max-width: 1300px;
+.global-container {
+    width: clamp(300px, 90vw, 1300px);
+
     background: rgb(255, 255, 255);
     @include box;
-    margin: 20px;
+    margin: 30px;
 }
 
 .main-container {
