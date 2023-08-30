@@ -37,11 +37,31 @@
 
     & textarea {
         height: 200px;
+        padding-top: 1em;
     }
 
     & .submit-button {
-        margin-top: 1em;
+        margin: 1em 0;
         font-size: 1.5rem;
         @include button;
     }
+}
+
+
+.add-ingredient-container {
+    position: relative;
+}
+
+.add-ingredient-button {
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.create-form-back-button {
+    font-size: 1.5rem;
+    position: absolute;
+    right: -100px;
+    top: 20px;
 }

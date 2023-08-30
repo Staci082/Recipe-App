@@ -1,9 +1,8 @@
 .categories-container {
-    border: cyan solid 2px;
     @include flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1em;
+    gap: 1.2em;
     margin-top: 2em;
     @include md {
         width: 100%;

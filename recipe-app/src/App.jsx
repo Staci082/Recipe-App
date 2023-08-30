@@ -19,6 +19,7 @@ function App() {
                     <Recipes />
                     <Pagination />
                 </div>
+                
             </div>
         </>
     );

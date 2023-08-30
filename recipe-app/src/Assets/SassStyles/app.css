@@ -4,13 +4,12 @@
 /* use content so we can choose properties when using the mixin instead of hardcoding */
 /* mixin for specific breakpoint (flexible) */
 .categories-container {
-  border: cyan solid 2px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1em;
+  gap: 1.2em;
   margin-top: 2em;
 }
 @media (max-width: 720px) {
@@ -62,6 +61,7 @@
 }
 
 .menu-button {
+  cursor: pointer;
   display: none;
   font-size: 3rem;
 }
@@ -74,10 +74,11 @@
 .search-bar {
   outline: none;
   height: 40px;
-  width: clamp(280px, 30vw, 500px);
+  width: clamp(200px, 20vw, 500px);
   border: 2px black solid;
   box-shadow: 8px 8px 0px 0px rgba(0, 0, 0, 0.75);
   border-radius: 10px;
+  box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.75);
   padding: 0 1em;
   margin-left: -8px;
 }
@@ -134,12 +135,18 @@
   border-bottom-right-radius: 15px;
   text-align: center;
 }
+@media (max-width: 960px) {
+  .pagination-container {
+    grid-area: 5/1/5/6;
+  }
+}
 
 .pagination {
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: bold;
+  margin-bottom: 1em;
 }
 
 .pagination a {
@@ -273,9 +280,10 @@
 }
 .create-form textarea {
   height: 200px;
+  padding-top: 1em;
 }
 .create-form .submit-button {
-  margin-top: 1em;
+  margin: 1em 0;
   font-size: 1.5rem;
   border: 2px black solid;
   box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.75);
@@ -288,6 +296,24 @@
   transform: scale(1.1);
   border: rgb(74, 180, 74) solid 2px;
   box-shadow: 4px 4px 0px 0px rgba(74, 180, 74, 0.75);
+}
+
+.add-ingredient-container {
+  position: relative;
+}
+
+.add-ingredient-button {
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.create-form-back-button {
+  font-size: 1.5rem;
+  position: absolute;
+  right: -100px;
+  top: 20px;
 }
 
 .login-container {

@@ -1,13 +1,16 @@
+import { HiPlus } from "react-icons/hi2";
+
+
 function Create() {
     return (
         <div className="create-container">
             <form className="create-form">
-                <a href="/" className="form-back-button">&times;</a>
+                <a href="/" className="create-form-back-button">&times;</a>
                 <h2>Create Recipe</h2>
 
                 <div className="form-separator">
                     <div className="form-inner-separator">
-                        <label htmlFor="title">Title:</label>
+                        <label htmlFor="title">Name:</label>
                         <input type="text" name="title" />
 
                         <label>Which best describes your recipe?</label>
@@ -32,7 +35,10 @@ function Create() {
                     
                     <div className="form-inner-separator">
                         <label>Ingredients</label>
+                        <div className="add-ingredient-container">
                         <input type="text" name="ingredients" className="form-control" id="ingredient-input"/>
+                        <button className="add-ingredient-button"><HiPlus size={28}/></button>
+                        </div>
                         <div className="ingredients-list"></div>
                     </div>
                 </div>

@@ -17,6 +17,7 @@
 }
 
 .menu-button {
+    cursor: pointer;
     display: none;
     font-size: 3rem;
 
@@ -28,8 +29,9 @@
 .search-bar {
     outline: none;
     height: 40px;
-    width: clamp(280px, 30vw, 500px);
+    width: clamp(200px, 20vw, 500px);
     @include box;
+    box-shadow: $box-shadow;
     padding: 0 1em;
     margin-left: -8px;
 }

@@ -9,19 +9,19 @@ function Categories() {
             img: "https://img.icons8.com/wired/64/tapas.png"
         },
         {
-            title: "Breakfasts",
+            title: "Breakfast",
             img: "https://img.icons8.com/wired/64/american-pancakes.png"
         },
         {
-            title: "Desserts",
+            title: "Dessert",
             img: "https://img.icons8.com/wired/64/strawberry-cheesecake.png"
         },
         {
-            title: "Dinners",
+            title: "Dinner",
             img: "https://img.icons8.com/wired/64/spaghetti.png"
         },
         {
-            title: "Lunches",
+            title: "Lunch",
             img: "https://img.icons8.com/wired/64/rice-bowl.png"
         },
         {
