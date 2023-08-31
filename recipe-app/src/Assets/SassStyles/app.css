@@ -10,7 +10,7 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 1.2em;
-  margin-top: 2em;
+  margin: 2em 0 1em 0;
 }
 @media (max-width: 720px) {
   .categories-container {
@@ -46,6 +46,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 1em;
+  margin-bottom: 1.5em;
 }
 
 .logo-container {
@@ -73,7 +74,7 @@
 .search-bar {
   outline: none;
   height: 40px;
-  width: clamp(200px, 20vw, 500px);
+  width: clamp(200px, 25vw, 600px);
   border: 2px black solid;
   box-shadow: 8px 8px 0px 0px rgba(0, 0, 0, 0.75);
   border-radius: 10px;
@@ -106,7 +107,7 @@
   height: 40px;
   outline: none;
   padding: 0 0.5em;
-  margin: 0.5em 0 1.5em 0;
+  margin-bottom: 1.5em;
   width: 90%;
   font-family: inherit;
   font-size: 1rem;
@@ -127,6 +128,13 @@
   transform: scale(1.1);
   border: rgb(74, 180, 74) solid 2px;
   box-shadow: 4px 4px 0px 0px rgba(74, 180, 74, 0.75);
+}
+
+.login-back-button {
+  font-size: 1.5rem;
+  position: absolute;
+  top: -8%;
+  left: -9%;
 }
 
 .pagination-container {
@@ -262,7 +270,7 @@
   height: 40px;
   outline: none;
   padding: 0 0.5em;
-  margin: 0.5em 0 1.5em 0;
+  margin-bottom: 1.5em;
   width: 90%;
   font-family: inherit;
   font-size: 1rem;
@@ -298,8 +306,8 @@
 
 .add-ingredient-button {
   position: absolute;
-  top: 15px;
-  right: 15px;
+  top: 10%;
+  right: 15%;
 }
 
 .form-back-button {
@@ -332,36 +340,36 @@
   margin: 2em;
   gap: 1em;
 }
-
-.edit-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-}
-.edit-form label {
+.form-inner-separator label {
   width: 100%;
   font-size: 1.5rem;
 }
-.edit-form input,
-.edit-form textarea,
-.edit-form select {
+.form-inner-separator input,
+.form-inner-separator textarea,
+.form-inner-separator select {
   height: 40px;
   outline: none;
   padding: 0 0.5em;
-  margin: 0.5em 0 1.5em 0;
+  margin-bottom: 1.5em;
   width: 90%;
   font-family: inherit;
   font-size: 1rem;
   border: 2px black solid;
   box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.75);
 }
-.edit-form select {
+.form-inner-separator select {
   width: 96.5%;
 }
-.edit-form textarea {
+.form-inner-separator textarea {
   height: 200px;
   padding-top: 1em;
+}
+
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
 }
 .edit-form .submit-button {
   margin: 1em 0;
@@ -392,7 +400,7 @@
 .form-back-button {
   font-size: 1.5rem;
   position: absolute;
-  right: 2%;
+  left: 2%;
   top: 1%;
 }
 
@@ -445,7 +453,7 @@
   height: 40px;
   outline: none;
   padding: 0 0.5em;
-  margin: 0.5em 0 1.5em 0;
+  margin-bottom: 1.5em;
   width: 90%;
   font-family: inherit;
   font-size: 1rem;
@@ -458,6 +466,13 @@
   position: absolute;
   bottom: 28px;
   right: 5px;
+}
+
+.grocery-back-button {
+  font-size: 1.5rem;
+  position: absolute;
+  left: -7%;
+  top: -52%;
 }
 
 .login-container {
@@ -484,7 +499,7 @@
   height: 40px;
   outline: none;
   padding: 0 0.5em;
-  margin: 0.5em 0 1.5em 0;
+  margin-bottom: 1.5em;
   width: 90%;
   font-family: inherit;
   font-size: 1rem;
@@ -505,6 +520,13 @@
   transform: scale(1.1);
   border: rgb(74, 180, 74) solid 2px;
   box-shadow: 4px 4px 0px 0px rgba(74, 180, 74, 0.75);
+}
+
+.login-back-button {
+  font-size: 1.5rem;
+  position: absolute;
+  top: -8%;
+  left: -9%;
 }
 
 .register-container {
@@ -531,7 +553,7 @@
   height: 40px;
   outline: none;
   padding: 0 0.5em;
-  margin: 0.5em 0 1.5em 0;
+  margin-bottom: 1.5em;
   width: 90%;
   font-family: inherit;
   font-size: 1rem;
@@ -552,6 +574,13 @@
   transform: scale(1.1);
   border: rgb(74, 180, 74) solid 2px;
   box-shadow: 4px 4px 0px 0px rgba(74, 180, 74, 0.75);
+}
+
+.register-back-button {
+  font-size: 1.5rem;
+  position: absolute;
+  top: -6%;
+  left: -9%;
 }
 
 html {

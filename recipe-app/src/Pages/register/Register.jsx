@@ -4,7 +4,7 @@ function Register() {
     return (
         <div className="register-container">
             <form className="register-form">
-                <a href="/" className="form-back-button">&times;</a>
+                <a href="/" className="register-back-button">&times;</a>
                 <h2>Register</h2>
                 <label htmlFor="name">Username:</label>
                 <input type="text" name="name" />

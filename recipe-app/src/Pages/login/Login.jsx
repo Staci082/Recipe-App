@@ -4,7 +4,7 @@ function Login() {
     <div className="login-container">
 
             <form className="login-form">
-                <a href="/" className="form-back-button">&times;</a>
+                <a href="/" className="login-back-button">&times;</a>
                 <h2>Log in</h2>
                 <label htmlFor="name">Username:</label>
                 <input type="text" name="name"/>

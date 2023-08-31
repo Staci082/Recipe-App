@@ -14,7 +14,7 @@ function Edit() {
                         <label htmlFor="title">Name:</label>
                         <input type="text" name="title" />
 
-                        <label>Which best describes your recipe?</label>
+                        <label>Category:</label>
                         <select name="category" className="form-control dropdown" required>
                             <option disabled="disabled" value="">
                                 Select category
@@ -28,12 +28,12 @@ function Edit() {
                             <option value="Vegetarian">Vegetarian</option>
                         </select>
 
-                        <label>Instructions</label>
+                        <label>Instructions:</label>
                         <textarea className="input-textarea" name="instructions"></textarea>
                     </div>
 
                     <div className="form-inner-separator">
-                        <label>Ingredients</label>
+                        <label>Ingredients:</label>
                         <div className="add-ingredient-container">
                             <input type="text" name="ingredients" className="form-control ingredient-input" />
                             <button className="add-ingredient-button">

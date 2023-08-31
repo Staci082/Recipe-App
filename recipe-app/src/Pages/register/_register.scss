@@ -23,3 +23,9 @@
         @include button;
     }
 }
+
+.register-back-button {
+    @include backButton;
+    top: -6%;
+    left: -9%;
+}
