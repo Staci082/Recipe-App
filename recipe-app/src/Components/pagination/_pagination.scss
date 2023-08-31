@@ -21,7 +21,7 @@
     color: black;
     padding: 8px 16px;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: $border-radius-sm;
     // font-size: $smallFont;
     &:hover {
         background: rgb(137, 233, 137);

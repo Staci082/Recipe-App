@@ -1,0 +1,13 @@
+
+
+.login-register-links {
+    border: $border;
+    border-radius: $border-radius-sm;
+    box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.75);
+    background: $green;
+    padding: .5em 1.5em;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    font-weight: bold;
+}

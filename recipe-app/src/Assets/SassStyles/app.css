@@ -83,58 +83,16 @@
   margin-left: -8px;
 }
 
-.login-container {
+.login-register-links {
+  border: 2px black solid;
+  border-radius: 5px;
+  box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.75);
+  background: rgb(221, 246, 221);
+  padding: 0.5em 1.5em;
   display: flex;
-  justify-content: center;
-}
-
-.login-form {
-  display: flex;
-  justify-content: center;
   align-items: center;
-  position: relative;
-  outline: none;
-  width: clamp(300px, 40vw, 300px);
-  flex-direction: column;
-  margin: 2em;
-  gap: 1em;
-}
-.login-form label {
-  width: 100%;
-  font-size: 1.5rem;
-}
-.login-form input {
-  height: 40px;
-  outline: none;
-  padding: 0 0.5em;
-  margin-bottom: 1.5em;
-  width: 90%;
-  font-family: inherit;
-  font-size: 1rem;
-  border: 2px black solid;
-  box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.75);
-}
-.login-form .submit-button {
-  margin-top: 1em;
-  font-size: 1.5rem;
-  border: 2px black solid;
-  box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.75);
-  border-radius: 2px;
-  cursor: pointer;
-  padding: 10px;
-  transition: ease-in-out 0.3s;
-}
-.login-form .submit-button:hover {
-  transform: scale(1.1);
-  border: rgb(74, 180, 74) solid 2px;
-  box-shadow: 4px 4px 0px 0px rgba(74, 180, 74, 0.75);
-}
-
-.login-back-button {
-  font-size: 1.5rem;
-  position: absolute;
-  top: -8%;
-  left: -9%;
+  gap: 25px;
+  font-weight: bold;
 }
 
 .pagination-container {
@@ -275,6 +233,7 @@
   font-family: inherit;
   font-size: 1rem;
   border: 2px black solid;
+  border-radius: 5px;
   box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.75);
 }
 .create-form select {
@@ -285,21 +244,22 @@
   padding-top: 1em;
 }
 .create-form .submit-button {
+  margin-top: 1em;
+  font-size: 1.5rem;
   border: 2px black solid;
   box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.75);
   border-radius: 2px;
   cursor: pointer;
   padding: 10px;
   transition: ease-in-out 0.3s;
-  margin: 1em 0;
-  font-size: 1.5rem;
-  padding: 1em 2em;
   border-radius: 5px;
+  padding: 0.5em 1em;
+  margin-bottom: 2em;
 }
 .create-form .submit-button:hover {
   transform: scale(1.1);
-  border: rgb(74, 180, 74) solid 2px;
-  box-shadow: 4px 4px 0px 0px rgba(74, 180, 74, 0.75);
+  border: rgb(221, 246, 221) solid 2px;
+  box-shadow: 4px 4px 0px 0px rgba(221, 246, 221, 0.75);
 }
 
 .add-ingredient-container {
@@ -357,6 +317,7 @@
   font-family: inherit;
   font-size: 1rem;
   border: 2px black solid;
+  border-radius: 5px;
   box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.75);
 }
 .form-inner-separator select {
@@ -374,21 +335,22 @@
   position: relative;
 }
 .edit-form .submit-button {
+  margin-top: 1em;
+  font-size: 1.5rem;
   border: 2px black solid;
   box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.75);
   border-radius: 2px;
   cursor: pointer;
   padding: 10px;
   transition: ease-in-out 0.3s;
-  margin: 1em 0;
-  font-size: 1.5rem;
-  padding: 1em 2em;
   border-radius: 5px;
+  padding: 0.5em 1em;
+  margin-bottom: 2em;
 }
 .edit-form .submit-button:hover {
   transform: scale(1.1);
-  border: rgb(74, 180, 74) solid 2px;
-  box-shadow: 4px 4px 0px 0px rgba(74, 180, 74, 0.75);
+  border: rgb(221, 246, 221) solid 2px;
+  box-shadow: 4px 4px 0px 0px rgba(221, 246, 221, 0.75);
 }
 
 .add-ingredient-container {
@@ -462,6 +424,7 @@
   font-family: inherit;
   font-size: 1rem;
   border: 2px black solid;
+  border-radius: 5px;
   box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.75);
   width: 250px;
 }
@@ -508,6 +471,7 @@
   font-family: inherit;
   font-size: 1rem;
   border: 2px black solid;
+  border-radius: 5px;
   box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.75);
 }
 .login-form .submit-button {
@@ -519,11 +483,13 @@
   cursor: pointer;
   padding: 10px;
   transition: ease-in-out 0.3s;
+  border-radius: 5px;
+  padding: 0.5em 1em;
 }
 .login-form .submit-button:hover {
   transform: scale(1.1);
-  border: rgb(74, 180, 74) solid 2px;
-  box-shadow: 4px 4px 0px 0px rgba(74, 180, 74, 0.75);
+  border: rgb(221, 246, 221) solid 2px;
+  box-shadow: 4px 4px 0px 0px rgba(221, 246, 221, 0.75);
 }
 
 .login-back-button {
@@ -562,6 +528,7 @@
   font-family: inherit;
   font-size: 1rem;
   border: 2px black solid;
+  border-radius: 5px;
   box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.75);
 }
 .register-form .submit-button {
@@ -573,11 +540,13 @@
   cursor: pointer;
   padding: 10px;
   transition: ease-in-out 0.3s;
+  border-radius: 5px;
+  padding: 0.5em 1em;
 }
 .register-form .submit-button:hover {
   transform: scale(1.1);
-  border: rgb(74, 180, 74) solid 2px;
-  box-shadow: 4px 4px 0px 0px rgba(74, 180, 74, 0.75);
+  border: rgb(221, 246, 221) solid 2px;
+  box-shadow: 4px 4px 0px 0px rgba(221, 246, 221, 0.75);
 }
 
 .register-back-button {
@@ -601,6 +570,7 @@ body {
 }
 
 a {
+  font-family: Poppins, sans-serif;
   text-decoration: none;
   color: black;
 }

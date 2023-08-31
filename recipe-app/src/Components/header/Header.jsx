@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { RxPerson } from "react-icons/rx";
 import { CgLayoutGridSmall } from "react-icons/cg";
+import LoginRegister from "../../Components/login-register/LoginRegister"
 import Menu from "../menu/Menu"
 
 
@@ -32,6 +33,7 @@ function Header() {
 
                 <input type="search" name="searchBar" className="search-bar" placeholder="Search.." aria-label="Search" />
                 <button id="login-button">
+                {<LoginRegister/>}
                     <RxPerson size={30} />
                 </button>
             </div>

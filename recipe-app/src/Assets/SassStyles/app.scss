@@ -7,7 +7,7 @@
 // COMPONENT IMPORTS
 @import "../../Components/categories/categories";
 @import "../../Components/header/header";
-@import "../../Pages/login/login";
+@import "../../Components/login-register/login-register";
 @import "../../Components/pagination/pagination";
 @import "../../Components/recipes/recipes";
 @import "../../Components/menu/menu";
@@ -33,6 +33,7 @@ body {
 }
 
 a {
+    font-family: Poppins, sans-serif;
     text-decoration: none;
     color: black;
 }

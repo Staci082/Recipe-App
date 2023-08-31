@@ -38,11 +38,8 @@
     }
 
     & .submit-button {
-        @include button;
-        margin: 1em 0;
-        font-size: 1.5rem;
-        padding: 1em 2em;
-        border-radius: 5px;
+        @include submitButton;
+        margin-bottom: 2em;
     }
 }
 
