@@ -48,20 +48,14 @@ button {
 }
 
 
-.form-back-button {
-    font-size: 1.5rem;
-    position: absolute;
-    right: 330px;
-    top: 50px;
-}
 
 // APP STYLING
-
 .global-container {
     max-width: 1300px;
     background: rgb(255, 255, 255);
     @include box;
     margin: 30px;
+    padding: 1em;
 }
 
 .main-container {

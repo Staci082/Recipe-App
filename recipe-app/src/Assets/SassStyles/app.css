@@ -227,11 +227,6 @@
   color: rgb(74, 180, 74);
 }
 
-.create-container {
-  display: flex;
-  justify-content: center;
-}
-
 .form-separator {
   display: flex;
   justify-content: space-around;
@@ -305,6 +300,13 @@
   position: absolute;
   top: 15px;
   right: 15px;
+}
+
+.form-back-button {
+  font-size: 1.5rem;
+  position: absolute;
+  right: 2%;
+  top: 1%;
 }
 
 .edit-container {
@@ -387,8 +389,16 @@
   right: 15px;
 }
 
+.form-back-button {
+  font-size: 1.5rem;
+  position: absolute;
+  right: 2%;
+  top: 1%;
+}
+
 .error-page {
   background: red;
+  padding: 2em;
 }
 
 .grocery-list-container {
@@ -396,6 +406,8 @@
   align-items: flex-start;
   justify-content: space-evenly;
   padding: 4em 0;
+  margin: 2em;
+  gap: 2em;
 }
 
 .line {
@@ -570,13 +582,6 @@ button {
   background: none;
 }
 
-.form-back-button {
-  font-size: 1.5rem;
-  position: absolute;
-  right: 330px;
-  top: 50px;
-}
-
 .global-container {
   max-width: 1300px;
   background: rgb(255, 255, 255);
@@ -584,6 +589,7 @@ button {
   box-shadow: 8px 8px 0px 0px rgba(0, 0, 0, 0.75);
   border-radius: 10px;
   margin: 30px;
+  padding: 1em;
 }
 
 .main-container {

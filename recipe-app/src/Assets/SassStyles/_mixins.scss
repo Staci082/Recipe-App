@@ -50,6 +50,11 @@
     box-shadow: $box-shadow;
 }
 
+@mixin backButton {
+    font-size: 1.5rem;
+    position: absolute;
+}
+
 /*  MEDIA QUERIES */
 $breakpoints: (
     "sm": 480px,

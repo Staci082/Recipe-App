@@ -2,11 +2,12 @@ import { HiPlus } from "react-icons/hi2";
 
 function Create() {
     return (
-        <div className="create-container">
-            <a href="/" className="form-back-button ">
+        
+            
+            <form className="create-form">
+            <a href="/" className="form-back-button">
                 &times;
             </a>
-            <form className="create-form">
                 <h2>Create Recipe</h2>
 
                 <div className="form-separator">
@@ -47,7 +48,7 @@ function Create() {
                     create
                 </button>
             </form>
-        </div>
+    
     );
 }
 

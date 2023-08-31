@@ -4,6 +4,7 @@ function GroceryList() {
     return (
         <>
             <div className="grocery-list-container">
+            <a href="/" className="form-back-button">&times;</a>
                 <div className="grocery-input-container">
                     <h2>Grocery List</h2>
                     <input type="text" className="grocery-input" />
@@ -24,6 +25,7 @@ function GroceryList() {
                     <div className="line"></div>
                     <div className="line"></div>
                 </div>
+
                 <div className="grocery-list">
                     <div className="title"></div>
                     <div className="line"></div>

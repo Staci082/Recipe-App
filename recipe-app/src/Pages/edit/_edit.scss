@@ -58,3 +58,8 @@
     right: 15px;
 }
 
+.form-back-button {
+    @include backButton;
+    right: 2%;
+    top: 1%;
+}

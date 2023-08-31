@@ -3,6 +3,9 @@
     align-items: flex-start;
     justify-content: space-evenly;
     padding: 4em 0;
+    margin: 2em;
+    gap: 2em;
+    // font-family: "Indie Flower", "comic Sans";
 }
 
 .line {
@@ -22,7 +25,6 @@
     height: auto;
     gap: 2em;
     @include box;
-    // font-family: "Indie Flower", "comic Sans";
     color: grey;
     font-size: 0.8rem;
 }
