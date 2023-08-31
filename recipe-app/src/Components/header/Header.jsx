@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { RxPerson } from "react-icons/rx";
-import { GiTacos } from "react-icons/gi";
 import { CgLayoutGridSmall } from "react-icons/cg";
 import Menu from "../menu/Menu"
 
@@ -19,8 +18,10 @@ function Header() {
     return (
         <>
             <div className="header-container">
-                <div className="logo">
-                    <GiTacos size={30} />
+                <div className="logo-container">
+                <img width="48" height="48" src="https://img.icons8.com/color/48/kawaii-taco.png" alt="kawaii-taco"/>
+
+
                     Fiesta Flavors
                 </div>
 

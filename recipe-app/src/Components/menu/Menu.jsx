@@ -2,11 +2,11 @@ function menu() {
     const menuItems = [
         {
             title: "Discover",
-            href: "/discover",
+            href: "/",
         },
         {
             title: "My Recipes",
-            href: "/recipes",
+            href: "/",
         },
         {
             title: "Create a Recipe",

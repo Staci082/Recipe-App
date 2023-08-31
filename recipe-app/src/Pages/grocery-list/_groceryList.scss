@@ -31,7 +31,6 @@
     @include flex;
     flex-direction: column;
     gap: 2em;
-
     position: relative;
     & .grocery-input {
         @include input;
@@ -40,7 +39,6 @@
 }
 
 .add-item-button {
-    cursor: pointer;
     position: absolute;
     bottom: 28px;
     right: 05px;

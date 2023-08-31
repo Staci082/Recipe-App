@@ -14,6 +14,7 @@
 
 @import "../../Pages/create/create";
 @import "../../Pages/edit/edit";
+@import "../../Pages/error/error";
 @import "../../Pages/grocery-list/groceryList";
 @import "../../Pages/login/login";
 @import "../../Pages/recipe/recipe";
@@ -27,6 +28,7 @@ html {
 body {
     font-family: Poppins, sans-serif;
     @include flex;
+    min-height: 95vh;
     background: rgb(255, 224, 254);
 }
 
@@ -40,6 +42,7 @@ ul {
 }
 
 button {
+    cursor: pointer;
     border: none;
     background: none;
 }
@@ -53,8 +56,9 @@ button {
 }
 
 // APP STYLING
+
 .global-container {
-    width: clamp(300px, 90vw, 1300px);
+    max-width: 1300px;
     background: rgb(255, 255, 255);
     @include box;
     margin: 30px;

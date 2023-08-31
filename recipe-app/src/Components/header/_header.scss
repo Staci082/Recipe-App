@@ -6,7 +6,7 @@
     padding: 1em;
 }
 
-.logo {
+.logo-container {
     display: flex;
     align-items: center; 
     font-family: gluten, comic sans-serif;
@@ -14,10 +14,11 @@
     @include lg {
         display: none;
     }
+
+
 }
 
 .menu-button {
-    cursor: pointer;
     display: none;
     font-size: 3rem;
 

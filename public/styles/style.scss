@@ -5,7 +5,6 @@
 
 @import url("https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap");
 
-
 $largeFont: 1.5rem;
 $mediumFont: 1rem;
 $smallFont: 0.8rem;
@@ -63,7 +62,6 @@ $smallShadow: 4px 2px 0;
     }
 }
 
-
 body {
     background-size: 60px 60px;
     animation: slide 8s infinite linear;
@@ -81,15 +79,13 @@ body {
 }
 
 .main-container {
-    height: 100vh;  // transparent container needed to center elements, since body background is always moving
+    height: 100vh; // transparent container needed to center elements, since body background is always moving
     width: 100vw;
     position: relative;
     @include flex;
     justify-content: center;
     font-family: "Poppins", Verdana;
 }
-
-
 
 .paint-brush {
     position: absolute;
@@ -137,7 +133,7 @@ body {
 
 .menu-container {
     @include flex;
-    margin: auto ;
+    margin: auto;
 }
 .main-button {
     margin: 2rem;
@@ -192,7 +188,7 @@ a {
     font-family: inherit;
     color: inherit;
     text-decoration: none;
-    font-size:  $largeFont;
+    font-size: $largeFont;
 }
 input,
 button,
@@ -202,8 +198,8 @@ textarea {
     font-size: $mediumFont;
 }
 
-#dropdown {
-    width: 94%;  /* dropdown was smaller for unknown reason */
+.dropdown {
+    width: 94%; /* dropdown was smaller for unknown reason */
 }
 
 .fa-circle-plus {

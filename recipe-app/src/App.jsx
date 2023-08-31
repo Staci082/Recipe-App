@@ -1,47 +1,65 @@
 import "./Assets/SassStyles/app.css";
+import { createBrowserRouter, RouterProvider, Route, Link } from "react-router-dom";
+
+// IMPORT COMPONENTS
 import Categories from "./Components/categories/Categories";
 import Header from "./Components/header/Header";
 import Pagination from "./Components/pagination/Pagination";
 import Recipes from "./Components/recipes/Recipes";
 import Menu from "./Components/menu/Menu";
 
+// IMPORT PAGES
 import Create from "./Pages/create/Create";
 import Edit from "./Pages/edit/Edit";
+import Error from "./Pages/error/Error";
 import GroceryList from "./Pages/grocery-list/GroceryList";
+import Homepage from "./Pages/homepage/Homepage";
 import Login from "./Pages/login/Login";
 import Recipe from "./Pages/recipe/Recipe";
 import Register from "./Pages/register/Register";
 
+// CREATE ROUTER
+const router = createBrowserRouter([
+    {
+        path: "/",
+        element: <Homepage />,
+    },
+    {
+        path: "/login",
+        element: <Login />,
+    },
+    {
+        path: "/register",
+        element: <Register />,
+    },
+    {
+        path: "/recipe",
+        element: <Recipe />,
+    },
+    {
+        path: "/create",
+        element: <Create />,
+    },
+    {
+        path: "/edit",
+        element: <Edit />,
+    },
+    {
+        path: "/list",
+        element: <GroceryList />,
+    },
+    {
+        path: "*",
+        element: <Error />,
+    },
+]);
+
 function App() {
     return (
         <>
-            <div className="global-container">
-                <Header />
-                <div className="main-container">
-                    <Menu />
-                    <Recipes />
-                    <Pagination />
+                <div className="global-container">
+                    <RouterProvider router={router} />
                 </div>
-            </div>
-            <div className="global-container">
-                <Login />
-            </div>
-            <div className="global-container">
-                <Register />
-            </div>
-            <div className="global-container">
-                <Create />
-            </div>
-            <div className="global-container">
-                <Edit />
-            </div>
-            <div className="global-container">
-                <Recipe/>
-            </div>
-            <div className="global-container">
-                <GroceryList />
-            </div>
-
         </>
     );
 }

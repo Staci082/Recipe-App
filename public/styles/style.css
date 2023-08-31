@@ -178,7 +178,7 @@ textarea {
   font-size: 1rem;
 }
 
-#dropdown {
+.dropdown {
   width: 94%; /* dropdown was smaller for unknown reason */
 }
 

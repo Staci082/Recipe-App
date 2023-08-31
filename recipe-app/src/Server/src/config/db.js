@@ -2,8 +2,9 @@ import mongoose from 'mongoose';
 mongoose.set('strictQuery', false);
 
 const ConnectDB = async () => {
+
+    const url = "mongodb+srv://staci082:staci082@cluster0.ikvgdf6.mongodb.net/?retryWrites=true&w=majority"; 
     try {
-        const url = process.env.VITE_DB_URL; 
         if (!url) {
             throw new Error("DB URL not defined");
         }

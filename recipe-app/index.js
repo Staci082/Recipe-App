@@ -1,19 +1,18 @@
 console.log('Hello world!')
 
+import cors from 'cors'
 import express from 'express'
 import bodyParser from 'body-parser'
-
 import ConnectDB from './src/Server/src/config/db.js'
-
-
 
 
 const app = express()
 // const port = 5173
-const port = process.env.VITE_PORT
+const port = process.env.PORT || 5713
 
 ConnectDB()
 
+app.use(cors())
 app.use(bodyParser.json())
 app.use(
     bodyParser.urlencoded({

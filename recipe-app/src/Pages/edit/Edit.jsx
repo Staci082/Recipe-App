@@ -16,8 +16,8 @@ function Edit() {
                             <input type="text" name="title" />
 
                             <label>Which best describes your recipe?</label>
-                            <select id="dropdown" name="category" className="form-control" required>
-                                <option disabled="disabled" selected="selected" value="">
+                            <select name="category" className="form-control dropdown" required>
+                                <option disabled="disabled" value="">
                                     Select category
                                 </option>
                                 <option value="Appetizer">Appetizer</option>
@@ -30,13 +30,13 @@ function Edit() {
                             </select>
 
                             <label>Instructions</label>
-                            <textarea id="instructions" className="input-textarea" name="instructions"></textarea>
+                            <textarea className="input-textarea" name="instructions"></textarea>
                         </div>
 
                         <div className="form-inner-separator">
                             <label>Ingredients</label>
                             <div className="add-ingredient-container">
-                                <input type="text" name="ingredients" className="form-control" id="ingredient-input" />
+                                <input type="text" name="ingredients" className="form-control ingredient-input" />
                                 <button className="add-ingredient-button">
                                     <HiPlus size={28} />
                                 </button>

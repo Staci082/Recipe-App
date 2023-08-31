@@ -19,7 +19,6 @@
 }
 
 .cat-item-container {
-  cursor: pointer;
   width: clamp(1.5rem, 15vw, 6rem);
   display: flex;
   flex-direction: column;
@@ -49,20 +48,19 @@
   padding: 1em;
 }
 
-.logo {
+.logo-container {
   display: flex;
   align-items: center;
   font-family: gluten, comic sans-serif;
   gap: 1em;
 }
 @media (max-width: 960px) {
-  .logo {
+  .logo-container {
     display: none;
   }
 }
 
 .menu-button {
-  cursor: pointer;
   display: none;
   font-size: 3rem;
 }
@@ -304,7 +302,6 @@
 }
 
 .add-ingredient-button {
-  cursor: pointer;
   position: absolute;
   top: 15px;
   right: 15px;
@@ -385,10 +382,13 @@
 }
 
 .add-ingredient-button {
-  cursor: pointer;
   position: absolute;
   top: 15px;
   right: 15px;
+}
+
+.error-page {
+  background: red;
 }
 
 .grocery-list-container {
@@ -443,7 +443,6 @@
 }
 
 .add-item-button {
-  cursor: pointer;
   position: absolute;
   bottom: 28px;
   right: 5px;
@@ -552,6 +551,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 95vh;
   background: rgb(255, 224, 254);
 }
 
@@ -565,6 +565,7 @@ ul {
 }
 
 button {
+  cursor: pointer;
   border: none;
   background: none;
 }
@@ -577,7 +578,7 @@ button {
 }
 
 .global-container {
-  width: clamp(300px, 90vw, 1300px);
+  max-width: 1300px;
   background: rgb(255, 255, 255);
   border: 2px black solid;
   box-shadow: 8px 8px 0px 0px rgba(0, 0, 0, 0.75);
