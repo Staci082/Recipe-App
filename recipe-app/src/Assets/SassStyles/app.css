@@ -285,14 +285,16 @@
   padding-top: 1em;
 }
 .create-form .submit-button {
-  margin: 1em 0;
-  font-size: 1.5rem;
   border: 2px black solid;
   box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.75);
   border-radius: 2px;
   cursor: pointer;
   padding: 10px;
   transition: ease-in-out 0.3s;
+  margin: 1em 0;
+  font-size: 1.5rem;
+  padding: 1em 2em;
+  border-radius: 5px;
 }
 .create-form .submit-button:hover {
   transform: scale(1.1);
@@ -304,10 +306,10 @@
   position: relative;
 }
 
-.add-ingredient-button {
+.add-ingredient-button, .create {
   position: absolute;
   top: 10%;
-  right: 15%;
+  right: 5%;
 }
 
 .form-back-button {
@@ -372,14 +374,16 @@
   position: relative;
 }
 .edit-form .submit-button {
-  margin: 1em 0;
-  font-size: 1.5rem;
   border: 2px black solid;
   box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.75);
   border-radius: 2px;
   cursor: pointer;
   padding: 10px;
   transition: ease-in-out 0.3s;
+  margin: 1em 0;
+  font-size: 1.5rem;
+  padding: 1em 2em;
+  border-radius: 5px;
 }
 .edit-form .submit-button:hover {
   transform: scale(1.1);
@@ -391,10 +395,10 @@
   position: relative;
 }
 
-.add-ingredient-button {
+.add-ingredient-button, .edit {
   position: absolute;
-  top: 15px;
-  right: 15px;
+  top: 10%;
+  right: 5%;
 }
 
 .form-back-button {

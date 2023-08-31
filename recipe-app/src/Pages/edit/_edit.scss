@@ -42,9 +42,11 @@
 
 
     & .submit-button {
+        @include button;
         margin: 1em 0;
         font-size: 1.5rem;
-        @include button;
+        padding: 1em 2em;
+        border-radius: 5px;
     }
 }
 
@@ -53,10 +55,10 @@
     position: relative;
 }
 
-.add-ingredient-button {
+.add-ingredient-button, .edit{
     position: absolute;
-    top: 15px;
-    right: 15px;
+    top: 10%;
+    right: 5%;
 }
 
 .form-back-button {

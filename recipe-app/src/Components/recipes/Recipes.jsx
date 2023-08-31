@@ -6,18 +6,18 @@ function Recipes() {
             <Categories />
 
 
-            <div className="recipe"></div>
-            <div className="recipe"></div>
-            <div className="recipe"></div>
-            <div className="recipe"></div>
-            <div className="recipe"></div>
-            <div className="recipe"></div>
-            <div className="recipe"></div>
-            <div className="recipe"></div>
-            <div className="recipe"></div>
-            <div className="recipe"></div>
-            <div className="recipe"></div>
-            <div className="recipe"></div>
+            <a className="recipe" href="/recipe"></a>
+            <a className="recipe" href="/recipe"></a>
+            <a className="recipe" href="/recipe"></a>
+            <a className="recipe" href="/recipe"></a>
+            <a className="recipe" href="/recipe"></a>
+            <a className="recipe" href="/recipe"></a>
+            <a className="recipe" href="/recipe"></a>
+            <a className="recipe" href="/recipe"></a>
+            <a className="recipe" href="/recipe"></a>
+            <a className="recipe" href="/recipe"></a>
+            <a className="recipe" href="/recipe"></a>
+            <a className="recipe" href="/recipe"></a>
         </div>
     );
 }

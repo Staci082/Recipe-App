@@ -37,7 +37,7 @@ function Create() {
                         <label>Ingredients:</label>
                         <div className="add-ingredient-container">
                             <input type="text" name="ingredients" className="form-control ingredient-input" id="ingredient-input" />
-                            <button className="add-ingredient-button">
+                            <button className="add-ingredient-button create">
                                 <HiPlus size={28} />
                             </button>
                         </div>

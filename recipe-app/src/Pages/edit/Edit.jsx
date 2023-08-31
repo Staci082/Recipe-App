@@ -36,7 +36,7 @@ function Edit() {
                         <label>Ingredients:</label>
                         <div className="add-ingredient-container">
                             <input type="text" name="ingredients" className="form-control ingredient-input" />
-                            <button className="add-ingredient-button">
+                            <button className="add-ingredient-button edit">
                                 <HiPlus size={28} />
                             </button>
                         </div>
