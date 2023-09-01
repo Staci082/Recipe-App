@@ -1,5 +1,5 @@
 // IMPORT COMPONENTS
-import Categories from "../../Components/categories/Categories";  
+
 import Header from "../../Components/header/Header";
 import Pagination from "../../Components/pagination/Pagination";
 import Recipes from "../../Components/recipes/Recipes";

@@ -8,5 +8,5 @@ router.post('/register', Register)
 router.post('/login', Login)
 
 
-
-export { router as userRouter }; // change router.name to userRouter
+// EXPORT
+export { router as userRouter }; 

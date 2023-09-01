@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 mongoose.set('strictQuery', false);
 
-const ConnectDB = async () => {
+export async function ConnectDB(){
 
     const url = "mongodb+srv://staci082:WoSDvyDWd8hiPduL@fiestaflavors.ok0fz92.mongodb.net/?retryWrites=true&w=majority"; 
     try {

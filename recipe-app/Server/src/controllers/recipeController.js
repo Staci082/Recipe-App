@@ -1,28 +1,25 @@
-
-const Recipe = require('../models/recipes')
-
-const mongoose = require('mongoose')
+import Recipe from '../models/Recipe.js'
 
 
 // GET /
 // ADD NEW RECIPE FORM PAGE
-exports.addRecipe = async (req, res) => {
+export async function addRecipe(req, res){
 
     const locals = {
         title: "Add recipe"
     }
 
-    try {
-        res.render('recipe/add', locals)
-    } catch (error) {
-        console.log(error)
-    }
+    // try {
+    //     res.render('recipe/add', locals)
+    // } catch (error) {
+    //     console.log(error)
+    // }
 }
 
 
 // POST /
 // CREATE NEW RECIPE DATA
-exports.postRecipe = async (req, res) => {
+export async function postRecipe(req, res){
 
     console.log(req.body)
 
@@ -42,7 +39,7 @@ exports.postRecipe = async (req, res) => {
         console.log('Recipe successfully created!')
 
         // REDIRECT TO HOMEPAGE
-        res.redirect('/')
+        // res.redirect('/')
 
     }   catch (error) {
         console.log(error)
@@ -52,7 +49,7 @@ exports.postRecipe = async (req, res) => {
 
 // GET / 
 // VIEW ALL RECIPES PAGE
-exports.viewRecipes = async (req, res) => {
+export async function viewRecipes(req, res){
 
     const locals = {
         title: "View recipes"
@@ -75,12 +72,12 @@ exports.viewRecipes = async (req, res) => {
         const count = await Recipe.count()
 
 
-        res.render('recipe/view', {
-            locals,
-            recipes,
-            current: page,
-            pages: Math.ceil(count/perPage)  //  ROUNDING
-        })
+        // res.render('recipe/view', {
+        //     locals,
+        //     recipes,
+        //     current: page,
+        //     pages: Math.ceil(count/perPage)  //  ROUNDING
+        // })
 
     } catch (error) {
         console.log(error)
@@ -90,7 +87,7 @@ exports.viewRecipes = async (req, res) => {
 
 // GET / 
 // GET SINGLE RECIPE BY ID
-exports.singleRecipe = async (req, res) => {
+export async function singleRecipe(req, res){
 
     try {
         single = await Recipe.findOne({ _id: req.params.id })  // finding single recipe (adding const bugs it for some reason)
@@ -99,7 +96,7 @@ exports.singleRecipe = async (req, res) => {
             title: single.name
         }
 
-        res.render('recipe/single', {locals, single} )
+        // res.render('recipe/single', {locals, single} )
     } catch (error) {
         console.log(error) 
     }
@@ -109,7 +106,7 @@ exports.singleRecipe = async (req, res) => {
 
 // // GET / 
 // // GET RECIPES BY CATEGORY
-// exports.sortRecipes = async (req,res) => {
+// export async function sortRecipes(req, res){
 
 //     // let category = req.body.chosenCategory || ""
 //     let category = req.params.category || ""
@@ -130,7 +127,7 @@ exports.singleRecipe = async (req, res) => {
 
 // POST / 
 // SEARCH RECIPES PAGE
-exports.searchRecipes = async (req, res) => {
+export async function searchRecipes(req, res){
     
     const locals = {
         title: "Search recipes"
@@ -160,13 +157,13 @@ exports.searchRecipes = async (req, res) => {
 
         const count = await Recipe.count()
 
-        res.render('recipe/view', {
-            locals,
-            recipeList,
-            recipes, 
-            current: page,
-            pages: Math.ceil(count / perPage)
-        })
+        // res.render('recipe/view', {
+        //     locals,
+        //     recipeList,
+        //     recipes, 
+        //     current: page,
+        //     pages: Math.ceil(count / perPage)
+        // })
         
     } catch (error) {
         console.log(error)
@@ -177,7 +174,7 @@ exports.searchRecipes = async (req, res) => {
 // GET /
 // GET EDIT RECIPE FORM PAGE
 
-exports.editPage = async (req, res) => {
+export async function editPage(req, res){
 
     const locals = {
         title: "Edit recipe",
@@ -187,16 +184,16 @@ exports.editPage = async (req, res) => {
         const single = await Recipe.findOne({ _id: req.params.id })
 
         // RENDER DATA
-        res.render('recipe/edit', {
-            locals,
-            single  // data grabbed earlier by finding id
-        })
+        // res.render('recipe/edit', {
+        //     locals,
+        //     single  // data grabbed earlier by finding id
+        // // })
     } catch (error) {
         console.log(error)
     }
 }
 
-exports.editRecipe = async (req, res) => {
+export async function editRecipe(req, res){
 
 
     try {  // USE SCHEMA TO UPDATE CUSTOMER CONSTRUCTOR
@@ -208,7 +205,7 @@ exports.editRecipe = async (req, res) => {
         })
 
         // REDIRECT TO VIEW PAGE
-        res.redirect(`/view/${req.params.id}`)
+        // res.redirect(`/view/${req.params.id}`)
 
     } catch (error) {
         console.log(error)
@@ -217,7 +214,7 @@ exports.editRecipe = async (req, res) => {
 
 // DELETE / 
 // DELETE RECIPE BY ID
-exports.deleteRecipe = async (req, res) => {
+export async function deleteRecipe(req, res){
 
     try {  
 
@@ -225,7 +222,7 @@ exports.deleteRecipe = async (req, res) => {
         await Recipe.deleteOne({_id: req.params.id})
 
         // REDIRECT TO HOMEPAGE
-        res.redirect("/view")
+        // res.redirect("/view")
 
     } catch (error) {
         console.log(error)
@@ -236,8 +233,7 @@ exports.deleteRecipe = async (req, res) => {
 
 // GET / 
 // GET RANDOM RECIPE PAGE
-exports.randomRecipe = async (req, res) => {
-
+export async function randomRecipes(req, res){
 
     try {
 
@@ -249,7 +245,7 @@ exports.randomRecipe = async (req, res) => {
             title: recipe.name
         }
 
-        res.render('recipe/random', {locals, recipe} )
+        // res.render('recipe/random', {locals, recipe} )
 
     } catch (error) {
         console.log(error)
