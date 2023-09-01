@@ -4,7 +4,7 @@ import cors from 'cors'
 import express from 'express'
 import ConnectDB from './src/Server/src/config/db.js'
 
-import {userRouter} from './src/Server/src/controllers/usersController.js'
+import {userRouter} from './src/Server/src/routes/user.js'
 
 const app = express()
 // const port = 5173

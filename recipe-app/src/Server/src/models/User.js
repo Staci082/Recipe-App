@@ -12,7 +12,7 @@ const UserSchema = new mongoose.Schema({
         type: String,
         required: true,
     }
-})
+}, { collection: 'data' })
 
 const UserModel = mongoose.model("users", UserSchema, "users")
 
