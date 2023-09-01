@@ -34,7 +34,7 @@ function Header() {
                 <input type="search" name="searchBar" className="search-bar" placeholder="Search.." aria-label="Search" />
                 <button id="login-button">
                 {<LoginRegister/>}
-                    <RxPerson size={30} />
+                    <RxPerson size={30}/>
                 </button>
             </div>
         </>

@@ -1,25 +1,7 @@
 
-const Recipe = require('../models/Recipe')
+const Recipe = require('../models/recipes')
 
 const mongoose = require('mongoose')
-
-
-// GET /
-// HOMEPAGE
-exports.homepage = async (req, res) => {
-
-    // TAB TITLE
-    const locals = {
-        title: "Fiesta Flavors"
-    }
-
-    try {
-        // RENDER PAGE AND LOAD VARIABLE DATA
-        res.render('index', locals)
-    } catch (error) {
-        console.log(error)
-    }
-}
 
 
 // GET /

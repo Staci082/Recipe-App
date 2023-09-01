@@ -11,12 +11,12 @@
 // 　＼二つ
 
 
-const mongoose = require('mongoose')
+import mongoose from 'mongoose';
 
 
 // CREATE DATA SCHEMA
-const Schema = mongoose.Schema
-const recipeSchema = new Schema({
+// const Schema = mongoose.Schema
+const recipeSchema = new mongoose.Schema({
     name: {
         type: String,
         trim: true
@@ -34,5 +34,6 @@ const recipeSchema = new Schema({
 
 
 // COMPILE SCHEMA TO MODEL
-module.exports = mongoose.model("Recipe", recipeSchema) // value + function
+// module.exports = mongoose.model("Recipe", recipeSchema) // value + function
 
+const recipeModel = mongoose.model("recipes", recipeSchema)

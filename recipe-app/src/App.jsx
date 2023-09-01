@@ -1,12 +1,5 @@
 import "./Assets/SassStyles/app.css";
-import { createBrowserRouter, RouterProvider, Route, Link } from "react-router-dom";
-
-// IMPORT COMPONENTS
-import Categories from "./Components/categories/Categories";
-import Header from "./Components/header/Header";
-import Pagination from "./Components/pagination/Pagination";
-import Recipes from "./Components/recipes/Recipes";
-import Menu from "./Components/menu/Menu";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 // IMPORT PAGES
 import Create from "./Pages/create/Create";
