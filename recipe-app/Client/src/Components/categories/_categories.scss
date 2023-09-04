@@ -1,7 +1,9 @@
 .categories-container {
     @include flex;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    width: 100%;
     gap: 1.2em;
     margin: 2em 0 1em 0;
     @include md {
@@ -27,4 +29,10 @@
 .cat-item-img {
     transform: scale(0.8);
     margin-bottom: -1em;
+}
+
+.slider {
+    border: 2px solid deeppink;
+    width: 80%;
+    max-height: 100px;
 }

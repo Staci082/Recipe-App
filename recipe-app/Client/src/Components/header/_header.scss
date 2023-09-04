@@ -1,10 +1,12 @@
 .header-container {
     position: relative;
-    border-radius: 15px;
     @include flex;
     justify-content: space-between;
-    padding: 1em;
+    padding: 0 2em;
     margin-bottom: 1.5em;
+    @include lg {
+        padding-left: 0;
+    }
 }
 
 .logo-container {
@@ -19,8 +21,7 @@
 
 .menu-button {
     display: none;
-    font-size: 3rem;
-
+    font-size: 3.5rem;
     @include lg {
         display: flex;
     }
@@ -29,7 +30,7 @@
 .search-bar {
     outline: none;
     height: 40px;
-    width: clamp(200px, 25vw, 600px);
+    width: clamp(250px, 30vw, 600px);
     @include box;
     box-shadow: $box-shadow;
     padding: 0 1em;

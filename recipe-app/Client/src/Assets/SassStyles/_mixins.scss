@@ -6,7 +6,14 @@
 
 @mixin box {
     border: $border;
-    box-shadow: 8px 8px 0px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 0.75);
+    border-radius: 10px;
+}
+
+@mixin colorBox {
+    border: $border;
+    box-shadow: 5px 5px 0px 0px rgb(152, 242, 147),
+    6px 6px 0px 0px black;
     border-radius: 10px;
 }
 
@@ -60,8 +67,11 @@
 }
 
 @mixin backButton {
+    cursor: pointer;
     font-size: 1.5rem;
     position: absolute;
+    left: 2%;
+    top: 1%;
 }
 
 /*  MEDIA QUERIES */

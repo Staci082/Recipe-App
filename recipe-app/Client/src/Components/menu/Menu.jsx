@@ -20,6 +20,13 @@ function menu() {
             title: "Grocery List",
             href: "/list",
         },
+        {
+            title: "Log in",
+            href: "/login",
+        },
+        { 
+            title: "Register", 
+            href: "/register" },
     ];
 
     return (

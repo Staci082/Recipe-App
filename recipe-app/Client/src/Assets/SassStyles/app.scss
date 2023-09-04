@@ -33,6 +33,7 @@ body {
 }
 
 a {
+
     font-family: Poppins, sans-serif;
     text-decoration: none;
     color: black;
@@ -51,20 +52,30 @@ button {
 
 // APP STYLING
 .global-container {
-    max-width: 1300px;
+    position: relative;
+    max-width: 1400px;
+    min-width: 300px;
     background: rgb(255, 255, 255);
     @include box;
-    margin: 30px;
-    padding: 1em;
+    margin: 1em 0;
+    padding: 1em 0;
+
+    @include sm {
+        height: 100vh;
+        margin:  -5% 2em;
+        padding: 1em;
+        border: none;
+    }
 }
 
 .main-container {
     background: rgb(255, 255, 255);
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(5);
+    grid-template-rows: repeat(4, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
+    margin-bottom: 1em;
 
     @include md {
         @include flex;
