@@ -7,7 +7,6 @@
 // COMPONENT IMPORTS
 @import "../../Components/categories/categories";
 @import "../../Components/header/header";
-@import "../../Components/login-register/login-register";
 @import "../../Components/pagination/pagination";
 @import "../../Components/recipes/recipes";
 @import "../../Components/menu/menu";
@@ -29,7 +28,7 @@ body {
     font-family: Poppins, sans-serif;
     @include flex;
     min-height: 95vh;
-    background: rgb(255, 224, 254);
+    background: $salmon-light;
 }
 
 a {
@@ -49,30 +48,38 @@ button {
     background: none;
 }
 
+.back-button {
+    @include backButton;
+}
+.form-back-button {
+    @include backButton;
+}
+.login-back-button {
+    @include backButton;
+
+}
+
 
 // APP STYLING
 .global-container {
     position: relative;
-    max-width: 1400px;
+    max-width: 1500px;
     min-width: 300px;
-    background: rgb(255, 255, 255);
+    background: $light;
     @include box;
-    margin: 1em 0;
-    padding: 1em 0;
+    margin: 1em;
+    padding: 1em 1em;
 
     @include sm {
-        height: 100vh;
-        margin:  -5% 2em;
-        padding: 1em;
-        border: none;
+        margin: 1em;
     }
 }
 
 .main-container {
-    background: rgb(255, 255, 255);
+    background: $light;
     display: grid;
     grid-template-columns: repeat(5);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     margin-bottom: 1em;
@@ -82,3 +89,4 @@ button {
         flex-direction: column;
     }
 }
+

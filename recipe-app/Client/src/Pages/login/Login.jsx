@@ -1,10 +1,9 @@
 function Login() {
     return (
         <div className="login-container">
+            <a href="/" className="login-back-button">&times;</a>
             <form className="login-form">
-                <a href="/" className="login-back-button">
-                    &times;
-                </a>
+
                 <h2>Log in</h2>
 
                 <div className="form-group">

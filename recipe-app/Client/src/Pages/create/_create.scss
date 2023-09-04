@@ -39,7 +39,7 @@
 
     & .submit-button {
         @include submitButton;
-        margin-bottom: 2em;
+        margin-bottom: 1em;
     }
 }
 
@@ -52,10 +52,4 @@
     position: absolute;
     top: 10%;
     right: 5%;
-}
-
-.form-back-button {
-    @include backButton;
-    right: 2%;
-    top: 1%;
 }

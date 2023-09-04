@@ -7,8 +7,9 @@ function Register() {
 
     return (
         <div className="register-container">
+            <a href="/" className="login-back-button">&times;</a>
             <form className="register-form">
-                <a href="/" className="register-back-button">&times;</a>
+                
                 <h2>Register</h2>
 
                 <div className="form-group">

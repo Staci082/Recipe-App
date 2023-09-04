@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { CgLayoutGridSmall } from "react-icons/cg";
-// import Menu from "../menu/Menu"
+import Menu from "../menu/Menu"
 
 
 function Header() {

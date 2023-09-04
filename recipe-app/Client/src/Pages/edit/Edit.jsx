@@ -3,10 +3,10 @@ import { HiPlus } from "react-icons/hi2";
 function Edit() {
     return (
         <>
+        <a href="/" className="form-back-button">
+                &times;
+            </a>
             <form className="edit-form">
-                <a href="/" className="form-back-button">
-                    &times;
-                </a>
                 <h2>Edit Recipe</h2>
 
                 <div className="form-separator">
