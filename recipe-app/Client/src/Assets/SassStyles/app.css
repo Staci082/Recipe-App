@@ -379,6 +379,7 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-evenly;
+  width: clamp(300px, 50vw, 2000px);
   padding: 4em 0;
   margin: 2em;
   gap: 2em;
@@ -409,6 +410,7 @@
 }
 
 .grocery-input-container {
+  border: deeppink solid 2px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -598,6 +600,45 @@
   margin-top: 1em;
 }
 .register-form .register-submit-button:hover {
+  transform: scale(1.1);
+  border: rgb(221, 246, 221) solid 2px;
+  box-shadow: 4px 4px 0px 0px rgba(221, 246, 221, 0.75);
+}
+
+.url-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 1em;
+}
+.url-form input {
+  height: 40px;
+  outline: none;
+  padding: 0 0.5em;
+  margin-bottom: 1.5em;
+  width: 90%;
+  font-family: inherit;
+  font-size: 1rem;
+  border: 2px black solid;
+  border-radius: 5px;
+  box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.75);
+  width: clamp(300px, 25vw, 450px);
+}
+.url-form .submit-button {
+  font-size: 1.5rem;
+  margin: -1em;
+  border: 2px black solid;
+  box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 2px;
+  cursor: pointer;
+  padding: 10px;
+  transition: ease-in-out 0.3s;
+  border-radius: 5px;
+  padding: 0.5em 1.5em;
+  margin: 1em;
+}
+.url-form .submit-button:hover {
   transform: scale(1.1);
   border: rgb(221, 246, 221) solid 2px;
   box-shadow: 4px 4px 0px 0px rgba(221, 246, 221, 0.75);

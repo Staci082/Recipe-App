@@ -20,6 +20,9 @@ router.post('/add', postRecipe)
 // VIEW ALL RECIPES PAGE
 router.get('/view', viewRecipes)
 
+// // ADD RECIPE FROM URL
+// router.get('/url', urlRecipe)
+
 // // SORT RECIPES BY CATEGORY
 // router.get('/view/:category', sortRecipes)
 

@@ -17,7 +17,7 @@ function menu() {
         },
         {
             title: "Add an Internet Recipe",
-            href: "/add",
+            href: "/url",
         },
         {
             title: "Grocery List",

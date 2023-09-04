@@ -1,7 +1,7 @@
 function Login() {
     return (
         <div className="login-container">
-            <a href="/" className="login-back-button">&times;</a>
+            <a href="/" className="back-button">&times;</a>
             <form className="login-form">
 
                 <h2>Log in</h2>

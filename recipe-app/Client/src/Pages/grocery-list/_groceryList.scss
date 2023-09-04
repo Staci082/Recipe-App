@@ -2,6 +2,8 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-evenly;
+
+    width: clamp(300px, 50vw, 2000px);
     padding: 4em 0;
     margin: 2em;
     gap: 2em;
@@ -31,6 +33,7 @@
 }
 
 .grocery-input-container {
+    border: deeppink solid 2px;
     @include flex;
     flex-direction: column;
     gap: 2em;

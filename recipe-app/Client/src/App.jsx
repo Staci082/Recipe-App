@@ -11,6 +11,7 @@ import Homepage from "./Pages/homepage/Homepage";
 import Login from "./Pages/login/Login";
 import Recipe from "./Pages/recipe/Recipe";
 import Register from "./Pages/register/Register";
+import URLRecipe from "./Pages/url-recipe/URLRecipe";
 
 
 
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
       path: "/list",
       element: <GroceryList />,
   },
+  {
+    path: "/url",
+    element: <URLRecipe />,
+},
   {
       path: "*",
       element: <Error />,
