@@ -15,10 +15,10 @@
     position: relative;
     display: flex;
     cursor: pointer;
-    min-width: 220px;
+    min-width: 250px;
     height: 70px;
     @include colorBox;
-    border: $salmon 2px solid;
+    border: black 2px solid;
     padding-left: 1em;
 
     & .recipe-title-container {
@@ -37,7 +37,7 @@
 
 
     @include sm {
-        min-width: 210px;
+        min-width: 280px;
     }
 }
 
@@ -48,7 +48,4 @@
     right: 2px;
     color: $salmon;
     font-size: 1.5rem;
-    &:hover {
-        color: red;
-    }
 }

@@ -23,13 +23,7 @@ function menu() {
             title: "Grocery List",
             href: "/list",
         },
-        {
-            title: "Log in",
-            href: "/login",
-        },
-        { 
-            title: "Register", 
-            href: "/register" },
+        
     ];
 
     return (
@@ -42,6 +36,10 @@ function menu() {
                             <a href={item.href}>{item.title}</a>
                         </li>
                     ))}
+                    <li className="menuItem" >
+                    <a href="/register">Register </a> /
+                        <a href="/login"> Log in </a> 
+                    </li>
                 </ul>
             </div>
         </div>

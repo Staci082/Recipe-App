@@ -8,7 +8,6 @@ function Recipes() {
 
     const toggleSave = () => {
         setSaveRecipe(!saveRecipe)
-        console.log(clicked)
     }
 
     return (

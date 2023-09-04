@@ -1,16 +1,7 @@
 .header-container {
-    position: relative;
     @include flex;
     justify-content: space-between;
-    padding: 0 2em;
     margin-bottom: 1.5em;
-
-    @include lg {
-        padding-left: 0;
-    }
-    @include sm {
-        padding: 0 1em 0 0;
-    }
 }
 
 .logo-container {
@@ -18,9 +9,12 @@
     align-items: center; 
     font-family: gluten, comic sans-serif;
     gap: 1em;
-    @include lg {
-        display: none;
+    & .logo-title {
+        @include lg {
+            display: none;
+        }
     }
+    
 }
 
 .menu-button {
@@ -34,9 +28,9 @@
 .search-bar {
     outline: none;
     height: 40px;
-    width: clamp(215px, 30vw, 600px);
+    width: clamp(240px, 35vw, 600px);
+    margin-left: 8px;
     @include box;
     box-shadow: $box-shadow;
     padding: 0 1em;
-    margin-left: -8px;
 }

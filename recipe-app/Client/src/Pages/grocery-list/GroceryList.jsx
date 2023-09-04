@@ -14,7 +14,6 @@ function GroceryList() {
                 </div>
 
                 <div className="grocery-list">
-                    <div className="title"></div>
                     <div className="line"></div>
                     <div className="line"></div>
                     <div className="line"></div>
@@ -24,10 +23,10 @@ function GroceryList() {
                     <div className="line"></div>
                     <div className="line"></div>
                     <div className="line"></div>
+
                 </div>
 
                 <div className="grocery-list">
-                    <div className="title"></div>
                     <div className="line"></div>
                     <div className="line"></div>
                     <div className="line"></div>

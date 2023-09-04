@@ -8,6 +8,7 @@
 .register-form {
     @include flex;
     @include form;
+    margin-top: -1em;
     
     & label {
         @include label;
