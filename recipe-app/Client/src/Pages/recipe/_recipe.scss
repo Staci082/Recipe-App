@@ -1,7 +1,7 @@
 
 .single-recipe-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     width: clamp(300px, 50vw, 2000px);
     padding:  0 1em 4em 1em;
     gap: 2em;
@@ -12,7 +12,7 @@
     }
     & .instructions-container {
         padding: 1em;
-        flex: 75%;
+        flex: stretch;
         @include colorBox;
     }
 

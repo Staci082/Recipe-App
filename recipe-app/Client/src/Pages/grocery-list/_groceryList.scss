@@ -1,20 +1,20 @@
 .grocery-list-container {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-evenly;
-
-    width: clamp(300px, 50vw, 2000px);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     padding: 4em 0;
     margin: 2em;
     gap: 2em;
     // font-family: "Indie Flower", "comic Sans";
+    @include lg {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 
 .line {
     padding-top: 2vh;
     border-bottom: grey 2px dotted;
     height: 5px;
-    width: 270px;
+    width: clamp(250px, 18vw, 330px);
 }
 
 .grocery-list {
@@ -23,7 +23,7 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    width: 300px;
+    width: clamp(280px, 20vw, 400px);
     padding: 2em 0 1em 0;
     height: auto;
     gap: 1.5em;
@@ -35,20 +35,20 @@
 .grocery-input-container {
     border: deeppink solid 2px;
     @include flex;
+    height: 200px;
     flex-direction: column;
     gap: 2em;
     position: relative;
     & .grocery-input {
         @include input;
-        
         width: 250px;
     }
 }
 
 .add-item-button {
     position: absolute;
-    bottom: 28px;
-    right: 5px;
+    bottom: 41px;
+    right: 25px;
 }
 
 .grocery-back-button {
