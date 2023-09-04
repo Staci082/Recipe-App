@@ -22,7 +22,7 @@ function Register() {
                     <input type="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)}/>
                 </div>
 
-                <button type="submit" className="submit-button">
+                <button type="submit" className="register-submit-button">
                     Register
                 </button>
             </form>

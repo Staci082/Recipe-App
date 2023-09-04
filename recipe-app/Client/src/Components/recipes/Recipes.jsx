@@ -1,19 +1,31 @@
+import { useState } from 'react'
 import Categories from "../categories/Categories";
 import { FaHeart, FaRegHeart } from "react-icons/fa6";
 
 function Recipes() {
+
+    const [saveRecipe, setSaveRecipe] = useState(false)
+
+    const toggleSave = () => {
+        setSaveRecipe(!saveRecipe)
+        console.log(clicked)
+    }
+
     return (
         <div className="recipe-container">
             <Categories />
 
 
-            <a className="recipe" href="/recipe">
-                <div className="recipe-title-container">
+            <div className="recipe" >
+                <a href="/recipe" className="recipe-title-container">
                 <h3 className="recipe-title">Recipe title</h3>
                 <i className="recipe-category">category</i>
-                </div> 
-                <FaRegHeart size={25} className="save-icon"/> 
-            </a>
+                </a> 
+                <button className="save-icon" onClick={toggleSave}>
+                    { saveRecipe ? <FaRegHeart/> : <FaHeart/> }
+                </button>
+                 
+            </div>
             
             <a className="recipe" href="/recipe"></a>
             <a className="recipe" href="/recipe"></a>

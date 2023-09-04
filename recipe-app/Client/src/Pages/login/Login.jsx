@@ -16,7 +16,7 @@ function Login() {
                     <input type="password" name="password" />
                 </div>
 
-                <button type="submit" className="submit-button">
+                <button type="submit" className="login-submit-button">
                     Log in
                 </button>
             </form>

@@ -3,7 +3,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     width: clamp(300px, 50vw, 2000px);
-    padding-bottom: 4em;
+    padding:  0 1em 4em 1em;
     gap: 2em;
 
     & .ingredients-container {

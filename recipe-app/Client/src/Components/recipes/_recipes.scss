@@ -42,10 +42,12 @@
 }
 
 .save-icon {
+    width: 40px;
     position: absolute;
     top: 3px;
-    right: 6px;
+    right: 2px;
     color: $salmon;
+    font-size: 1.5rem;
     &:hover {
         color: red;
     }

@@ -17,7 +17,8 @@
         @include input;
     }
     
-    & .submit-button {
+    & .register-submit-button {
         @include submitButton;
+        margin-top: 1em;
     }
 }

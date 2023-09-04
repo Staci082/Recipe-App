@@ -177,10 +177,12 @@
 }
 
 .save-icon {
+  width: 40px;
   position: absolute;
   top: 3px;
-  right: 6px;
+  right: 2px;
   color: rgb(255, 171, 185);
+  font-size: 1.5rem;
 }
 .save-icon:hover {
   color: red;
@@ -488,7 +490,7 @@
   border-radius: 5px;
   box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.75);
 }
-.login-form .submit-button {
+.login-form .login-submit-button {
   font-size: 1.5rem;
   margin: -1em;
   border: 2px black solid;
@@ -499,8 +501,9 @@
   transition: ease-in-out 0.3s;
   border-radius: 5px;
   padding: 0.5em 1.5em;
+  margin-top: 1em;
 }
-.login-form .submit-button:hover {
+.login-form .login-submit-button:hover {
   transform: scale(1.1);
   border: rgb(221, 246, 221) solid 2px;
   box-shadow: 4px 4px 0px 0px rgba(221, 246, 221, 0.75);
@@ -510,7 +513,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   width: clamp(300px, 50vw, 2000px);
-  padding-bottom: 4em;
+  padding: 0 1em 4em 1em;
   gap: 2em;
 }
 .single-recipe-container .ingredients-container {
@@ -593,7 +596,7 @@
   border-radius: 5px;
   box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.75);
 }
-.register-form .submit-button {
+.register-form .register-submit-button {
   font-size: 1.5rem;
   margin: -1em;
   border: 2px black solid;
@@ -604,8 +607,9 @@
   transition: ease-in-out 0.3s;
   border-radius: 5px;
   padding: 0.5em 1.5em;
+  margin-top: 1em;
 }
-.register-form .submit-button:hover {
+.register-form .register-submit-button:hover {
   transform: scale(1.1);
   border: rgb(221, 246, 221) solid 2px;
   box-shadow: 4px 4px 0px 0px rgba(221, 246, 221, 0.75);
