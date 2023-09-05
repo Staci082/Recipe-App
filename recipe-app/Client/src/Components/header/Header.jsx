@@ -5,6 +5,13 @@ import Menu from "../menu/Menu"
 
 function Header() {
 
+    const [openMenu, setOpenMenu] = useState(false)
+
+    const toggleMenu = () => {
+        console.log("menu clicked")
+        setOpenMenu(!openMenu)
+    }
+
 
     return (
         <>
@@ -16,8 +23,9 @@ function Header() {
 
                 <input type="search" name="searchBar" className="search-bar" placeholder="Search.." aria-label="Search" />
 
-                <button>
+                <button onClick={toggleMenu}>
                     <CgLayoutGridSmall className="menu-button"/>
+                    <Menu className={`${openMenu && 'open'}`}/>
                 </button>
 
             </div>
