@@ -11,9 +11,10 @@
 }
 
 @mixin colorBox {
+    background: $light;
     border: $border;
-    box-shadow: 5px 5px 0px 0px $green2,
-    7px 7px 0px 0px rgb(12, 72, 10);
+    box-shadow: 5px 5px 0px 0px $light-purple,
+    7px 7px 0px 0px black;
     border-radius: 10px;
 }
 
@@ -26,8 +27,8 @@
     transition: ease-in-out 0.3s;
     &:hover {
         transform: scale(1.1);
-        border: $green solid 2px;
-        box-shadow: 4px 4px 0px 0px rgba($green, 0.75);
+        border: $light-purple solid 2px;
+        box-shadow: 4px 4px 0px 0px rgba($light-green, 0.75);
     }
 }
 

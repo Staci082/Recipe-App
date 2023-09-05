@@ -9,14 +9,16 @@
 }
 
 .menu-container {
-    width: 180px;
-    @include box;
+    width: 200px;
+    @include colorBox;
+    box-shadow: 5px 5px 0px 0px $light-purple,
+    7px 7px 0px 0px black;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     padding: 0.5em 1.5em 0 1em;
-    background: $green;
+    background: $light-salmon;
 }
 
 .menuItem {

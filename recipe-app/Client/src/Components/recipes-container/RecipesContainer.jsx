@@ -2,7 +2,7 @@ import { useState } from 'react'
 import Categories from "../categories/Categories";
 import { FaHeart, FaRegHeart } from "react-icons/fa6";
 
-function Recipes() {
+function RecipesContainer() {
 
     const [saveRecipe, setSaveRecipe] = useState(false)
 
@@ -23,12 +23,8 @@ function Recipes() {
                 <button className="save-icon" onClick={toggleSave}>
                     { saveRecipe ? <FaRegHeart/> : <FaHeart/> }
                 </button>
-                 
             </div>
             
-            <a className="recipe" href="/recipe"></a>
-            <a className="recipe" href="/recipe"></a>
-            <a className="recipe" href="/recipe"></a>
             <a className="recipe" href="/recipe"></a>
             <a className="recipe" href="/recipe"></a>
             <a className="recipe" href="/recipe"></a>
@@ -41,4 +37,4 @@ function Recipes() {
     );
 }
 
-export default Recipes;
+export default RecipesContainer;

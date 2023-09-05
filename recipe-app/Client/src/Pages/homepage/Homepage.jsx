@@ -2,7 +2,7 @@
 
 import Header from "../../Components/header/Header";
 import Pagination from "../../Components/pagination/Pagination";
-import Recipes from "../../Components/recipes/Recipes";
+import RecipesContainer from "../../Components/recipes-container/RecipesContainer";
 import Menu from "../../Components/menu/Menu";
 
 function Homepage() {
@@ -14,7 +14,7 @@ function Homepage() {
         <Header  />
         <div className="main-container">
             <Menu />
-            <Recipes />
+            <RecipesContainer />
             <Pagination />
         </div>
 

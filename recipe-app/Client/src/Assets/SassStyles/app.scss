@@ -8,7 +8,7 @@
 @import "../../Components/categories/categories";
 @import "../../Components/header/header";
 @import "../../Components/pagination/pagination";
-@import "../../Components/recipes/recipes";
+@import "../../Components/recipes-container/recipes-container";
 @import "../../Components/menu/menu";
 
 @import "../../Pages/create/create";
@@ -29,7 +29,7 @@ body {
     font-family: Poppins, sans-serif;
     @include flex;
     min-height: 95vh;
-    background: $salmon-light;
+    background: $salmon;
 }
 
 a {
@@ -43,7 +43,7 @@ ul {
 }
 
 textarea {
-    resize: none; 
+    resize: none;
 }
 
 button {
@@ -62,13 +62,12 @@ button {
     @include backButton;
 }
 
-
 // APP STYLING
 .global-container {
     position: relative;
-    max-width: 1500px;
+    max-width: 1300px;
     min-width: 300px;
-    background: $light;
+    background: $light-salmon;
     @include box;
     margin: 1em;
     padding: 1em 1em;
@@ -79,7 +78,7 @@ button {
 }
 
 .main-container {
-    background: $light;
+    background: $light-salmon;
     display: grid;
     grid-template-columns: repeat(5);
     grid-template-rows: repeat(2, 1fr);
@@ -92,4 +91,3 @@ button {
         flex-direction: column;
     }
 }
-
