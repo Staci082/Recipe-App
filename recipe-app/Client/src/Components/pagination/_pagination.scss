@@ -24,14 +24,14 @@
     border-radius: $border-radius-sm;
     // font-size: $smallFont;
     &:hover {
-        background: rgb(137, 233, 137);
+        background: $light-purple;
         // background: $yellow;
     }
 }
 
 .pagination a.active {
     // background-color: $orange;
-    background: rgb(34, 230, 34);
+    background: $salmon;
     color: white;
 }
 

@@ -26,6 +26,6 @@
     margin-bottom: clamp(0.5rem, 5vh, 1.5rem);
     font-weight: bold;
     & a:hover {
-        color: rgb(74, 180, 74);
+        color: $light-purple;
     }
 }

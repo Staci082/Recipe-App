@@ -113,11 +113,11 @@
   border-radius: 5px;
 }
 .pagination a:hover {
-  background: rgb(137, 233, 137);
+  background: #BFBAF6;
 }
 
 .pagination a.active {
-  background: rgb(34, 230, 34);
+  background: #fbd3d3;
   color: white;
 }
 
@@ -207,7 +207,7 @@
   font-weight: bold;
 }
 .menuItem a:hover {
-  color: rgb(74, 180, 74);
+  color: #BFBAF6;
 }
 
 .form-separator {
@@ -665,7 +665,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 95vh;
-  background: #fbd3d3;
+  background: rgb(252, 240, 242);
 }
 
 a {
