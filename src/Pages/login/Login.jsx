@@ -1,9 +1,12 @@
+import form from "../../Components/auth-form/authForm";
+
 function Login() {
     return (
-        <div className="login-container">
-            <a href="/" className="back-button">&times;</a>
-            <form className="login-form">
-
+        <div className="auth-container">
+            <a href="/" className="back-button">
+                &times;
+            </a>
+            <form className="auth-form">
                 <h2>Log in</h2>
 
                 <div className="form-group">
@@ -16,7 +19,7 @@ function Login() {
                     <input type="password" name="password" />
                 </div>
 
-                <button type="submit" className="login-submit-button">
+                <button type="submit" className="submit-button">
                     Log in
                 </button>
             </form>

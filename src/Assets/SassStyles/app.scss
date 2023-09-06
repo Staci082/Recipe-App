@@ -7,17 +7,17 @@
 // COMPONENT IMPORTS
 @import "../../Components/categories/categories";
 @import "../../Components/header/header";
+@import "../../Components/auth-form/auth-form";
 @import "../../Components/pagination/pagination";
 @import "../../Components/recipes-container/recipes-container";
+@import "../../Components/recipe-form/recipe-form";
 @import "../../Components/menu/menu";
 
-@import "../../Pages/create/create";
-@import "../../Pages/edit/edit";
+// @import "../../Pages/create/create";
+// @import "../../Pages/edit/edit";
 @import "../../Pages/error/error";
 @import "../../Pages/grocery-list/groceryList";
-@import "../../Pages/login/login";
 @import "../../Pages/recipe/recipe";
-@import "../../Pages/register/register";
 @import "../../Pages/url-recipe/url-recipe";
 
 // GLOBAL STYLING
@@ -50,6 +50,15 @@ button {
     cursor: pointer;
     border: none;
     background: none;
+}
+
+.submit-button {
+    font-size: 1.5rem;
+    margin: -1em;
+    margin-top: 1em;
+    @include button;
+    border-radius: $border-radius-sm;
+    padding: 0.5em 1.5em;
 }
 
 .back-button {

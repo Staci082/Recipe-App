@@ -8,8 +8,4 @@
         @include input;
         width: clamp(300px, 25vw, 450px)
     }
-    & .submit-button {
-        @include submitButton;
-        margin: 1em;
-    }
 }

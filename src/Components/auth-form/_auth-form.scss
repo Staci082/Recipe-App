@@ -1,10 +1,11 @@
 
-.login-container {
+
+.auth-container {
     display: flex; 
     justify-content: center;
 }
 
-.login-form {
+.auth-form {
     @include flex;
     @include form;
     margin-top: -1em;
@@ -16,10 +17,6 @@
     & input {
         @include input;
     }
-    
-    & .login-submit-button {
-        @include submitButton;
-        margin-top: 1em;
-    }
+
 
 }
