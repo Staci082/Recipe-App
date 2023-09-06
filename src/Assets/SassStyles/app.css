@@ -310,6 +310,10 @@
   color: #BFBAF6;
 }
 
+.logout-button {
+  cursor: pointer;
+}
+
 .error-page {
   background: red;
   padding: 2em;
