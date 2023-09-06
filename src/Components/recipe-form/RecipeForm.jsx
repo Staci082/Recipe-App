@@ -1,22 +1,27 @@
 import { HiPlus } from "react-icons/hi2";
 
-function RecipeForm() {
+
+function RecipeForm({   label, 
+                        recipe, 
+                        handleChange, 
+                        handleIngredientChange, 
+                        addIngredient }) {
   return (
     <>
             <a href="/" className="form-back-button">
                 &times;
             </a>
             <form className="recipe-form">
-                <h2>Create Recipe</h2>
+                <h2>{label} recipe</h2>
 
                 <div className="form-separator">
                     <div className="form-inner-separator">
                         <label htmlFor="title">Name:</label>
-                        <input type="text" name="title" />
+                        <input type="text" name="title" onChange={handleChange}/>
 
-                        <label>Category:</label>
+                        <label htmlFor="category">Category:</label>
                         <select name="category" className="form-control" required>
-                            <option disabled="disabled" value="">
+                            <option disabled="disabled" value="" onChange={handleChange}>
                                 Select category
                             </option>
                             <option value="Appetizer">Appetizer</option>
@@ -28,19 +33,29 @@ function RecipeForm() {
                             <option value="Vegetarian">Vegetarian</option>
                         </select>
 
-                        <label>Instructions:</label>
-                        <textarea id="instructions" className="input-textarea" name="instructions"></textarea>
+                        <label htmlFor="instructions">Instructions:</label>
+                        <textarea className="input-textarea" name="instructions" onChange={handleChange}></textarea>
                     </div>
 
                     <div className="form-inner-separator">
-                        <label>Ingredients:</label>
+                        <label htmlFor="ingredients">Ingredients:</label>
                         <div className="add-ingredient-container">
-                            <input type="text" name="ingredients" className="form-control ingredient-input" id="ingredient-input" />
-                            <button className="add-ingredient-button">
+                            <button type="button" className="add-ingredient-button" onClick={addIngredient}>
                                 <HiPlus size={28} />
                             </button>
                         </div>
-                        <div className="ingredients-list"></div>
+                        <ul className="ingredients-list">
+                            {recipe.ingredients.map((ingredient, index) => {
+                                // <li key={index}>{ingredient}</li>
+
+                                <input  key={index} 
+                                        type="text" 
+                                        value={ingredient} 
+                                        className="form-control ingredient-input" 
+                                        name="ingredients" 
+                                        onChange={(e) => handleIngredientChange(e, index)} />
+                            })}
+                        </ul>
                     </div>
                 </div>
                 <button type="submit" className="submit-button">

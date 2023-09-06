@@ -553,7 +553,7 @@ button {
 .global-container {
   position: relative;
   max-width: 1300px;
-  background: rgb(252, 240, 242);
+  background: rgb(255, 255, 255);
   border: 2px black solid;
   box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 0.75);
   border-radius: 10px;
@@ -567,7 +567,6 @@ button {
 }
 
 .main-container {
-  background: rgb(252, 240, 242);
   display: grid;
   grid-template-columns: repeat(5);
   grid-template-rows: repeat(2, 1fr);

@@ -25,7 +25,7 @@ function Header() {
 
                 <button onClick={toggleMenu}>
                     <CgLayoutGridSmall className="menu-button"/>
-                    <Menu className={`${openMenu && 'open'}`}/>
+                    {/* <Menu className={`${openMenu && 'open'}`}/> */}
                 </button>
 
             </div>

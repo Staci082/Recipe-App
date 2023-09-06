@@ -1,16 +1,13 @@
 
 
-
-
-function form({ username, 
-                setUsername, 
+function form({ username,
+                setUsername,
                 password, 
                 setPassword, 
                 label, 
                 onSubmit }) {
-  return (
-    <div className="auth-container">
-        
+    return (
+        <div className="auth-container">
             <a href="/" className="back-button">
                 &times;
             </a>
@@ -32,7 +29,7 @@ function form({ username,
                 </button>
             </form>
         </div>
-  )
+    );
 }
 
-export default form
+export default form;

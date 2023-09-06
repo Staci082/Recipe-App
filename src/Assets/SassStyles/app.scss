@@ -75,7 +75,7 @@ button {
 .global-container {
     position: relative;
     max-width: 1300px;
-    background: $light-salmon;
+    background: $light;
     @include box;
     margin: 1em;
     padding: 1em 0.5em;
@@ -86,7 +86,7 @@ button {
 }
 
 .main-container {
-    background: $light-salmon;
+    // background: $light-salmon;
     display: grid;
     grid-template-columns: repeat(5);
     grid-template-rows: repeat(2, 1fr);
