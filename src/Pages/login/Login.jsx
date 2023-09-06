@@ -1,29 +1,18 @@
-import form from "../../Components/auth-form/authForm";
+import { useState } from "react";
+import AuthForm from "../../Components/auth-form/AuthForm";
 
 function Login() {
+    const [username, setUsername] = useState("");
+    const [password, setPassword] = useState("");
+
     return (
-        <div className="auth-container">
-            <a href="/" className="back-button">
-                &times;
-            </a>
-            <form className="auth-form">
-                <h2>Log in</h2>
-
-                <div className="form-group">
-                    <label htmlFor="name">Username:</label>
-                    <input type="text" name="name" />
-                </div>
-
-                <div className="form-group">
-                    <label htmlFor="password">Password:</label>
-                    <input type="password" name="password" />
-                </div>
-
-                <button type="submit" className="submit-button">
-                    Log in
-                </button>
-            </form>
-        </div>
+        <AuthForm 
+        username={username} 
+        setUsername={setUsername} 
+        password={password}
+        setPassword={setPassword} 
+        label="login"
+        onSubmit={onSubmit} />
     );
 }
 

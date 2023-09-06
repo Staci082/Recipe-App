@@ -1,33 +1,33 @@
 import { useState } from "react";
-import form from "../../Components/auth-form/authForm";
+import axios from "axios";
+import AuthForm from "../../Components/auth-form/AuthForm";
 
 function Register() {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
 
+    const onSubmit = async (e) => {
+        e.preventDefault()
+
+        try {
+            await axios.post("http://localhost:5712/auth/register", {
+                username,
+                password
+            })
+            alert("Registration completed! Please log in.")
+        } catch (error) {
+            console.error(error)
+        }
+    }
+
     return (
-        <div className="auth-container">
-            <a href="/" className="back-button">
-                &times;
-            </a>
-            <form className="auth-form">
-                <h2>Register</h2>
-
-                <div className="form-group">
-                    <label htmlFor="name">Username:</label>
-                    <input type="text" id="username" value={username} onChange={(e) => setUsername(e.target.value)} />
-                </div>
-
-                <div className="form-group">
-                    <label htmlFor="password">Password:</label>
-                    <input type="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-                </div>
-
-                <button type="submit" className="submit-button">
-                    Register
-                </button>
-            </form>
-        </div>
+        <AuthForm 
+        username={username} 
+        setUsername={setUsername} 
+        password={password}
+        setPassword={setPassword}
+        label="register"
+        onSubmit={onSubmit} />
     );
 }
 
