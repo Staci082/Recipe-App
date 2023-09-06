@@ -1,6 +1,9 @@
 import express from 'express'
 import {postRecipe, 
-        allRecipes, 
+        allRecipes,
+        saveRecipe, 
+        getSavedRecipesIds,
+        getSavedRecipes,
         singleRecipe, 
         searchRecipes, 
         editPage, 
@@ -16,6 +19,14 @@ router.get('/discover', allRecipes)
 // POST RECIPE FORM DATA
 router.post('/create', postRecipe)
 
+// SAVE A RECIPE
+router.put('/', saveRecipe)
+
+// GET SAVED RECIPES IDS 
+router.get('/savedRecipes/ids', getSavedRecipesIds)
+
+// GET SAVED RECIPES 
+router.get('/savedRecipes', getSavedRecipes)
 
 // // ADD RECIPE FROM URL
 // router.get('/url', urlRecipe)

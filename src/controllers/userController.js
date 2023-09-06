@@ -1,6 +1,6 @@
 import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";
-import UserModel from "../models/User.js";
+import User from "../models/User.js";
 
 // POST
 // REGISTER USER
@@ -8,7 +8,7 @@ export async function Register(req, res) {
     const { username, password } = req.body;
 
     // CHECK IF USERNAME ALREADY EXISTS
-    const user = await UserModel.findOne({ username });
+    const user = await User.findOne({ username });
     if (user) {
         return res.json({ message: "🐌 User already exists!" });
     }
@@ -17,7 +17,7 @@ export async function Register(req, res) {
     const hashedPassword = await bcrypt.hash(password, 10);
 
     // SAVE USER IN DB
-    const newUser = new UserModel({ username, password: hashedPassword });
+    const newUser = new User({ username, password: hashedPassword });
 
     try {
         await newUser.save();
@@ -34,7 +34,7 @@ export async function Login(req, res) {
     const { username, password } = req.body;
 
     // CHECK USERNAME
-    const user = await UserModel.findOne({ username });
+    const user = await User.findOne({ username });
     if (!user) {
         return res.json({ message: "Username or password is incorrect!" });
     }
@@ -46,6 +46,6 @@ export async function Login(req, res) {
     }
 
     // GIVE TOKEN WHEN BOTH ARE VALID
-    const token = jwt.sign({ id: user._id}, "secret" )
+    const token = jwt.sign({ id: user._id }, "secret");
     res.json({ token, userID: user._id });
 }

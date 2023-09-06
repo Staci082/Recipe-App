@@ -1,4 +1,5 @@
 import { Recipe } from "../models/Recipe.js";
+import { User } from "../models/User.js";
 
 
 // GET /
@@ -56,6 +57,56 @@ export async function postRecipe(req, res) {
     }
 }
 
+// PUT
+// SAVE RECIPES
+export async function saveRecipe(req, res) {
+
+    try {
+        const recipe = await Recipe.findById(req.body.recipeID)
+        const user = await User.findById(req.body.userID)
+
+        // add recipe into saved recipes array
+        user.savedRecipes.push(recipe)
+
+        //save user in db
+        await user.save()
+        res.json({savedRecipes: user?.savedRecipes})
+
+    } catch (error) {
+        cosnole.log(error)
+    }
+}
+
+// GET
+// GET SAVED RECIPES IDS
+export async function getSavedRecipesIds(req, res) {
+
+    try {
+
+        const user = await User.findById(req.body.userID)
+        const savedRecipes = await Recipe.findById({
+            _id: { $in: user.savedRecipes}
+        })
+        res.json({ savedRecipes })
+
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+// GET
+// GET SAVED RECIPES
+export async function getSavedRecipes(req, res) {
+
+    try {
+
+        const user = await User.findById(req.body.userID)
+        res.json({ savedRecipes: user?.savedRecipes })
+
+    } catch (error) {
+        console.log(error)
+    }
+}
 
 // GET /
 // GET SINGLE RECIPE BY ID
