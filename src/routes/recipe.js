@@ -1,7 +1,6 @@
 import express from 'express'
-import {addRecipe,
-        postRecipe, 
-        viewRecipes, 
+import {postRecipe, 
+        allRecipes, 
         singleRecipe, 
         searchRecipes, 
         editPage, 
@@ -11,24 +10,22 @@ import {addRecipe,
 const router = express.Router()
 
 
-// ADD RECIPE PAGE
-router.get('/add', addRecipe)
+// GET ALL RECIPES
+router.get('/discover', allRecipes)
 
 // POST RECIPE FORM DATA
-router.post('/add', postRecipe)
+router.post('/create', postRecipe)
 
-// VIEW ALL RECIPES PAGE
-router.get('/view', viewRecipes)
 
 // // ADD RECIPE FROM URL
 // router.get('/url', urlRecipe)
 
 // // SORT RECIPES BY CATEGORY
-// router.get('/view/:category', sortRecipes)
+// router.get('/:category', sortRecipes)
 
 //GET / 
 // GET RECIPE BY ID
-router.get('/view/:id', singleRecipe)
+router.get('/:id', singleRecipe)
 
 // SEARCH RECIPES
 router.post('/search', searchRecipes)
