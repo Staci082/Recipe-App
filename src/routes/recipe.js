@@ -5,6 +5,7 @@ import {postRecipe,
         getSavedRecipesIds,
         getSavedRecipes,
         singleRecipe, 
+        sortRecipes,
         searchRecipes, 
         editPage, 
         editRecipe, 
@@ -17,7 +18,7 @@ const router = express.Router()
 router.get('/discover', allRecipes)
 
 // POST RECIPE FORM DATA
-router.post('/create', postRecipe)
+router.post('/', postRecipe)
 
 // SAVE A RECIPE
 router.put('/', saveRecipe)
@@ -31,8 +32,8 @@ router.get('/savedRecipes', getSavedRecipes)
 // // ADD RECIPE FROM URL
 // router.get('/url', urlRecipe)
 
-// // SORT RECIPES BY CATEGORY
-// router.get('/:category', sortRecipes)
+// SORT RECIPES BY CATEGORY
+router.get('/:category', sortRecipes)
 
 //GET / 
 // GET RECIPE BY ID

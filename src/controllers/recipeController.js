@@ -13,8 +13,8 @@ export async function allRecipes(req, res) {
     // let page = req.query.page || 1;
 
     try {
-        const response = await Recipe.find({}) // empty brackets = find all (IF NO PAGINATION)
-        res.json(response)
+        const recipes = await Recipe.find({}) // empty brackets = find all (IF NO PAGINATION)
+        res.json(recipes)
         // const recipes = await Recipe.aggregate([{ $sort: { updatedAt: -1 } }])
         //     .sort({ name: 1 })
         //     .skip(perPage * page - perPage)
@@ -124,22 +124,23 @@ export async function singleRecipe(req, res) {
     }
 }
 
-// // GET /
-// // GET RECIPES BY CATEGORY
-// export async function sortRecipes(req, res){
+// GET /
+// GET RECIPES BY CATEGORY
+export async function sortRecipes(req, res){
 
-//     // let category = req.body.chosenCategory || ""
-//     let category = req.params.category || ""
+    // let category = req.body.chosenCategory || ""
+    let category = req.params.category || ""
 
-//     try {
-//         const recipes = await Recipe.find({_category: category}).limit(12)
+    try {
+        const recipes = await Recipe.find({category: category})    
+        // .limit(12)
 
-//         res.render('recipe/view', recipes)
+        res.json(recipes)
 
-//     } catch (error) {
-//         console.log(error)
-//     }
-// }
+    } catch (error) {
+        console.log(error)
+    }
+}
 
 // POST /
 // SEARCH RECIPES PAGE
