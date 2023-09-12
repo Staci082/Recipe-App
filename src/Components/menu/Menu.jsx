@@ -3,10 +3,6 @@ import { useCookies } from "react-cookie";
 function menu() {
     const menuItems = [
         {
-            title: "My Recipes",
-            href: "/",
-        },
-        {
             title: "Discover",
             href: "/",
         },
@@ -40,15 +36,24 @@ function menu() {
             <div className="menu-container">
                 <h5>Menu</h5>
                 <ul>
-                    <li className="menuItem">
-                        {!cookies.access_token ? (
-                            <>
+                    {!cookies.access_token ? (
+                        <>
+                            <li className="menuItem">
                                 <a href="/login">Log in </a> /<a href="/register"> Register</a>
-                            </>
-                        ) : (
-                            <a onClick={logout} className="logout-button">Log out</a>
-                        )}
-                    </li>
+                            </li>
+                        </>
+                    ) : (
+                        <>
+                            <li className="menuItem">
+                                <a onClick={logout} className="logout-button">
+                                    Log out
+                                </a>
+                            </li>
+                            <li className="menuItem">
+                                <a href="/savedrecipes">My Recipes</a>
+                            </li>
+                        </>
+                    )}
 
                     {menuItems.map((item) => (
                         <li className="menuItem" key={item.title}>

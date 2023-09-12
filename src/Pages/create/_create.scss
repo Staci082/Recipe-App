@@ -1,0 +1,53 @@
+
+.form-separator {
+    display: flex;
+    justify-content: space-around;
+    
+    @include md{
+        flex-direction: column;
+    }
+
+}
+
+.form-inner-separator {
+    @include form;
+}
+
+.recipe-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    background: rgb(140, 127, 70);
+
+    & label {
+        @include label;
+    }
+
+
+    & input,
+    textarea,
+    select {
+        @include input;
+    }
+
+    & select {
+        width: 96.5%;
+    }
+
+    & textarea {
+        height: 200px;
+        padding-top: 1em;
+    }
+}
+
+
+.add-ingredient-container {
+    position: relative;
+}
+
+.add-ingredient-button{
+    position: absolute;
+    top: 10%;
+    right: 5%;
+}
