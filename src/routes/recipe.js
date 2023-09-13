@@ -18,7 +18,7 @@ const router = express.Router()
 router.get('/', allRecipes)
 
 // POST RECIPE FORM DATA
-router.post('/', postRecipe)
+router.post('/create', postRecipe)
 
 // SAVE A RECIPE
 router.put('/', saveRecipe)

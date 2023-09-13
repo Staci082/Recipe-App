@@ -39,19 +39,13 @@ export async function allRecipes(req, res) {
 // CREATE NEW RECIPE DATA
 export async function postRecipe(req, res) {
     console.log(req.body);
-
-    const newRecipe = new Recipe({
-        name: req.body.name,
-        category: req.body.category,
-        ingredients: req.body.ingredients,
-        instructions: req.body.instructions
-    });
+    const newRecipe = new Recipe(req.body);
 
     try {
         const response = await newRecipe.save();
-
         console.log("Recipe successfully created!");
         res.json(response);
+
     } catch (error) {
         res.json(error)
         console.log(error)

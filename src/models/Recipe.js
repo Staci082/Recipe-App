@@ -19,17 +19,24 @@ import mongoose from 'mongoose';
 const recipeSchema = new mongoose.Schema({
     name: {
         type: String,
-        trim: true
+        trim: true,
+        required: true
     },
     category: {
         type: String,
+        required: true
     },
     ingredients: {
         type: Array,
+        required: true
     },
     instructions: {
         type: String,
     },
+    userOwner: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "users"
+    }
 });
 
 
