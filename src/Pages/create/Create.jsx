@@ -1,23 +1,21 @@
 import RecipeForm from "../../Components/recipe-form/RecipeForm";
-
+import UseGetUserId from "../../Hooks/useGetUserId"
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useCookies } from "react-cookie";
 
-const useGetUserID = () => {
-    return window.localStorage.getItem("userID");
-};
+
 
 function Create() {
-    const userID = useGetUserID();
+    const userID = UseGetUserId();
     const [cookies, _] = useCookies(["access_token"]);
     const [recipe, setRecipe] = useState({
         name: "",
         category: "",
         ingredients: [],
         instructions: "",
-        userOwner: 0,
+        userOwner: userID,
     });
 
     const navigate = useNavigate();
@@ -43,7 +41,7 @@ function Create() {
         event.preventDefault();
         try {
             await axios.post(
-                "http://localhost:5173/",
+                "http://localhost:5712/create",
                 { ...recipe },
                 {
                     headers: { authorization: cookies.access_token },

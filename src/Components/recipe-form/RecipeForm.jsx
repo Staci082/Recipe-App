@@ -12,11 +12,11 @@ function RecipeForm({ label, recipe, handleChange, handleIngredientChange, handl
                 <div className="form-separator">
                     <div className="form-inner-separator">
                         <label htmlFor="title">Name:</label>
-                        <input type="text" name="title" onChange={handleChange} />
+                        <input type="text" name="name" onChange={handleChange} />
 
                         <label htmlFor="category">Category:</label>
-                        <select name="category" className="form-control" required>
-                            <option disabled="disabled" value="" onChange={handleChange}>
+                        <select name="category" className="form-control" onChange={handleChange} required>
+                            <option value="" disabled>
                                 Select category
                             </option>
                             <option value="Appetizer">Appetizer</option>
