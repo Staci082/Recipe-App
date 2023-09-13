@@ -15,6 +15,7 @@ export async function allRecipes(req, res) {
     try {
         const recipes = await Recipe.find({}) // empty brackets = find all (IF NO PAGINATION)
         res.json(recipes)
+        console.log(recipes)
         // const recipes = await Recipe.aggregate([{ $sort: { updatedAt: -1 } }])
         //     .sort({ name: 1 })
         //     .skip(perPage * page - perPage)
@@ -112,11 +113,11 @@ export async function getSavedRecipes(req, res) {
 // GET SINGLE RECIPE BY ID
 export async function singleRecipe(req, res) {
     try {
-        single = await Recipe.findOne({ _id: req.params.id }); // finding single recipe (adding const bugs it for some reason)
-
-        const locals = {
-            title: single.name,
-        };
+         recipe = await Recipe.findOne({ _id: req.params.id }); // finding single recipe (adding const bugs it for some reason)
+        res.json(recipes)
+        // const locals = {
+        //     title: single.name,
+        // };
 
         // res.render('recipe/single', {locals, single} )
     } catch (error) {

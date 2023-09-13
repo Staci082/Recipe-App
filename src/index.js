@@ -16,7 +16,7 @@ app.use(express.json());
 app.use(cors());
 
 app.use("/auth", userRouter);
-app.use("/recipes", recipeRouter);
+app.use("/", recipeRouter);
 
 app.get("/", (req, res) => {
     res.json({ message: "Backend API working" });
