@@ -298,12 +298,12 @@
   background: rgb(252, 240, 242);
 }
 
-.menuItem {
+.menuItem, .logout-button {
   font-size: clamp(0.5rem, 5vh, 1rem);
   margin-bottom: clamp(0.5rem, 5vh, 1.5rem);
   font-weight: bold;
 }
-.menuItem a:hover {
+.menuItem a:hover, .logout-button a:hover {
   color: #BFBAF6;
 }
 

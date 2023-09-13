@@ -21,7 +21,7 @@
     background: $light-salmon;
 }
 
-.menuItem {
+.menuItem, .logout-button {
     font-size: clamp(0.5rem, 5vh, 1rem);
     margin-bottom: clamp(0.5rem, 5vh, 1.5rem);
     font-weight: bold;

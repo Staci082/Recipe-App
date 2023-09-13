@@ -19,13 +19,13 @@ function RecipeForm({ label, recipe, handleChange, handleIngredientChange, handl
                             <option value="" disabled>
                                 Select category
                             </option>
-                            <option value="Appetizer">Appetizer</option>
-                            <option value="Breakfast">Breakfast</option>
-                            <option value="Dessert">Dessert</option>
-                            <option value="Dinner">Dinner</option>
-                            <option value="Lunch">Lunch</option>
-                            <option value="Side">Side</option>
-                            <option value="Vegetarian">Vegetarian</option>
+                            <option value="appetizer">Appetizer</option>
+                            <option value="breakfast">Breakfast</option>
+                            <option value="dessert">Dessert</option>
+                            <option value="dinner">Dinner</option>
+                            <option value="lunch">Lunch</option>
+                            <option value="side">Side</option>
+                            <option value="vegetarian">Vegetarian</option>
                         </select>
 
                         <label htmlFor="instructions">Instructions:</label>

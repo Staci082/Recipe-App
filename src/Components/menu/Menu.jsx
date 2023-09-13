@@ -1,5 +1,6 @@
 import { useCookies } from "react-cookie";
 
+
 function menu() {
     const menuItems = [
         {
@@ -26,10 +27,14 @@ function menu() {
 
     const [cookies, setCookies] = useCookies(["access_token"]);
 
+
     const logout = () => {
         setCookies("access_token", "");
         window.localStorage.removeItem("userID");
     };
+
+
+
 
     return (
         <div className="side-container">
@@ -45,7 +50,7 @@ function menu() {
                     ) : (
                         <>
                             <li className="menuItem">
-                                <a onClick={logout} className="logout-button">
+                                <a href="/" onClick={logout} className="logout-button">
                                     Log out
                                 </a>
                             </li>
