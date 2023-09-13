@@ -5,34 +5,42 @@ function Categories() {
         {
             title: "All recipes",
             img: "https://img.icons8.com/wired/64/storytelling.png",
+            href: "/"
         },
         {
             title: "Appetizers",
             img: "https://img.icons8.com/wired/64/tapas.png",
+            href: "/appetizers"
         },
         {
             title: "Breakfast",
             img: "https://img.icons8.com/wired/64/american-pancakes.png",
+            href: "/breakfast"
         },
         {
             title: "Dessert",
             img: "https://img.icons8.com/wired/64/strawberry-cheesecake.png",
+            href: "/dessert"
         },
         {
             title: "Dinner",
             img: "https://img.icons8.com/wired/64/spaghetti.png",
+            href: "/dinner"
         },
         {
             title: "Lunch",
             img: "https://img.icons8.com/wired/64/rice-bowl.png",
+            href: "/lunch"
         },
         {
             title: "Sides",
             img: "https://img.icons8.com/wired/64/pelmeni.png",
+            href: "/sides"
         },
         {
             title: "Vegetarian",
             img: "https://img.icons8.com/wired/64/firm-tofu.png",
+            href: "/vegetarian"
         },
     ];
 
@@ -78,10 +86,10 @@ function Categories() {
         <div className="categories-container">
             {/* <Slider className="slider" {...sliderSettings} > */}
                 {categories.map((item) => (
-                    <button className="cat-item-container" key={item.title}>
+                    <a className="cat-item-container" href={item.href} key={item.title}>
                         <img className="cat-item-img" src={item.img} />
                         <h4 className="cat-item-title">{item.title}</h4>
-                    </button>
+                    </a>
                 ))}
             {/* </Slider> */}
         </div>

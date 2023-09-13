@@ -18,7 +18,7 @@ import URLRecipe from "./Pages/url-recipe/URLRecipe";
 // CREATE ROUTER
 const router = createBrowserRouter([
   {
-      path: "/recipes",
+      path: "/",
       element: <Homepage />,
   },
   {
@@ -30,7 +30,7 @@ const router = createBrowserRouter([
       element: <Register />,
   },
   {
-      path: "/recipe/:id",
+      path: "/recipe",
       element: <Recipe />,
   },
   {

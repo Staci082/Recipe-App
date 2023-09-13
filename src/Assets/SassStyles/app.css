@@ -281,9 +281,6 @@
   .side-container {
     display: none;
   }
-  .side-container .open {
-    display: flex;
-  }
 }
 
 .menu-container {
@@ -488,6 +485,7 @@ body {
 }
 
 a {
+  cursor: pointer;
   font-family: Poppins, sans-serif;
   text-decoration: none;
   color: black;

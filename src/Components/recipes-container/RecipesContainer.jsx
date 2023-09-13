@@ -13,8 +13,9 @@ function RecipesContainer() {
     useEffect(() => {
         async function fetchData() {
             try {
-                const response = await axios.get(`/${route}`);
-                setRecipes(response.data);
+                const response = await fetch("http://localhost:5712/");
+                const recipes = await response.json()
+                setRecipes(recipes);
             } catch (error) {
                 console.log("Error fetching data:", error);
             }
@@ -34,7 +35,7 @@ function RecipesContainer() {
             <Categories />
 
             {recipes.map((recipe) => (
-                <div className="recipe" id={recipe._id}>
+                <div className="recipe" key={recipe._id}>
                     <a href={`/${recipe._id}`} className="recipe-title-container">
                         <h3 className="recipe-title">{recipe.name}</h3>
                         <i className="recipe-category">{recipe.category}</i>
@@ -45,14 +46,15 @@ function RecipesContainer() {
                 </div>
             ))}
 
-            {/* <a className="recipe" href="/recipe"></a>
             <a className="recipe" href="/recipe"></a>
             <a className="recipe" href="/recipe"></a>
             <a className="recipe" href="/recipe"></a>
             <a className="recipe" href="/recipe"></a>
             <a className="recipe" href="/recipe"></a>
             <a className="recipe" href="/recipe"></a>
-            <a className="recipe" href="/recipe"></a> */}
+            <a className="recipe" href="/recipe"></a>
+            <a className="recipe" href="/recipe"></a>
+            <a className="recipe" href="/recipe"></a>
         </div>
     );
 }

@@ -5,9 +5,6 @@
     margin-left: 1em;
     @include lg {
         display: none;
-        .open {
-            display: flex;
-        }
     }
 }
 

@@ -18,7 +18,6 @@ function Homepage() {
             <Pagination />
         </div>
 
-   
 
 </>
   )

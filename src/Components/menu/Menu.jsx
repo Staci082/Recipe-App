@@ -33,7 +33,7 @@ function menu() {
 
     return (
         <div className="side-container">
-            <div className="menu-container">
+            <div className="menu-container" >
                 <h5>Menu</h5>
                 <ul>
                     {!cookies.access_token ? (
