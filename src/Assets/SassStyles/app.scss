@@ -80,23 +80,22 @@ button {
     @include box;
     margin: 1em;
     padding: 1em 0.5em;
-
-    @include sm {
-        margin: 1em;
-    }
 }
 
 .main-container {
-    // background: $light-salmon;
-    display: grid;
-    grid-template-columns: repeat(5);
-    grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    margin-bottom: 1em;
+    display: flex;
+    align-items: flex-start;
+}
 
-    @include md {
-        @include flex;
-        flex-direction: column;
+.left-container {
+    @include lg {
+        display: none;
     }
+}
+
+.right-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 2em;
 }

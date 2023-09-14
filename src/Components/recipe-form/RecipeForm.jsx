@@ -40,27 +40,10 @@ function RecipeForm({ label, recipe, handleChange, handleIngredientChange, handl
                         {recipe.ingredients.map((ingredient, index) => (
                             <input key={index} type="text" name="ingredients" value={ingredient} onChange={(e) => handleIngredientChange(e, index)} />
                         ))}
-
-                        {/* <div className="add-ingredient-container">
-                        <input 
-                            type="text" 
-                            value="" 
-                            className="form-control ingredient-input" 
-                            name="ingredients" 
-                            onChange={(e) => handleIngredientChange(e)} />
-                            <button type="button" className="add-ingredient-button" onClick={addIngredient}>
-                                <HiPlus size={28} />
-                            </button>
-                        </div>
-                        <ul className="ingredients-list">
-                            {recipe.ingredients.map((ingredient) => {
-                                <li key={ingredient}>{ingredient}</li>
-                            })}
-                        </ul> */}
                     </div>
                 </div>
                 <button type="submit" className="submit-button">
-                    create
+                    {label}
                 </button>
             </form>
         </>

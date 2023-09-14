@@ -1,6 +1,7 @@
 import { useState, useEffect} from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
+// import Pagination from "../../Components/pagination/Pagination";
 // import { FaHeart, FaRegHeart } from "react-icons/fa6";
 
 function FilterRecipes() {
@@ -8,8 +9,10 @@ function FilterRecipes() {
     const [recipes, setRecipes] = useState([]);
     // const [saveButton, setSaveButton] = useState(false)
 
+    // const [currentPage, setCurrentPage] = useState(1);
+    // const [recipesPerPage, setRecipesPerPage] = useState(8);
+
     useEffect(() => {
-        console.log(route,category)
         const fetchRecipes = async () => {
             try {
                 const response = await axios.get("http://localhost:5712/" + category);
@@ -21,6 +24,10 @@ function FilterRecipes() {
 
         fetchRecipes();
     }, [route,recipes]);
+
+    // const lastRecipeIndex = currentPage * recipesPerPage;
+    // const firstRecipeIndex = lastRecipeIndex - recipesPerPage;
+    // const currentRecipes = recipes.slice(firstRecipeIndex, lastRecipeIndex);
 
     return (
     <>
@@ -36,6 +43,12 @@ function FilterRecipes() {
                     </button>
                 </div>
             ))}
+        {/* <Pagination 
+                totalRecipes={recipes.length}
+                recipesPerPage={postsPerPage}
+                setCurrentPage={setCurrentPage}
+                currentPage={currentPage}
+            /> */}
     </>
     )
 }
