@@ -49,3 +49,30 @@ export async function Login(req, res) {
     const token = jwt.sign({ id: user._id }, "secret");
     res.json({ token, userID: user._id });
 }
+
+const VerifyToken = (req, res, next) => {
+    let token = req.headers.authorization;
+    if(token){
+        token = token.split(' ')[1];
+        let decoded = jwt.verify(token,'secret')
+        if(decoded){
+            next();
+        }else{
+            res.status(401).json({
+                message: 'Invalid'
+            })
+        }
+    }
+};
+
+export const GetLikes = (req, res) => {
+    const userId = req.params.id;
+    User.findById(userId).then((user) => {
+        console.log(user.savedRecipes);
+        res.status(200).json({
+            likes: user.savedRecipes,
+        });
+    });
+};
+
+export default VerifyToken;
