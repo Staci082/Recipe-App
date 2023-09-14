@@ -1,6 +1,11 @@
-import { useEffect} from "react";
+import { useState, useEffect} from "react";
+import axios from "axios";
+import { useParams } from "react-router-dom";
+import { FaHeart, FaRegHeart } from "react-icons/fa6";
 
 function DiscoverRecipes() {
+    const { route } = useParams();
+    const [recipes, setRecipes] = useState([]);
 
     useEffect(() => {
         const fetchRecipes = async () => {

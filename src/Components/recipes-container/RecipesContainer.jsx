@@ -1,58 +1,57 @@
-import { useState, useEffect} from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 import Categories from "../categories/Categories";
-// import UseGetUserId from "../../Hooks/useGetUserId";
+import UseGetUserId from "../../Hooks/useGetUserId";
 import { FaHeart, FaRegHeart } from "react-icons/fa6";
-import { useParams } from "react-router-dom";
+import { useParams, Routes, Route } from "react-router-dom";
+import DiscoverRecipes from "../discover-recipes/DiscoverRecipes";
 
 function RecipesContainer() {
-    const { route } = useParams();
+    // const { route } = useParams();
 
-    // FILTER RECIPES
-    const [recipes, setRecipes] = useState([]);
+    // // FILTER RECIPES
+    // const [recipes, setRecipes] = useState([]);
 
     // // SAVE RECIPES
     // const [savedRecipes, setSavedRecipes] = useState([]);
     // const [saveRecipeButton, setSaveRecipeButton] = useState([]);
 
-    // const userID = UseGetUserId();
+    const userID = UseGetUserId();
 
-    useEffect(() => {
-        const fetchRecipes = async () => {
-            try {
-                const response = await axios.get("http://localhost:5712/");
-                setRecipes(response.data);
-            } catch (error) {
-                console.log("Error fetching data:", error);
-            }
-        };
+    // useEffect(() => {
+    //     const fetchRecipes = async () => {
+    //         try {
+    //             const response = await axios.get("http://localhost:5712/");
+    //             setRecipes(response.data);
+    //         } catch (error) {
+    //             console.log("Error fetching data:", error);
+    //         }
+    //     };
+    //     // const fetchSavedRecipes = async () => {
+    //     //     try {
+    //     //         const response = await axios.get(`http://localhost:5712/savedrecipes/ids/${userID}`);
+    //     //         setSavedRecipes(response.data);
+    //     //     } catch (error) {
+    //     //         console.log("Error fetching data:", error);
+    //     //     }
+    //     // };
 
-        // const fetchSavedRecipes = async () => {
-        //     try {
-        //         const response = await axios.get(`http://localhost:5712/savedrecipes/ids/${userID}`);
-        //         setSavedRecipes(response.data);
-        //     } catch (error) {
-        //         console.log("Error fetching data:", error);
-        //     }
-        // };
+    //     // const fetchLikes = async () => {
+    //     //     try {
+    //     //         const response = await axios.get(`http://localhost:5712/auth/getlikes/${userID}`, {
+    //     //             headers: { Authorization: `Bearer ${document.cookie.split("=")[1]}` },
+    //     //         });
 
-        // const fetchLikes = async () => {
-        //     try {
-        //         const response = await axios.get(`http://localhost:5712/auth/getlikes/${userID}`, {
-        //             headers: { Authorization: `Bearer ${document.cookie.split("=")[1]}` },
-        //         });
+    //     //         setSaveRecipeButton(response.data.likes);
+    //     //     } catch (error) {
+    //     //         console.log("Error fetching data:", error);
+    //     //     }
+    //     // };
 
-        //         setSaveRecipeButton(response.data.likes);
-        //     } catch (error) {
-        //         console.log("Error fetching data:", error);
-        //     }
-        // };
-
-                // fetchSavedRecipes();
-        // fetchLikes();
-        fetchRecipes();
-    }, [route]);
-
+    //     // fetchSavedRecipes();
+    //     // fetchLikes();
+    //     fetchRecipes();
+    // }, [route]);
 
     // const saveRecipe = async (recipeID) => {
     //     try {
@@ -65,27 +64,13 @@ function RecipesContainer() {
     //     }
     // };
 
-
     return (
         <div className="recipe-container">
             <Categories />
 
-            {recipes.map((recipe) => (
-                <div className="recipe" key={recipe._id}>
-                    <a href={`/${recipe._id}`} className="recipe-title-container">
-                        <h3 className="recipe-title">{recipe.name}</h3>
-                        <i className="recipe-category">{recipe.category}</i>
-                    </a>
-                    <button
-                        className="save-icon"
-                        // onClick={() => {
-                        //     saveRecipe();
-                        // }}
-                    >
-                        <FaRegHeart />
-                    </button>
-                </div>
-            ))}
+            <Routes>
+                <Route path="/" element={<DiscoverRecipes />} />
+            </Routes>
 
             <a className="recipe" href="/recipe"></a>
             <a className="recipe" href="/recipe"></a>
