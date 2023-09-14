@@ -1,7 +1,9 @@
 .header-container {
+    position: relative;
     @include flex;
     justify-content: space-between;
     margin-bottom: 1.5em;
+    // border: deeppink solid 2px;
 }
 
 .logo-container {
@@ -14,13 +16,14 @@
             display: none;
         }
     }
-    
+    // border: deeppink solid 2px;
 }
 
 .menu-button {
     display: none;
     margin-right: -15px;
     font-size: 3.5rem;
+    z-index: 5;
     @include lg {
         display: flex;
     }
@@ -34,4 +37,22 @@
     @include box;
     box-shadow: $box-shadow;
     padding: 0 1em;
+}
+
+#mobile-menu {
+    position: absolute;
+    right: -5px;
+    top: -35px;
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    z-index: 2;
+    height: auto; 
+
+    padding: 1em;
+    & .menu-container {
+
+        min-width: 100%;
+        box-shadow: none;
+    }
 }

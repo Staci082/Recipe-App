@@ -38,25 +38,25 @@ function menu() {
 
 
     return (
-        <div className="side-container">
+
             <div className="menu-container" >
                 <h5>Menu</h5>
                 <ul>
                     {!cookies.access_token ? (
                         <>
                             <li className="menuItem">
-                                <a href="/login">Log in </a> /<a href="/register"> Register</a>
+                                <Link href="/login">Log in </Link> /<Link href="/register"> Register</Link>
                             </li>
                         </>
                     ) : (
                         <>
                             <li className="menuItem">
-                                <a href="/" onClick={logout} className="logout-button">
+                                <Link href="/" onClick={logout} className="logout-button">
                                     Log out
-                                </a>
+                                </Link>
                             </li>
                             <li className="menuItem">
-                                <a href="/savedrecipes">My Recipes</a>
+                                <Link href="/savedrecipes">My Recipes</Link>
                             </li>
                         </>
                     )}
@@ -68,7 +68,7 @@ function menu() {
                     ))}
                 </ul>
             </div>
-        </div>
+
     );
 }
 

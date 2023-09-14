@@ -13,14 +13,13 @@ function Homepage() {
 
   return (
     <>
-
         <Header/>
         <div className="main-container">
-            <Menu />
+        <div className="side-container">
+            <Menu/>
+            </div>
             <RecipesContainer />
         </div>
-
-
 </>
   )
 }

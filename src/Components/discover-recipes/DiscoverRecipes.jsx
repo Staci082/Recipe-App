@@ -33,6 +33,9 @@ function DiscoverRecipes() {
                     </button>
                 </div>
             ))}
+            <div className="recipe"> <a href="recipe" className="recipe-title-container"></a></div>
+            <div className="recipe"> <a href="recipe" className="recipe-title-container"></a></div>
+            <div className="recipe"> <a href="recipe" className="recipe-title-container"></a></div>
     </>
     )
 }

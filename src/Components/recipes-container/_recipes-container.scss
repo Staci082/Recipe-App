@@ -9,13 +9,11 @@
     }
 }
 
-
-
 .recipe {
     position: relative;
     display: flex;
     cursor: pointer;
-    min-width: 240px;
+    width: 260px;
     height: 70px;
     @include colorBox;
     border: black 2px solid;
@@ -37,7 +35,7 @@
 
 
     @include sm {
-        min-width: 280px;
+        min-width: 300px;
     }
 }
 

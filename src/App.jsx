@@ -1,5 +1,6 @@
 import "./Assets/SassStyles/app.scss";
 import {Routes, Route } from "react-router-dom";
+import { useState } from "react"
 
 // IMPORT PAGES
 import Create from "./Pages/create/Create";
@@ -13,6 +14,7 @@ import Login from "./Pages/login/Login";
 import Recipe from "./Pages/recipe/Recipe";
 import Register from "./Pages/register/Register";
 import URLRecipe from "./Pages/url-recipe/URLRecipe";
+import FilterRecipes from "./Components/filter-recipes/FilterRecipes";
 
 
 
@@ -53,19 +55,21 @@ const router = [
 ]
 
 function App() {
-    
 
+    // const [param, setParam] = useState("")
+    
     return (
         <>
         
             <div className="global-container">
                 <Routes>
                     <Route path="/" element={<Homepage />}>
+                        <Route path="/:category" element={<FilterRecipes/> } />
                         <Route path="recipes" element={<DiscoverRecipes />} />
-                        <Route path="dessert" element={<Dessert />} />
                     </Route>
+
                 {router.map((item) => (
-                    <Route path={item.path} element={item.element}/>
+                    <Route path={item.path} element={item.element} key={item.path}/>
                     ))}
                 </Routes>
             </div>
