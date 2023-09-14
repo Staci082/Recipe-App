@@ -11,7 +11,7 @@ function Homepage() {
   return (
     <>
 
-        <Header  />
+        <Header/>
         <div className="main-container">
             <Menu />
             <RecipesContainer />

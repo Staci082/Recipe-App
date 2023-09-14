@@ -3,14 +3,14 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 import { FaHeart, FaRegHeart } from "react-icons/fa6";
 
-function DiscoverRecipes() {
+function Dessert() {
     const { route } = useParams();
     const [recipes, setRecipes] = useState([]);
 
     useEffect(() => {
         const fetchRecipes = async () => {
             try {
-                const response = await axios.get("http://localhost:5712/recipes");
+                const response = await axios.get("http://localhost:5712/dessert");
                 setRecipes(response.data);
             } catch (error) {
                 console.log("Error fetching data:", error);
@@ -37,4 +37,4 @@ function DiscoverRecipes() {
     )
 }
 
-export default DiscoverRecipes 
+export default Dessert

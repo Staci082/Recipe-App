@@ -1,11 +1,12 @@
 import { useCookies } from "react-cookie";
+import { Link } from "react-router-dom"
 
 
 function menu() {
     const menuItems = [
         {
             title: "Discover",
-            href: "/",
+            href: "/recipes",
         },
         {
             title: "Get Random Recipe",
@@ -62,7 +63,7 @@ function menu() {
 
                     {menuItems.map((item) => (
                         <li className="menuItem" key={item.title}>
-                            <a href={item.href}>{item.title}</a>
+                            <Link to={item.href}>{item.title}</Link>
                         </li>
                     ))}
                 </ul>

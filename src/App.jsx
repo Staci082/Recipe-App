@@ -1,6 +1,5 @@
 import "./Assets/SassStyles/app.scss";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-
+import {Routes, Route } from "react-router-dom";
 
 // IMPORT PAGES
 import Create from "./Pages/create/Create";
@@ -16,7 +15,7 @@ import URLRecipe from "./Pages/url-recipe/URLRecipe";
 
 
 // CREATE ROUTER
-const router = createBrowserRouter([
+const router = [
   {
       path: "/",
       element: <Homepage />,
@@ -38,10 +37,6 @@ const router = createBrowserRouter([
       element: <Create />,
   },
   {
-      path: "/edit/:id",
-      element: <Edit />,
-  },
-  {
       path: "/list",
       element: <GroceryList />,
   },
@@ -53,7 +48,7 @@ const router = createBrowserRouter([
       path: "*",
       element: <Error />,
   },
-]);
+]
 
 function App() {
     
@@ -61,7 +56,11 @@ function App() {
     return (
         <>
             <div className="global-container">
-                <RouterProvider router={router} />
+                <Routes>
+                {router.map((item) => (
+                    <Route path={item.path} element={item.element}/>
+                    ))}
+                </Routes>
             </div>
         </>
     );

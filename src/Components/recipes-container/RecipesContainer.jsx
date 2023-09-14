@@ -5,6 +5,7 @@ import UseGetUserId from "../../Hooks/useGetUserId";
 import { FaHeart, FaRegHeart } from "react-icons/fa6";
 import { useParams, Routes, Route } from "react-router-dom";
 import DiscoverRecipes from "../discover-recipes/DiscoverRecipes";
+import Dessert from "../dessert/Dessert";
 
 function RecipesContainer() {
     // const { route } = useParams();
@@ -16,7 +17,7 @@ function RecipesContainer() {
     // const [savedRecipes, setSavedRecipes] = useState([]);
     // const [saveRecipeButton, setSaveRecipeButton] = useState([]);
 
-    const userID = UseGetUserId();
+    // const userID = UseGetUserId();
 
     // useEffect(() => {
     //     const fetchRecipes = async () => {
@@ -69,10 +70,10 @@ function RecipesContainer() {
             <Categories />
 
             <Routes>
+                <Route path="dessert" element={<Dessert />} />
                 <Route path="/" element={<DiscoverRecipes />} />
             </Routes>
 
-            <a className="recipe" href="/recipe"></a>
             <a className="recipe" href="/recipe"></a>
             <a className="recipe" href="/recipe"></a>
             <a className="recipe" href="/recipe"></a>
