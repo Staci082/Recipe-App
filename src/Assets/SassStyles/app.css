@@ -167,15 +167,18 @@
   background: #BFBAF6;
 }
 
-.pagination .pagination-active {
-  background: #fbd3d3;
+.pagination .pagination-active a {
   border-radius: 5px;
-  padding: 10px 0;
+  color: #BFBAF6;
+}
+.pagination .pagination-active a:hover {
+  color: black;
 }
 
 .outer-recipe-container {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 .recipe-container {

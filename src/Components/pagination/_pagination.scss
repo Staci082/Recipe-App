@@ -15,14 +15,17 @@
     padding: 10px 20px;
     text-decoration: none;
     border-radius: $border-radius-sm;
+
     &:hover {
         background: $light-purple;
     }
     
 }
 
-.pagination .pagination-active {
-    background: $salmon;
+.pagination .pagination-active a {
     border-radius: $border-radius-sm;
-    padding: 10px 0;
+    color: $light-purple;
+    &:hover {
+        color: black;
+    }
 } 
