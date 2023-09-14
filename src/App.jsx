@@ -3,6 +3,8 @@ import {Routes, Route } from "react-router-dom";
 
 // IMPORT PAGES
 import Create from "./Pages/create/Create";
+import Dessert from "./Components/dessert/Dessert";
+import DiscoverRecipes from "./Components/discover-recipes/DiscoverRecipes";
 import Edit from "./Pages/edit/Edit";
 import Error from "./Pages/error/Error";
 import GroceryList from "./Pages/grocery-list/GroceryList";
@@ -16,10 +18,10 @@ import URLRecipe from "./Pages/url-recipe/URLRecipe";
 
 // CREATE ROUTER
 const router = [
-  {
-      path: "/",
-      element: <Homepage />,
-  },
+//   {
+//       path: "/",
+//       element: <Homepage />,
+//   },
   {
       path: "/login",
       element: <Login />,
@@ -55,8 +57,13 @@ function App() {
 
     return (
         <>
+        
             <div className="global-container">
                 <Routes>
+                    <Route path="/" element={<Homepage />}>
+                        <Route path="recipes" element={<DiscoverRecipes />} />
+                        <Route path="dessert" element={<Dessert />} />
+                    </Route>
                 {router.map((item) => (
                     <Route path={item.path} element={item.element}/>
                     ))}

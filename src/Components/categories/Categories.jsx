@@ -6,7 +6,7 @@ function Categories() {
         {
             title: "All recipes",
             img: "https://img.icons8.com/wired/64/storytelling.png",
-            href: "/"
+            href: "/recipes"
         },
         {
             title: "Appetizers",
