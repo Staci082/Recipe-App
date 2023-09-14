@@ -1,5 +1,5 @@
 import express from 'express'
-import VerifyToken from '../controllers/userController.js'
+// import VerifyToken from '../controllers/userController.js'
 import {postRecipe, 
         allRecipes,
         getSavedRecipesIds,
@@ -18,7 +18,7 @@ const router = express.Router()
 router.get('/all', allRecipes)
 
 // POST RECIPE FORM DATA
-router.post('/create', VerifyToken, postRecipe)
+router.post('/create', postRecipe)
 
 
 // GET SAVED RECIPES IDS 
