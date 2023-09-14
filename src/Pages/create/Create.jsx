@@ -47,6 +47,12 @@ function Create() {
         }
     };
 
+    const handleDelete = (i) => {
+        const deleteValue = [...recipe]
+        deleteValue.splice(i, 1)
+        setRecipe(deleteValue);
+    }
+
     console.log(recipe);
 
     return (
@@ -57,6 +63,7 @@ function Create() {
             handleIngredientChange={handleIngredientChange}
             handleAddIngredient={handleAddIngredient}
             handleSubmit={handleSubmit}
+            handleDelete={handleDelete}
         />
     );
 }

@@ -1,6 +1,9 @@
-import { HiPlus } from "react-icons/hi2";
+import { HiPlus, HiOutlineXMark } from "react-icons/hi2";
 
-function RecipeForm({ label, recipe, handleChange, handleIngredientChange, handleAddIngredient, handleSubmit }) {
+function RecipeForm({ label, recipe, handleChange, handleIngredientChange, handleAddIngredient, handleSubmit, handleDelete}) {
+
+
+
     return (
         <>
             <a href="/" className="form-back-button">
@@ -38,8 +41,11 @@ function RecipeForm({ label, recipe, handleChange, handleIngredientChange, handl
                         <HiPlus size={28} />
                         </button>
                         {recipe.ingredients.map((ingredient, index) => (
+                            <div className="ingredient-input-container" key={index}>
                             <input key={index} type="text" name="ingredients" value={ingredient} onChange={(e) => handleIngredientChange(e, index)} />
-                        ))}
+                            <button type="button" onClick={handleDelete} className="remove-ingredient-button"><HiOutlineXMark size={26} /></button>
+                            </div>
+                       ))}
                     </div>
                 </div>
                 <button type="submit" className="submit-button">

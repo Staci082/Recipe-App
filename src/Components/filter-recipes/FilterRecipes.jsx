@@ -1,16 +1,37 @@
-import { useState, useEffect} from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
+import ReactPaginate from "react-paginate";
 // import Pagination from "../../Components/pagination/Pagination";
-// import { FaHeart, FaRegHeart } from "react-icons/fa6";
+import { FaHeart, FaRegHeart, FaAnglesLeft, FaAnglesRight } from "react-icons/fa6";
 
 function FilterRecipes() {
-    const { route,category } = useParams();
+    const { route, category } = useParams();
     const [recipes, setRecipes] = useState([]);
-    // const [saveButton, setSaveButton] = useState(false)
 
-    // const [currentPage, setCurrentPage] = useState(1);
-    // const [recipesPerPage, setRecipesPerPage] = useState(8);
+    // PAGINATION
+    const [pageNumber, setPageNumber] = useState(0);
+    const recipesPerPage = 6;
+    const pagesVisited = pageNumber * recipesPerPage;
+    const displayRecipes = recipes.slice(pagesVisited, pagesVisited + recipesPerPage).map((recipe) => {
+        return (
+            <div className="recipe" key={recipe._id}>
+                <a href={`/recipe/${recipe._id}`} className="recipe-title-container">
+                    <h3 className="recipe-title">{recipe.name}</h3>
+                    <i className="recipe-category">{recipe.category}</i>
+                </a>
+                <button className="save-icon">
+                    {/* onClick={() => setSaveButton(!saveButton)} */}
+                    {/* {saveButton ? <FaRegHeart /> : <FaHeart/>} */}
+                </button>
+            </div>
+        );
+    });
+
+    const pageCount = Math.ceil(recipes.length / recipesPerPage);
+    const changePage = ({ selected }) => {
+        setPageNumber(selected);
+    };
 
     useEffect(() => {
         const fetchRecipes = async () => {
@@ -23,35 +44,26 @@ function FilterRecipes() {
         };
 
         fetchRecipes();
-    }, [route,recipes]);
-
-    // const lastRecipeIndex = currentPage * recipesPerPage;
-    // const firstRecipeIndex = lastRecipeIndex - recipesPerPage;
-    // const currentRecipes = recipes.slice(firstRecipeIndex, lastRecipeIndex);
+    }, [route, recipes]);
 
     return (
-    <>
-    {recipes.map((recipe) => (
-                <div className="recipe" key={recipe._id}>
-                    <a href={`/recipe/${recipe._id}`} className="recipe-title-container">
-                        <h3 className="recipe-title">{recipe.name}</h3>
-                        <i className="recipe-category">{recipe.category}</i>
-                    </a>
-                    <button className="save-icon" > 
-                    {/* onClick={() => setSaveButton(!saveButton)} */}
-                        {/* {saveButton ? <FaRegHeart /> : <FaHeart/>} */}
-                    </button>
-                </div>
-            ))}
-        {/* <Pagination 
-                totalRecipes={recipes.length}
-                recipesPerPage={postsPerPage}
-                setCurrentPage={setCurrentPage}
-                currentPage={currentPage}
-            /> */}
-    </>
-    )
+        <>
+            <div className="recipe-container">{displayRecipes}</div>
+
+                <ReactPaginate
+                breakLabel="..."
+                    previousLabel={<FaAnglesLeft/>}
+                    nextLabel={<FaAnglesRight/>}
+                    pageCount={pageCount}
+                    onPageChange={changePage}
+                    containerClassName={"pagination-inner-container"}
+                    previousLinkClassName={"previous-button"}
+                    nextLinkClassName={"next-button"}
+                    disabledClassName={"pagination-disabled"}
+                    activeClassName={"pagination-active"}/>
+
+        </>
+    );
 }
 
-
-export default FilterRecipes
+export default FilterRecipes;

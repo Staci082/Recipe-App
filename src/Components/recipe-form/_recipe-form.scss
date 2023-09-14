@@ -50,3 +50,14 @@
     top: 10%;
     right: 5%;
 }
+
+.ingredient-input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    & .remove-ingredient-button {
+        position: absolute;
+        right: 10px;
+        top: 8px;
+    }
+}
