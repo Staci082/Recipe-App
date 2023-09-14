@@ -15,7 +15,6 @@ export async function allRecipes(req, res) {
     try {
         const recipes = await Recipe.find({}) // empty brackets = find all (IF NO PAGINATION)
         res.json(recipes)
-        console.log(recipes)
         // const recipes = await Recipe.aggregate([{ $sort: { updatedAt: -1 } }])
         //     .sort({ name: 1 })
         //     .skip(perPage * page - perPage)
