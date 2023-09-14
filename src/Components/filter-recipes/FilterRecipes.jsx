@@ -56,7 +56,7 @@ function FilterRecipes() {
                     nextLabel={<FaAnglesRight/>}
                     pageCount={pageCount}
                     onPageChange={changePage}
-                    containerClassName={"pagination-inner-container"}
+                    containerClassName={"pagination"}
                     previousLinkClassName={"previous-button"}
                     nextLinkClassName={"next-button"}
                     disabledClassName={"pagination-disabled"}
