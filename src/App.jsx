@@ -4,9 +4,6 @@ import { useState } from "react"
 
 // IMPORT PAGES
 import Create from "./Pages/create/Create";
-import Dessert from "./Components/dessert/Dessert";
-import DiscoverRecipes from "./Components/discover-recipes/DiscoverRecipes";
-import Edit from "./Pages/edit/Edit";
 import Error from "./Pages/error/Error";
 import GroceryList from "./Pages/grocery-list/GroceryList";
 import Homepage from "./Pages/homepage/Homepage";
@@ -64,8 +61,7 @@ function App() {
             <div className="global-container">
                 <Routes>
                     <Route path="/" element={<Homepage />}>
-                        <Route path="/:category" element={<FilterRecipes/> } />
-                        <Route path="recipes" element={<DiscoverRecipes />} />
+                        <Route path="/category/:category" element={<FilterRecipes/> } />
                     </Route>
 
                 {router.map((item) => (

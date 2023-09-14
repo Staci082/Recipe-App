@@ -4,10 +4,7 @@ import { Link } from "react-router-dom"
 
 function menu() {
     const menuItems = [
-        {
-            title: "Discover",
-            href: "/recipes",
-        },
+
         {
             title: "Get Random Recipe",
             href: "/random",

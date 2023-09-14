@@ -11,7 +11,7 @@ function FilterRecipes() {
         console.log(route,category)
         const fetchRecipes = async () => {
             try {
-                const response = await axios.get("http://localhost:5712/"+category);
+                const response = await axios.get("http://localhost:5712/" + category);
                 setRecipes(response.data);
             } catch (error) {
                 console.log("Error fetching data:", error);
@@ -19,13 +19,13 @@ function FilterRecipes() {
         };
 
         fetchRecipes();
-    }, [route]);
+    }, [route,recipes]);
 
     return (
     <>
     {recipes.map((recipe) => (
                 <div className="recipe" key={recipe._id}>
-                    <a href={`/${recipe._id}`} className="recipe-title-container">
+                    <a href={`/recipe/${recipe._id}`} className="recipe-title-container">
                         <h3 className="recipe-title">{recipe.name}</h3>
                         <i className="recipe-category">{recipe.category}</i>
                     </a>

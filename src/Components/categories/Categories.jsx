@@ -6,7 +6,7 @@ function Categories() {
         {
             title: "All recipes",
             img: "https://img.icons8.com/wired/64/storytelling.png",
-            href: "/recipes"
+            href: "/all"
         },
         {
             title: "Appetizers",
@@ -87,7 +87,7 @@ function Categories() {
         <div className="categories-container">
             {/* <Slider className="slider" {...sliderSettings} > */}
                 {categories.map((item) => (
-                    <Link className="cat-item-container" to={item.href} key={item.title}>
+                    <Link className="cat-item-container" to={`/category${item.href}`} key={item.title}>
                         <img className="cat-item-img" src={item.img} />
                         <h4 className="cat-item-title">{item.title}</h4>
                     </Link>
