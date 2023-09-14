@@ -15,7 +15,7 @@ const router = express.Router()
 
 
 // GET ALL RECIPES
-router.get('/recipes', allRecipes)
+router.get('/all', allRecipes)
 
 // POST RECIPE FORM DATA
 router.post('/create', VerifyToken, postRecipe)
