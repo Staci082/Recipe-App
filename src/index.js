@@ -18,9 +18,6 @@ app.use(cors());
 app.use("/auth", userRouter);
 app.use("/", recipeRouter);
 
-app.get("/", (req, res) => {
-    res.json({ message: "Backend API working" });
-});
 
 app.listen(port, () => {
     console.log(`App is running on ${port}`);
