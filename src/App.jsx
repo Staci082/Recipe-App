@@ -60,13 +60,15 @@ function App() {
         
             <div className="global-container">
                 <Routes>
+
                     <Route path="/" element={<Homepage />}>
                         <Route path="/category/:category" element={<FilterRecipes/> } />
                     </Route>
 
-                {router.map((item) => (
-                    <Route path={item.path} element={item.element} key={item.path}/>
-                    ))}
+                    {router.map((item) => (
+                        <Route path={item.path} element={item.element} key={item.path}/>
+                        ))}
+
                 </Routes>
             </div>
         </>

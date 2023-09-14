@@ -42,18 +42,18 @@ function menu() {
                     {!cookies.access_token ? (
                         <>
                             <li className="menuItem">
-                                <Link href="/login">Log in </Link> /<Link href="/register"> Register</Link>
+                                <Link to="/login">Log in </Link> /<Link to="/register"> Register</Link>
                             </li>
                         </>
                     ) : (
                         <>
                             <li className="menuItem">
-                                <Link href="/" onClick={logout} className="logout-button">
+                                <Link to="/" onClick={logout} className="logout-button">
                                     Log out
                                 </Link>
                             </li>
                             <li className="menuItem">
-                                <Link href="/savedrecipes">My Recipes</Link>
+                                <Link to="/auth/:id/savedrecipes">My Recipes</Link>
                             </li>
                         </>
                     )}
