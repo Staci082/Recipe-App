@@ -85,11 +85,9 @@ export async function singleRecipe(req, res) {
     try {
          recipe = await Recipe.findOne({ _id: req.params.id }); // finding single recipe (adding const bugs it for some reason)
         res.json(recipes)
-        // const locals = {
-        //     title: single.name,
-        // };
+       
 
-        // res.render('recipe/single', {locals, single} )
+        // res.render('recipe/single', single )
     } catch (error) {
         console.log(error);
     }

@@ -35,7 +35,7 @@ router.get('/:category', sortRecipes)
 
 //GET / 
 // GET RECIPE BY ID
-router.get('/:id', singleRecipe)
+router.get('/recipe/:id', singleRecipe)
 
 // SEARCH RECIPES
 router.post('/search', searchRecipes)
