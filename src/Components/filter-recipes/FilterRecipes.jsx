@@ -11,16 +11,18 @@ function FilterRecipes() {
 
     // PAGINATION
     const [pageNumber, setPageNumber] = useState(0);
-    const recipesPerPage = 6;
+    const recipesPerPage = 12;
     const pagesVisited = pageNumber * recipesPerPage;
     const displayRecipes = recipes.slice(pagesVisited, pagesVisited + recipesPerPage).map((recipe) => {
         return (
             <div className="recipe" key={recipe._id}>
+                <img/>
                 <a href={`/recipe/${recipe._id}`} className="recipe-title-container">
                     <h3 className="recipe-title">{recipe.name}</h3>
-                    <i className="recipe-category">{recipe.category}</i>
+                    <p className="recipe-category">{recipe.category}</p>
                 </a>
                 <button className="save-icon">
+                <FaRegHeart />
                     {/* onClick={() => setSaveButton(!saveButton)} */}
                     {/* {saveButton ? <FaRegHeart /> : <FaHeart/>} */}
                 </button>
@@ -49,7 +51,13 @@ function FilterRecipes() {
 
     return (
         <>
-            <div className="recipe-container">{displayRecipes}</div>
+        <div className="recipe-container-titles">
+            <h1>Recipes</h1>
+            <h2>12 recipes</h2>
+            </div>
+
+            <div className="recipe-container">
+                {displayRecipes}</div>
 
                 <ReactPaginate
                 breakLabel="..."

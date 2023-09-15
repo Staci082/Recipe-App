@@ -20,10 +20,10 @@ function Header() {
 
                 <input type="search" name="searchBar" className="search-bar" placeholder="Search.." aria-label="Search" />
 
-                <button onClick={() => {setOpenMenu(!openMenu)}}>
+                {/* <button onClick={() => {setOpenMenu(!openMenu)}}>
                     <CgLayoutGridSmall className="menu-button"/>
                     
-                </button>
+                </button> */}
 
             </div>
         </>

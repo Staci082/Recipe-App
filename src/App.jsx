@@ -58,7 +58,7 @@ function App() {
     return (
         <>
         
-            <div className="global-container">
+
                 <Routes>
 
                     <Route path="/" element={<Homepage />}>
@@ -70,7 +70,7 @@ function App() {
                         ))}
 
                 </Routes>
-            </div>
+
         </>
     );
 }

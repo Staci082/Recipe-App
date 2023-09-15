@@ -1,13 +1,11 @@
 import { useCookies } from "react-cookie";
-import { Link } from "react-router-dom"
-
+import { Link } from "react-router-dom";
 
 function menu() {
     const menuItems = [
-
         {
-            title: "Get Random Recipe",
-            href: "/random",
+            title: "My Recipes",
+            href: "/myrecipes",
         },
         {
             title: "Create a Recipe",
@@ -18,6 +16,10 @@ function menu() {
             href: "/url",
         },
         {
+            title: "Get Random Recipe",
+            href: "/random",
+        },
+        {
             title: "Grocery List",
             href: "/list",
         },
@@ -25,47 +27,47 @@ function menu() {
 
     const [cookies, setCookies] = useCookies(["access_token"]);
 
-
     const logout = () => {
         setCookies("access_token", "");
         window.localStorage.removeItem("userID");
     };
 
-
-
-
     return (
+        <div className="menu-container">
+            <h5>Menu</h5>
+            <ul>
+                {menuItems.map((item) => (
+                    <li className="menuItem" key={item.title}>
+                        <Link to={item.href}>{item.title}</Link>
+                    </li>
+                ))}
+            </ul>
 
-            <div className="menu-container" >
-                <h5>Menu</h5>
-                <ul>
-                    {!cookies.access_token ? (
-                        <>
-                            <li className="menuItem">
-                                <Link to="/login">Log in </Link> /<Link to="/register"> Register</Link>
-                            </li>
-                        </>
-                    ) : (
-                        <>
-                            <li className="menuItem">
-                                <Link to="/" onClick={logout} className="logout-button">
-                                    Log out
-                                </Link>
-                            </li>
-                            <li className="menuItem">
-                                <Link to="/auth/:id/savedrecipes">My Recipes</Link>
-                            </li>
-                        </>
-                    )}
-
-                    {menuItems.map((item) => (
-                        <li className="menuItem" key={item.title}>
-                            <Link to={item.href}>{item.title}</Link>
+            <h5>Settings</h5>
+            <ul>
+                {!cookies.access_token ? (
+                    <>
+                        <li className="menuItem">
+                            <Link to="/login">Log in </Link>
                         </li>
-                    ))}
-                </ul>
-            </div>
-
+                        <li className="menuItem">
+                            <Link to="/register"> Register</Link>
+                        </li>
+                    </>
+                ) : (
+                    <>
+                        <li className="menuItem">
+                            <Link to="/" onClick={logout} className="logout-button">
+                                Log out
+                            </Link>
+                        </li>
+                    </>
+                )}
+                <li className="menuItem">
+                    <Link>Theme</Link>
+                </li>
+            </ul>
+        </div>
     );
 }
 

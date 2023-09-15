@@ -1,19 +1,19 @@
-
-
 .menu-container {
     width: 200px;
+
     @include colorBox;
-    box-shadow: 5px 5px 0px 0px $light-purple,
-    7px 7px 0px 0px black;
+    // box-shadow: 5px 5px 0px 0px $light-purple,
+    // 7px 7px 0px 0px white;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     padding: 0.5em 1.5em;
-    background: $light-salmon;
+
 }
 
-.menuItem, .logout-button {
+.menuItem,
+.logout-button {
     font-size: clamp(0.5rem, 5vh, 1rem);
     margin-bottom: clamp(0.5rem, 5vh, 1.5rem);
     font-weight: bold;

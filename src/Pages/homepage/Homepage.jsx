@@ -13,6 +13,7 @@ function Homepage() {
                     <Menu />
                 </div>
                 <div className="right-container">
+                    
                     <Categories />
                     <RecipesContainer />
                 </div>

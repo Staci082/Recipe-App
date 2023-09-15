@@ -6,21 +6,21 @@
 
 @mixin box {
     border: $border;
-    box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 0.75);
+    // box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 0.75);
     border-radius: 10px;
 }
 
 @mixin colorBox {
     background: $light;
     border: $border;
-    box-shadow: 5px 5px 0px 0px $light-purple,
-    7px 7px 0px 0px black;
+    // box-shadow: 5px 5px 0px 0px $light-purple,
+    // 7px 7px 0px 0px white;
     border-radius: 10px;
 }
 
 @mixin button {
     border: $border;
-    box-shadow: $box-shadow;
+    // box-shadow: $box-shadow;
     border-radius: 2px;
     cursor: pointer;
     padding: 10px;
@@ -56,9 +56,7 @@
     font-size: 1rem;
     border: $border;
     border-radius: $border-radius-sm;
-    box-shadow: $box-shadow;
 }
-
 
 @mixin backButton {
     cursor: pointer;

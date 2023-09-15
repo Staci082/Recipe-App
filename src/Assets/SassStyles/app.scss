@@ -27,9 +27,8 @@ html {
 
 body {
     font-family: Poppins, sans-serif;
-    @include flex;
-    min-height: 95vh;
-    background: $light-salmon;
+    min-height: 100vh;
+    background: rgb(252, 247, 239);
 }
 
 a {
@@ -73,29 +72,11 @@ button {
 }
 
 // APP STYLING
-.global-container {
-    position: relative;
-    max-width: 1300px;
-    background: $light;
-    @include box;
-    margin: 1em;
-    padding: 1em 0.5em;
-    border: none;
-        box-shadow: none;
-        padding-bottom: 2em;
-        background: $light-salmon;
-    @include sm {
-        border: none;
-        box-shadow: none;
-        padding-bottom: 2em;
-        background: $light-salmon;
-    }
-}
 
 .main-container {
     display: flex;
     align-items: flex-start;
-    
+
 }
 
 .left-container {

@@ -8,33 +8,41 @@
     gap: 2.5em;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: center;  
+}
+.recipe-container-titles {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    & h2 {
+        color: orange;
+    }
 }
 
 .recipe {
     position: relative;
     display: flex;
+    flex-direction: column;
     cursor: pointer;
-    width: 260px;
-    height: 70px;
-    @include colorBox;
-    border: black 2px solid;
-    padding-left: 1em;
+    width: 240px;
+    height: 200px;
+    border-radius: 15px;
+
+    & img {
+        height: 100%;
+        background: rgb(255, 221, 157);
+    }
 
     & .recipe-title-container {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        width: 75%;
+        justify-content: flex-end;
+        padding: .5em 1em;
+        background: white;
     }
-    & h3 {
+    & .recipe-title, .recipe-category {
         margin: 0;
     }
-
-    & i {
-        margin-left: 0.3em;
-    }
-
 
     @include sm {
         min-width: 300px;
@@ -46,6 +54,6 @@
     position: absolute;
     top: 4px;
     right: 2px;
-    color: $light-purple;
+    color: yellow;
     font-size: 1.5rem;
 }
