@@ -12,7 +12,7 @@
   justify-content: center;
   width: 100%;
   gap: 1em;
-  margin-bottom: 2em;
+  margin-bottom: 3em;
 }
 @media (max-width: 720px) {
   .categories-container {
@@ -151,7 +151,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 2em;
+  margin-top: 4em;
   gap: 0.5em;
   font-weight: bold;
   border-radius: 5px;
@@ -313,7 +313,7 @@
   flex-direction: column;
   justify-content: flex-start;
   padding: 0.5em 1.5em;
-  background: rgb(252, 240, 242);
+  background: rgb(238, 248, 234);
 }
 
 .menuItem, .logout-button {
@@ -327,6 +327,134 @@
 
 .logout-button {
   cursor: pointer;
+}
+
+.form-separator {
+  display: flex;
+  justify-content: space-around;
+}
+@media (max-width: 720px) {
+  .form-separator {
+    flex-direction: column;
+  }
+}
+
+.form-inner-separator {
+  position: relative;
+  outline: none;
+  width: clamp(300px, 40vw, 300px);
+  flex-direction: column;
+  margin: 2em;
+  gap: 1em;
+}
+
+.recipe-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.recipe-form label {
+  width: 100%;
+  font-size: 1.5rem;
+}
+.recipe-form input,
+.recipe-form textarea,
+.recipe-form select {
+  height: 40px;
+  outline: none;
+  padding: 0 0.5em;
+  margin-bottom: 1.5em;
+  width: 90%;
+  font-family: inherit;
+  font-size: 1rem;
+  border: 2px black solid;
+  border-radius: 5px;
+  box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.75);
+}
+.recipe-form select {
+  width: 96.5%;
+}
+.recipe-form textarea {
+  height: 200px;
+  padding-top: 1em;
+}
+
+.add-ingredient-container {
+  position: relative;
+}
+
+.add-ingredient-button {
+  position: absolute;
+  top: 10%;
+  right: 5%;
+}
+
+.edit-container {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 2em;
+}
+
+.form-separator {
+  display: flex;
+  justify-content: space-around;
+}
+@media (max-width: 720px) {
+  .form-separator {
+    flex-direction: column;
+  }
+}
+
+.form-inner-separator {
+  position: relative;
+  outline: none;
+  width: clamp(300px, 40vw, 300px);
+  flex-direction: column;
+  margin: 2em;
+  gap: 1em;
+}
+.form-inner-separator label {
+  width: 100%;
+  font-size: 1.5rem;
+}
+.form-inner-separator input,
+.form-inner-separator textarea,
+.form-inner-separator select {
+  height: 40px;
+  outline: none;
+  padding: 0 0.5em;
+  margin-bottom: 1.5em;
+  width: 90%;
+  font-family: inherit;
+  font-size: 1rem;
+  border: 2px black solid;
+  border-radius: 5px;
+  box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.75);
+}
+.form-inner-separator select {
+  width: 96.5%;
+}
+.form-inner-separator textarea {
+  height: 200px;
+  padding-top: 1em;
+}
+
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.add-ingredient-container {
+  position: relative;
+}
+
+.add-ingredient-button, .edit {
+  position: absolute;
+  top: 10%;
+  right: 5%;
 }
 
 .error-page {
@@ -499,7 +627,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 95vh;
-  background: rgb(252, 240, 242);
+  background: rgb(238, 248, 234);
 }
 
 a {
@@ -575,6 +703,18 @@ button {
   border-radius: 10px;
   margin: 1em;
   padding: 1em 0.5em;
+  border: none;
+  box-shadow: none;
+  padding-bottom: 2em;
+  background: rgb(238, 248, 234);
+}
+@media (max-width: 480px) {
+  .global-container {
+    border: none;
+    box-shadow: none;
+    padding-bottom: 2em;
+    background: rgb(238, 248, 234);
+  }
 }
 
 .main-container {

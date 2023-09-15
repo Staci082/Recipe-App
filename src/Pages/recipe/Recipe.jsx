@@ -29,7 +29,7 @@ const ingredients = [
             </div>
 
             <div className="recipe-button-container">
-                <a href="/edit" className="edit-buttons"><FaPencil /></a>
+                <a href="/edit/{_id}" className="edit-buttons"><FaPencil /></a>
                 <a href="/delete/{_id}" className="edit-buttons"><FaTrashCan /></a>
             </div>
         </>

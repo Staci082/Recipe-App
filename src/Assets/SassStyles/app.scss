@@ -8,13 +8,13 @@
 @import "../../Components/categories/categories";
 @import "../../Components/header/header";
 @import "../../Components/auth-form/auth-form";
-@import "../../Components/pagination/pagination";
+@import "../../Components/filter-recipes/pagination";
 @import "../../Components/recipes-container/recipes-container";
 @import "../../Components/recipe-form/recipe-form";
 @import "../../Components/menu/menu";
 
-// @import "../../Pages/create/create";
-// @import "../../Pages/edit/edit";
+@import "../../Pages/create/create";
+@import "../../Pages/edit/edit";
 @import "../../Pages/error/error";
 @import "../../Pages/grocery-list/groceryList";
 @import "../../Pages/recipe/recipe";
@@ -80,11 +80,22 @@ button {
     @include box;
     margin: 1em;
     padding: 1em 0.5em;
+    border: none;
+        box-shadow: none;
+        padding-bottom: 2em;
+        background: $light-salmon;
+    @include sm {
+        border: none;
+        box-shadow: none;
+        padding-bottom: 2em;
+        background: $light-salmon;
+    }
 }
 
 .main-container {
     display: flex;
     align-items: flex-start;
+    
 }
 
 .left-container {

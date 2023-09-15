@@ -2,11 +2,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 2em;
+    margin-top: 4em;
     gap: .5em;
     font-weight: bold;
     border-radius: $border-radius-sm;
-
 }
 
 
@@ -25,6 +24,7 @@
 .pagination .pagination-active a {
     border-radius: $border-radius-sm;
     color: $light-purple;
+
     &:hover {
         color: black;
     }

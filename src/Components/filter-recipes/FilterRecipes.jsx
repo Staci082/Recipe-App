@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import ReactPaginate from "react-paginate";
-// import Pagination from "../../Components/pagination/Pagination";
+
 import { FaHeart, FaRegHeart, FaAnglesLeft, FaAnglesRight } from "react-icons/fa6";
 
 function FilterRecipes() {
@@ -33,6 +33,7 @@ function FilterRecipes() {
         setPageNumber(selected);
     };
 
+    // FETCH RECIPES
     useEffect(() => {
         const fetchRecipes = async () => {
             try {
