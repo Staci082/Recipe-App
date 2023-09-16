@@ -56,6 +56,7 @@ function Create() {
     console.log(recipe);
 
     return (
+
         <RecipeForm
             label="create"
             recipe={recipe}
@@ -65,6 +66,7 @@ function Create() {
             handleSubmit={handleSubmit}
             handleDelete={handleDelete}
         />
+
     );
 }
 

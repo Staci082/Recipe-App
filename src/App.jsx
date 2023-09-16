@@ -1,6 +1,6 @@
 import "./Assets/SassStyles/app.scss";
-import {Routes, Route } from "react-router-dom";
-import { useState } from "react"
+import { Routes, Route } from "react-router-dom";
+import { useState } from "react";
 
 // IMPORT PAGES
 import Create from "./Pages/create/Create";
@@ -13,64 +13,55 @@ import Register from "./Pages/register/Register";
 import URLRecipe from "./Pages/url-recipe/URLRecipe";
 import FilterRecipes from "./Components/filter-recipes/FilterRecipes";
 
-
-
 // CREATE ROUTER
 const router = [
-//   {
-//       path: "/",
-//       element: <Homepage />,
-//   },
-  {
-      path: "/login",
-      element: <Login />,
-  },
-  {
-      path: "/register",
-      element: <Register />,
-  },
-  {
-      path: "/recipe",
-      element: <Recipe />,
-  },
-  {
-      path: "/create",
-      element: <Create />,
-  },
-  {
-      path: "/list",
-      element: <GroceryList />,
-  },
-  {
-    path: "/url",
-    element: <URLRecipe />,
-},
-  {
-      path: "*",
-      element: <Error />,
-  },
-]
+    //   {
+    //       path: "/",
+    //       element: <Homepage />,
+    //   },
+    {
+        path: "/login",
+        element: <Login />,
+    },
+    {
+        path: "/register",
+        element: <Register />,
+    },
+    {
+        path: "/recipe",
+        element: <Recipe />,
+    },
+    {
+        path: "/create",
+        element: <Create />,
+    },
+    {
+        path: "/list",
+        element: <GroceryList />,
+    },
+    {
+        path: "/url",
+        element: <URLRecipe />,
+    },
+    {
+        path: "*",
+        element: <Error />,
+    },
+];
 
 function App() {
-
     // const [param, setParam] = useState("")
-    
+
     return (
         <>
-        
-
-                <Routes>
-
-                    <Route path="/" element={<Homepage />}>
-                        <Route path="/category/:category" element={<FilterRecipes/> } />
-                    </Route>
-
-                    {router.map((item) => (
-                        <Route path={item.path} element={item.element} key={item.path}/>
-                        ))}
-
-                </Routes>
-
+            <Routes>
+                <Route path="/" element={<Homepage />}>
+                    <Route path="/category/:category" element={<FilterRecipes />} />
+                </Route>
+                {router.map((item) => (
+                        <Route path={item.path} element={item.element} key={item.path} />
+                ))}
+            </Routes>
         </>
     );
 }

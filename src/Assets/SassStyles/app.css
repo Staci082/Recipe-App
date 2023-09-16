@@ -177,9 +177,9 @@
   cursor: pointer;
   width: 240px;
   height: 200px;
-  border-radius: 15px;
+  border-radius: 5%;
 }
-.recipe img {
+.recipe .recipe-img {
   height: 100%;
   background: rgb(255, 221, 157);
 }
@@ -439,15 +439,12 @@
 }
 
 .grocery-list-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
   padding: 4em 0;
   margin: 2em;
   gap: 2em;
 }
 @media (max-width: 1190px) {
   .grocery-list-container {
-    grid-template-columns: repeat(1, 1fr);
     padding: 0;
   }
 }
@@ -507,10 +504,10 @@
 
 .grocery-back-button {
   cursor: pointer;
-  font-size: 1.5rem;
+  font-size: 3rem;
   position: absolute;
-  right: 12px;
-  top: 2px;
+  right: 30px;
+  top: 10px;
 }
 
 .single-recipe-container {
@@ -562,10 +559,10 @@
 
 .recipe-back-button {
   cursor: pointer;
-  font-size: 1.5rem;
+  font-size: 3rem;
   position: absolute;
-  right: 12px;
-  top: 2px;
+  right: 30px;
+  top: 10px;
 }
 
 .url-form {
@@ -639,26 +636,33 @@ button {
 
 .back-button {
   cursor: pointer;
-  font-size: 1.5rem;
+  font-size: 3rem;
   position: absolute;
-  right: 12px;
-  top: 2px;
+  right: 30px;
+  top: 10px;
 }
 
 .form-back-button {
   cursor: pointer;
-  font-size: 1.5rem;
+  font-size: 3rem;
   position: absolute;
-  right: 12px;
-  top: 2px;
+  right: 30px;
+  top: 10px;
 }
 
 .login-back-button {
   cursor: pointer;
-  font-size: 1.5rem;
+  font-size: 3rem;
   position: absolute;
-  right: 12px;
-  top: 2px;
+  right: 30px;
+  top: 10px;
+}
+
+.global-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .main-container {

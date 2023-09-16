@@ -11,18 +11,18 @@ function FilterRecipes() {
 
     // PAGINATION
     const [pageNumber, setPageNumber] = useState(0);
-    const recipesPerPage = 12;
+    const recipesPerPage = 6;
     const pagesVisited = pageNumber * recipesPerPage;
     const displayRecipes = recipes.slice(pagesVisited, pagesVisited + recipesPerPage).map((recipe) => {
         return (
             <div className="recipe" key={recipe._id}>
-                <img/>
+                <img className="recipe-img"/>
                 <a href={`/recipe/${recipe._id}`} className="recipe-title-container">
                     <h3 className="recipe-title">{recipe.name}</h3>
                     <p className="recipe-category">{recipe.category}</p>
                 </a>
                 <button className="save-icon">
-                <FaRegHeart />
+                    <FaRegHeart />
                     {/* onClick={() => setSaveButton(!saveButton)} */}
                     {/* {saveButton ? <FaRegHeart /> : <FaHeart/>} */}
                 </button>

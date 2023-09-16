@@ -15,6 +15,7 @@ const ingredients = [
 
     return (
         <>
+                <div className="global-container">
         <h1 className="recipe-name">Recipe name</h1>
         <a href="/" className="recipe-back-button">&times;</a>
             <div className="single-recipe-container">
@@ -31,6 +32,7 @@ const ingredients = [
             <div className="recipe-button-container">
                 <a href="/edit/{_id}" className="edit-buttons"><FaPencil /></a>
                 <a href="/delete/{_id}" className="edit-buttons"><FaTrashCan /></a>
+            </div>
             </div>
         </>
     );

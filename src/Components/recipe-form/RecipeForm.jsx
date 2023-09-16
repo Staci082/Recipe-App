@@ -6,6 +6,7 @@ function RecipeForm({ label, recipe, handleChange, handleIngredientChange, handl
 
     return (
         <>
+                <div className="global-container">
             <a href="/" className="form-back-button">
                 &times;
             </a>
@@ -52,6 +53,7 @@ function RecipeForm({ label, recipe, handleChange, handleIngredientChange, handl
                     {label}
                 </button>
             </form>
+            </div>
         </>
     );
 }

@@ -26,9 +26,9 @@
     cursor: pointer;
     width: 240px;
     height: 200px;
-    border-radius: 15px;
+    border-radius: 5%;
 
-    & img {
+    & .recipe-img {
         height: 100%;
         background: rgb(255, 221, 157);
     }
@@ -40,6 +40,7 @@
         padding: .5em 1em;
         background: white;
     }
+    
     & .recipe-title, .recipe-category {
         margin: 0;
     }

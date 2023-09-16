@@ -73,10 +73,14 @@ button {
 
 // APP STYLING
 
+.global-container {
+    @include flex;
+    height: 100vh;
+}
+
 .main-container {
     display: flex;
     align-items: flex-start;
-
 }
 
 .left-container {

@@ -1,12 +1,9 @@
 .grocery-list-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
     padding: 4em 0;
     margin: 2em;
     gap: 2em;
     // font-family: "Indie Flower", "comic Sans";
     @include xl {
-        grid-template-columns: repeat(1, 1fr);
         padding: 0;
     }
 }
