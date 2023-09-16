@@ -20,7 +20,7 @@
 
 @mixin button {
     border: $border;
-    // box-shadow: $box-shadow;
+    box-shadow: $box-shadow;
     border-radius: 2px;
     cursor: pointer;
     padding: 10px;
@@ -28,7 +28,7 @@
     &:hover {
         transform: scale(1.1);
         border: orange solid 2px;
-        box-shadow: 4px 4px 0px 0px rgba($light-green, 0.75);
+        box-shadow: 4px 4px 0px 0px rgba(orange, 0.75);
     }
 }
 
