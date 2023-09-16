@@ -16,7 +16,6 @@ function FilterRecipes() {
     const displayRecipes = recipes.slice(pagesVisited, pagesVisited + recipesPerPage).map((recipe) => {
         return (
             <div className="recipe" key={recipe._id}>
-                <img className="recipe-img"/>
                 <a href={`/recipe/${recipe._id}`} className="recipe-title-container">
                     <h3 className="recipe-title">{recipe.name}</h3>
                     <p className="recipe-category">{recipe.category}</p>
@@ -51,7 +50,7 @@ function FilterRecipes() {
 
     return (
         <>
-        <div className="recipe-container-titles">
+        <div className="recipe-container-header">
             <h1>Recipes</h1>
             <h2>12 recipes</h2>
             </div>

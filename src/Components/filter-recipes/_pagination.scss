@@ -9,19 +9,18 @@
 }
 
 .pagination a {
-    color: white;
     padding: 10px 20px;
     text-decoration: none;
     border-radius: $border-radius-sm;
 
     &:hover {
-        background: $light-purple;
+        background: orange;
     }
 }
 
 .pagination .pagination-active a {
     border-radius: $border-radius-sm;
-    color: $light-purple;
+    color: orange;
 
     &:hover {
         color: white;

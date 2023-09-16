@@ -38,7 +38,7 @@
   text-align: center;
 }
 .cat-item-container:hover {
-  background: #BFBAF6;
+  background: orange;
 }
 
 .cat-item-title {
@@ -131,18 +131,17 @@
 }
 
 .pagination a {
-  color: white;
   padding: 10px 20px;
   text-decoration: none;
   border-radius: 5px;
 }
 .pagination a:hover {
-  background: #BFBAF6;
+  background: orange;
 }
 
 .pagination .pagination-active a {
   border-radius: 5px;
-  color: #BFBAF6;
+  color: orange;
 }
 .pagination .pagination-active a:hover {
   color: white;
@@ -161,34 +160,29 @@
   justify-content: center;
 }
 
-.recipe-container-titles {
+.recipe-container-header {
   display: flex;
   align-items: center;
   gap: 2em;
 }
-.recipe-container-titles h2 {
+.recipe-container-header h2 {
   color: orange;
 }
 
 .recipe {
   position: relative;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   cursor: pointer;
   width: 240px;
-  height: 200px;
-  border-radius: 5%;
-}
-.recipe .recipe-img {
-  height: 100%;
-  background: rgb(255, 221, 157);
+  background: white;
+  border-radius: 15px;
 }
 .recipe .recipe-title-container {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   padding: 0.5em 1em;
-  background: white;
 }
 .recipe .recipe-title, .recipe .recipe-category {
   margin: 0;
@@ -201,11 +195,9 @@
 
 .save-icon {
   width: 40px;
-  position: absolute;
-  top: 4px;
-  right: 2px;
-  color: yellow;
+  color: orange;
   font-size: 1.5rem;
+  margin-right: 5px;
 }
 
 .form-separator {
@@ -300,7 +292,7 @@
 }
 .menuItem a:hover,
 .logout-button a:hover {
-  color: #BFBAF6;
+  color: orange;
 }
 
 .logout-button {
@@ -549,7 +541,7 @@
 }
 
 .edit-buttons:hover {
-  color: #BFBAF6;
+  color: orange;
 }
 
 .recipe-back-button {
@@ -625,7 +617,7 @@ button {
 }
 .submit-button:hover {
   transform: scale(1.1);
-  border: #BFBAF6 solid 2px;
+  border: orange solid 2px;
   box-shadow: 4px 4px 0px 0px rgba(221, 246, 221, 0.75);
 }
 

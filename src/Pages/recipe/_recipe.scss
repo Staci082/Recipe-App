@@ -1,4 +1,3 @@
-
 .recipe-details-container {
     position: relative;
     display: flex;
@@ -24,7 +23,6 @@
     font-size: clamp(1.5rem, 3vw, 2rem);
 }
 
-
 .recipe-button-container {
     position: absolute;
     font-size: 1.5rem;
@@ -36,11 +34,10 @@
 
 .edit-buttons {
     &:hover {
-        color: $light-purple;
+        color: orange;
     }
 }
 
 .recipe-back-button {
     @include backButton;
-
 }

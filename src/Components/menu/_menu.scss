@@ -2,14 +2,13 @@
     width: 200px;
 
     @include colorBox;
-    // box-shadow: 5px 5px 0px 0px $light-purple,
+    // box-shadow: 5px 5px 0px 0px orange,
     // 7px 7px 0px 0px white;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     padding: 0.5em 1.5em;
-
 }
 
 .menuItem,
@@ -18,7 +17,7 @@
     margin-bottom: clamp(0.5rem, 5vh, 1.5rem);
     font-weight: bold;
     & a:hover {
-        color: $light-purple;
+        color: orange;
     }
 }
 
