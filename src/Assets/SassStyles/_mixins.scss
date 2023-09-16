@@ -44,17 +44,18 @@
 @mixin label {
     width: 100%;
     font-size: 1.5rem;
+
 }
 
 @mixin input {
     height: 40px;
     outline: none;
     padding: 0 0.5em;
-    margin-bottom: 1.5em;
+    margin: .8em 0 1.5em 0;
     width: 90%;
     font-family: inherit;
     font-size: 1rem;
-    border: $border;
+    box-shadow: $box-shadow;
     border-radius: $border-radius-sm;
 }
 

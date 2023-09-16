@@ -82,7 +82,7 @@
   outline: none;
   height: 40px;
   width: clamp(250px, 35vw, 600px);
-  border: 1px white solid;
+  border: 1px rgb(0, 0, 0) solid;
   border-radius: 10px;
   padding: 0 1em;
 }
@@ -112,11 +112,11 @@
   height: 40px;
   outline: none;
   padding: 0 0.5em;
-  margin-bottom: 1.5em;
+  margin: 0.8em 0 1.5em 0;
   width: 90%;
   font-family: inherit;
   font-size: 1rem;
-  border: 1px white solid;
+  box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.75);
   border-radius: 5px;
 }
 
@@ -212,6 +212,7 @@
 
 .form-inner-separator {
   position: relative;
+  position: relative;
   outline: none;
   width: clamp(300px, 40vw, 300px);
   flex-direction: column;
@@ -236,11 +237,11 @@
   height: 40px;
   outline: none;
   padding: 0 0.5em;
-  margin-bottom: 1.5em;
+  margin: 0.8em 0 1.5em 0;
   width: 90%;
   font-family: inherit;
   font-size: 1rem;
-  border: 1px white solid;
+  box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.75);
   border-radius: 5px;
 }
 .recipe-form select {
@@ -255,27 +256,20 @@
   position: relative;
 }
 
-.add-ingredient-button {
-  position: absolute;
-  top: 10%;
-  right: 5%;
-}
-
 .ingredient-input-container {
-  position: relative;
   display: flex;
-  align-items: center;
+  position: relative;
 }
 .ingredient-input-container .remove-ingredient-button {
   position: absolute;
   right: 10px;
-  top: 8px;
+  top: 20px;
 }
 
 .menu-container {
   width: 200px;
   background: rgb(255, 255, 255);
-  border: 1px white solid;
+  border: 1px rgb(0, 0, 0) solid;
   border-radius: 10px;
   position: relative;
   display: flex;
@@ -334,11 +328,11 @@
   height: 40px;
   outline: none;
   padding: 0 0.5em;
-  margin-bottom: 1.5em;
+  margin: 0.8em 0 1.5em 0;
   width: 90%;
   font-family: inherit;
   font-size: 1rem;
-  border: 1px white solid;
+  box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.75);
   border-radius: 5px;
 }
 .recipe-form select {
@@ -393,11 +387,11 @@
   height: 40px;
   outline: none;
   padding: 0 0.5em;
-  margin-bottom: 1.5em;
+  margin: 0.8em 0 1.5em 0;
   width: 90%;
   font-family: inherit;
   font-size: 1rem;
-  border: 1px white solid;
+  box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.75);
   border-radius: 5px;
 }
 .form-inner-separator select {
@@ -460,7 +454,7 @@
   height: auto;
   gap: 1.5em;
   background: rgb(255, 255, 255);
-  border: 1px white solid;
+  border: 1px rgb(0, 0, 0) solid;
   border-radius: 10px;
   color: grey;
   font-size: 0.8rem;
@@ -479,11 +473,11 @@
   height: 40px;
   outline: none;
   padding: 0 0.5em;
-  margin-bottom: 1.5em;
+  margin: 0.8em 0 1.5em 0;
   width: 90%;
   font-family: inherit;
   font-size: 1rem;
-  border: 1px white solid;
+  box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.75);
   border-radius: 5px;
   width: 250px;
 }
@@ -511,14 +505,14 @@
 .recipe-details-container .ingredients-container {
   padding-right: 1em;
   background: rgb(255, 255, 255);
-  border: 1px white solid;
+  border: 1px rgb(0, 0, 0) solid;
   border-radius: 10px;
 }
 .recipe-details-container .instructions-container {
   padding: 1em;
   flex: stretch;
   background: rgb(255, 255, 255);
-  border: 1px white solid;
+  border: 1px rgb(0, 0, 0) solid;
   border-radius: 10px;
 }
 @media (max-width: 960px) {
@@ -563,11 +557,11 @@
   height: 40px;
   outline: none;
   padding: 0 0.5em;
-  margin-bottom: 1.5em;
+  margin: 0.8em 0 1.5em 0;
   width: 90%;
   font-family: inherit;
   font-size: 1rem;
-  border: 1px white solid;
+  box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.75);
   border-radius: 5px;
   width: clamp(300px, 25vw, 450px);
 }
@@ -607,7 +601,7 @@ button {
   font-size: 1.5rem;
   margin: -1em;
   margin-top: 1em;
-  border: 1px white solid;
+  border: 1px rgb(0, 0, 0) solid;
   border-radius: 2px;
   cursor: pointer;
   padding: 10px;

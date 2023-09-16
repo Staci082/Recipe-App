@@ -9,6 +9,7 @@
 }
 
 .form-inner-separator {
+    position: relative;
     @include form;
 }
 
@@ -45,19 +46,17 @@
     position: relative;
 }
 
-.add-ingredient-button{
-    position: absolute;
-    top: 10%;
-    right: 5%;
-}
+// .add-ingredient-button{
+//     margin-left: 100px;   ???????????????? not working
+// }
 
 .ingredient-input-container {
-    position: relative;
     display: flex;
-    align-items: center;
+    position: relative;
+
     & .remove-ingredient-button {
         position: absolute;
         right: 10px;
-        top: 8px;
+        top: 20px;
     }
 }
