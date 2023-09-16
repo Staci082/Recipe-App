@@ -17,7 +17,7 @@ function menu() {
         },
         {
             title: "Get Random Recipe",
-            href: "/random",
+            href: "/recipe",
         },
         {
             title: "Grocery List",
