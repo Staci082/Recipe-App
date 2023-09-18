@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Search from "../search/Search"
 import { CgLayoutGridSmall } from "react-icons/cg";
 import Menu from "../menu/Menu"
 
@@ -18,8 +19,7 @@ function Header() {
                     <p className="logo-title">Fiesta Flavors</p>
                 </div>
 
-                <input type="search" name="searchBar" className="search-bar" placeholder="Search.." aria-label="Search" />
-
+                <Search/>
                 {/* <button onClick={() => {setOpenMenu(!openMenu)}}>
                     <CgLayoutGridSmall className="menu-button"/>
                     

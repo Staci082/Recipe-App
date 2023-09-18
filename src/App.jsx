@@ -14,22 +14,6 @@ import FilterRecipes from "./Components/filter-recipes/FilterRecipes";
 
 // CREATE ROUTER
 const router = [
-    //   {
-    //       path: "/",
-    //       element: <Homepage />,
-    //   },
-    {
-        path: "/login",
-        element: <Login />,
-    },
-    {
-        path: "/register",
-        element: <Register />,
-    },
-    {
-        path: "/recipe/:id",
-        element: <Recipe />,
-    },
     {
         path: "/create",
         element: <Create />,
@@ -37,6 +21,18 @@ const router = [
     {
         path: "/list",
         element: <GroceryList />,
+    },
+    {
+        path: "/login",
+        element: <Login />,
+    },
+    {
+        path: "/recipe/:id",
+        element: <Recipe />,
+    },
+    {
+        path: "/register",
+        element: <Register />,
     },
     {
         path: "/url",

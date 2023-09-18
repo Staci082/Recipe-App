@@ -4,7 +4,6 @@ import { useParams } from "react-router-dom";
 import { FaPencil, FaTrashCan } from "react-icons/fa6";
 
 function Recipe() {
-
     const params = useParams();
     const recipeID = params.id;
     const [recipe, setRecipe] = useState([]);
@@ -25,24 +24,24 @@ function Recipe() {
         <>
             <div className="global-container">
                 <div className="single-recipe-container">
-                    <h1 className="recipe-name">{recipe.name}</h1>
+                    <div className="single-recipe-title-container">
+                        <h1 className="recipe-name">{recipe.name}</h1>
+                        <h2 className="recipe-category-title">{recipe.category}</h2>
+                    </div>
                     <a href="/" className="recipe-back-button">
                         &times;
                     </a>
                     <div className="recipe-details-container">
                         <div className="ingredients-container">
                             <ul>
+                                <h5 className="recipe-details-title">Ingredients</h5>
                                 {/* have to get values after data is fetched */}
-                                {recipe.ingredients && recipe.ingredients.map((item) => (
-                                    <li key={item}>{item}</li>
-                                ))}
+                                {recipe.ingredients && recipe.ingredients.map((item) => <li key={item}>{item}</li>)}
                             </ul>
                         </div>
-                        <div className="instructions-container">
-                        {/* {recipe.instructions && recipe.instructions.map((item) => (
-                                    <li key={item}>{item}</li>
-                                ))} */}
-                            {recipe.instructions}
+                        <div className="method-container">
+                            <h5 className="recipe-details-title">Instructions</h5>
+                            {recipe.method}
                         </div>
                         <div className="recipe-button-container">
                             <a href="/edit/{_id}" className="edit-buttons">

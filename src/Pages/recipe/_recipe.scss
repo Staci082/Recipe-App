@@ -1,26 +1,40 @@
 .recipe-details-container {
     position: relative;
     display: flex;
-    width: clamp(300px, 50vw, 2000px);
+    flex-direction: column;
+    width: clamp(300px, 50vw, 3500px);
     gap: 2em;
+    margin-bottom: 6em;
 
     & .ingredients-container {
-        padding-right: 1em;
         @include colorBox;
+        & ul {
+            padding-left: 1em;
+        }
     }
-    & .instructions-container {
+    & .method-container {
         padding: 1em;
         flex: stretch;
         @include colorBox;
     }
 
-    @include lg {
-        flex-direction: column;
-    }
+}
+.single-recipe-title-container {
+    display: flex;
+    align-items: center;
+    gap: 2em;
 }
 
 .recipe-name {
     font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+.recipe-category-title {
+    color: orange;
+}
+
+.recipe-details-title {
+    color: orange;
 }
 
 .recipe-button-container {
