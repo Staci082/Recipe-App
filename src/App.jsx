@@ -1,6 +1,5 @@
 import "./Assets/SassStyles/app.scss";
 import { Routes, Route } from "react-router-dom";
-import { useState } from "react";
 
 // IMPORT PAGES
 import Create from "./Pages/create/Create";
@@ -28,7 +27,7 @@ const router = [
         element: <Register />,
     },
     {
-        path: "/recipe",
+        path: "/recipe/:id",
         element: <Recipe />,
     },
     {
@@ -50,7 +49,6 @@ const router = [
 ];
 
 function App() {
-    // const [param, setParam] = useState("")
 
     return (
         <>

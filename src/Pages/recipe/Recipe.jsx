@@ -1,39 +1,58 @@
+import { useState, useEffect } from "react";
+import axios from "axios";
+import { useParams } from "react-router-dom";
 import { FaPencil, FaTrashCan } from "react-icons/fa6";
 
 function Recipe() {
-    const ingredients = ["lorem", "loremipsun", "loremi", "loremrem", "loremlorem", "lorems", "loremipsun", "loremum"];
+
+    const params = useParams();
+    const recipeID = params.id;
+    const [recipe, setRecipe] = useState([]);
+
+    useEffect(() => {
+        const fetchRecipe = async () => {
+            try {
+                const response = await axios.get("http://localhost:5712/recipe/" + recipeID);
+                console.log(response.data);
+                setRecipe(response.data);
+            } catch (error) {
+                console.log("Error fetching data:", error);
+            }
+        };
+        fetchRecipe();
+    }, []);
 
     return (
         <>
             <div className="global-container">
                 <div className="single-recipe-container">
-                    <h1 className="recipe-name">Recipe name</h1>
+                    <h1 className="recipe-name">{recipe.name}</h1>
                     <a href="/" className="recipe-back-button">
                         &times;
                     </a>
                     <div className="recipe-details-container">
                         <div className="ingredients-container">
+                            {console.log(recipe)}
                             <ul>
-                                {ingredients.map((item) => (
+                                {/* {recipe.ingredients.map((item) => (
                                     <li key={item}>{item}</li>
-                                ))}
+                                ))} */}
                             </ul>
                         </div>
                         <div className="instructions-container">
-                            1. Lorem ipsum dolor sit amet consectetur, adipisicing elit. 2. Ab repellendus quod consequuntur nobis omnis soluta ea eum officia molestias quasi? 3. Lorem ipsum dolor sit amet consectetur adipisicing elit. 4. Earum, magni. 5. Lorem ipsum dolor sit amet consectetur
-                            adipisicing elit. 6. Earum, magni.
+                            {/* {recipe.instructions.map((item) => (
+                                <li key={item}>{item}</li>
+                            ))} */}
                         </div>
                         <div className="recipe-button-container">
-                        <a href="/edit/{_id}" className="edit-buttons">
-                            <FaPencil />
-                        </a>
-                        <a href="/delete/{_id}" className="edit-buttons">
-                            <FaTrashCan />
-                        </a>
+                            <a href="/edit/{_id}" className="edit-buttons">
+                                <FaPencil />
+                            </a>
+                            <a href="/delete/{_id}" className="edit-buttons">
+                                <FaTrashCan />
+                            </a>
+                        </div>
                     </div>
-                    </div>
-
-                    
                 </div>
             </div>
         </>
