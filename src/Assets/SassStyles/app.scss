@@ -84,7 +84,7 @@ button {
 }
 
 .left-container {
-    @include lg {
+    @include md {
         display: none;
     }
 }

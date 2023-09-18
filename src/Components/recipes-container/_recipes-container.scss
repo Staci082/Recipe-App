@@ -8,7 +8,9 @@
     gap: 2.5em;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;  
+    @include md {
+        justify-content: center;  
+    }
 }
 
 .recipe-container-header {
@@ -25,7 +27,7 @@
     display: flex;
     justify-content: space-between;
     cursor: pointer;
-    width: 240px;
+    width: 260px;
     background: white;
     border-radius: 15px;
 

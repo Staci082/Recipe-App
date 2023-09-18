@@ -11,9 +11,11 @@ function FilterRecipes() {
 
     // PAGINATION
     const [pageNumber, setPageNumber] = useState(0);
-    const recipesPerPage = 6;
+    const recipesPerPage = 15;
     const pagesVisited = pageNumber * recipesPerPage;
     const displayRecipes = recipes.slice(pagesVisited, pagesVisited + recipesPerPage).map((recipe) => {
+
+        // RECIPE LIST ITEM
         return (
             <div className="recipe" key={recipe._id}>
                 <a href={`/recipe/${recipe._id}`} className="recipe-title-container">
@@ -51,8 +53,8 @@ function FilterRecipes() {
     return (
         <>
         <div className="recipe-container-header">
-            <h1>Recipes</h1>
-            <h2>12 recipes</h2>
+            <h1>Recipes </h1>
+            <h2>{Number(recipes.length)}</h2>
             </div>
 
             <div className="recipe-container">
