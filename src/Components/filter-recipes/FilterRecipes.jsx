@@ -13,7 +13,9 @@ function FilterRecipes() {
     const [pageNumber, setPageNumber] = useState(0);
     const recipesPerPage = 15;
     const pagesVisited = pageNumber * recipesPerPage;
-    const displayRecipes = recipes.slice(pagesVisited, pagesVisited + recipesPerPage).map((recipe) => {
+    const displayRecipes = 
+    recipes.slice(pagesVisited, pagesVisited + recipesPerPage)
+    .map((recipe) => {
 
         // RECIPE LIST ITEM
         return (
@@ -41,7 +43,8 @@ function FilterRecipes() {
         const fetchRecipes = async () => {
             try {
                 const response = await axios.get("http://localhost:5712/" + category);
-                setRecipes(response.data);
+                const sortedRecipes = response.data.sort((a, b) => a.name.localeCompare(b.name));
+                setRecipes(sortedRecipes);
             } catch (error) {
                 console.log("Error fetching data:", error);
             }
