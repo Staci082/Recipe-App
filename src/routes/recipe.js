@@ -20,7 +20,6 @@ router.get('/all', allRecipes)
 // POST RECIPE FORM DATA
 router.post('/create', postRecipe)
 
-
 // GET SAVED RECIPES IDS 
 router.get('/savedRecipes/ids/:userID', getSavedRecipesIds)
 
@@ -33,7 +32,6 @@ router.get('/savedRecipes', getSavedRecipes)
 // SORT RECIPES BY CATEGORY
 router.get('/:category', sortRecipes)
 
-//GET / 
 // GET RECIPE BY ID
 router.get('/recipe/:id', singleRecipe)
 
@@ -48,9 +46,6 @@ router.put('/edit/:id', editRecipe)
 
 // DELETE SELECTED RECIPE
 router.delete('/edit/:id', deleteRecipe)
-
-// GET RANDOM RECIPE
-// router.get('/random', randomRecipes)
 
 
 // EXPORT

@@ -40,9 +40,6 @@ const recipeSchema = new mongoose.Schema({
 });
 
 
-// COMPILE SCHEMA TO MODEL
-// module.exports = mongoose.model("Recipe", recipeSchema) // value + function
-
 export const Recipe = mongoose.model("Recipe", recipeSchema)
 
 export default Recipe

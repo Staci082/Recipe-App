@@ -6,33 +6,13 @@ import { User } from "../models/User.js";
 // VIEW ALL RECIPES PAGE
 export async function allRecipes(req, res) {
 
-    // // ITEM PER PAGE LIMIT
-    // let perPage = 12;
-
-    // // START PAGE = CURRENT PAGE OR 1 TO START
-    // let page = req.query.page || 1;
-
     try {
-        const recipes = await Recipe.find({}) // empty brackets = find all (IF NO PAGINATION)
+        const recipes = await Recipe.find({}) 
         res.json(recipes)
-        // const recipes = await Recipe.aggregate([{ $sort: { updatedAt: -1 } }])
-        //     .sort({ name: 1 })
-        //     .skip(perPage * page - perPage)
-        //     .limit(perPage)
-        //     .exec();
-
-        // const count = await Recipe.count();
-
-        // res.render('recipe/view', {
-        //     recipes,
-        //     current: page,
-        //     pages: Math.ceil(count/perPage)  //  ROUNDING
-        // })
     } catch (error) {
         console.log(error);
     }
 }
-
 
 // POST /
 // CREATE NEW RECIPE DATA
@@ -51,8 +31,6 @@ export async function postRecipe(req, res) {
     }
 }
 
-
-
 // GET
 // GET SAVED RECIPES IDS
 export async function getSavedRecipesIds(req, res) {
@@ -70,10 +48,8 @@ export async function getSavedRecipesIds(req, res) {
 export async function getSavedRecipes(req, res) {
 
     try {
-
         const user = await User.findById(req.body.userID)
         res.json({ savedRecipes: user?.savedRecipes })
-
     } catch (error) {
         console.log(error)
     }
@@ -82,12 +58,11 @@ export async function getSavedRecipes(req, res) {
 // GET /
 // GET SINGLE RECIPE BY ID
 export async function singleRecipe(req, res) {
+    let id = req.params.id || ""
     try {
-         recipe = await Recipe.findOne({ _id: req.params.id }); // finding single recipe (adding const bugs it for some reason)
-        res.json(recipes)
-       
-
-        // res.render('recipe/single', single )
+        const recipe = await Recipe.findById(id);
+        res.json(recipe)
+        console.log(recipe)
     } catch (error) {
         console.log(error);
     }
@@ -96,16 +71,11 @@ export async function singleRecipe(req, res) {
 // GET /
 // GET RECIPES BY CATEGORY
 export async function sortRecipes(req, res){
-
-    // let category = req.body.chosenCategory || ""
     let category = req.params.category || ""
 
     try {
         const recipes = await Recipe.find({category: category})    
-        // .limit(12)
-
         res.json(recipes)
-
     } catch (error) {
         console.log(error)
     }
