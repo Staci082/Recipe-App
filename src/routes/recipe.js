@@ -36,7 +36,7 @@ router.get('/:category', sortRecipes)
 router.get('/recipe/:id', singleRecipe)
 
 // SEARCH RECIPES
-router.post('/search', searchRecipes)
+router.post('/search/:', searchRecipes)
 
 // VIEW EDIT RECIPE FORM PAGE
 router.get('/edit/:id', editPage)

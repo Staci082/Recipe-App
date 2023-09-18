@@ -1,5 +1,3 @@
-
-
 //          🌸＞　　 フ
 // 　　　　　| 　-  - |
 // 　 　　　／` ミ＿xノ
@@ -10,9 +8,7 @@
 // 　| (￣ヽ＿_ヽ_)__)
 // 　＼二つ
 
-
-import mongoose from 'mongoose';
-
+import mongoose from "mongoose";
 
 // CREATE DATA SCHEMA
 // const Schema = mongoose.Schema
@@ -20,26 +16,25 @@ const recipeSchema = new mongoose.Schema({
     name: {
         type: String,
         trim: true,
-        required: true
+        required: true,
     },
     category: {
         type: String,
-        required: true
+        required: true,
     },
     ingredients: {
         type: Array,
-        required: true
+        required: true,
     },
-    instructions: {
-        type: String,
+    method: {
+        type: Array,
     },
     userOwner: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "users"
-    }
+        ref: "users",
+    },
 });
 
+export const Recipe = mongoose.model("Recipe", recipeSchema);
 
-export const Recipe = mongoose.model("Recipe", recipeSchema)
-
-export default Recipe
+export default Recipe;

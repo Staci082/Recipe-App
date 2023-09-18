@@ -1,14 +1,12 @@
 import { Recipe } from "../models/Recipe.js";
 import { User } from "../models/User.js";
 
-
 // GET /
 // VIEW ALL RECIPES PAGE
 export async function allRecipes(req, res) {
-
     try {
-        const recipes = await Recipe.find({}) 
-        res.json(recipes)
+        const recipes = await Recipe.find({});
+        res.json(recipes);
     } catch (error) {
         console.log(error);
     }
@@ -24,45 +22,29 @@ export async function postRecipe(req, res) {
         const response = await newRecipe.save();
         console.log("Recipe successfully created!");
         res.json(response);
-
     } catch (error) {
-        res.json(error)
-        console.log(error)
+        res.json(error);
+        console.log(error);
     }
 }
 
 // GET
 // GET SAVED RECIPES IDS
 export async function getSavedRecipesIds(req, res) {
-
     try {
-        const user = await User.findById(req.params.userID)
-        res.json({ savedRecipes: user?.savedRecipes })
+        const user = await User.findById(req.params.userID);
+        res.json({ savedRecipes: user?.savedRecipes });
     } catch (error) {
-        console.log(error)
+        console.log(error);
     }
 }
 
 // GET
 // GET SAVED RECIPES
 export async function getSavedRecipes(req, res) {
-
     try {
-        const user = await User.findById(req.body.userID)
-        res.json({ savedRecipes: user?.savedRecipes })
-    } catch (error) {
-        console.log(error)
-    }
-}
-
-// GET /
-// GET SINGLE RECIPE BY ID
-export async function singleRecipe(req, res) {
-    let id = req.params.id || ""
-    try {
-        const recipe = await Recipe.findById(id);
-        res.json(recipe)
-        console.log(recipe)
+        const user = await User.findById(req.body.userID);
+        res.json({ savedRecipes: user?.savedRecipes });
     } catch (error) {
         console.log(error);
     }
@@ -70,24 +52,33 @@ export async function singleRecipe(req, res) {
 
 // GET /
 // GET RECIPES BY CATEGORY
-export async function sortRecipes(req, res){
-    let category = req.params.category || ""
+export async function sortRecipes(req, res) {
+    let category = req.params.category || "";
 
     try {
-        const recipes = await Recipe.find({category: category})    
-        res.json(recipes)
+        const recipes = await Recipe.find({ category: category });
+        res.json(recipes);
     } catch (error) {
-        console.log(error)
+        console.log(error);
+    }
+}
+
+// GET /
+// GET SINGLE RECIPE BY ID
+export async function singleRecipe(req, res) {
+    let id = req.params.id || "";
+    try {
+        const recipe = await Recipe.findById(id);
+        res.json(recipe);
+        console.log(recipe);
+    } catch (error) {
+        console.log(error);
     }
 }
 
 // POST /
 // SEARCH RECIPES PAGE
 export async function searchRecipes(req, res) {
-    const locals = {
-        title: "Search recipes",
-    };
-
     try {
         let searchTerm = req.body.searchTerm || ""; // adding the empty string will fix the error of 'undefined replace()'
         const searchNoSpecialChar = searchTerm.replace(/[^a-zA-Z0-9 ]/g, ""); // disallow special characters
@@ -96,25 +87,7 @@ export async function searchRecipes(req, res) {
         const recipes = await Recipe.find({
             $or: [{ name: new RegExp(searchNoSpecialChar, "i") }, { category: new RegExp(searchNoSpecialChar, "i") }, { ingredients: new RegExp(searchNoSpecialChar, "i") }],
         });
-
-        let perPage = 12;
-        let page = req.query.page || 1;
-
-        const recipeList = await Recipe.aggregate([{ $sort: { updatedAt: -1 } }])
-            .sort({ name: 1 })
-            .skip(perPage * page - perPage)
-            .limit(perPage)
-            .exec();
-
-        const count = await Recipe.count();
-
-        // res.render('recipe/view', {
-        //     locals,
-        //     recipeList,
-        //     recipes,
-        //     current: page,
-        //     pages: Math.ceil(count / perPage)
-        // })
+        res.json(recipes);
     } catch (error) {
         console.log(error);
     }
@@ -122,7 +95,6 @@ export async function searchRecipes(req, res) {
 
 // GET /
 // GET EDIT RECIPE FORM PAGE
-
 export async function editPage(req, res) {
     const locals = {
         title: "Edit recipe",
@@ -142,6 +114,8 @@ export async function editPage(req, res) {
     }
 }
 
+// PUT /
+// EDIT RECIPE
 export async function editRecipe(req, res) {
     try {
         // USE SCHEMA TO UPDATE CUSTOMER CONSTRUCTOR
@@ -149,7 +123,7 @@ export async function editRecipe(req, res) {
             name: req.body.name,
             category: req.body.category,
             ingredients: req.body.ingredients,
-            instructions: req.body.instructions,
+            method: req.body.method,
         });
 
         // REDIRECT TO VIEW PAGE
