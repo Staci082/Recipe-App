@@ -4,6 +4,10 @@ import { Link } from "react-router-dom";
 function menu() {
     const menuItems = [
         {
+            title: "Saved Recipes",
+            href: "/savedrecipes",
+        },
+        {
             title: "My Recipes",
             href: "/myrecipes",
         },

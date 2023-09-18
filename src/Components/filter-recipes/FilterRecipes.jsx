@@ -56,7 +56,7 @@ function FilterRecipes() {
     return (
         <>
         <div className="recipe-container-header">
-            <h1>Recipes </h1>
+            <h1>{category} recipes </h1>
             <h2>{Number(recipes.length)}</h2>
             </div>
 
