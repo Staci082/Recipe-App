@@ -93,15 +93,14 @@ export async function searchRecipes(req, res) {
     }
 }
 
-
 // GET /
 // GET EDIT RECIPE FORM PAGE
 export async function editPage(req, res) {
-        let id = req.params.id || "";
-        try {
-            const recipe = await Recipe.findById(id);
-            res.json(recipe);
-            console.log(recipe);
+    let id = req.params.id || "";
+    try {
+        const recipe = await Recipe.findById(id);
+        res.json(recipe);
+        console.log(recipe);
     } catch (error) {
         console.log(error);
     }
@@ -113,15 +112,7 @@ export async function editRecipe(req, res) {
     let id = req.params.id || "";
     try {
         // USE SCHEMA TO UPDATE CUSTOMER CONSTRUCTOR
-        await Recipe.findByIdAndUpdate(id, {
-            name: req.body.name,
-            category: req.body.category,
-            ingredients: req.body.ingredients,
-            method: req.body.method,
-        });
-
-        // REDIRECT TO VIEW PAGE
-        // res.redirect(`/recipe/${id}`)
+        await Recipe.findByIdAndUpdate(id, req.body);
     } catch (error) {
         console.log(error);
     }
@@ -148,7 +139,6 @@ export async function randomRecipes(req, res) {
         let recipe = await Recipe.findOne().skip(random).exec();
         res.json(recipe);
         console.log(recipe);
-
     } catch (error) {
         console.log(error);
     }
