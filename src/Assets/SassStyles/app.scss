@@ -12,6 +12,7 @@
 @import "../../Components/recipes-container/recipes-container";
 @import "../../Components/recipe-form/recipe-form";
 @import "../../Components/menu/menu";
+@import "../../Components/empty/empty";
 
 @import "../../Pages/error/error";
 @import "../../Pages/grocery-list/groceryList";
@@ -26,7 +27,7 @@ html {
 body {
     font-family: Poppins, sans-serif;
     min-height: 100vh;
-    background: rgb(252, 247, 239);
+    background: $light;
 }
 
 a {

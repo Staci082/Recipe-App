@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { FaPencil, FaTrashCan } from "react-icons/fa6";
 
@@ -7,6 +8,8 @@ function Recipe() {
     const params = useParams();
     const recipeID = params.id;
     const [recipe, setRecipe] = useState([]);
+    const [showModal, setShowModal] = useState(false);
+    const navigate = useNavigate();
 
     useEffect(() => {
         const fetchRecipe = async () => {
@@ -19,6 +22,17 @@ function Recipe() {
         };
         fetchRecipe();
     }, []);
+
+    const handleDelete = () => {
+        try {
+            axios.delete("http://localhost:5712/recipe/"  + recipeID)
+            setShowModal(false)
+            navigate("/category/all");
+            alert("recipe deleted!")
+        } catch (error) {
+            console.log(error)
+        }
+    }
 
     return (
         <>
@@ -45,14 +59,26 @@ function Recipe() {
                         </div>
                         <div className="recipe-button-container">
                             <a href={`/edit/${recipeID}`} className="edit-buttons">
-                                <FaPencil />
+                                <FaPencil size={26}/>
                             </a>
-                            <a href={`/delete/${recipeID}`} className="edit-buttons">
-                                <FaTrashCan />
-                            </a>
+                            <button onClick={() => setShowModal(true)} className="edit-buttons">
+                                <FaTrashCan size={26}/>
+                            </button>
                         </div>
                     </div>
                 </div>
+
+                {showModal && (
+                    <div className="modal">
+                        <p className="modal-title">Are you sure you want to delete this recipe?</p>
+
+                        <div className="modal-button-container">
+                        <button onClick={handleDelete} className="modal-button">YES</button>
+                        <button onClick={() => setShowModal(false)} className="modal-button">CANCEL</button>
+                        </div>
+                    </div>
+                )}
+
             </div>
         </>
     );

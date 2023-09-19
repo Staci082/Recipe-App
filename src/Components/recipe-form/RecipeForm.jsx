@@ -1,23 +1,29 @@
+import { useNavigate } from "react-router-dom";
 import { HiPlus, HiOutlineXMark } from "react-icons/hi2";
 
 function RecipeForm({ label, recipe, handleChange, handleIngredientChange, handleAddIngredient, handleSubmit, handleDelete }) {
+    const navigate = useNavigate();
+	const goBack = () => {
+		navigate(-1);
+	}
+   
     return (
         <>
             <div className="global-container">
-                <a href="/" className="form-back-button">
+                <button onClick={goBack} className="form-back-button">
                     &times;
-                </a>
+                </button>
                 <form className="recipe-form" onSubmit={handleSubmit}>
                     <h2>{label} recipe</h2>
 
                     <div className="form-separator">
                         <div className="form-inner-separator">
                             <label htmlFor="title">Name:</label>
-                            <input type="text" name="name" onChange={handleChange} />
+                            <input type="text" name="name" onChange={handleChange}/>
 
                             <label htmlFor="category">Category:</label>
                             <select name="category" className="form-control" onChange={handleChange} required>
-                                <option value="" disabled>
+                                <option value="">
                                     Select category
                                 </option>
                                 <option value="appetizer">Appetizer</option>

@@ -8,6 +8,7 @@
 
     & .ingredients-container {
         @include colorBox;
+        box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 0.75);
         & ul {
             padding-left: 1em;
         }
@@ -16,6 +17,7 @@
         padding: 1em;
         flex: stretch;
         @include colorBox;
+        box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 0.75);
     }
 
 }
@@ -40,13 +42,12 @@
 .recipe-button-container {
     position: absolute;
     font-size: 1.5rem;
-    bottom: -50px;
+    bottom: -60px;
     right: 0;
-    display: flex;
-    gap: 20px;
 }
 
 .edit-buttons {
+    margin: 8px;
     &:hover {
         color: orange;
     }
@@ -54,4 +55,35 @@
 
 .recipe-back-button {
     @include backButton;
+}
+
+.modal {
+    position: absolute;
+    @include flex;
+    flex-direction: column;
+    width: clamp(300px, 70%, 1000px);
+    background: $light;
+    padding: 2em;
+    gap: 2rem;
+    @include box;
+    box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 0.75);
+}
+
+.modal-button-container {
+    display: flex;
+    gap: 2rem;
+}
+
+.modal-title, .modal-button {
+    font-size: clamp(1.5rem, 70%, 2rem);
+    text-align: center;
+    font-weight: bold;
+}
+
+.modal-button {
+    font-size: 1rem;
+    &:hover {
+        color: orange;
+        transform: scale(1.2)
+    }
 }

@@ -284,7 +284,7 @@
 
 .menu-container {
   width: 200px;
-  background: rgb(255, 255, 255);
+  background: rgb(252, 247, 239);
   border: 1px rgb(0, 0, 0) solid;
   border-radius: 10px;
   border: none;
@@ -309,6 +309,12 @@
 
 .logout-button {
   cursor: pointer;
+}
+
+.empty-page-container {
+  width: 1000px;
+  height: 100px;
+  background: lime;
 }
 
 .error-page {
@@ -345,7 +351,7 @@
   padding: 2em 0 1em 0;
   height: auto;
   gap: 1.5em;
-  background: rgb(255, 255, 255);
+  background: rgb(252, 247, 239);
   border: 1px rgb(0, 0, 0) solid;
   border-radius: 10px;
   color: grey;
@@ -397,9 +403,10 @@
   margin-bottom: 6em;
 }
 .recipe-details-container .ingredients-container {
-  background: rgb(255, 255, 255);
+  background: rgb(252, 247, 239);
   border: 1px rgb(0, 0, 0) solid;
   border-radius: 10px;
+  box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 0.75);
 }
 .recipe-details-container .ingredients-container ul {
   padding-left: 1em;
@@ -407,9 +414,10 @@
 .recipe-details-container .method-container {
   padding: 1em;
   flex: stretch;
-  background: rgb(255, 255, 255);
+  background: rgb(252, 247, 239);
   border: 1px rgb(0, 0, 0) solid;
   border-radius: 10px;
+  box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 0.75);
 }
 
 .single-recipe-title-container {
@@ -433,12 +441,13 @@
 .recipe-button-container {
   position: absolute;
   font-size: 1.5rem;
-  bottom: -50px;
+  bottom: -60px;
   right: 0;
-  display: flex;
-  gap: 20px;
 }
 
+.edit-buttons {
+  margin: 8px;
+}
 .edit-buttons:hover {
   color: orange;
 }
@@ -449,6 +458,40 @@
   position: absolute;
   right: 30px;
   top: 10px;
+}
+
+.modal {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: clamp(300px, 70%, 1000px);
+  background: rgb(252, 247, 239);
+  padding: 2em;
+  gap: 2rem;
+  border: 1px rgb(0, 0, 0) solid;
+  border-radius: 10px;
+  box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 0.75);
+}
+
+.modal-button-container {
+  display: flex;
+  gap: 2rem;
+}
+
+.modal-title, .modal-button {
+  font-size: clamp(1.5rem, 70%, 2rem);
+  text-align: center;
+  font-weight: bold;
+}
+
+.modal-button {
+  font-size: 1rem;
+}
+.modal-button:hover {
+  color: orange;
+  transform: scale(1.2);
 }
 
 .url-form {
