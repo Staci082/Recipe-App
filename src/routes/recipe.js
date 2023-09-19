@@ -9,7 +9,7 @@ import {postRecipe,
         searchRecipes, 
         editPage, 
         editRecipe, 
-        deleteRecipe, randomRecipes} from '../controllers/recipeController.js'
+        deleteRecipe} from '../controllers/recipeController.js'
 
 const router = express.Router()
 
@@ -37,9 +37,6 @@ router.get('/recipe/:id', singleRecipe)
 
 // SEARCH RECIPES
 router.post('/search/:', searchRecipes)
-
-// GET RANDOM RECIPE
-router.get('/recipe/random', randomRecipes)
 
 // VIEW EDIT RECIPE FORM PAGE
 router.get('/edit/:id', editPage)

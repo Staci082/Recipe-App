@@ -138,28 +138,3 @@ export async function deleteRecipe(req, res) {
         console.log(error);
     }
 }
-
-// GET /
-// GET RANDOM RECIPE PAGE
-export async function randomRecipes(req, res) {
-    try {
-        // Get the count of all recipes in the database
-        const count = await Recipe.countDocuments();
-
-        // Generate a random number between 0 and (count - 1)
-        const random = Math.floor(Math.random() * count);
-
-        // Use the random number to skip to a random recipe
-        const recipe = await Recipe.findOne().skip(random).exec();
-
-        if (!recipe) {
-            // Handle the case where no recipe is found (optional)
-            return res.status(404).json({ error: "No recipes found." });
-        }
-
-        res.json(recipe);
-        console.log(recipe);
-    } catch (error) {
-        console.log(error);
-    }
-}
