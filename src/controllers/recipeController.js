@@ -66,11 +66,20 @@ export async function sortRecipes(req, res) {
 // GET /
 // GET SINGLE RECIPE BY ID
 export async function singleRecipe(req, res) {
-    let id = req.params.id || "";
+    const { id } = req.params;
+
     try {
-        const recipe = await Recipe.findById(id);
-        res.json(recipe);
-        console.log(recipe);
+        if (id === 'random') {
+            // Handle the random recipe case
+            const count = await Recipe.countDocuments();
+            const randomIndex = Math.floor(Math.random() * count);
+            const randomRecipe = await Recipe.findOne().skip(randomIndex).exec();
+            res.json(randomRecipe);
+        } else {
+            // Handle the case where a specific recipe is requested
+            const recipe = await Recipe.findById(id);
+            res.json(recipe);
+        }
     } catch (error) {
         console.log(error);
     }
@@ -134,9 +143,20 @@ export async function deleteRecipe(req, res) {
 // GET RANDOM RECIPE PAGE
 export async function randomRecipes(req, res) {
     try {
-        let count = await Recipe.find().countDocuments();
-        let random = Math.floor(Math.random() * count);
-        let recipe = await Recipe.findOne().skip(random).exec();
+        // Get the count of all recipes in the database
+        const count = await Recipe.countDocuments();
+
+        // Generate a random number between 0 and (count - 1)
+        const random = Math.floor(Math.random() * count);
+
+        // Use the random number to skip to a random recipe
+        const recipe = await Recipe.findOne().skip(random).exec();
+
+        if (!recipe) {
+            // Handle the case where no recipe is found (optional)
+            return res.status(404).json({ error: "No recipes found." });
+        }
+
         res.json(recipe);
         console.log(recipe);
     } catch (error) {
