@@ -29,7 +29,7 @@ function RecipeForm({ label, recipe, handleChange, handleIngredientChange, handl
                                 <option value="vegetarian">Vegetarian</option>
                             </select>
 
-                            <label htmlFor="method">method:</label>
+                            <label htmlFor="method">Instructions:</label>
                             <textarea className="input-textarea" name="method" onChange={handleChange}></textarea>
                         </div>
 
@@ -38,10 +38,12 @@ function RecipeForm({ label, recipe, handleChange, handleIngredientChange, handl
                             <button type="button" onClick={handleAddIngredient} className="add-ingredient-button">
                                 <HiPlus size={28} />
                             </button>
+
+                            
                             {recipe.ingredients.map((ingredient, index) => (
                                 <div className="ingredient-input-container" key={index}>
                                     <input key={index} type="text" name="ingredients" value={ingredient} onChange={(e) => handleIngredientChange(e, index)} />
-                                    <button type="button" onClick={handleDelete} className="remove-ingredient-button">
+                                    <button type="button" onClick={() => handleDelete(index)} className="remove-ingredient-button">
                                         <HiOutlineXMark size={26} />
                                     </button>
                                 </div>

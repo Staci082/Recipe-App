@@ -8,7 +8,7 @@ function Create() {
         name: "",
         category: "",
         ingredients: [],
-        method: "",
+        method: [],
     });
 
     const navigate = useNavigate();
@@ -43,14 +43,21 @@ function Create() {
     };
 
     const handleDelete = (i) => {
-        const deleteValue = [...recipe];
-        deleteValue.splice(i, 1);
-        setRecipe(deleteValue);
+        const newArray = [...recipe.ingredients];
+        newArray.splice(i, 1);
+        setRecipe({...recipe, ingredients: newArray});
     };
 
     console.log(recipe);
 
-    return <RecipeForm label="create" recipe={recipe} handleChange={handleChange} handleIngredientChange={handleIngredientChange} handleAddIngredient={handleAddIngredient} handleSubmit={handleSubmit} handleDelete={handleDelete} />;
+    return <RecipeForm 
+                label="create" 
+                recipe={recipe} 
+                handleChange={handleChange} 
+                handleIngredientChange={handleIngredientChange} 
+                handleAddIngredient={handleAddIngredient} 
+                handleSubmit={handleSubmit} 
+                handleDelete={handleDelete} />;
 }
 
 export default Create;

@@ -36,7 +36,7 @@
     }
 
     & textarea {
-        height: 200px;
+        height: 150px;
         padding-top: 1em;
     }
 }
@@ -46,9 +46,9 @@
     position: relative;
 }
 
-// .add-ingredient-button{
-//     margin-left: 100px;   ???????????????? not working
-// }
+.add-ingredient-button{
+    margin-left: 100px;  
+}
 
 .ingredient-input-container {
     display: flex;

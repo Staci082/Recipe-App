@@ -44,10 +44,10 @@ function Recipe() {
                             {recipe.method}
                         </div>
                         <div className="recipe-button-container">
-                            <a href="/edit/{_id}" className="edit-buttons">
+                            <a href={`/edit/${recipeID}`} className="edit-buttons">
                                 <FaPencil />
                             </a>
-                            <a href="/delete/{_id}" className="edit-buttons">
+                            <a href={`/delete/${recipeID}`} className="edit-buttons">
                                 <FaTrashCan />
                             </a>
                         </div>

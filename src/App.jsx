@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 // IMPORT PAGES
 import Create from "./Pages/create/Create";
 import Error from "./Pages/error/Error";
+import Edit from "./Pages/edit/Edit"
 import GroceryList from "./Pages/grocery-list/GroceryList";
 import Homepage from "./Pages/homepage/Homepage";
 import Login from "./Pages/login/Login";
@@ -17,6 +18,10 @@ const router = [
     {
         path: "/create",
         element: <Create />,
+    },
+    {
+        path: "/edit/:id",
+        element: <Edit />,
     },
     {
         path: "/list",
