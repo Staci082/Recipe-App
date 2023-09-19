@@ -93,22 +93,15 @@ export async function searchRecipes(req, res) {
     }
 }
 
+
 // GET /
 // GET EDIT RECIPE FORM PAGE
 export async function editPage(req, res) {
-    const locals = {
-        title: "Edit recipe",
-    };
-
-    try {
-        // FIND ID OF CERTAIN CUSTOMER
-        const single = await Recipe.findOne({ _id: req.params.id });
-
-        // RENDER DATA
-        // res.render('recipe/edit', {
-        //     locals,
-        //     single  // data grabbed earlier by finding id
-        // // })
+        let id = req.params.id || "";
+        try {
+            const recipe = await Recipe.findById(id);
+            res.json(recipe);
+            console.log(recipe);
     } catch (error) {
         console.log(error);
     }
@@ -117,9 +110,10 @@ export async function editPage(req, res) {
 // PUT /
 // EDIT RECIPE
 export async function editRecipe(req, res) {
+    let id = req.params.id || "";
     try {
         // USE SCHEMA TO UPDATE CUSTOMER CONSTRUCTOR
-        await Recipe.findByIdAndUpdate(req.params.id, {
+        await Recipe.findByIdAndUpdate(id, {
             name: req.body.name,
             category: req.body.category,
             ingredients: req.body.ingredients,
@@ -127,7 +121,7 @@ export async function editRecipe(req, res) {
         });
 
         // REDIRECT TO VIEW PAGE
-        // res.redirect(`/view/${req.params.id}`)
+        // res.redirect(`/recipe/${id}`)
     } catch (error) {
         console.log(error);
     }
@@ -136,16 +130,12 @@ export async function editRecipe(req, res) {
 // DELETE /
 // DELETE RECIPE BY ID
 export async function deleteRecipe(req, res) {
+    let id = req.params.id || "";
     try {
         // DELETE SELECTED CUSTOMER DATA
-        await Recipe.deleteOne({ _id: req.params.id });
-
-        // REDIRECT TO HOMEPAGE
-        // res.redirect("/view")
+        await Recipe.findByIdAndDelete(id);
     } catch (error) {
         console.log(error);
-        // FAIL MESSAGE
-        // await req.flash('info', 'An error occurred while deleting the customer data. Please try again.')
     }
 }
 
@@ -156,12 +146,9 @@ export async function randomRecipes(req, res) {
         let count = await Recipe.find().countDocuments();
         let random = Math.floor(Math.random() * count);
         let recipe = await Recipe.findOne().skip(random).exec();
+        res.json(recipe);
+        console.log(recipe);
 
-        const locals = {
-            title: recipe.name,
-        };
-
-        // res.render('recipe/random', {locals, recipe} )
     } catch (error) {
         console.log(error);
     }
