@@ -1,31 +1,32 @@
 import RecipeForm from "../../Components/recipe-form/RecipeForm.jsx";
-import { useState, useEffect } from "react"
+import { useState, useEffect } from "react";
+import axios from "axios";
 import { useParams } from "react-router-dom"
-import axios from "axios"
 
 function Edit() {
-    const { recipeID } = useParams()
+    const { recipeID } = useParams();
+
     const [recipe, setRecipe] = useState({
         name: "",
         category: "",
         ingredients: [],
         method: [],
-    })
-
-
+    });
 
     useEffect(() => {
-        try {
-            axios.get("http://localhost:5712/edit/" + recipeID)
-            .then((response) => {
-                setRecipe(response.data)
-            })
-            console.log(recipe)
-        } catch (error) {
-            console.log(error)
-        }
+        // Fetch the existing recipe data for the specified recipeID
+        const fetchRecipeData = async () => {
+            try {
+                const response = await axios.get(`http://localhost:5712/recipe/${recipeID}`, { ...recipe });
+                const existingRecipe = response.data; 
+                setRecipe(existingRecipe);
+            } catch (error) {
+                console.error(error);
+            }
+        };
 
-    }, [recipeID])
+        fetchRecipeData();
+    }, [recipeID]);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -33,48 +34,44 @@ function Edit() {
     };
 
     const handleIngredientChange = (e, index) => {
-        const newIngredients = [...recipe.ingredients]
-        newIngredients[index] = e.target.value
-        setRecipe({...recipe, ingredients: newIngredients})
-    }
+        const { value } = e.target;
+        const ingredients = [...recipe.ingredients];
+        ingredients[index] = value;
+        setRecipe({ ...recipe, ingredients });
+    };
 
     const handleAddIngredient = () => {
-        setRecipe({
-            ...recipe,
-            ingredients: [...recipe.ingredients, ""]
-        })
-    }
+        const ingredients = [...recipe.ingredients, ""];
+        setRecipe({ ...recipe, ingredients });
+    };
 
-    const handleDelete = (index) => {
-        const newIngredients = [...recipe.ingredients]
-        newIngredients.splice(index, 1)
-        setRecipe({...recipe, ingredients: newIngredients})
-    }
-
-    const handleSubmit = (e) => {
-        e.preventDefault()
-
+    const handleSubmit = async (event) => {
+        event.preventDefault();
         try {
-            axios.put("http://localhost:5712/edit/" + recipeID)
-            .then((response) => {
-                console.log(response)
-            })
+            await axios.put(`http://localhost:5712/edit/${recipeID}`, { ...recipe });
+            console.log(recipe);
+            alert("Recipe Updated");
         } catch (error) {
-            console.log(error)
+            console.error(error);
         }
-    }
+    };
 
+    const handleDelete = (i) => {
+        const newArray = [...recipe.ingredients];
+        newArray.splice(i, 1);
+        setRecipe({ ...recipe, ingredients: newArray });
+    };
 
-    return (
-        <RecipeForm 
+    console.log(recipe);
+
+    return <RecipeForm 
                 label="edit" 
                 recipe={recipe} 
                 handleChange={handleChange} 
                 handleIngredientChange={handleIngredientChange} 
-                handleAddIngredient={handleAddIngredient} 
+                handleAddIngredient={handleAddIngredient}
                 handleSubmit={handleSubmit} 
-                handleDelete={handleDelete}/>
-    );
+                handleDelete={handleDelete} />;
 }
 
 export default Edit;

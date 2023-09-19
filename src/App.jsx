@@ -36,6 +36,10 @@ const router = [
         element: <Recipe />,
     },
     {
+        path: "/recipe/random",
+        element: <Recipe randomRecipe={true} />,
+    },
+    {
         path: "/register",
         element: <Register />,
     },
@@ -50,6 +54,7 @@ const router = [
 ];
 
 function App() {
+    
 
     return (
         <>

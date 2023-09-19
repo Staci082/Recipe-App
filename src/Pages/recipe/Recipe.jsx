@@ -3,7 +3,7 @@ import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
 import { FaPencil, FaTrashCan } from "react-icons/fa6";
 
-function Recipe() {
+function Recipe({ randomRecipe }) {  // prop from random recipe
     const params = useParams();
     const recipeID = params.id;
     const [recipe, setRecipe] = useState([]);
@@ -13,29 +13,38 @@ function Recipe() {
     useEffect(() => {
         const fetchRecipe = async () => {
             try {
-                const response = await axios.get("http://localhost:5712/recipe/" + recipeID);
-                setRecipe(response.data);
+                if (randomRecipe) {
+                    // Fetch a random recipe
+                    const response = await axios.get("http://localhost:5712/recipe/random");
+                    setRecipe(response.data);
+                    console.log(response.data)
+                } else {
+                    // Fetch the recipe based on the provided ID
+                    const response = await axios.get("http://localhost:5712/recipe/" + recipeID);
+                    setRecipe(response.data);
+                }
             } catch (error) {
                 console.log("Error fetching data:", error);
             }
         };
         fetchRecipe();
-    }, []);
+    }, [recipeID, randomRecipe]);
+
 
     const goBack = () => {
-		navigate(-1);
-	}
+        navigate(-1);
+    };
 
     const handleDelete = () => {
         try {
-            axios.delete("http://localhost:5712/recipe/"  + recipeID)
-            setShowModal(false)
+            axios.delete("http://localhost:5712/recipe/" + recipeID);
+            setShowModal(false);
             navigate("/category/all");
-            alert("recipe deleted!")
+            alert("recipe deleted!");
         } catch (error) {
-            console.log(error)
+            console.log(error);
         }
-    }
+    };
 
     return (
         <>
@@ -62,10 +71,10 @@ function Recipe() {
                         </div>
                         <div className="recipe-button-container">
                             <a href={`/edit/${recipeID}`} className="edit-buttons">
-                                <FaPencil size={26}/>
+                                <FaPencil size={26} />
                             </a>
                             <button onClick={() => setShowModal(true)} className="edit-buttons">
-                                <FaTrashCan size={26}/>
+                                <FaTrashCan size={26} />
                             </button>
                         </div>
                     </div>
@@ -76,12 +85,15 @@ function Recipe() {
                         <p className="modal-title">Are you sure you want to delete this recipe?</p>
 
                         <div className="modal-button-container">
-                        <button onClick={handleDelete} className="modal-button">YES</button>
-                        <button onClick={() => setShowModal(false)} className="modal-button">CANCEL</button>
+                            <button onClick={handleDelete} className="modal-button">
+                                YES
+                            </button>
+                            <button onClick={() => setShowModal(false)} className="modal-button">
+                                CANCEL
+                            </button>
                         </div>
                     </div>
                 )}
-
             </div>
         </>
     );

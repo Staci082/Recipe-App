@@ -1,7 +1,6 @@
 import RecipeForm from "../../Components/recipe-form/RecipeForm";
 import { useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
 
 function Create() {
     const [recipe, setRecipe] = useState({
@@ -10,8 +9,6 @@ function Create() {
         ingredients: [],
         method: [],
     });
-
-    const navigate = useNavigate();
 
     const handleChange = (e) => {
         const { name, value } = e.target;
