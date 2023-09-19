@@ -126,6 +126,7 @@
   font-size: 1rem;
   box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.75);
   border-radius: 5px;
+  box-shadow: 4px 6px 0px 0px rgba(0, 0, 0, 0.75);
 }
 
 .pagination {
@@ -255,6 +256,7 @@
   font-size: 1rem;
   box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.75);
   border-radius: 5px;
+  box-shadow: 4px 6px 0px 0px rgba(0, 0, 0, 0.75);
 }
 .recipe-form select {
   width: 96.5%;
@@ -264,12 +266,12 @@
   padding-top: 1em;
 }
 
-.add-ingredient-container {
-  position: relative;
-}
-
 .add-ingredient-button {
-  margin-left: 100px;
+  margin-left: 30px;
+  background: white;
+  border: black 1px solid;
+  border-radius: 5px;
+  box-shadow: 3px 4px 0px 0px rgba(0, 0, 0, 0.75);
 }
 
 .ingredient-input-container {
@@ -377,6 +379,7 @@
   font-size: 1rem;
   box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.75);
   border-radius: 5px;
+  box-shadow: 4px 6px 0px 0px rgba(0, 0, 0, 0.75);
   width: 250px;
 }
 
@@ -511,6 +514,7 @@
   font-size: 1rem;
   box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.75);
   border-radius: 5px;
+  box-shadow: 4px 6px 0px 0px rgba(0, 0, 0, 0.75);
   width: clamp(300px, 25vw, 450px);
 }
 

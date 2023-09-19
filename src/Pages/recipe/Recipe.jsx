@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { FaPencil, FaTrashCan } from "react-icons/fa6";
 
 function Recipe() {
@@ -23,6 +22,10 @@ function Recipe() {
         fetchRecipe();
     }, []);
 
+    const goBack = () => {
+		navigate(-1);
+	}
+
     const handleDelete = () => {
         try {
             axios.delete("http://localhost:5712/recipe/"  + recipeID)
@@ -42,9 +45,9 @@ function Recipe() {
                         <h1 className="recipe-name">{recipe.name}</h1>
                         <h2 className="recipe-category-title">{recipe.category}</h2>
                     </div>
-                    <a href="/" className="recipe-back-button">
+                    <button onClick={goBack} className="recipe-back-button">
                         &times;
-                    </a>
+                    </button>
                     <div className="recipe-details-container">
                         <div className="ingredients-container">
                             <ul>

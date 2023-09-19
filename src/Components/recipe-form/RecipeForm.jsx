@@ -42,7 +42,7 @@ function RecipeForm({ label, recipe, handleChange, handleIngredientChange, handl
                         <div className="form-inner-separator">
                             <label htmlFor="ingredients">Ingredients:</label>
                             <button type="button" onClick={handleAddIngredient} className="add-ingredient-button">
-                                <HiPlus size={28} />
+                               <HiPlus size={28} />
                             </button>
 
                             

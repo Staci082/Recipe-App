@@ -41,13 +41,12 @@
     }
 }
 
-
-.add-ingredient-container {
-    position: relative;
-}
-
 .add-ingredient-button{
-    margin-left: 100px;  
+    margin-left: 30px;  
+    background: white;
+    border: black 1px solid;
+    border-radius: 5px;
+    box-shadow: 3px 4px 0px 0px rgba(0, 0, 0, 0.75);
 }
 
 .ingredient-input-container {
