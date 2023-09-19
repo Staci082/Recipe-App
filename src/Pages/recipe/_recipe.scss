@@ -22,6 +22,7 @@
 
 }
 .single-recipe-title-container {
+    position: relative;
     display: flex;
     align-items: center;
     gap: 2em;
@@ -33,6 +34,11 @@
 
 .recipe-category-title {
     color: orange;
+}
+
+.random-button {
+    position: absolute;
+    right: 0;
 }
 
 .recipe-details-title {

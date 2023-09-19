@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
-import { FaPencil, FaTrashCan } from "react-icons/fa6";
+import { FaPencil, FaTrashCan, FaArrowRotateLeft } from "react-icons/fa6";
 
 function Recipe({ randomRecipe }) {  // prop from random recipe
     const params = useParams();
@@ -50,9 +50,13 @@ function Recipe({ randomRecipe }) {  // prop from random recipe
         <>
             <div className="global-container">
                 <div className="single-recipe-container">
+                    
                     <div className="single-recipe-title-container">
                         <h1 className="recipe-name">{recipe.name}</h1>
                         <h2 className="recipe-category-title">{recipe.category}</h2>
+                        <a href={`/recipe/random`} className="random-button">
+                                <FaArrowRotateLeft size={26} />
+                        </a>
                     </div>
                     <button onClick={goBack} className="recipe-back-button">
                         &times;
