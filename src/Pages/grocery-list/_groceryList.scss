@@ -1,8 +1,9 @@
 .grocery-list-container {
     padding: 4em 0;
-    margin: 2em;
-    gap: 2em;
-    // font-family: "Indie Flower", "comic Sans";
+    gap: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     @include xl {
         padding: 0;
     }
@@ -16,7 +17,6 @@
 }
 
 .grocery-list {
-    border: deeppink solid 2px;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -24,29 +24,26 @@
     align-items: center;
     width: clamp(300px, 20vw, 400px);
     padding: 2em 0 1em 0;
-    height: auto;
+    margin-top: 3em;
     gap: 1.5em;
     @include colorBox;
+    background: white;
     color: grey;
     font-size: 0.8rem;
 }
 
-.grocery-input-container {
-    @include flex;
-    height: 200px;
-    flex-direction: column;
-    gap: 2em;
-    position: relative;
-    & .grocery-input {
-        @include input;
-        width: 250px;
-    }
-}
 
+
+.grocery-input {
+    @include input;
+    width: 250px;
+}
 .add-item-button {
-    position: absolute;
-    bottom: 41px;
-    right: 25px;
+    background: white;
+    padding: 5px 10px;
+    border: black 1px solid;
+    border-radius: 5px;
+    box-shadow: 3px 4px 0px 0px rgba(0, 0, 0, 0.75);
 }
 
 .grocery-back-button {

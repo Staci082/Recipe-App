@@ -1,31 +1,31 @@
+
 .recipe-details-container {
     position: relative;
     display: flex;
     flex-direction: column;
-    width: clamp(300px, 50vw, 800px);
+    width: clamp(340px, 50vw, 800px);
     gap: 2em;
     margin-bottom: 6em;
 
-    & .ingredients-container {
+    & .ingredients-container, .method-container {
         @include colorBox;
+        padding: 1em;
+        padding-right: 2.5em;
         box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 0.75);
-        & ul {
-            padding-left: 1em;
+        @include sm {
+            padding: 0;
+            padding-right: 1.5em;
         }
     }
-    & .method-container {
-        padding: 1em;
-        flex: stretch;
-        @include colorBox;
-        box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 0.75);
-    }
-
 }
 .single-recipe-title-container {
     position: relative;
     display: flex;
     align-items: center;
     gap: 2em;
+    @include md {
+        flex-direction: column;
+    }
 }
 
 .recipe-name {
@@ -36,27 +36,28 @@
     color: orange;
 }
 
-.random-button {
-    position: absolute;
-    right: 0;
-}
-
 .recipe-details-title {
     color: orange;
 }
 
 .recipe-button-container {
-    position: absolute;
-    font-size: 1.5rem;
-    bottom: -60px;
-    right: 0;
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    margin-bottom: 2em;
 }
 
-.edit-buttons {
-    margin: 8px;
+.edit-buttons,
+.random-button {
+    margin: 0 8px;
     &:hover {
         color: orange;
     }
+}
+
+.random-button {
+    position: absolute;
+    left: 0;
 }
 
 .recipe-back-button {
@@ -80,7 +81,8 @@
     gap: 2rem;
 }
 
-.modal-title, .modal-button {
+.modal-title,
+.modal-button {
     font-size: clamp(1.5rem, 70%, 2rem);
     text-align: center;
     font-weight: bold;
@@ -90,6 +92,6 @@
     font-size: 1rem;
     &:hover {
         color: orange;
-        transform: scale(1.2)
+        transform: scale(1.2);
     }
 }

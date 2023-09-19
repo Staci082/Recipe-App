@@ -7,6 +7,7 @@ import { FaHeart, FaRegHeart, FaAnglesLeft, FaAnglesRight } from "react-icons/fa
 
 function FilterRecipes() {
     const { route, category } = useParams();
+    const [saveButton, setSaveButton] = useState(false)
     const [recipes, setRecipes] = useState([]);
 
     // PAGINATION
@@ -24,10 +25,8 @@ function FilterRecipes() {
                     <h3 className="recipe-title">{recipe.name}</h3>
                     <p className="recipe-category">{recipe.category}</p>
                 </a>
-                <button className="save-icon">
-                    <FaRegHeart />
-                    {/* onClick={() => setSaveButton(!saveButton)} */}
-                    {/* {saveButton ? <FaRegHeart /> : <FaHeart/>} */}
+                <button className="save-icon" onClick={() => setSaveButton(!saveButton)} >
+                    {saveButton ? <FaHeart /> : <FaRegHeart/>}
                 </button>
             </div>
         );

@@ -19,7 +19,7 @@ function RecipeForm({ label, recipe, handleChange, handleIngredientChange, handl
                     <div className="form-separator">
                         <div className="form-inner-separator">
                             <label htmlFor="title">Name:</label>
-                            <input type="text" name="name" onChange={handleChange}/>
+                            <input type="text" name="name" maxlength="33" onChange={handleChange}/>
 
                             <label htmlFor="category">Category:</label>
                             <select name="category" className="form-control" onChange={handleChange} required>

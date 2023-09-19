@@ -10,7 +10,7 @@
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-around;
-  width: 100%;
+  width: 90%;
   gap: 1em;
 }
 @media (max-width: 960px) {
@@ -289,6 +289,7 @@
   background: rgb(252, 247, 239);
   border: 1px rgb(0, 0, 0) solid;
   border-radius: 10px;
+  background: white;
   border: none;
   position: relative;
   display: flex;
@@ -326,8 +327,10 @@
 
 .grocery-list-container {
   padding: 4em 0;
-  margin: 2em;
-  gap: 2em;
+  gap: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 @media (max-width: 1190px) {
   .grocery-list-container {
@@ -343,7 +346,6 @@
 }
 
 .grocery-list {
-  border: deeppink solid 2px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -351,25 +353,17 @@
   align-items: center;
   width: clamp(300px, 20vw, 400px);
   padding: 2em 0 1em 0;
-  height: auto;
+  margin-top: 3em;
   gap: 1.5em;
   background: rgb(252, 247, 239);
   border: 1px rgb(0, 0, 0) solid;
   border-radius: 10px;
+  background: white;
   color: grey;
   font-size: 0.8rem;
 }
 
-.grocery-input-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 200px;
-  flex-direction: column;
-  gap: 2em;
-  position: relative;
-}
-.grocery-input-container .grocery-input {
+.grocery-input {
   height: 40px;
   outline: none;
   padding: 0 0.5em;
@@ -384,9 +378,11 @@
 }
 
 .add-item-button {
-  position: absolute;
-  bottom: 41px;
-  right: 25px;
+  background: white;
+  padding: 5px 10px;
+  border: black 1px solid;
+  border-radius: 5px;
+  box-shadow: 3px 4px 0px 0px rgba(0, 0, 0, 0.75);
 }
 
 .grocery-back-button {
@@ -401,26 +397,23 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  width: clamp(300px, 50vw, 800px);
+  width: clamp(340px, 50vw, 800px);
   gap: 2em;
   margin-bottom: 6em;
 }
-.recipe-details-container .ingredients-container {
+.recipe-details-container .ingredients-container, .recipe-details-container .method-container {
   background: rgb(252, 247, 239);
   border: 1px rgb(0, 0, 0) solid;
   border-radius: 10px;
-  box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 0.75);
-}
-.recipe-details-container .ingredients-container ul {
-  padding-left: 1em;
-}
-.recipe-details-container .method-container {
   padding: 1em;
-  flex: stretch;
-  background: rgb(252, 247, 239);
-  border: 1px rgb(0, 0, 0) solid;
-  border-radius: 10px;
+  padding-right: 2.5em;
   box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 0.75);
+}
+@media (max-width: 480px) {
+  .recipe-details-container .ingredients-container, .recipe-details-container .method-container {
+    padding: 0;
+    padding-right: 1.5em;
+  }
 }
 
 .single-recipe-title-container {
@@ -428,6 +421,11 @@
   display: flex;
   align-items: center;
   gap: 2em;
+}
+@media (max-width: 720px) {
+  .single-recipe-title-container {
+    flex-direction: column;
+  }
 }
 
 .recipe-name {
@@ -438,27 +436,29 @@
   color: orange;
 }
 
-.random-button {
-  position: absolute;
-  right: 0;
-}
-
 .recipe-details-title {
   color: orange;
 }
 
 .recipe-button-container {
-  position: absolute;
-  font-size: 1.5rem;
-  bottom: -60px;
-  right: 0;
+  display: flex;
+  justify-content: end;
+  width: 100%;
+  margin-bottom: 2em;
 }
 
-.edit-buttons {
-  margin: 8px;
+.edit-buttons,
+.random-button {
+  margin: 0 8px;
 }
-.edit-buttons:hover {
+.edit-buttons:hover,
+.random-button:hover {
   color: orange;
+}
+
+.random-button {
+  position: absolute;
+  left: 0;
 }
 
 .recipe-back-button {
@@ -489,7 +489,8 @@
   gap: 2rem;
 }
 
-.modal-title, .modal-button {
+.modal-title,
+.modal-button {
   font-size: clamp(1.5rem, 70%, 2rem);
   text-align: center;
   font-weight: bold;
@@ -601,7 +602,7 @@ button {
 .global-container {
   display: flex;
   justify-content: center;
-  align-items: center;
+  padding-top: 5em;
   height: 100vh;
 }
 
@@ -617,6 +618,7 @@ button {
 }
 
 .right-container {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;

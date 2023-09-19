@@ -54,13 +54,6 @@ function Recipe({ randomRecipe }) {
                     <div className="single-recipe-title-container">
                         <h1 className="recipe-name">{recipe.name}</h1>
                         <h2 className="recipe-category-title">{recipe.category}</h2>
-
-                        {/* hide random shuffle button unless on random page */}
-                        {location.pathname === "/recipe/random" && (
-                            <a href="/recipe/random" className="random-button">
-                                <FaArrowRotateLeft size={26} />
-                            </a>
-                        )}
                     </div>
                     <button onClick={goBack} className="recipe-back-button">
                         &times;
@@ -73,11 +66,20 @@ function Recipe({ randomRecipe }) {
                                 {recipe.ingredients && recipe.ingredients.map((item) => <li key={item}>{item}</li>)}
                             </ul>
                         </div>
+
                         <div className="method-container">
+                        <ul>
                             <h5 className="recipe-details-title">Instructions</h5>
-                            {recipe.method}
+                            {recipe.method && recipe.method.map((item) => <li key={item}>{item}</li>)}
+                            </ul>
                         </div>
                         <div className="recipe-button-container">
+                            {/* hide random shuffle button unless on random page */}
+                            {location.pathname === "/recipe/random" && (
+                                <a href="/recipe/random" className="random-button">
+                                    <FaArrowRotateLeft size={28} />
+                                </a>
+                            )}
                             <a href={`/edit/${recipeID}`} className="edit-buttons">
                                 <FaPencil size={26} />
                             </a>

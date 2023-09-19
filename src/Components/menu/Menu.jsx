@@ -4,16 +4,12 @@ import { Link } from "react-router-dom";
 function menu() {
     const menuItems = [
         {
-            title: "Saved Recipes",
-            href: "/savedrecipes",
-        },
-        {
-            title: "My Recipes",
-            href: "/myrecipes",
-        },
-        {
             title: "Create a Recipe",
             href: "/create",
+        },
+        {
+            title: "Saved Recipes",
+            href: "/savedrecipes",
         },
         {
             title: "Add Internet Recipe",
