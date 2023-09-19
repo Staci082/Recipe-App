@@ -1,13 +1,15 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams, useLocation } from "react-router-dom";
 import { FaPencil, FaTrashCan, FaArrowRotateLeft } from "react-icons/fa6";
 
-function Recipe({ randomRecipe }) {  // prop from random recipe
+function Recipe({ randomRecipe }) {
+    // prop from random recipe
     const params = useParams();
     const recipeID = params.id;
     const [recipe, setRecipe] = useState([]);
     const [showModal, setShowModal] = useState(false);
+    const location = useLocation();
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -17,7 +19,7 @@ function Recipe({ randomRecipe }) {  // prop from random recipe
                     // Fetch a random recipe
                     const response = await axios.get("http://localhost:5712/recipe/random");
                     setRecipe(response.data);
-                    console.log(response.data)
+                    console.log(response.data);
                 } else {
                     // Fetch the recipe based on the provided ID
                     const response = await axios.get("http://localhost:5712/recipe/" + recipeID);
@@ -29,7 +31,6 @@ function Recipe({ randomRecipe }) {  // prop from random recipe
         };
         fetchRecipe();
     }, [recipeID, randomRecipe]);
-
 
     const goBack = () => {
         navigate(-1);
@@ -50,13 +51,16 @@ function Recipe({ randomRecipe }) {  // prop from random recipe
         <>
             <div className="global-container">
                 <div className="single-recipe-container">
-                    
                     <div className="single-recipe-title-container">
                         <h1 className="recipe-name">{recipe.name}</h1>
                         <h2 className="recipe-category-title">{recipe.category}</h2>
-                        <a href={`/recipe/random`} className="random-button">
+
+                        {/* hide random shuffle button unless on random page */}
+                        {location.pathname === "/recipe/random" && (
+                            <a href="/recipe/random" className="random-button">
                                 <FaArrowRotateLeft size={26} />
-                        </a>
+                            </a>
+                        )}
                     </div>
                     <button onClick={goBack} className="recipe-back-button">
                         &times;
