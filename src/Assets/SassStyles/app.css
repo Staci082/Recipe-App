@@ -471,6 +471,7 @@
 
 .modal {
   position: absolute;
+  top: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -602,7 +603,7 @@ button {
 .global-container {
   display: flex;
   justify-content: center;
-  padding-top: 5em;
+  padding-top: 3em;
   height: 100vh;
 }
 
