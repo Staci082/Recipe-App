@@ -4803,7 +4803,7 @@
         "ingredients": [
             "300g all-butter puff pastry",
             "plain flour, for dusting",
-            "6 dessert apples(about 900g/2lb), such as Braeburn, Cox\u2019s Orange Pippin or Adam\u2019s Pearmain",
+            "6 dessert apples(about 900g/2lb), such as Braeburn, Cox\u2019s orange Pippin or Adam\u2019s Pearmain",
             "100g golden caster sugar",
             "85g unsalted butter(60g/2\u00bcoz chilled and diced, 25g/1oz melted)",
             "cr\u00e8me fra\u00eeche(full-fat please!) or high-quality vanilla ice cream, to serve"
@@ -4878,7 +4878,8 @@
     },
 
     {
-        "name": "Smoked salmon carpaccio", "ingredients": [
+        "name": "Smoked salmon carpaccio",
+        "ingredients": [
             "50g radishes, finely sliced into rounds",
             "2 tbsp white wine vinegar",
             "1 tbsp strong horseradish",
@@ -4890,20 +4891,24 @@
             "handful of pea shoots",
             "drizzle of extra virgin olive oil, to serve"
         ],
-        "category": "lunch", "method": [
+        "category": "lunch",
+        "method": [
             "First, lightly pickle the radish slices by putting them in a small bowl with the vinegar for at least 30 mins. Meanwhile, mix the horseradish with the whipped cream in a small bowl and season with salt.",
             "Lay 100g of the long salmon slices on 4 rectangular plates in a neat rectangle shape. Put 3 discs of beetroot on top of the salmon in different places. Arrange about 6 slices of the pickled radish around the salmon too. Add a few orange segments and some of the preserved lemon.",
             "Next, shape the horseradish into quenelles by using 2 teaspoons to scoop and roll it. Put 3 quenelles on each plate. Finally, scatter with the pea shoots, and drizzle over a little oil before serving."
         ]
     },
     {
-        "name": "Leeks & peas in lemon butter", "ingredients": ["6 leeks, each one cut on the angle into 5-6 pieces", "250g frozen petits pois", "50g cold butter", "juice \u00bd lemon"],
-        "category": "side", "method": [
+        "name": "Leeks & peas in lemon butter",
+        "ingredients": ["6 leeks, each one cut on the angle into 5-6 pieces", "250g frozen petits pois", "50g cold butter", "juice \u00bd lemon"],
+        "category": "side",
+        "method": [
             "Boil the leeks in salted water for 6 mins until tender, but still holding their shape. Drain, leaving a little water in the pan, then return the leeks to the pan. Place over a low heat and stir in the peas and butter, cooking until the butter has melted and the peas are hot. Add the lemon juice, season with salt and pepper and serve straight away."
         ]
     },
     {
-        "name": "Sweet potato parcel", "ingredients": [
+        "name": "Sweet potato parcel",
+        "ingredients": [
             "4 sweet potatoes(about 750g), peeled and cut into 2-3cm chunks",
             "5 tbsp cold pressed rapeseed oil",
             "1 onion, thinly sliced",
@@ -4914,7 +4919,8 @@
             "3 tbsp cranberry sauce",
             "5 sheets filo pastry(we used Jus-Rol)"
         ],
-        "category": "lunch", "method": [
+        "category": "lunch",
+        "method": [
             "Heat oven to 200C/180C fan/gas 6. Put the potatoes on a ",
             ", toss with 1 tbsp of the oil, season and roast for 25 mins.",
             "While the potatoes roast, heat another 1 tbsp oil in a frying pan and cook the onion over a medium heat for about 7-10 mins to soften. Stir in the garlic, chilli flakes and sage and cook for another minute or 2. Remove from the heat and add the chestnuts, cranberry sauce and the sweet potato cubes. Season a little.\u00a0",
@@ -4924,7 +4930,8 @@
         ]
     },
     {
-        "name": "Turkey samosas", "ingredients": [
+        "name": "Turkey samosas",
+        "ingredients": [
             "3 tbsp curry paste(we used korma)",
             "2 tbsp mango chutney, plus extra to serve",
             "2 tbsp natural yogurtfrom a 150g pot (serve the remainder)",
@@ -4937,37 +4944,45 @@
             "1 egg, beaten",
             "1 tbsp sesame seeds"
         ],
-        "category": "lunch", "method": [
+        "category": "lunch",
+        "method": [
             "In a large bowl, combine the curry paste, mango chutney and 2 tbsp yogurt, and mix well. Fold in the potatoes, turkey, peas and coriander, then season well.",
             "Heat oven to 200C/180C fan/gas 6. Cut the sheets of filo in half lengthways so you have 12 strips \u2013 keep the pastry covered with a tea towel while you work so it doesn\u2019t dry out. Layer up 3 sheets of filo, brushing a little oil between each sheet. Pile a quarter of the filling in the top corner of the pastry in a triangle shape. Fold the pastry over to encase the filling, then keep folding until the parcel is sealed and the filo is used up. Brush the final edge with a little beaten egg to help stick the pastry together. Repeat to make all 4 jumbo samosas.",
             "Lay your samosas on a baking sheet and brush each one with more beaten egg, then sprinkle with sesame seeds. Bake for 35 mins or until the samosas are golden brown and the filling is piping hot. Serve with the remaining yogurt, some mango chutney and coriander leaves."
         ]
     },
     {
-        "name": "Orange & spice wings", "ingredients": ["1kg chicken wings", "2 tbsp plain flour", "2 tbsp oil", "50g festive spice mix, see <a href='https://www.bbcgoodfood.com/recipes/festive-spice'>our recipe</a>", "1 orange, juiced", "1 tbsp honey", "pinch of salt, to serve"],
-        "category": "appetizer", "method": [
+        "name": "Orange & spice wings",
+        "ingredients": ["1kg chicken wings", "2 tbsp plain flour", "2 tbsp oil", "50g festive spice mix, see <a href='https://www.bbcgoodfood.com/recipes/festive-spice'>our recipe</a>", "1 orange, juiced", "1 tbsp honey", "pinch of salt, to serve"],
+        "category": "appetizer",
+        "method": [
             "Heat oven to 200C/180C/gas 6. Put the\u00a0chicken wings in a large bowl with\u00a0plain flour and season well. Toss together to coat, then spread out over a large baking tray, drizzle with oil and cook for 40-45 mins, turning halfway through.",
             "When the chicken wings are nearly done, put the\u00a0",
             " in a saucepan with the orange juice and honey. Warm gently, then pour over the chicken wings, toss together, and return to the oven for a further 10 mins or until sticky. Sprinkle with salt to serve.\u00a0"
         ]
     },
     {
-        "name": "Chocolate & almond croissants", "ingredients": ["6 croissants", "100g marzipan, broken into small pieces", "50g toasted sliced almonds", "50g milk chocolate, chopped"],
-        "category": "breakfast", "method": [
+        "name": "Chocolate & almond croissants",
+        "ingredients": ["6 croissants", "100g marzipan, broken into small pieces", "50g toasted sliced almonds", "50g milk chocolate, chopped"],
+        "category": "breakfast",
+        "method": [
             "Heat oven to 180C/160C fan/gas 4. Slice into each croissant lengthways, but don\u2019t go all the way through \u2013 they should open like books. Sprinkle or spread the bottom half of each with marzipan, followed by 1 tsp almonds and 1 tbsp chocolate.",
             "Close up, put on a baking sheet and sprinkle the remaining chocolate and almonds on top. Bake for 5 mins or until the chocolate has melted. Serve warm."
         ]
     },
     {
-        "name": "Ginger-spiced pears", "ingredients": ["500g granulated sugar", "500ml white wine vinegar", "pared zest (use a vegetable peeler) and juice 1 orange", "5cm piece ginger, thinly sliced (no need to peel)", "3 bay leaves", "1 tsp black peppercorn", "1\u00bd kg small ripe pear"],
-        "category": "side", "method": [
+        "name": "Ginger-spiced pears",
+        "ingredients": ["500g granulated sugar", "500ml white wine vinegar", "pared zest (use a vegetable peeler) and juice 1 orange", "5cm piece ginger, thinly sliced (no need to peel)", "3 bay leaves", "1 tsp black peppercorn", "1\u00bd kg small ripe pear"],
+        "category": "side",
+        "method": [
             "Put the sugar, vinegar, orange zest and juice, ginger, bay leaves and peppercorns in a large pan. Bring slowly to the boil, stirring constantly to dissolve the sugar, then boil for 5 mins.",
             "Meanwhile, peel, core and halve or quarter the pears, depending on size. Add the pears to the pan and poach gently for 10-15 mins until they are just tender. Remove with a slotted spoon and pack into warm sterilised Kilner jars with rubber seals (see tip below).",
             "Boil the vinegar mixture hard to reduce by a third, then pour over the pears, including the spices. The pears need to be completely covered with the liquid. Fit the rubber seal and clamp the jar tightly closed. Reserve any leftover syrup for topping up the jars later, as the pears will absorb the syrup over time. "
         ]
     },
     {
-        "name": "Orange, fennel & wild rice salad", "ingredients": [
+        "name": "Orange, fennel & wild rice salad",
+        "ingredients": [
             "500g carrotswe used purple and orange ones), peeled, halved and cut into short batons on an angle",
             "1 tbsp olive oil",
             "100g mixed basmati & wild rice",
@@ -4984,21 +4999,25 @@
             "4 tbsp olive oil",
             "1 tbsp maple syrup"
         ],
-        "category": "vegetarian", "method": [
+        "category": "vegetarian",
+        "method": [
             "Heat oven to 200C/180C fan/gas 6. Toss the carrots, oil and some seasoning on a large baking tray. Cook for 25-30 mins until tender. While the carrots cook, fill 2 large pans with salted water and bring to the boil. Add the rice to one pan and the lentils to the other. Cook following pack instructions, or until just cooked, then drain and set aside to cool.",
             "Zest the oranges over a large bowl. Cut away the peel and pith, then cut along each piece of membrane to remove the segments, catching any juices in the bowl. Set the segments aside. Add the ingredients for the dressing to the orange zest and juice, season and whisk.",
             "When the carrots have cooled a little, add to the dressing with the remaining salad ingredients, including the cooked rice, lentils and orange segments. Toss together and serve on a big platter."
         ]
     },
     {
-        "name": "Brie & cranberry twists", "ingredients": ["12 sheets filo pastry", "100g butter, melted", "250g brie, cut into 18 chunky fingers", "18 tsp cranberrysauce", "50g walnuts, roughly chopped", "sprinkling of poppy seeds"],
-        "category": "appetizer", "method": [
+        "name": "Brie & cranberry twists",
+        "ingredients": ["12 sheets filo pastry", "100g butter, melted", "250g brie, cut into 18 chunky fingers", "18 tsp cranberrysauce", "50g walnuts, roughly chopped", "sprinkling of poppy seeds"],
+        "category": "appetizer",
+        "method": [
             "Heat oven to 220C/200C fan/gas 7. Stack two\u00a0of the filo sheets. With a widest edge facing you, brush with some melted butter. Put three brie fingers at even intervals across the bottom of the filo. Top each finger with 1 tsp cranberry sauce, then sprinkle over a few chopped walnuts.",
             "Roll up the filo from the bottom. Cut into\u00a0three\u00a0parcels, and twist the ends to seal. Brush with more butter and sprinkle with poppy seeds. Repeat with the remaining ingredients. Bake for 10 mins. "
         ]
     },
     {
-        "name": "Artichoke & pecorino bruschetta", "ingredients": [
+        "name": "Artichoke & pecorino bruschetta",
+        "ingredients": [
             "140g artichokein olive oil, drained",
             "pinch of chilli flakes",
             "small handful mintleaves",
@@ -5008,42 +5027,54 @@
             "1 garlic clove, sliced",
             "50g pecorino, thinly sliced (or vegetarian alternative)"
         ],
-        "category": "appetizer", "method": [
+        "category": "appetizer",
+        "method": [
             "Heat oven to 200C/180C fan/gas 6. Halve or quarter the artichokes, if whole, and put them in a bowl with the chilli flakes, mint, zest and oil. Season lightly with salt and set aside.",
             "Put the bread on a baking sheet and scatter over the garlic. Drizzle with olive oil and season with sea salt. Bake for 10 mins, or until golden and crisp. Set aside to cool.",
             "Fold the pecorino through the marinated artichokes and spoon over the garlic bruschetta just before eating."
         ]
     },
     {
-        "name": "Moroccan turkey salad", "ingredients": ["2 pitta breads", "2 tbsp olive oil", "1 diced aubergine", "1 tbsp harissa", "250g halved cherry tomato", "500g shredded leftover turkeybreast", "100g rocket", "seeds 1 pomegranateor 110g tub pomegranate seeds", "a few mintleaves"],
-        "category": "lunch", "method": ["Tear the pitta into pieces and fry in the olive oil until crisp. Tip into a bowl, then fry the aubergine for 10 mins until soft. Add to the pitta with the harissa, tomatoes, turkey and rocket. Toss well. Scatter over pomegranate seeds and mint leaves."]
+        "name": "Moroccan turkey salad",
+        "ingredients": ["2 pitta breads", "2 tbsp olive oil", "1 diced aubergine", "1 tbsp harissa", "250g halved cherry tomato", "500g shredded leftover turkeybreast", "100g rocket", "seeds 1 pomegranateor 110g tub pomegranate seeds", "a few mintleaves"],
+        "category": "lunch",
+        "method": ["Tear the pitta into pieces and fry in the olive oil until crisp. Tip into a bowl, then fry the aubergine for 10 mins until soft. Add to the pitta with the harissa, tomatoes, turkey and rocket. Toss well. Scatter over pomegranate seeds and mint leaves."]
     },
     {
-        "name": "Ricotta & spring onion dip", "ingredients": ["150g ricotta", "3 roughly chopped spring onions, plus extra to serve", "juice and zest \u00bd lemon", "50g soured cream, cr\u00e8me fra\u00eeche or natural yogurt", "cucumbersticks or toast, to serve"],
-        "category": "side", "method": ["Whizz the ricotta, spring onions, lemon zest, juice, soured cream and some seasoning in a food processor. Scatter with more sliced spring onions to serve, and eat with cucumber sticks or toast."]
+        "name": "Ricotta & spring onion dip",
+        "ingredients": ["150g ricotta", "3 roughly chopped spring onions, plus extra to serve", "juice and zest \u00bd lemon", "50g soured cream, cr\u00e8me fra\u00eeche or natural yogurt", "cucumbersticks or toast, to serve"],
+        "category": "side",
+        "method": ["Whizz the ricotta, spring onions, lemon zest, juice, soured cream and some seasoning in a food processor. Scatter with more sliced spring onions to serve, and eat with cucumber sticks or toast."]
     },
     {
-        "name": "Turnip gratin", "ingredients": ["600g potatoes, such as Maris Piper, peeled", "600g turnips, peeled", "600ml pot double cream", "3 garlic cloves, grated", "ground white pepper, to taste", "large knob of butter, for greasing"],
-        "category": "side", "method": [
+        "name": "Turnip gratin",
+        "ingredients": ["600g potatoes, such as Maris Piper, peeled", "600g turnips, peeled", "600ml pot double cream", "3 garlic cloves, grated", "ground white pepper, to taste", "large knob of butter, for greasing"],
+        "category": "side",
+        "method": [
             "Preheat the oven to 150C/130C fan/gas 2. Thinly slice the potatoes and turnips to about 2mm thick \u2013 you can use a Japanese mandolin if you have one \u2013 then toss together in a large bowl. Pour the cream in a pan, then add the garlic, plenty of salt and some white pepper \u2013 be generous when seasoning the cream as the potatoes and turnips aren\u2019t seasoned separately. Bring the cream to the boil, then remove from the heat and put to one side. Grease a large gratin dish and layer a third of the potatoes and turnips in the dish, slightly overlapping each other as if you are building a wall. Pour over a third of the warm cream, then continue in this way with the remaining potatoes, turnips and cream.",
             "Put the gratin in the oven and cook for 20 mins. Remove the dish from the oven and push the potatoes and turnips down with a fish slice. This will help to release the starches and the cream will eventually reduce and thicken. Put the gratin back in the oven and repeat the process every 10 mins until the potatoes and turnips feel tight and firm. Return to the oven for another 20 mins and cook until golden brown and tender \u2013 test by inserting a sharp knife through the potatoes and turnips. Remove from the oven and leave to cool slightly."
         ]
     },
     {
-        "name": "Brie, ham & fig jam toastie", "ingredients": ["a little butter, softened", "2 thick slices good white bread", "1 tbsp fig jam", "2 tsp Dijon mustard", "few slices brieor camembert", "1 thick slice of ham(best from the deli counter, or leftover)", "salad leaves, to serve (optional)"],
-        "category": "breakfast", "method": [
+        "name": "Brie, ham & fig jam toastie",
+        "ingredients": ["a little butter, softened", "2 thick slices good white bread", "1 tbsp fig jam", "2 tsp Dijon mustard", "few slices brieor camembert", "1 thick slice of ham(best from the deli counter, or leftover)", "salad leaves, to serve (optional)"],
+        "category": "breakfast",
+        "method": [
             "Heat a toastie maker\u00a0or a small griddle pan. Butter each slice of bread on one side, then spread the other side of one slice with fig jam, and one with mustard. Top the fig jam with brie and ham, sandwich with the remaining bread, butter-side up, then place in the toastie maker or the griddle pan. If cooking in a pan, squash down a little with the back of a fish slice while cooking, flip over after 2-3 mins when golden, then cook on the other side. Serve with a handful of salad leaves on the side, if you like."
         ]
     },
     {
-        "name": "Mini hasselbacks with dill", "ingredients": ["1kg baby new potato", "2 tsp dried dill", "2 tbsp fine breadcrumb", "2 tbsp rapeseed oil"],
-        "category": "appetizer", "method": [
+        "name": "Mini hasselbacks with dill",
+        "ingredients": ["1kg baby new potato", "2 tsp dried dill", "2 tbsp fine breadcrumb", "2 tbsp rapeseed oil"],
+        "category": "appetizer",
+        "method": [
             "Heat oven to 220C/200C fan/gas 7. To slice, place a potato in a wooden spoon and carefully cut at 3mm intervals, slicing through the potato until your knife hits the spoon. In a bowl, mix the dill and breadcrumbs together.",
             "Toss the potatoes with the oil and some seasoning, and arrange a large baking tray \u2013 cut-side up. Bake for 20 mins. Sprinkle with the dill breadcrumbs, then bake for a further 15 mins."
         ]
     },
     {
-        "name": "Yogurt piccalilli & crisp kale salad", "ingredients": [
+        "name": "Yogurt piccalilli & crisp kale salad",
+        "ingredients": [
             "200g tiny cauliflower florets",
             "280g jar sweet pickled baby silverskin onions",
             "3 tbsp olive oil",
@@ -5054,7 +5085,8 @@
             "4 tbsp Greek-style yogurt(not the thick-strained type)",
             "125g (or about 5 leaves) kaleor cavolo nero, any big stems removed, then shredded into 1cm strips"
         ],
-        "category": "vegetarian", "method": [
+        "category": "vegetarian",
+        "method": [
             "Bring a pan of salted water to the boil and have a bowl of iced water ready. Add the cauliflower to the pan, return to the boil and cook for 30 seconds. Drain the cauliflower, then plunge into the ice water. Once cold, drain well.\u00a0",
             "Keep 3 tbsp of the onion vinegar aside, then mix the cauliflower with the onions and the rest of the vinegar from the jar in a large bowl. Cover and steep in the fridge for at least 2 hrs, or overnight if possible.",
             "To make the dressing, heat 1 tbsp oil in a ",
@@ -5064,7 +5096,8 @@
         ]
     },
     {
-        "name": "Turkey laksa", "ingredients": [
+        "name": "Turkey laksa",
+        "ingredients": [
             "1-2 tbsp Thai red curry paste, depending on taste",
             "1l chicken stock",
             "500g/ 1lb 2oz skinless turkeybreast, cut into strips",
@@ -5076,27 +5109,33 @@
             "2 tsp sugar",
             "small handful coriander"
         ],
-        "category": "dinner", "method": [
+        "category": "dinner",
+        "method": [
             "Heat a large saucepan and fry the curry paste for 1 min, until fragrant. Tip in the stock and bring to the boil, then throw in the turkey and cook for 5 mins. Add the rice noodles and cook for 3 mins more.",
             "Add the pepper and beansprouts and cook for 2 mins more. Add the coconut milk, bring to a simmer, season with the lime juice and sugar, then spoon into bowls, sprinkle with the coriander leaves and serve."
         ]
     },
     {
-        "name": "Watercress & celeriac soup", "ingredients": ["4 leeks, washed and sliced", "50g butter", "1 tbsp olive oil", "1 celeriac, peeled and diced", "1\u00bd l vegetable stock", "2 x 100g bags watercress", "6 slices toasted baguette", "100g soft vegetarian goat's cheese", "a few sprigs watercress, to serve"],
-        "category": "lunch", "method": [
+        "name": "Watercress & celeriac soup",
+        "ingredients": ["4 leeks, washed and sliced", "50g butter", "1 tbsp olive oil", "1 celeriac, peeled and diced", "1\u00bd l vegetable stock", "2 x 100g bags watercress", "6 slices toasted baguette", "100g soft vegetarian goat's cheese", "a few sprigs watercress, to serve"],
+        "category": "lunch",
+        "method": [
             "Gently cook the leeks in the butter and olive oil until soft but not coloured. Add the celeriac and stock, bring to the boil and simmer until the celeriac is soft. Add the bags of watercress and blend until smooth, then season. Cool. ",
             "To serve, defrost the soup in the fridge overnight, then tip into a saucepan and reheat. Top each toasted baguette slice with some goat\u2019s cheese, then add a slice to each bowl with a sprig of watercress."
         ]
     },
     {
-        "name": "Herb & pepper crusted rib of beef", "ingredients": ["1 tbsp rock salt", "2 tbsp cracked black peppercorn", "3 garlic cloves, crushed", "small bunch rosemary, finely chopped", "small bunch parsley, chopped", "4 tbsp olive oil", "3kg rib of beefon the bone", "2 onions, sliced", "250ml red wine", "400ml fresh beef stock"],
-        "category": "dinner", "method": [
+        "name": "Herb & pepper crusted rib of beef",
+        "ingredients": ["1 tbsp rock salt", "2 tbsp cracked black peppercorn", "3 garlic cloves, crushed", "small bunch rosemary, finely chopped", "small bunch parsley, chopped", "4 tbsp olive oil", "3kg rib of beefon the bone", "2 onions, sliced", "250ml red wine", "400ml fresh beef stock"],
+        "category": "dinner",
+        "method": [
             "Heat oven to 220C/200C fan/gas 7. Mix the rock salt, peppercorns, garlic, rosemary, parsley and olive oil. Rub this mixture all over the beef rib then place in a roasting tin. Put in the oven and cook for 30 mins, then turn the oven down to 160C/140C fan/gas 3 and cook for a further 1 hr 20 mins. Remove from the oven, transfer the beef to a board, cover with tin foil and rest for 30 mins before carving.",
             "While the beef rests, make the gravy. Pour off all but 2 tbsp of fat from the roasting tin and reserve any juices. Fry the onions in the roasting tin over a medium heat for about 10 mins, then add the wine, stock and reserved juices. Keep cooking for a further 10 mins to reduce to a thick sauce, season well and serve alongside the roast beef."
         ]
     },
     {
-        "name": "Goat's cheese & cranberry tartlets", "ingredients": [
+        "name": "Goat's cheese & cranberry tartlets",
+        "ingredients": [
             "375-425g pack ready-rolled puff pastryor 500g pack ready-made pastry rolled 5mm thick",
             "1 egg, beaten",
             "3 tbsp cranberry sauce or a good-quality chutney",
@@ -5105,7 +5144,8 @@
             "extra-virgin olive oil, for drizzling",
             "rocket leaves, to serve"
         ],
-        "category": "appetizer", "method": [
+        "category": "appetizer",
+        "method": [
             "Preheat oven to fan 200C/conventional 220C/gas 7. Lay pastry on a floured work surface. Using a round 7.5cm round pastry cutter, cut out as many circles as possible.",
             "Sit them on oiled baking sheets and score a circle about 2.5cm in from the edge of each disc by pressing gently with a 5cm cutter. Pierce the middle of each with a fork, brush with egg and top with a little cranberry sauce or chutney.",
             "Slice the cheese 5mm thick so you have a slice per disc (discard end rinds). Lay a slice on each tartlet, then top with thyme leaves, a drizzle of oil and a twist of black pepper.",
@@ -5113,15 +5153,18 @@
         ]
     },
     {
-        "name": "Passion fruit & lime tart", "ingredients": ["500g pack dessert pastry", "8 passion fruits", "finely grated zest and juice of 1 lime", "200g golden caster sugar", "6 egg yolks", "142ml tub double cream", "icing sugar for dusting (optional)"],
-        "category": "dessert", "method": [
+        "name": "Passion fruit & lime tart",
+        "ingredients": ["500g pack dessert pastry", "8 passion fruits", "finely grated zest and juice of 1 lime", "200g golden caster sugar", "6 egg yolks", "142ml tub double cream", "icing sugar for dusting (optional)"],
+        "category": "dessert",
+        "method": [
             "Roll out the pastry and use it to line a 23cm tart ring, then chill for at least 20 mins. Heat oven to 180C/fan160C/gas 4. Line the tart with baking parchment and baking beans, then bake for 15 mins. Remove the parchment, bake for a further 5-10 mins until golden, then remove from the oven and reduce the temperature to 140C/fan 120C/gas 1.",
             "While the case is cooking, cut the passion fruits in half, scoop out the flesh into a bowl, then blitz with a hand blender. Push the pulp through sieve and mix the juice with the lime zest and juice. Beat the sugar and yolks together until pale, then beat in the cream and fruit juice. Carefully pour the custard into the tart case, then bake for 40 mins, until set with a very slight wobble. Remove the tart from the oven, then leave to cool completely.",
             "You can now either serve the tart as it is, or try a chef\u2019s tip and dust it with icing sugar, then caramelise the top with a blowtorch."
         ]
     },
     {
-        "name": "Salmon & herby potato coulibiacs", "ingredients": [
+        "name": "Salmon & herby potato coulibiacs",
+        "ingredients": [
             "600g potato, thinly sliced",
             "1 large onion, thinly sliced",
             "1 tbsp olive oil",
@@ -5135,7 +5178,8 @@
             "650g side of salmon, skinned and pin-boned, cut crossways into 3cm slices, then cut in half lengthways to get thick fingers",
             "1 egg, beaten"
         ],
-        "category": "dinner", "method": [
+        "category": "dinner",
+        "method": [
             "Heat oven to 180C/160C fan/gas 4. Par-boil the potato slices for 2-3 mins. Drain and set aside in a large bowl.",
             "Gently fry the onion in the oil for 10 mins until lightly golden. Cool slightly, then stir in the cream, cr\u00e8me fra\u00eeche, herbs, zest and plenty of seasoning. Pour over the potatoes and mix very gently.",
             "Roll out one pack of pastry on a lightly floured surface to a 35 x 35cm, then lay on a large baking sheet. Pack \u00bc of the potato mixture down one side of the pastry, leaving a 5cm border. Arrange \u00bd of the salmon on top to cover the potato. Cover the salmon with \u00bc of the potato. Brush the pastry all the way round with beaten egg and fold over the pastry. Trim the edges and crimp with your fingers, or seal with a fork. Make decorative fish for the top, if you like.",
@@ -5144,30 +5188,37 @@
         ]
     },
     {
-        "name": "Chicory & hummus bites", "ingredients": ["2 large heads of chicory", "1 carrot", "175g tub hummus", "16-18 black olives, preferably pitted"],
-        "category": "appetizer", "method": [
+        "name": "Chicory & hummus bites",
+        "ingredients": ["2 large heads of chicory", "1 carrot", "175g tub hummus", "16-18 black olives, preferably pitted"],
+        "category": "appetizer",
+        "method": [
             "Up to 2 hrs ahead, separate the chicory into boat-shaped leaves and trim the ends so that they are all roughly the same size. You will probably get about eight or nine decent-sized leaves from each head of chicory. As the leaves get closer to the heart of the chicory, they will be too small to use for canap\u00e9s, so save them to add to wintry salads.",
             "Peel the carrot, then keep peeling off strips until you have as many as the number of chicory leaves.",
             "Drop spoonfuls of hummus onto the chicory, then add a carrot curl and an olive to each. They\u2019ll keep in the fridge for about 2 hours."
         ]
     },
     {
-        "name": "Spiced roast beef", "ingredients": ["1 tbsp juniper berries", "1 tbsp coriander seeds", "1 tbsp black peppercorns", "1 tbsp allspice berries", "2 tbsp olive oil", "2kg-3kg (4lb 8oz-6lb 8oz) topside joint of beef- depending on the amount of leftovers you want"],
-        "category": "lunch", "method": [
+        "name": "Spiced roast beef",
+        "ingredients": ["1 tbsp juniper berries", "1 tbsp coriander seeds", "1 tbsp black peppercorns", "1 tbsp allspice berries", "2 tbsp olive oil", "2kg-3kg (4lb 8oz-6lb 8oz) topside joint of beef- depending on the amount of leftovers you want"],
+        "category": "lunch",
+        "method": [
             "Combine all the spices and \u00bd tbsp salt together in a pestle and mortar. Give everything a good grind, keeping a little of its coarseness. Rub the oil and then the ground spices all over the beef and massage in well. Cover and chill overnight to marinate.",
             "Next day, heat oven to 190C/170C fan/gas 5. Weigh your joint and roast for 10 mins per 450g for rare meat and 15 mins per 450g for medium, plus an extra 20 mins. Cover and rest for 20 mins while you finish the salads, then slice and serve. Alternatively, roast the beef in the morning and serve at room temperature for dinner."
         ]
     },
     {
-        "name": "Parmesan, poppy seed & caraway twists", "ingredients": ["175g gluten-free flour (we used Doves Farm, widely available)", "85g butter", "pinch cayenne pepper", "1 egg yolk mixed with 3 tbsp cold water", "1 egg, beaten", "3 tbsp freshly grated parmesan(or vegetarian alternative)", "1 tbsp each poppy seeds and caraway seeds"],
-        "category": "appetizer", "method": [
+        "name": "Parmesan, poppy seed & caraway twists",
+        "ingredients": ["175g gluten-free flour (we used Doves Farm, widely available)", "85g butter", "pinch cayenne pepper", "1 egg yolk mixed with 3 tbsp cold water", "1 egg, beaten", "3 tbsp freshly grated parmesan(or vegetarian alternative)", "1 tbsp each poppy seeds and caraway seeds"],
+        "category": "appetizer",
+        "method": [
             "To make the pastry, put the flour, butter and cayenne pepper into a food processor, then whizz into fine breadcrumbs. sprinkle the egg and water mixture onto the flour, then pulse again until the mixture begins to come together. tip the mixture onto a board and gently squeeze the pastry until it begins to come together in a ball, adding more water if it feels dry.",
             "Heat oven to 190C/fan 170C/gas 5. roll the pastry into a large a4-sized rectangle, roughly 20 x 30cm. Brush the sheet with the beaten egg and cut in half widthways. Sprinkle one half with the Parmesan and the second half with poppy and caraway seeds. lightly run the rolling pin across the top to press the cheese and the seeds into the pastry. Cut each half into 12-15 sticks. arrange on a baking sheet and chill for 10 mins.",
             "Bake for 8-10 mins until golden brown, then cool for 5 mins before lifting onto a wire rack."
         ]
     },
     {
-        "name": "Prawn & fennel bisque", "ingredients": [
+        "name": "Prawn & fennel bisque",
+        "ingredients": [
             "450g raw tiger prawn in their shells",
             "4 tbsp olive oil",
             "1 large onion, chopped",
@@ -5182,14 +5233,16 @@
             "8 tiger prawns, shelled, but tail tips left on (optional)",
             "fennel fronds (optional)"
         ],
-        "category": "lunch", "method": [
+        "category": "lunch",
+        "method": [
             "Shell the prawns, then fry the shells in the oil in a large pan for about 5 mins. Add the onion, fennel and carrots and cook for about 10 mins until the veg start to soften. Pour in the wine and brandy, bubble hard for about 1 min to drive off the alcohol, then add the tomatoes, stock and paprika. Cover and simmer for 30 mins. Meanwhile, chop the prawns.",
             "Blitz the soup as finely as you can with a stick blender or food processor, then press through a sieve into a bowl. Spend a bit of time really working the mixture through the sieve as this will give the soup its velvety texture.",
             "Tip back into a clean pan, add the prawns and cook for 10 mins, then blitz again until smooth. You can make and chill this a day ahead or freeze it for 1 month. Thaw ovenight in the fridge. To serve, gently reheat in a pan with the cream. If garnishing, cook the 8 prawns in a little butter. Spoon into small bowls and top with the prawns and snipped fennel fronds."
         ]
     },
     {
-        "name": "Triple cheese & bacon Dauphinoise", "ingredients": [
+        "name": "Triple cheese & bacon Dauphinoise",
+        "ingredients": [
             "butter, for greasing",
             "500ml semi-skimmed milk",
             "300ml pot double cream",
@@ -5201,7 +5254,8 @@
             "50g parmesan, grated",
             "50g gruy\u00e8re, cubed"
         ],
-        "category": "side", "method": [
+        "category": "side",
+        "method": [
             "Heat oven to 180C/160C fan/gas 4 and grease a shallow baking dish with butter (I used a 20 x 30cm dish). Pour the milk and cream into a large saucepan, add the garlic, tip in the potatoes and bring to the boil. Remove from the heat to let the garlic infuse and the potatoes cool a little while you cook the bacon.",
             "Heat the oil in a frying pan and add the lardons. Cook on a low-medium heat for 10 mins until they are turning crispy.",
             "Using a slotted spoon, start layering the potatoes onto the base of the dish until completely covered (remove the garlic cloves when you spot them). Spoon over some of the cream mixture, a little cheddar, Parmesan and Gruy\u00e8re, and scatter on some of the bacon. Season well and repeat until you have used up all the potato. Pour over any remaining cream and scatter with the remaining cheese. Reserve some of the bacon for topping later.",
@@ -5209,7 +5263,8 @@
         ]
     },
     {
-        "name": "Sesame beef wraps", "ingredients": [
+        "name": "Sesame beef wraps",
+        "ingredients": [
             "1 tsp vegetable oil",
             "175g beef steak, cut into thin strips",
             "1 red pepper, deseeded and thinly sliced",
@@ -5220,7 +5275,8 @@
             "2 Baby Gem lettuces",
             "1 tsp sesame oil"
         ],
-        "category": "lunch", "method": [
+        "category": "lunch",
+        "method": [
             "Heat oil in a large frying pan. When the pan is really hot, tip in the beef and pepper, then cook for a few mins until lightly browned and the beef is cooked through. Tip in the garlic, ginger and sesame seeds, then cook for 1-2 mins more, stirring often until they start to turn golden.",
             "Pour over the soy sauce and 2 tbsp water, let it bubble down a bit until it starts to look syrupy, then drizzle with the sesame oil. Separate the leaves from the lettuces and arrange on a plate. Spoon a little of the beef mixture into each leaf, drizzle with pan juices and serve warm."
         ]
