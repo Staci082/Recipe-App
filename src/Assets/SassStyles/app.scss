@@ -28,7 +28,8 @@ html {
 body {
     font-family: Poppins, sans-serif;
     min-height: 100vh;
-    background: $light;
+    background: $background;
+    color: $text;
 }
 
 a {

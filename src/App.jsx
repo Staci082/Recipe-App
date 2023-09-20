@@ -1,6 +1,6 @@
 import "./Assets/SassStyles/app.scss";
-import { SearchProvider } from "./Context/SearchContext.jsx";
 import { Routes, Route } from "react-router-dom";
+// import { useSearchContext } from "./Context/SearchContext"
 
 // IMPORT PAGES
 import Create from "./Pages/create/Create";
@@ -57,19 +57,18 @@ const router = [
 
 
 function App() {
+    // const { results } = useSearchContext()
 
     return (
         <>
-        <SearchProvider>
             <Routes>
-                <Route path="/" element={<Homepage />}>
+                <Route path="/" element={<Homepage/>}>
                     <Route path="/category/:category" element={<FilterRecipes />} />
                 </Route>
                 {router.map((item) => (
                         <Route path={item.path} element={item.element} key={item.path} />
                 ))}
             </Routes>
-        </SearchProvider>
         </>
     );
 }

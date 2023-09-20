@@ -11,9 +11,9 @@
 }
 
 @mixin colorBox {
-    background: $light;
+    background: $background;
     border: $border;
-    // box-shadow: 5px 5px 0px 0px orange,
+    // box-shadow: 5px 5px 0px 0px $primary,
     // 7px 7px 0px 0px white;
     border-radius: 10px;
 }
@@ -27,8 +27,8 @@
     transition: ease-in-out 0.3s;
     &:hover {
         transform: scale(1.1);
-        border: orange solid 2px;
-        box-shadow: 4px 4px 0px 0px rgba(orange, 0.75);
+        border: $primary solid 2px;
+        box-shadow: 4px 4px 0px 0px rgba($primary, 0.75);
     }
 }
 
@@ -44,14 +44,13 @@
 @mixin label {
     width: 100%;
     font-size: 1.5rem;
-
 }
 
 @mixin input {
     height: 40px;
     outline: none;
     padding: 0 0.5em;
-    margin: .8em 0 1.5em 0;
+    margin: 0.8em 0 1.5em 0;
     width: 90%;
     font-family: inherit;
     font-size: 1rem;

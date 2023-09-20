@@ -39,7 +39,7 @@
   text-align: center;
 }
 .cat-item-container:hover {
-  background: orange;
+  background: rgb(255, 80, 80);
 }
 
 .cat-item-title {
@@ -145,12 +145,12 @@
   border-radius: 5px;
 }
 .pagination a:hover {
-  background: orange;
+  background: rgb(255, 80, 80);
 }
 
 .pagination .pagination-active a {
   border-radius: 5px;
-  color: orange;
+  color: rgb(255, 80, 80);
 }
 .pagination .pagination-active a:hover {
   color: white;
@@ -179,7 +179,7 @@
   gap: 2em;
 }
 .recipe-container-header h2 {
-  color: orange;
+  color: rgb(255, 80, 80);
 }
 
 .recipe {
@@ -197,7 +197,8 @@
   justify-content: center;
   padding: 0.5em 1em;
 }
-.recipe .recipe-title, .recipe .recipe-category {
+.recipe .recipe-title,
+.recipe .recipe-category {
   margin: 0;
 }
 @media (max-width: 480px) {
@@ -208,7 +209,7 @@
 
 .save-icon {
   width: 40px;
-  color: orange;
+  color: rgb(255, 80, 80);
   font-size: 1.5rem;
   margin-right: 5px;
 }
@@ -286,7 +287,7 @@
 
 .menu-container {
   width: 200px;
-  background: rgb(252, 247, 239);
+  background: rgb(254, 244, 244);
   border: 1px rgb(0, 0, 0) solid;
   border-radius: 10px;
   background: white;
@@ -307,7 +308,7 @@
 }
 .menuItem a:hover,
 .logout-button a:hover {
-  color: orange;
+  color: rgb(255, 80, 80);
 }
 
 .logout-button {
@@ -329,7 +330,7 @@
   border-radius: 10px;
   box-shadow: 4px 6px 0px 0px rgba(0, 0, 0, 0.75);
   flex-direction: column;
-  background: rgb(252, 247, 239);
+  background: rgb(254, 244, 244);
   font-weight: bold;
   font-size: 2rem;
   z-index: 2;
@@ -346,7 +347,7 @@
   font-size: 3rem;
 }
 .theme-button.orange {
-  color: orange;
+  color: rgb(255, 80, 80);
 }
 .theme-button.red {
   color: red;
@@ -402,7 +403,7 @@
   padding: 2em 0 1em 0;
   margin-top: 3em;
   gap: 1.5em;
-  background: rgb(252, 247, 239);
+  background: rgb(254, 244, 244);
   border: 1px rgb(0, 0, 0) solid;
   border-radius: 10px;
   background: white;
@@ -448,8 +449,9 @@
   gap: 2em;
   margin-bottom: 6em;
 }
-.recipe-details-container .ingredients-container, .recipe-details-container .method-container {
-  background: rgb(252, 247, 239);
+.recipe-details-container .ingredients-container,
+.recipe-details-container .method-container {
+  background: rgb(254, 244, 244);
   border: 1px rgb(0, 0, 0) solid;
   border-radius: 10px;
   padding: 1em;
@@ -457,7 +459,8 @@
   box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 0.75);
 }
 @media (max-width: 480px) {
-  .recipe-details-container .ingredients-container, .recipe-details-container .method-container {
+  .recipe-details-container .ingredients-container,
+  .recipe-details-container .method-container {
     padding: 0;
     padding-right: 1.5em;
   }
@@ -476,15 +479,15 @@
 }
 
 .recipe-name {
-  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-size: clamp(1.5rem, 2vw, 2rem);
 }
 
 .recipe-category-title {
-  color: orange;
+  color: rgb(255, 80, 80);
 }
 
 .recipe-details-title {
-  color: orange;
+  color: rgb(255, 80, 80);
 }
 
 .recipe-button-container {
@@ -500,7 +503,8 @@
 }
 .edit-buttons:hover,
 .random-button:hover {
-  color: orange;
+  color: rgb(255, 80, 80);
+  transform: scale(1.2);
 }
 
 .random-button {
@@ -524,7 +528,7 @@
   align-items: center;
   flex-direction: column;
   width: clamp(300px, 70%, 1000px);
-  background: rgb(252, 247, 239);
+  background: rgb(254, 244, 244);
   padding: 2em;
   gap: 2rem;
   border: 1px rgb(0, 0, 0) solid;
@@ -548,7 +552,7 @@
   font-size: 1rem;
 }
 .modal-button:hover {
-  color: orange;
+  color: rgb(255, 80, 80);
   transform: scale(1.2);
 }
 
@@ -580,7 +584,8 @@ html {
 body {
   font-family: Poppins, sans-serif;
   min-height: 100vh;
-  background: rgb(252, 247, 239);
+  background: rgb(254, 244, 244);
+  color: rgb(10, 10, 10);
 }
 
 a {
@@ -619,8 +624,8 @@ button {
 }
 .submit-button:hover {
   transform: scale(1.1);
-  border: orange solid 2px;
-  box-shadow: 4px 4px 0px 0px rgba(255, 165, 0, 0.75);
+  border: rgb(255, 80, 80) solid 2px;
+  box-shadow: 4px 4px 0px 0px rgba(255, 80, 80, 0.75);
 }
 
 .back-button {

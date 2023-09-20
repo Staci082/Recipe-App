@@ -29,6 +29,7 @@ const useSearch = () => {
             }
         };
         fetchRecipes();
+        console.log("searchContext: ", results);
 
         return () => {
             if (source) {
@@ -40,7 +41,6 @@ const useSearch = () => {
     const handleChange = (e) => {
         setInput(e.target.value);
     };
-
 
     return { input, results, setResults, handleChange }
 }

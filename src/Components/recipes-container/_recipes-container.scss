@@ -9,7 +9,7 @@
     display: flex;
     flex-wrap: wrap;
     @include md {
-        justify-content: center;  
+        justify-content: center;
     }
 }
 
@@ -18,7 +18,7 @@
     align-items: center;
     gap: 2em;
     & h2 {
-        color: orange;
+        color: $primary;
     }
 }
 
@@ -35,10 +35,11 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding: .5em 1em;
+        padding: 0.5em 1em;
     }
-    
-    & .recipe-title, .recipe-category {
+
+    & .recipe-title,
+    .recipe-category {
         margin: 0;
     }
 
@@ -49,7 +50,7 @@
 
 .save-icon {
     width: 40px;
-    color: orange;
+    color: $primary;
     font-size: 1.5rem;
     margin-right: 5px;
 }

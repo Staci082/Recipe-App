@@ -2,7 +2,7 @@
     width: 200px;
     @include colorBox;
     background: white;
-    // box-shadow: 5px 5px 0px 0px orange,
+    // box-shadow: 5px 5px 0px 0px $primary,
     // 7px 7px 0px 0px white;
     border: none;
     position: relative;
@@ -13,14 +13,13 @@
     margin-left: 1em;
 }
 
-
 .menuItem,
 .logout-button {
     font-size: clamp(0.5rem, 5vh, 1rem);
     margin-bottom: clamp(0.5rem, 5vh, 1.5rem);
     font-weight: bold;
     & a:hover {
-        color: orange;
+        color: $primary;
     }
 }
 
