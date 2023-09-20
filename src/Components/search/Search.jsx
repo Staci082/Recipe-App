@@ -1,35 +1,17 @@
-import { useState, useEffect } from "react"
-import axios from "axios"
+import useSearch from "../../Hooks/useSearch.js"
+
 
 function Search() {
-    const [searchResult, setSearchResult] = useState([])
-    const [key, setKey] = useState("")
+    const { input, handleChange } = useSearch()
 
-    useEffect(() => {
-        const search = async () => {
-            try {
-                if (!key.trim()) {
-                    setSearchResult([])
-                    return
-                }
-                const res = await axios.get("http://localhost:5712/search/" + key)
-                setSearchResult(res.data)
-            } catch (error) {
-                console.log(error)
-            }
-        }
-    }, [key])
-
-  return (
-    <input type="text" 
-            name="searchBar" 
-            value={key} 
-            className="search-bar" 
-            placeholder="Search.." 
-            aria-label="Search"
-            onChange={(e) => setKey(e.target.value)}
-            />
-  )
+    return <input 
+    type="text" 
+    name="searchBar" 
+    value={input} 
+    className="search-bar" 
+    placeholder="Search.." 
+    aria-label="Search" 
+    onChange={handleChange} />;
 }
 
-export default Search
+export default Search;

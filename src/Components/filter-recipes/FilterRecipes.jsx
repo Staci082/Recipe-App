@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import ReactPaginate from "react-paginate";
+import useSearch from "../../Hooks/useSearch.js"
 
 import { FaHeart, FaRegHeart, FaAnglesLeft, FaAnglesRight } from "react-icons/fa6";
 
@@ -9,6 +10,8 @@ function FilterRecipes() {
     const { route, category } = useParams();
     const [saveButton, setSaveButton] = useState(false)
     const [recipes, setRecipes] = useState([]);
+
+    const { results, handleChange } = useSearch()
 
     // PAGINATION
     const [pageNumber, setPageNumber] = useState(0);
@@ -42,8 +45,7 @@ function FilterRecipes() {
         const fetchRecipes = async () => {
             try {
                 const response = await axios.get("http://localhost:5712/" + category);
-                const sortedRecipes = response.data.sort((a, b) => a.name.localeCompare(b.name));
-                setRecipes(sortedRecipes);
+                setRecipes(response.data);
             } catch (error) {
                 console.log("Error fetching data:", error);
             }
