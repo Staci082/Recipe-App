@@ -12,7 +12,7 @@
     font-family: gluten, comic sans-serif;
     gap: 1em;
     & .logo-title {
-        @include lg {
+        @include md {
             display: none;
         }
     }

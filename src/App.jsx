@@ -1,4 +1,5 @@
 import "./Assets/SassStyles/app.scss";
+import { SearchProvider } from "./Context/SearchContext.jsx";
 import { Routes, Route } from "react-router-dom";
 
 // IMPORT PAGES
@@ -13,7 +14,7 @@ import Register from "./Pages/register/Register";
 import URLRecipe from "./Pages/url-recipe/URLRecipe";
 import FilterRecipes from "./Components/filter-recipes/FilterRecipes";
 
-// CREATE ROUTER
+
 const router = [
     {
         path: "/create",
@@ -53,11 +54,13 @@ const router = [
     },
 ];
 
+
+
 function App() {
-    
 
     return (
         <>
+        <SearchProvider>
             <Routes>
                 <Route path="/" element={<Homepage />}>
                     <Route path="/category/:category" element={<FilterRecipes />} />
@@ -66,6 +69,7 @@ function App() {
                         <Route path={item.path} element={item.element} key={item.path} />
                 ))}
             </Routes>
+        </SearchProvider>
         </>
     );
 }

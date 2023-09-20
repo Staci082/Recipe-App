@@ -73,7 +73,7 @@
   font-family: gluten, comic sans-serif;
   gap: 1em;
 }
-@media (max-width: 960px) {
+@media (max-width: 720px) {
   .logo-container .logo-title {
     display: none;
   }
@@ -314,6 +314,53 @@
   cursor: pointer;
 }
 
+.theme-modal {
+  position: absolute;
+  left: 10%;
+  right: 0;
+  top: 20%;
+  width: 80%;
+  padding: 2em 0;
+  gap: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px rgb(0, 0, 0) solid;
+  border-radius: 10px;
+  box-shadow: 4px 6px 0px 0px rgba(0, 0, 0, 0.75);
+  flex-direction: column;
+  background: rgb(252, 247, 239);
+  font-weight: bold;
+  font-size: 2rem;
+  z-index: 2;
+}
+
+.theme-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+}
+
+.theme-button {
+  font-size: 3rem;
+}
+.theme-button.orange {
+  color: orange;
+}
+.theme-button.red {
+  color: red;
+}
+.theme-button.green {
+  color: green;
+}
+.theme-button.blue {
+  color: blue;
+}
+.theme-button.purple {
+  color: purple;
+}
+
 .empty-page-container {
   width: 1000px;
   height: 100px;
@@ -389,7 +436,7 @@
   cursor: pointer;
   font-size: 3rem;
   position: absolute;
-  right: 30px;
+  right: 20px;
   top: 10px;
 }
 
@@ -465,7 +512,7 @@
   cursor: pointer;
   font-size: 3rem;
   position: absolute;
-  right: 30px;
+  right: 20px;
   top: 10px;
 }
 
@@ -580,7 +627,7 @@ button {
   cursor: pointer;
   font-size: 3rem;
   position: absolute;
-  right: 30px;
+  right: 20px;
   top: 10px;
 }
 
@@ -588,7 +635,7 @@ button {
   cursor: pointer;
   font-size: 3rem;
   position: absolute;
-  right: 30px;
+  right: 20px;
   top: 10px;
 }
 
@@ -596,7 +643,7 @@ button {
   cursor: pointer;
   font-size: 3rem;
   position: absolute;
-  right: 30px;
+  right: 20px;
   top: 10px;
 }
 

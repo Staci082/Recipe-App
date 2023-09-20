@@ -1,0 +1,42 @@
+.theme-modal {
+    position: absolute;
+    left: 10%;
+    right: 0;
+    top: 20%;
+    width: 80%;
+    padding: 2em 0;
+    gap: 2em;
+    @include flex;
+    @include box;
+    box-shadow: 4px 6px 0px 0px rgba(0, 0, 0, 0.75);
+    flex-direction: column;
+    background: $light;
+    font-weight: bold;
+    font-size: 2rem;
+    z-index: 2;
+}
+
+.theme-button-container {
+    @include flex;
+    gap: 2em;
+}
+
+.theme-button {
+    font-size: 3rem;
+    &.orange {
+        color: orange;
+    }
+    &.red {
+        color: red;
+    }
+    &.green {
+        color: green;
+    }
+    &.blue {
+        color: blue;
+    }
+    &.purple {
+        color: purple;
+    }
+}
+

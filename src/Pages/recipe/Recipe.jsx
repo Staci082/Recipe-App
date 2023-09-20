@@ -19,7 +19,6 @@ function Recipe({ randomRecipe }) {
                     // Fetch a random recipe
                     const response = await axios.get("http://localhost:5712/recipe/random");
                     setRecipe(response.data);
-                    console.log(response.data);
                 } else {
                     // Fetch the recipe based on the provided ID
                     const response = await axios.get("http://localhost:5712/recipe/" + recipeID);

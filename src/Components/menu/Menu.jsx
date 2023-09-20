@@ -1,5 +1,7 @@
+import { useState } from "react"
 import { useCookies } from "react-cookie";
 import { Link } from "react-router-dom";
+import { BsFillDropletFill } from "react-icons/bs";
 
 function menu() {
     const menuItems = [
@@ -25,6 +27,7 @@ function menu() {
         },
     ];
 
+    const [showModal, setShowModal] = useState(false)
     const [cookies, setCookies] = useCookies(["access_token"]);
 
     const logout = () => {
@@ -32,7 +35,9 @@ function menu() {
         window.localStorage.removeItem("userID");
     };
 
+
     return (
+        <>
         <div className="menu-container">
             <h5>Menu</h5>
             <ul>
@@ -64,10 +69,27 @@ function menu() {
                     </>
                 )}
                 <li className="menuItem">
-                    <Link>Theme</Link>
+                    <a  onClick={() => setShowModal(!showModal)}>Theme</a>
                 </li>
             </ul>
         </div>
+        {showModal && (
+            <div className="theme-modal">
+                <button onClick={() => setShowModal(!showModal)} className="recipe-back-button">
+                        &times;
+                    </button>
+                <p className="theme-modal-title">Choose your theme:</p>
+
+                <div className="theme-button-container">
+                    <button className="theme-button orange"><BsFillDropletFill/></button>
+                    <button className="theme-button red"><BsFillDropletFill/></button>
+                    <button className="theme-button green"><BsFillDropletFill/></button>
+                    <button className="theme-button blue"><BsFillDropletFill/></button>
+                    <button className="theme-button purple"><BsFillDropletFill/></button>
+                </div>
+            </div>
+        )}
+        </>
     );
 }
 
