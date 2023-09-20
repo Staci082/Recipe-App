@@ -35,6 +35,10 @@ function menu() {
         window.localStorage.removeItem("userID");
     };
 
+    const changeTheme = () => {
+        setShowModal(!showModal)
+    }
+
 
     return (
         <>
@@ -81,11 +85,11 @@ function menu() {
                 <p className="theme-modal-title">Choose your theme:</p>
 
                 <div className="theme-button-container">
-                    <button className="theme-button orange"><BsFillDropletFill/></button>
-                    <button className="theme-button red"><BsFillDropletFill/></button>
-                    <button className="theme-button green"><BsFillDropletFill/></button>
-                    <button className="theme-button blue"><BsFillDropletFill/></button>
-                    <button className="theme-button purple"><BsFillDropletFill/></button>
+                <button onClick={changeTheme} className="theme-button red"><BsFillDropletFill/></button>
+                    <button onClick={changeTheme} className="theme-button orange"><BsFillDropletFill/></button>
+                    <button onClick={changeTheme} className="theme-button green"><BsFillDropletFill/></button>
+                    <button onClick={changeTheme} className="theme-button blue"><BsFillDropletFill/></button>
+                    <button onClick={changeTheme} className="theme-button purple"><BsFillDropletFill/></button>
                 </div>
             </div>
         )}
