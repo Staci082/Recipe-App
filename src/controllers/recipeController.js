@@ -5,7 +5,7 @@ import { User } from "../models/User.js";
 // VIEW ALL RECIPES PAGE
 export async function allRecipes(req, res) {
     try {
-        const recipes = await Recipe.find({});
+        const recipes = await Recipe.find({}).sort({ name: 1 });
         res.json(recipes);
     } catch (error) {
         console.log(error);
@@ -56,7 +56,7 @@ export async function sortRecipes(req, res) {
     let category = req.params.category || "";
 
     try {
-        const recipes = await Recipe.find({ category: category });
+        const recipes = await Recipe.find({ category: category }).sort({ name: 1 });
         res.json(recipes);
     } catch (error) {
         console.log(error);
@@ -69,7 +69,7 @@ export async function singleRecipe(req, res) {
     const { id } = req.params;
 
     try {
-        if (id === 'random') {
+        if (id === "random") {
             // Handle the random recipe case
             const count = await Recipe.countDocuments();
             const randomIndex = Math.floor(Math.random() * count);
@@ -88,17 +88,24 @@ export async function singleRecipe(req, res) {
 // POST /
 // SEARCH RECIPES PAGE
 export async function searchRecipes(req, res) {
+    const { query } = req.body;
+    const words = query.split(/\s+/).filter((word) => word);
     try {
-        let searchTerm = req.body.searchTerm || ""; // adding the empty string will fix the error of 'undefined replace()'
-        const searchNoSpecialChar = searchTerm.replace(/[^a-zA-Z0-9 ]/g, ""); // disallow special characters
-
-        // SEARCH THROUGH THESE PARAMS WITHOUT SPECIAL CHARACTERS
         const recipes = await Recipe.find({
-            $or: [{ name: new RegExp(searchNoSpecialChar, "i") }, { category: new RegExp(searchNoSpecialChar, "i") }, { ingredients: new RegExp(searchNoSpecialChar, "i") }],
-        });
+            $or: [
+                { name: { $regex: new RegExp(words.join("|"), "i") } },
+                {
+                    ingredients: {
+                        $elemMatch: {
+                            $in: words.map((word) => new RegExp(word, "i")),
+                        },
+                    },
+                },
+            ],
+        }).sort({ name: 1 });
         res.json(recipes);
     } catch (error) {
-        console.log(error);
+        console.error(error);
     }
 }
 
