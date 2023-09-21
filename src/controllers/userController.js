@@ -1,6 +1,7 @@
 import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";
 import User from "../models/User.js";
+import GroceryList from "../models/GroceryList.js";
 
 // POST
 // REGISTER USER
@@ -68,5 +69,41 @@ export const GetSavedRecipes = (req, res) => {
         });
     });
 };
+
+
+export async function addGroceryList(req, res) {
+    const item = new GroceryList(req.body)
+    
+    try {
+        const response = await item.save()
+        res.json(response);
+    } catch (error) {
+        console.log(error)
+    }
+    
+
+}
+
+export async function getGroceryList(req, res) {
+
+        const response = await GroceryList.find()
+        res.json(response);
+        console.log(response)
+    try {
+
+    } catch (error) {   
+        console.log(error)
+    }
+}
+
+export async function editGroceryList(req, res) {
+    
+    // try {
+        const {id} = req.params
+        console.log(id)
+    // } catch (error) {
+    //     console.log(error)
+    // }
+}
 
 export default VerifyToken;

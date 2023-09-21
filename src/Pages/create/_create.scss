@@ -1,0 +1,55 @@
+
+.form-separator {
+    display: flex;
+    justify-content: space-around;
+    @include md{
+        flex-direction: column;
+    }
+}
+
+.form-inner-separator {
+    @include form;
+}
+
+.create-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    & label {
+        @include label;
+    }
+
+
+    & input,
+    textarea,
+    select {
+        @include input;
+    }
+
+    & select {
+        width: 96.5%;
+    }
+
+    & textarea {
+        height: 200px;
+        padding-top: 1em;
+    }
+
+    & .submit-button {
+        @include submitButton;
+        margin-bottom: 1em;
+    }
+}
+
+
+.add-ingredient-container {
+    position: relative;
+}
+
+.add-ingredient-button, .create{
+    position: absolute;
+    top: 10%;
+    right: 5%;
+}

@@ -1,0 +1,25 @@
+
+.login-container {
+    display: flex; 
+    justify-content: center;
+}
+
+.login-form {
+    @include flex;
+    @include form;
+    margin-top: -1em;
+    
+    & label {
+        @include label;
+    }
+
+    & input {
+        @include input;
+    }
+    
+    & .login-submit-button {
+        @include submitButton;
+        margin-top: 1em;
+    }
+
+}

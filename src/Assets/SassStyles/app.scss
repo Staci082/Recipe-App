@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gluten:wght@500&display=swap");
+
+@import "./variables";
+@import "./mixins";
+
+// COMPONENT IMPORTS
+@import "../../Components/categories/categories";
+@import "../../Components/header/header";
+@import "../../Components/pagination/pagination";
+@import "../../Components/recipes-container/recipes-container";
+@import "../../Components/menu/menu";
+
+@import "../../Pages/create/create";
+@import "../../Pages/edit/edit";
+@import "../../Pages/error/error";
+@import "../../Pages/grocery-list/groceryList";
+@import "../../Pages/login/login";
+@import "../../Pages/recipe/recipe";
+@import "../../Pages/register/register";
+@import "../../Pages/url-recipe/url-recipe";
+
+// GLOBAL STYLING
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Poppins, sans-serif;
+    @include flex;
+    min-height: 95vh;
+    background: $light-salmon;
+}
+
+a {
+    font-family: Poppins, sans-serif;
+    text-decoration: none;
+    color: black;
+}
+
+ul {
+    list-style: none;
+}
+
+textarea {
+    resize: none;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+.back-button {
+    @include backButton;
+}
+.form-back-button {
+    @include backButton;
+}
+.login-back-button {
+    @include backButton;
+}
+
+// APP STYLING
+.global-container {
+    position: relative;
+    max-width: 1300px;
+    background: $light-salmon;
+    @include box;
+    margin: 1em;
+    padding: 1em 0.5em;
+
+    @include sm {
+        margin: 1em;
+    }
+}
+
+.main-container {
+    background: $light-salmon;
+    display: grid;
+    grid-template-columns: repeat(5);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    margin-bottom: 1em;
+
+    @include md {
+        @include flex;
+        flex-direction: column;
+    }
+}
