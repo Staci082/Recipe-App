@@ -13,7 +13,7 @@ import Login from "./Pages/login/Login";
 import Recipe from "./Pages/recipe/Recipe";
 import Register from "./Pages/register/Register";
 import URLRecipe from "./Pages/url-recipe/URLRecipe";
-import FilterRecipes from "./Components/filter-recipes/FilterRecipes";
+import FilterRecipes from "./Components/recipes-filter/RecipesFilter";
 
 
 const router = [
@@ -26,7 +26,7 @@ const router = [
         element: <Edit />,
     },
     {
-        path: "/list",
+        path: "/auth/list",
         element: <GroceryList />,
     },
     {
@@ -64,7 +64,7 @@ function App() {
         <SearchProvider>
             <Routes>
                 <Route path="/" element={<Homepage/>}>
-                    <Route path="/category/:category" element={<FilterRecipes />} />
+                    <Route path="/:category" element={<FilterRecipes />} />
                 </Route>
                 {router.map((item) => (
                         <Route path={item.path} element={item.element} key={item.path} />

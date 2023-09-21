@@ -48,7 +48,7 @@ function Categories() {
     return (
         <div className="categories-container">
             {categories.map((item) => (
-                <Link className="cat-item-container" to={`/category${item.href}`} key={item.title}>
+                <Link className="cat-item-container" to={item.href} key={item.title}>
                     <img className="cat-item-img" src={item.img} />
                     <h4 className="cat-item-title">{item.title}</h4>
                 </Link>

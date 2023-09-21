@@ -39,7 +39,7 @@ function Recipe({ randomRecipe }) {
         try {
             axios.delete("http://localhost:5712/recipe/" + recipeID);
             setShowModal(false);
-            navigate("/category/all");
+            navigate("/all");
             ToastSuccess("Recipe deleted!")
         } catch (error) {
             console.log(error);

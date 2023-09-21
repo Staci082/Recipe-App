@@ -3,12 +3,11 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 import Pagination from "../pagination/Pagination.jsx";
 import { FaHeart, FaRegHeart } from "react-icons/fa6";
-import UseSearchContext from "../../Context/SearchContext";
-import UseGetUserId from "../../Hooks/useGetUserId.js";
+import UseSearchContext from "../../Context/SearchContext.jsx";
+
 
 function FilterRecipes() {
     const { input, results } = UseSearchContext();
-    const userId = UseGetUserId()
 
     const { route, category } = useParams();
     const [saveButton, setSaveButton] = useState(false);
