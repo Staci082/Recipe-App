@@ -3,11 +3,10 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 import Pagination from "../pagination/Pagination.jsx";
 import { FaHeart, FaRegHeart } from "react-icons/fa6";
-import UseSearchContext from "../../Context/SearchContext"
+import UseSearchContext from "../../Context/SearchContext";
 
 function FilterRecipes() {
-    
-    const { results } = UseSearchContext()
+    const { input, results } = UseSearchContext();
 
     const { route, category } = useParams();
     const [saveButton, setSaveButton] = useState(false);
@@ -20,33 +19,31 @@ function FilterRecipes() {
     const displayRecipes =
         results.length > 0
             ? results.slice(pagesVisited, pagesVisited + recipesPerPage).map((recipe) => {
-                return (
-                    <div className="recipe" key={recipe._id}>
-                        <a href={`/recipe/${recipe._id}`} className="recipe-title-container">
-                            <h3 className="recipe-title">{recipe.name}</h3>
-                            <p className="recipe-category">{recipe.category}</p>
-                        </a>
-                        <button className="save-icon" onClick={() => setSaveButton(!saveButton)}>
-                            {saveButton ? <FaHeart /> : <FaRegHeart />}
-                        </button>
-                    </div>
-                );
-            })
-            : 
-        recipes.slice(pagesVisited, pagesVisited + recipesPerPage).map((recipe) => {
-                return (
-                    <div className="recipe" key={recipe._id}>
-                        <a href={`/recipe/${recipe._id}`} className="recipe-title-container">
-                            <h3 className="recipe-title">{recipe.name}</h3>
-                            <p className="recipe-category">{recipe.category}</p>
-                        </a>
-                        <button className="save-icon" onClick={() => setSaveButton(!saveButton)}>
-                            {saveButton ? <FaHeart /> : <FaRegHeart />}
-                        </button>
-                    </div>
-
-                );
-            });
+                  return (
+                      <div className="recipe" key={recipe._id}>
+                          <a href={`/recipe/${recipe._id}`} className="recipe-title-container">
+                              <h3 className="recipe-title">{recipe.name}</h3>
+                              <p className="recipe-category">{recipe.category}</p>
+                          </a>
+                          <button className="save-icon" onClick={() => setSaveButton(!saveButton)}>
+                              {saveButton ? <FaHeart /> : <FaRegHeart />}
+                          </button>
+                      </div>
+                  );
+              })
+            : recipes.slice(pagesVisited, pagesVisited + recipesPerPage).map((recipe) => {
+                  return (
+                      <div className="recipe" key={recipe._id}>
+                          <a href={`/recipe/${recipe._id}`} className="recipe-title-container">
+                              <h3 className="recipe-title">{recipe.name}</h3>
+                              <p className="recipe-category">{recipe.category}</p>
+                          </a>
+                          <button className="save-icon" onClick={() => setSaveButton(!saveButton)}>
+                              {saveButton ? <FaHeart /> : <FaRegHeart />}
+                          </button>
+                      </div>
+                  );
+              });
 
     const pageCount = Math.ceil(recipes.length / recipesPerPage);
     const changePage = ({ selected }) => {
@@ -69,8 +66,17 @@ function FilterRecipes() {
     return (
         <>
             <div className="recipe-container-header">
-                <h1>{category} recipes </h1>
-                <h2>{Number(recipes.length)}</h2>
+                {results.length > 0 ? (
+                    <>
+                        <h1>{input} recipes</h1>
+                        <h2>{Number(results.length)}</h2>
+                    </>
+                ) : (
+                    <>
+                        <h1>{category} recipes</h1>
+                        <h2>{Number(recipes.length)}</h2>
+                    </>
+                )}
             </div>
 
             <div className="recipe-container">{displayRecipes}</div>
