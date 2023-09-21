@@ -26,7 +26,6 @@ export const SearchProvider = ({ children }) => {
             try {
                 const response = await axios.post("http://localhost:5712/search", { query: input }, { cancelToken: source.token });
                 setResults(response.data);
-                console.log("backend:", response.data);
             } catch (error) {
                 if (axios.isCancel(error)) {
                 } else {
@@ -35,7 +34,6 @@ export const SearchProvider = ({ children }) => {
             }
         };
         fetchRecipes();
-        console.log("searchContext: ", results);
 
         return () => {
             if (source) {

@@ -39,6 +39,14 @@ function menu() {
         setShowModal(!showModal);
     };
 
+    const themeColors = [
+        "red",
+        "orange",
+        "green",
+        "blue",
+        "purple"
+    ]
+
     return (
         <>
             <div className="menu-container">
@@ -82,23 +90,13 @@ function menu() {
                         &times;
                     </button>
                     <p className="theme-modal-title">Choose your theme:</p>
-
+                    
                     <div className="theme-button-container">
-                        <button onClick={changeTheme} className="theme-button red">
-                            <BsFillDropletFill />
-                        </button>
-                        <button onClick={changeTheme} className="theme-button orange">
-                            <BsFillDropletFill />
-                        </button>
-                        <button onClick={changeTheme} className="theme-button green">
-                            <BsFillDropletFill />
-                        </button>
-                        <button onClick={changeTheme} className="theme-button blue">
-                            <BsFillDropletFill />
-                        </button>
-                        <button onClick={changeTheme} className="theme-button purple">
-                            <BsFillDropletFill />
-                        </button>
+                    {themeColors.map((color) => (
+                        <button onClick={changeTheme} className={`theme-button ${color}`}>
+                        <BsFillDropletFill />
+                    </button>
+                    ))}
                     </div>
                 </div>
             )}
