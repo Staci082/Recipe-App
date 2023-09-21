@@ -16,40 +16,26 @@ function FilterRecipes() {
     const recipesPerPage = 15;
     const pagesVisited = pageNumber * recipesPerPage;
 
-    const displayRecipes =
-        results.length > 0
-            ? results.slice(pagesVisited, pagesVisited + recipesPerPage).map((recipe) => {
-                  return (
-                      <div className="recipe" key={recipe._id}>
-                          <a href={`/recipe/${recipe._id}`} className="recipe-title-container">
-                              <h3 className="recipe-title">{recipe.name}</h3>
-                              <p className="recipe-category">{recipe.category}</p>
-                          </a>
-                          <button className="save-icon" onClick={() => setSaveButton(!saveButton)}>
-                              {saveButton ? <FaHeart /> : <FaRegHeart />}
-                          </button>
-                      </div>
-                  );
-              })
-            : recipes.slice(pagesVisited, pagesVisited + recipesPerPage).map((recipe) => {
-                  return (
-                      <div className="recipe" key={recipe._id}>
-                          <a href={`/recipe/${recipe._id}`} className="recipe-title-container">
-                              <h3 className="recipe-title">{recipe.name}</h3>
-                              <p className="recipe-category">{recipe.category}</p>
-                          </a>
-                          <button className="save-icon" onClick={() => setSaveButton(!saveButton)}>
-                              {saveButton ? <FaHeart /> : <FaRegHeart />}
-                          </button>
-                      </div>
-                  );
-              });
+    const displayRecipes = (recipeList) =>
+        recipeList.slice(pagesVisited, pagesVisited + recipesPerPage).map((recipe) => (
+            <div className="recipe" key={recipe._id}>
+                <a href={`/recipe/${recipe._id}`} className="recipe-title-container">
+                    <h3 className="recipe-title">{recipe.name}</h3>
+                    <p className="recipe-category">{recipe.category}</p>
+                </a>
+                <button className="save-icon" onClick={() => setSaveButton(!saveButton)}>
+                    {saveButton ? <FaHeart /> : <FaRegHeart />}
+                </button>
+            </div>
+        ));
 
-    const pageCount = 
-            results.length > 0
-            ? Math.ceil(results.length / recipesPerPage)
-            : Math.ceil(recipes.length / recipesPerPage)
+    const displayRecipesList = results.length > 0 
+        ? displayRecipes(results) 
+        : displayRecipes(recipes);
 
+    const pageCount = results.length > 0 
+        ? Math.ceil(results.length / recipesPerPage) 
+        : Math.ceil(recipes.length / recipesPerPage);
 
     const changePage = ({ selected }) => {
         setPageNumber(selected);
@@ -84,7 +70,7 @@ function FilterRecipes() {
                 )}
             </div>
 
-            <div className="recipe-container">{displayRecipes}</div>
+            <div className="recipe-container">{displayRecipesList}</div>
 
             <Pagination pageCount={pageCount} onPageChange={changePage} />
         </>
