@@ -45,7 +45,12 @@ function FilterRecipes() {
                   );
               });
 
-    const pageCount = Math.ceil(recipes.length / recipesPerPage);
+    const pageCount = 
+            results.length > 0
+            ? Math.ceil(results.length / recipesPerPage)
+            : Math.ceil(recipes.length / recipesPerPage)
+
+
     const changePage = ({ selected }) => {
         setPageNumber(selected);
     };
