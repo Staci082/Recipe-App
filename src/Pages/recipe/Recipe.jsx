@@ -4,23 +4,22 @@ import { useNavigate, useParams, useLocation } from "react-router-dom";
 import { FaPencil, FaTrashCan, FaArrowRotateLeft } from "react-icons/fa6";
 
 function Recipe({ randomRecipe }) {
-    // prop from random recipe
+    
     const params = useParams();
     const recipeID = params.id;
-    const [recipe, setRecipe] = useState([]);
-    const [showModal, setShowModal] = useState(false);
     const location = useLocation();
     const navigate = useNavigate();
+
+    const [recipe, setRecipe] = useState([]);
+    const [showModal, setShowModal] = useState(false);
 
     useEffect(() => {
         const fetchRecipe = async () => {
             try {
                 if (randomRecipe) {
-                    // Fetch a random recipe
                     const response = await axios.get("http://localhost:5712/recipe/random");
                     setRecipe(response.data);
                 } else {
-                    // Fetch the recipe based on the provided ID
                     const response = await axios.get("http://localhost:5712/recipe/" + recipeID);
                     setRecipe(response.data);
                 }
@@ -45,6 +44,18 @@ function Recipe({ randomRecipe }) {
             console.log(error);
         }
     };
+
+    const openModal = () => {
+        setShowModal(true)
+        if (typeof window != 'undefined' && window.document) {
+            document.body.style.overflow = 'hidden';
+        }
+    }
+    const closeModal = () => {
+        setShowModal(false)
+            document.body.style.overflow = 'unset';
+    }
+
 
     return (
         <>
@@ -82,7 +93,7 @@ function Recipe({ randomRecipe }) {
                             <a href={`/edit/${recipeID}`} className="edit-buttons">
                                 <FaPencil size={26} />
                             </a>
-                            <button onClick={() => setShowModal(true)} className="edit-buttons">
+                            <button onClick={openModal} className="edit-buttons">
                                 <FaTrashCan size={26} />
                             </button>
                         </div>
@@ -90,14 +101,14 @@ function Recipe({ randomRecipe }) {
                 </div>
 
                 {showModal && (
-                    <div className="modal">
+                    <div className="delete-modal">
                         <p className="modal-title">Are you sure you want to delete this recipe?</p>
 
                         <div className="modal-button-container">
                             <button onClick={handleDelete} className="modal-button">
                                 YES
                             </button>
-                            <button onClick={() => setShowModal(false)} className="modal-button">
+                            <button onClick={closeModal} className="modal-button">
                                 CANCEL
                             </button>
                         </div>

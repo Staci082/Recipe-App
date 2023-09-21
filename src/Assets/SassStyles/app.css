@@ -316,10 +316,11 @@
 }
 
 .theme-modal {
-  position: absolute;
+  position: fixed;
   left: 10%;
   right: 0;
-  top: 20%;
+  top: 30%;
+  bottom: 30%;
   width: 80%;
   padding: 2em 0;
   gap: 2em;
@@ -520,9 +521,10 @@
   top: 10px;
 }
 
-.modal {
-  position: absolute;
-  top: 50%;
+.delete-modal {
+  position: fixed;
+  top: 30%;
+  bottom: 40%;
   display: flex;
   justify-content: center;
   align-items: center;

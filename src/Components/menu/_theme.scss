@@ -27,10 +27,11 @@ $themes: (
 );
 
 .theme-modal {
-    position: absolute;
+    position: fixed;
     left: 10%;
     right: 0;
-    top: 20%;
+    top: 30%;
+    bottom: 30%;
     width: 80%;
     padding: 2em 0;
     gap: 2em;

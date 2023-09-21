@@ -1,4 +1,4 @@
-import { useState, useEffect, useContext } from "react";
+import { useState, useEffect, useContext } from "react";  // keep "useContext" here or else "UseSearchContext" fails
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import Pagination from "../pagination/Pagination.jsx";
