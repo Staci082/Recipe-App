@@ -1,6 +1,7 @@
 import "./Assets/SassStyles/app.scss";
 import { Routes, Route } from "react-router-dom";
-// import { useSearchContext } from "./Context/SearchContext"
+import { useState } from "react"
+ import { SearchProvider } from "./Context/SearchContext"
 
 // IMPORT PAGES
 import Create from "./Pages/create/Create";
@@ -57,10 +58,10 @@ const router = [
 
 
 function App() {
-    // const { results } = useSearchContext()
 
     return (
         <>
+        <SearchProvider>
             <Routes>
                 <Route path="/" element={<Homepage/>}>
                     <Route path="/category/:category" element={<FilterRecipes />} />
@@ -69,6 +70,7 @@ function App() {
                         <Route path={item.path} element={item.element} key={item.path} />
                 ))}
             </Routes>
+            </SearchProvider>
         </>
     );
 }

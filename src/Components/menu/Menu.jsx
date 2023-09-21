@@ -35,7 +35,7 @@ function menu() {
         window.localStorage.removeItem("userID");
     };
 
-    const changeTheme = () => {
+    const changeTheme = (e) => {
         setShowModal(!showModal);
     };
 

@@ -3,7 +3,7 @@ import axios from "axios";
 
 const SearchContext = createContext();
 
-export function useSearchContext() {
+const UseSearchContext = () => {
     return useContext(SearchContext);
 }
 
@@ -53,7 +53,6 @@ export const SearchProvider = ({ children }) => {
             value={{
                 input,
                 results,
-                setResults,
                 handleChange,
             }}
         >
@@ -62,4 +61,4 @@ export const SearchProvider = ({ children }) => {
     );
 };
 
-export default SearchContext;
+export default UseSearchContext

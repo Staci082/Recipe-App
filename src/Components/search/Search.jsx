@@ -1,8 +1,8 @@
-import useSearch from "../../Hooks/useSearch.js"
+import UseSearchContext from "../../Context/SearchContext"
 
 
 function Search() {
-    const { input, handleChange } = useSearch()
+    const { input, handleChange } = UseSearchContext()
 
     return <input 
     type="text" 

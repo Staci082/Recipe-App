@@ -39,7 +39,7 @@
   text-align: center;
 }
 .cat-item-container:hover {
-  background: rgb(255, 80, 80);
+  background: orange;
 }
 
 .cat-item-title {
@@ -145,12 +145,12 @@
   border-radius: 5px;
 }
 .pagination a:hover {
-  background: rgb(255, 80, 80);
+  background: orange;
 }
 
 .pagination .pagination-active a {
   border-radius: 5px;
-  color: rgb(255, 80, 80);
+  color: orange;
 }
 .pagination .pagination-active a:hover {
   color: white;
@@ -179,7 +179,7 @@
   gap: 2em;
 }
 .recipe-container-header h2 {
-  color: rgb(255, 80, 80);
+  color: orange;
 }
 
 .recipe {
@@ -209,7 +209,7 @@
 
 .save-icon {
   width: 40px;
-  color: rgb(255, 80, 80);
+  color: orange;
   font-size: 1.5rem;
   margin-right: 5px;
 }
@@ -287,7 +287,7 @@
 
 .menu-container {
   width: 200px;
-  background: rgb(254, 244, 244);
+  background: rgb(252, 247, 239);
   border: 1px rgb(0, 0, 0) solid;
   border-radius: 10px;
   background: white;
@@ -308,7 +308,7 @@
 }
 .menuItem a:hover,
 .logout-button a:hover {
-  color: rgb(255, 80, 80);
+  color: orange;
 }
 
 .logout-button {
@@ -330,7 +330,7 @@
   border-radius: 10px;
   box-shadow: 4px 6px 0px 0px rgba(0, 0, 0, 0.75);
   flex-direction: column;
-  background: rgb(254, 244, 244);
+  background: rgb(252, 247, 239);
   font-weight: bold;
   font-size: 2rem;
   z-index: 2;
@@ -347,7 +347,7 @@
   font-size: 3rem;
 }
 .theme-button.orange {
-  color: rgb(255, 80, 80);
+  color: orange;
 }
 .theme-button.red {
   color: red;
@@ -403,7 +403,7 @@
   padding: 2em 0 1em 0;
   margin-top: 3em;
   gap: 1.5em;
-  background: rgb(254, 244, 244);
+  background: rgb(252, 247, 239);
   border: 1px rgb(0, 0, 0) solid;
   border-radius: 10px;
   background: white;
@@ -451,7 +451,7 @@
 }
 .recipe-details-container .ingredients-container,
 .recipe-details-container .method-container {
-  background: rgb(254, 244, 244);
+  background: rgb(252, 247, 239);
   border: 1px rgb(0, 0, 0) solid;
   border-radius: 10px;
   padding: 1em;
@@ -483,11 +483,11 @@
 }
 
 .recipe-category-title {
-  color: rgb(255, 80, 80);
+  color: orange;
 }
 
 .recipe-details-title {
-  color: rgb(255, 80, 80);
+  color: orange;
 }
 
 .recipe-button-container {
@@ -503,7 +503,7 @@
 }
 .edit-buttons:hover,
 .random-button:hover {
-  color: rgb(255, 80, 80);
+  color: orange;
   transform: scale(1.2);
 }
 
@@ -528,7 +528,7 @@
   align-items: center;
   flex-direction: column;
   width: clamp(300px, 70%, 1000px);
-  background: rgb(254, 244, 244);
+  background: rgb(252, 247, 239);
   padding: 2em;
   gap: 2rem;
   border: 1px rgb(0, 0, 0) solid;
@@ -552,7 +552,7 @@
   font-size: 1rem;
 }
 .modal-button:hover {
-  color: rgb(255, 80, 80);
+  color: orange;
   transform: scale(1.2);
 }
 
@@ -584,8 +584,7 @@ html {
 body {
   font-family: Poppins, sans-serif;
   min-height: 100vh;
-  background: rgb(254, 244, 244);
-  color: rgb(10, 10, 10);
+  background: rgb(252, 247, 239);
 }
 
 a {
@@ -624,8 +623,8 @@ button {
 }
 .submit-button:hover {
   transform: scale(1.1);
-  border: rgb(255, 80, 80) solid 2px;
-  box-shadow: 4px 4px 0px 0px rgba(255, 80, 80, 0.75);
+  border: orange solid 2px;
+  box-shadow: 4px 4px 0px 0px rgba(255, 165, 0, 0.75);
 }
 
 .back-button {
