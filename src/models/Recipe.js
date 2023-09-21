@@ -1,12 +1,3 @@
-//          🌸＞　　 フ
-// 　　　　　| 　-  - |
-// 　 　　　／` ミ＿xノ
-// 　　 　 /　　　  |
-// 　　 　/　ヽ　　 ﾉ
-// 　 　 │　 |　|　|
-// 　／￣|　  |　|　|
-// 　| (￣ヽ＿_ヽ_)__)
-// 　＼二つ
 
 import mongoose from "mongoose";
 
@@ -28,6 +19,7 @@ const recipeSchema = new mongoose.Schema({
     },
     method: {
         type: Array,
+        required: true,
     },
     userOwner: {
         type: mongoose.Schema.Types.ObjectId,
@@ -38,3 +30,19 @@ const recipeSchema = new mongoose.Schema({
 export const Recipe = mongoose.model("Recipe", recipeSchema);
 
 export default Recipe;
+
+
+
+
+
+
+
+//          🌸＞　　 フ
+// 　　　　　| 　-  - |
+// 　 　　　／` ミ＿xノ
+// 　　 　 /　　　  |
+// 　　 　/　ヽ　　 ﾉ
+// 　 　 │　 |　|　|
+// 　／￣|　  |　|　|
+// 　| (￣ヽ＿_ヽ_)__)
+// 　＼二つ

@@ -127,8 +127,8 @@ export async function editPage(req, res) {
 export async function editRecipe(req, res) {
     let id = req.params.id || "";
     try {
-        // USE SCHEMA TO UPDATE CUSTOMER CONSTRUCTOR
         await Recipe.findByIdAndUpdate(id, req.body);
+        console.log("recipe successfully updated")
     } catch (error) {
         console.log(error);
     }

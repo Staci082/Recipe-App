@@ -20,11 +20,11 @@ router.get('/all', allRecipes)
 // POST RECIPE FORM DATA
 router.post('/create', postRecipe)
 
-// GET SAVED RECIPES IDS 
-router.get('/savedRecipes/ids/:userID', getSavedRecipesIds)
+// // // GET SAVED RECIPES IDS 
+// // router.get('/savedRecipes/ids/:userID', getSavedRecipesIds)
 
-// GET SAVED RECIPES 
-router.get('/savedRecipes', getSavedRecipes)
+// // GET SAVED RECIPES 
+// router.get('/savedRecipes', getSavedRecipes)
 
 // // ADD RECIPE FROM URL
 // router.get('/url', urlRecipe)
