@@ -2,6 +2,7 @@ import RecipeForm from "../../Components/recipe-form/RecipeForm.jsx";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom"
+import { ToastSuccess, ToastError } from "../../Hooks/useToasts"
 
 function Edit() {
     const { recipeID } = useParams();
@@ -50,9 +51,10 @@ function Edit() {
         try {
             await axios.put(`http://localhost:5712/edit/${recipeID}`, { ...recipe });
             console.log(recipe);
-            alert("Recipe Updated");
+            ToastSuccess("Recipe updated!")
         } catch (error) {
             console.error(error);
+            ToastError("Oops! Something went wrong!")
         }
     };
 

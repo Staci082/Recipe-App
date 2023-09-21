@@ -45,54 +45,14 @@ function Categories() {
         },
     ];
 
-    // const sliderSettings = {
-    //     dots: false,
-    //     infinite: false,
-    //     speed: 500,
-    //     slidesToShow: 8,
-    //     slidesToScroll: 2,
-    //     initialSlide: 0,
-    //     swipeToSlide:true,
-    //     swipe:true,
-    //     arrows:false,
-    //     responsive: [
-    //         {
-    //             breakpoint: 1024,
-    //             settings: {
-    //                 slidesToShow: 5,
-    //                 slidesToScroll: 3,
-    //                 infinite: true,
-    //                 dots: true,
-    //             },
-    //         },
-    //         {
-    //             breakpoint: 600,
-    //             settings: {
-    //                 slidesToShow: 2,
-    //                 slidesToScroll: 2,
-    //                 initialSlide: 2,
-    //             },
-    //         },
-    //         {
-    //             breakpoint: 480,
-    //             settings: {
-    //                 slidesToShow: 1,
-    //                 slidesToScroll: 1,
-    //             },
-    //         },
-    //     ],
-    // };
-
     return (
         <div className="categories-container">
-            {/* <Slider className="slider" {...sliderSettings} > */}
             {categories.map((item) => (
                 <Link className="cat-item-container" to={`/category${item.href}`} key={item.title}>
                     <img className="cat-item-img" src={item.img} />
                     <h4 className="cat-item-title">{item.title}</h4>
                 </Link>
             ))}
-            {/* </Slider> */}
         </div>
     );
 }

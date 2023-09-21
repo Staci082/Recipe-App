@@ -4,9 +4,11 @@ import { useParams } from "react-router-dom";
 import Pagination from "../pagination/Pagination.jsx";
 import { FaHeart, FaRegHeart } from "react-icons/fa6";
 import UseSearchContext from "../../Context/SearchContext";
+import UseGetUserId from "../../Hooks/useGetUserId.js";
 
 function FilterRecipes() {
     const { input, results } = UseSearchContext();
+    const userId = UseGetUserId()
 
     const { route, category } = useParams();
     const [saveButton, setSaveButton] = useState(false);
@@ -23,11 +25,25 @@ function FilterRecipes() {
                     <h3 className="recipe-title">{recipe.name}</h3>
                     <p className="recipe-category">{recipe.category}</p>
                 </a>
-                <button className="save-icon" onClick={() => setSaveButton(!saveButton)}>
+                <button className="save-icon" onClick={() => handleSaveRecipe(recipe._id)}>
                     {saveButton ? <FaHeart /> : <FaRegHeart />}
                 </button>
             </div>
         ));
+
+    const [savedRecipes, setSavedRecipes] = useState([]);
+    const handleSaveRecipe = async (recipeId) => {
+        try {
+            await axios.post("http://localhost:5712/users/savedrecipes/" + recipeId);
+            setSavedRecipes([...savedRecipes, recipeId]);
+            setSaveButton(true)
+            console.log("test working")
+        } catch (error) {
+            console.error("Error saving recipe:", error);
+            console.log("test not working")
+        }
+    };
+
 
     const displayRecipesList = results.length > 0 
         ? displayRecipes(results) 

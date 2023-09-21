@@ -3,6 +3,7 @@ import { useCookies } from "react-cookie";
 import { Link } from "react-router-dom";
 import { BsFillDropletFill } from "react-icons/bs";
 
+
 function menu() {
     const menuItems = [
         {
@@ -11,7 +12,7 @@ function menu() {
         },
         {
             title: "Saved Recipes",
-            href: "/savedrecipes",
+            href: "/auth/savedrecipes",
         },
         {
             title: "Add Internet Recipe",
@@ -23,7 +24,7 @@ function menu() {
         },
         {
             title: "Grocery List",
-            href: "/list",
+            href: "/auth/list",
         },
     ];
 
@@ -38,6 +39,17 @@ function menu() {
     const changeTheme = (e) => {
         setShowModal(!showModal);
     };
+
+    const openModal = () => {
+        setShowModal(true)
+        if (typeof window != 'undefined' && window.document) {
+            document.body.style.overflow = 'hidden';
+        }
+    }
+    const closeModal = () => {
+        setShowModal(false)
+            document.body.style.overflow = 'unset';
+    }
 
     const themeColors = [
         "red",
@@ -80,13 +92,13 @@ function menu() {
                         </>
                     )}
                     <li className="menuItem">
-                        <a onClick={() => setShowModal(!showModal)}>Theme</a>
+                        <a onClick={openModal}>Theme</a>
                     </li>
                 </ul>
             </div>
             {showModal && (
                 <div className="theme-modal">
-                    <button onClick={() => setShowModal(!showModal)} className="recipe-back-button">
+                    <button onClick={closeModal} className="recipe-back-button">
                         &times;
                     </button>
                     <p className="theme-modal-title">Choose your theme:</p>

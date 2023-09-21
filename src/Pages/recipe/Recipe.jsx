@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate, useParams, useLocation } from "react-router-dom";
 import { FaPencil, FaTrashCan, FaArrowRotateLeft } from "react-icons/fa6";
+import { ToastSuccess, ToastError } from "../../Hooks/useToasts"
 
 function Recipe({ randomRecipe }) {
     
@@ -39,9 +40,10 @@ function Recipe({ randomRecipe }) {
             axios.delete("http://localhost:5712/recipe/" + recipeID);
             setShowModal(false);
             navigate("/category/all");
-            alert("recipe deleted!");
+            ToastSuccess("Recipe deleted!")
         } catch (error) {
             console.log(error);
+            ToastError("Oops! Something went wrong!")
         }
     };
 

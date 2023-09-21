@@ -1,7 +1,16 @@
 import { useNavigate } from "react-router-dom";
 import { HiPlus, HiOutlineXMark } from "react-icons/hi2";
 
-function RecipeForm({ label, recipe, handleChange, handleIngredientChange, handleAddIngredient, handleSubmit, handleDelete }) {
+function RecipeForm({ 
+    label, 
+    recipe, 
+    handleChange, 
+    handleIngredientChange, 
+    handleAddIngredient, 
+    handleAddMethod,
+    handleMethodChange,
+    handleSubmit, 
+    handleDelete }) {
     const navigate = useNavigate();
 	const goBack = () => {
 		navigate(-1);
@@ -19,7 +28,7 @@ function RecipeForm({ label, recipe, handleChange, handleIngredientChange, handl
                     <div className="form-separator">
                         <div className="form-inner-separator">
                             <label htmlFor="title">Name:</label>
-                            <input type="text" name="name" maxlength="33" onChange={handleChange}/>
+                            <input type="text" name="name" maxLength="33" onChange={handleChange}/>
 
                             <label htmlFor="category">Category:</label>
                             <select name="category" className="form-control" onChange={handleChange} required>
@@ -36,7 +45,8 @@ function RecipeForm({ label, recipe, handleChange, handleIngredientChange, handl
                             </select>
 
                             <label htmlFor="method">Instructions:</label>
-                            <textarea className="input-textarea" name="method" onChange={handleChange}></textarea>
+                            <textarea className="input-textarea" name="method" maxLength="300" onChange={handleChange}></textarea>
+                           
                         </div>
 
                         <div className="form-inner-separator">
