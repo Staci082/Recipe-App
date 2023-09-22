@@ -1,7 +1,6 @@
 import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";
 import User from "../models/User.js";
-import GroceryList from "../models/GroceryList.js";
 
 // POST
 // REGISTER USER
@@ -59,6 +58,25 @@ const VerifyToken = (req, res, next) => {
         }
     }
 };
+export default VerifyToken;
+
+export const getList = async (req, res) => {
+    try {
+        const { userId } = req.user;
+        console.log('User ID:', userId); 
+        const user = await User.findById(userId);
+        console.log('User Document:', user);
+        if (!user) {
+            return res.status(404).json({ message: "User not found" });
+        }
+        const groceryList = user.groceryItems;
+        res.json({ groceryList });
+
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ message: "Internal server error" });
+    }
+};
 
 export const GetSavedRecipes = (req, res) => {
     const userId = req.params.id;
@@ -70,40 +88,53 @@ export const GetSavedRecipes = (req, res) => {
     });
 };
 
+export async function addListItem(req, res) {
+    const { userId, itemName } = req.body;
 
-export async function addGroceryList(req, res) {
-    const item = new GroceryList(req.body)
-    
     try {
-        const response = await item.save()
-        res.json(response);
+        // Find the user by their ID
+        const user = await User.findById(userId);
+
+        if (!user) {
+            return res.status(404).json({ message: "User not found" });
+        }
+
+        // Add the grocery item to the user's list
+        user.groceryList.push({ name: itemName, checked: false });
+
+        // Save the updated user document
+        await user.save();
+
+        res.status(201).json({ message: "Grocery item added successfully" });
     } catch (error) {
-        console.log(error)
+        console.log(error);
     }
-    
-
 }
 
-export async function getGroceryList(req, res) {
 
-        const response = await GroceryList.find()
-        res.json(response);
-        console.log(response)
+export async function editListItem(req, res) {
     try {
+        const { id } = req.params;
 
-    } catch (error) {   
-        console.log(error)
+        const groceryItem = await User.findById(id, "groceryItems");
+        console.log(groceryItem);
+        if (!groceryItem) {
+            return res.status(404).json({ message: "Grocery item not found" });
+        }
+
+        // Save the updated item
+        await groceryItem.save();
+        console.log(groceryItem.checked);
+    } catch (error) {
+        console.log(error);
     }
 }
 
-export async function editGroceryList(req, res) {
-    
-    // try {
-        const {id} = req.params
-        console.log(id)
-    // } catch (error) {
-    //     console.log(error)
-    // }
+export async function deleteListItem(req, res) {
+    let id = req.params.id || "";
+    try {
+        await User.findByIdAndDelete(id, "groceryItems");
+    } catch (error) {
+        console.log(error);
+    }
 }
-
-export default VerifyToken;

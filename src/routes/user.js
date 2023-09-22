@@ -1,5 +1,5 @@
 import express from 'express'
-import VerifyToken, { Register, Login, GetSavedRecipes, addGroceryList, getGroceryList, editGroceryList } from '../controllers/userController.js'
+import VerifyToken, { Register, Login, GetSavedRecipes, addListItem, getList, editListItem, deleteListItem } from '../controllers/userController.js'
 
 const router = express.Router();
 
@@ -9,9 +9,10 @@ router.post('/login', Login)
 router.post("/savedrecipes/:id",)
 router.get("/savedrecipes", VerifyToken, GetSavedRecipes)
 
-router.post("/list", addGroceryList)
-router.get("/list", getGroceryList)
-router.put("/list/:id", editGroceryList)
+router.get("/list", VerifyToken, getList)
+router.post("/list", addListItem)
+router.put("/list/:id", editListItem)
+router.delete("/list/:id", deleteListItem)
 
 // EXPORT
 export { router as userRouter }; 
