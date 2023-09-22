@@ -1,11 +1,11 @@
-function form({ username, setUsername, password, setPassword, label, onSubmit }) {
+function form({ username, setUsername, password, setPassword, label, handleSubmit }) {
     return (
         <div className="global-container">
             <div className="auth-container">
                 <a href="/" className="back-button">
                     &times;
                 </a>
-                <form className="auth-form" onSubmit={onSubmit}>
+                <form className="auth-form" onSubmit={handleSubmit}>
                     <h2>{label}</h2>
 
                     <div className="form-group">
@@ -18,7 +18,7 @@ function form({ username, setUsername, password, setPassword, label, onSubmit })
                         <input type="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} />
                     </div>
 
-                    <button type="submit" className="submit-button">
+                    <button type="submit" className="submit-button" >
                         {label}
                     </button>
                 </form>

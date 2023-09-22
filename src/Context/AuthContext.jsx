@@ -16,6 +16,24 @@ export function AuthProvider({ children }) {
 
     const navigate = useNavigate();
 
+    const register = async (userData) => {
+        try {
+            const response = await axios.post("http://localhost:5712/auth/register", userData);
+            const { token, userID } = response.data;
+            const decoded = jwt_decode(token);
+
+            localStorage.setItem("user", JSON.stringify(decoded));
+            setState(decoded);
+            setIsLoggedIn(true);
+            localStorage.setItem("userID", userID);
+            ToastSuccess("test!");
+        } catch (error) {
+            console.error(error);
+            setIsLoggedIn(false);
+
+        }
+    };
+
     const login = (username, password) => {
         axios
             .post("http://localhost:5712/auth/login", {
@@ -43,25 +61,24 @@ export function AuthProvider({ children }) {
         setIsLoggedIn(false);
         ToastSuccess("You have been logged out.");
     };
-
+    
     const checkIsLoggedIn = () => {
-        // Check if there's a user in local storage and set the isLoggedIn state accordingly
-        const user = localStorage.getItem("user");
-        setIsLoggedIn(!!user); // Set isLoggedIn to true if user is found, otherwise false
+    const user = localStorage.getItem("user");
+    setIsLoggedIn(user)
     };
 
     useEffect(() => {
-        checkIsLoggedIn(); // Call the function when the component mounts
+        checkIsLoggedIn();
     }, []);
 
     return (
         <AuthContext.Provider
             value={{
                 state,
+                register,
                 login,
                 logout,
-                isLoggedIn,
-                // register
+                isLoggedIn
             }}
         >
             {children}

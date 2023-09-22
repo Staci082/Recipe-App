@@ -8,7 +8,7 @@ function Login() {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
 
-    const onSubmit = async (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault();
 
         try {
@@ -18,7 +18,7 @@ function Login() {
         }
     };
 
-    return <AuthForm username={username} setUsername={setUsername} password={password} setPassword={setPassword} label="login" onSubmit={onSubmit} />;
+    return <AuthForm username={username} setUsername={setUsername} password={password} setPassword={setPassword} label="login" handleSubmit={handleSubmit} />;
 }
 
 export default Login;

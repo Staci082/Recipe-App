@@ -1,38 +1,39 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom"
-import axios from "axios";
+import { useState } from "react"
+import { useNavigate } from "react-router-dom";
 import AuthForm from "../../Components/auth-form/AuthForm";
+import { useAuth } from "../../Context/AuthContext";
+import { ToastSuccess, ToastError } from "../../Hooks/useToasts";
 
 function Register() {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
 
-    const navigate = useNavigate()
+    const navigate = useNavigate();
+    const { register } = useAuth();
 
-    const onSubmit = async (e) => {
-        e.preventDefault()
-
+    const handleSubmit = (e) => {
+        e.preventDefault();
         try {
-            await axios.post("http://localhost:5712/auth/register", {
+            const userData = {
                 username,
-                password
-            })
-            alert("Registration completed! Please log in.")
-            navigate("/login")
+                password,
+                };
+            register(userData);
+            ToastSuccess("Registered successfully!");
+            navigate("/");
         } catch (error) {
-            console.error(error)
+            console.error(error);
+            ToastError("Oops! Somthing went wrong!");
         }
-    }
+    };
 
-    return (
-        <AuthForm 
-        username={username} 
-        setUsername={setUsername} 
-        password={password}
-        setPassword={setPassword}
-        label="register"
-        onSubmit={onSubmit} />
-    );
+    return <AuthForm 
+                username={username} 
+                setUsername={setUsername} 
+                password={password} 
+                setPassword={setPassword} 
+                label="register" 
+                handleSubmit={handleSubmit} />;
 }
 
 export default Register;
