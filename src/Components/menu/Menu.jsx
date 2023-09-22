@@ -1,8 +1,7 @@
 import { useState } from "react";
-import { useCookies } from "react-cookie";
 import { Link } from "react-router-dom";
 import { BsFillDropletFill } from "react-icons/bs";
-
+import { useAuth } from "../../Context/AuthContext";
 
 function menu() {
     const menuItems = [
@@ -28,12 +27,12 @@ function menu() {
         },
     ];
 
-    const [showModal, setShowModal] = useState(false);
-    const [cookies, setCookies] = useCookies(["access_token"]);
+    const { isLoggedIn, logout } = useAuth();
 
-    const logout = () => {
-        setCookies("access_token", "");
-        window.localStorage.removeItem("userID");
+    const [showModal, setShowModal] = useState(false);
+
+    const handleLogout = () => {
+        logout();
     };
 
     const changeTheme = (e) => {
@@ -41,23 +40,17 @@ function menu() {
     };
 
     const openModal = () => {
-        setShowModal(true)
-        if (typeof window != 'undefined' && window.document) {
-            document.body.style.overflow = 'hidden';
+        setShowModal(true);
+        if (typeof window != "undefined" && window.document) {
+            document.body.style.overflow = "hidden";
         }
-    }
+    };
     const closeModal = () => {
-        setShowModal(false)
-            document.body.style.overflow = 'unset';
-    }
+        setShowModal(false);
+        document.body.style.overflow = "unset";
+    };
 
-    const themeColors = [
-        "red",
-        "orange",
-        "green",
-        "blue",
-        "purple"
-    ]
+    const themeColors = ["red", "orange", "green", "blue", "purple"];
 
     return (
         <>
@@ -73,7 +66,7 @@ function menu() {
 
                 <h5>Settings</h5>
                 <ul>
-                    {!cookies.access_token ? (
+                    {!isLoggedIn ? (
                         <>
                             <li className="menuItem">
                                 <Link to="/login">Log in </Link>
@@ -85,7 +78,7 @@ function menu() {
                     ) : (
                         <>
                             <li className="menuItem">
-                                <Link to="/" onClick={logout} className="logout-button">
+                                <Link to="/" onClick={handleLogout} className="logout-button">
                                     Log out
                                 </Link>
                             </li>
@@ -102,13 +95,13 @@ function menu() {
                         &times;
                     </button>
                     <p className="theme-modal-title">Choose your theme:</p>
-                    
+
                     <div className="theme-button-container">
-                    {themeColors.map((color) => (
-                        <button onClick={changeTheme} className={`theme-button ${color}`}>
-                        <BsFillDropletFill />
-                    </button>
-                    ))}
+                        {themeColors.map((color) => (
+                            <button onClick={changeTheme} className={`theme-button ${color}`}>
+                                <BsFillDropletFill />
+                            </button>
+                        ))}
                     </div>
                 </div>
             )}
