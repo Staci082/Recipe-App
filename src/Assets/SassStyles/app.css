@@ -410,6 +410,10 @@
   color: grey;
 }
 
+.crossed-out {
+  text-decoration: line-through;
+}
+
 .grocery-input {
   height: 40px;
   outline: none;
@@ -585,6 +589,7 @@ body {
   font-family: Poppins, sans-serif;
   min-height: 100vh;
   background: rgb(252, 247, 239);
+  background-size: 60px 60px;
 }
 
 a {

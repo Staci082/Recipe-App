@@ -1,38 +1,28 @@
 import { useState } from "react";
-import { useCookies } from "react-cookie";
-import { useNavigate } from "react-router-dom";
-import axios from "axios";
+// import { useNavigate } from "react-router-dom";
 import AuthForm from "../../Components/auth-form/AuthForm";
+import { useAuth } from "../../Context/AuthContext"
 
 function Login() {
+    const { login } = useAuth(); // Access the login function from the authentication context
+
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
-
-    const [_, setCookies] = useCookies(["access_token"]);
-
-    const navigate = useNavigate();
 
     const onSubmit = async (e) => {
         e.preventDefault();
 
         try {
-            const response = await axios.post("http://localhost:5712/auth/login", {
-                username,
-                password,
-            });
-
-            setCookies("access_token", response.data.token);
-            window.localStorage.setItem("userID", response.data.userID);
-            navigate("/");
+            login(username, password); // Call the login function from the context
+            // The login function will handle setting cookies, local storage, and navigation
         } catch (error) {
             console.error(error);
         }
     };
 
-    return (
-            <AuthForm username={username} setUsername={setUsername} password={password} setPassword={setPassword} label="login" onSubmit={onSubmit} />
+    // Rest of your component...
 
-    );
+    return <AuthForm username={username} setUsername={setUsername} password={password} setPassword={setPassword} label="login" onSubmit={onSubmit} />;
 }
 
 export default Login;

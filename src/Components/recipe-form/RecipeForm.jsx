@@ -7,8 +7,6 @@ function RecipeForm({
     handleChange, 
     handleIngredientChange, 
     handleAddIngredient, 
-    handleAddMethod,
-    handleMethodChange,
     handleSubmit, 
     handleDelete }) {
     const navigate = useNavigate();

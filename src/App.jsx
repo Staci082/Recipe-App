@@ -1,6 +1,7 @@
 import "./Assets/SassStyles/app.scss";
 import { Routes, Route } from "react-router-dom";
 import { useState } from "react"
+
  import { SearchProvider } from "./Context/SearchContext"
 
 // IMPORT PAGES
@@ -58,7 +59,7 @@ const router = [
 
 
 function App() {
-
+  
     return (
         <>
         <SearchProvider>
