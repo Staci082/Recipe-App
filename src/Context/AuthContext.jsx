@@ -61,7 +61,7 @@ export function AuthProvider({ children }) {
         setIsLoggedIn(false);
         ToastSuccess("You have been logged out.");
     };
-    
+
     const checkIsLoggedIn = () => {
     const user = localStorage.getItem("user");
     setIsLoggedIn(user)
@@ -74,6 +74,7 @@ export function AuthProvider({ children }) {
     return (
         <AuthContext.Provider
             value={{
+                AuthContext,
                 state,
                 register,
                 login,

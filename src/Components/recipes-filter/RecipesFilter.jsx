@@ -2,11 +2,12 @@ import { useState, useEffect, useContext } from "react";  // keep "useContext" h
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import Pagination from "../pagination/Pagination.jsx";
+import { ToastSuccess, ToastError } from "../../Hooks/useToasts.js";
 import { FaHeart, FaRegHeart } from "react-icons/fa6";
 import UseSearchContext from "../../Context/SearchContext.jsx";
 
 
-function FilterRecipes() {
+function FilterRecipes({isLoggedIn}) {
     const { input, results } = UseSearchContext();
 
     const { route, category } = useParams();
@@ -26,20 +27,28 @@ function FilterRecipes() {
                 </a>
                 <button className="save-icon" onClick={() => handleSaveRecipe(recipe._id)}>
                     {saveButton ? <FaHeart /> : <FaRegHeart />}
+                    
                 </button>
             </div>
         ));
 
     const [savedRecipes, setSavedRecipes] = useState([]);
+
+    
     const handleSaveRecipe = async (recipeId) => {
+        if (!isLoggedIn) {
+            ToastError("You need to be logged in to save a recipe.");
+            return; // Don't proceed if the user is not logged in
+        }
+
         try {
-            await axios.post("http://localhost:5712/users/savedrecipes/" + recipeId);
+            await axios.post("http://localhost:5712/auth/savedrecipes/" + recipeId);
             setSavedRecipes([...savedRecipes, recipeId]);
-            setSaveButton(true)
-            console.log("test working")
+            setSaveButton(true);
+            ToastError("Recipe saved!");
         } catch (error) {
             console.error("Error saving recipe:", error);
-            console.log("test not working")
+            console.log("Recipe could not be saved.");
         }
     };
 
