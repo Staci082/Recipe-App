@@ -6,6 +6,9 @@
     gap: 0.5em;
     font-weight: bold;
     border-radius: $border-radius-sm;
+    @include md {
+        transform: scale(0.5);
+    }
 }
 
 .pagination a {

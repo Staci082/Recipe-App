@@ -8,9 +8,8 @@
     gap: 2.5em;
     display: flex;
     flex-wrap: wrap;
-    @include md {
-        justify-content: center;
-    }
+    justify-content: center;
+
 }
 
 .recipe-container-header {

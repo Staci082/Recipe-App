@@ -1,12 +1,10 @@
 import { useState } from "react";
-import Search from "../search/Search"
+import Search from "../search/Search";
 import { CgLayoutGridSmall } from "react-icons/cg";
-import Menu from "../menu/Menu"
-
+import Menu from "../menu/Menu";
 
 function Header() {
-
-    const [openMenu, setOpenMenu] = useState(true)
+    const [openMenu, setOpenMenu] = useState(true);
 
     return (
         <>
@@ -15,16 +13,12 @@ function Header() {
                         <Menu/>
                     </div> */}
                 <div className="logo-container">
-                <img width="48" height="48" src="https://img.icons8.com/color/48/kawaii-taco.png" alt="kawaii-taco"/>
+                    <img width="48" height="48" src="https://img.icons8.com/color/48/kawaii-taco.png" alt="kawaii-taco" />
                     <p className="logo-title">Fiesta Flavors</p>
                 </div>
 
-                <Search/>
-                {/* <button onClick={() => {setOpenMenu(!openMenu)}}>
-                    <CgLayoutGridSmall className="menu-button"/>
-                    
-                </button> */}
-
+                <Search />
+                <CgLayoutGridSmall className="menu-button" />
             </div>
         </>
     );

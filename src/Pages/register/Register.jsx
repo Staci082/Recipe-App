@@ -9,7 +9,7 @@ function Register() {
     const [password, setPassword] = useState("");
 
     const navigate = useNavigate();
-    const { register } = useAuth();
+    const { register} = useAuth();
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -19,6 +19,7 @@ function Register() {
                 password,
                 };
             register(userData);
+
             ToastSuccess("Registered successfully!");
             navigate("/");
         } catch (error) {

@@ -102,4 +102,7 @@ button {
     flex-direction: column;
     justify-content: center;
     margin: 0 2em;
+    @include md {
+        margin: 0;
+    }
 }

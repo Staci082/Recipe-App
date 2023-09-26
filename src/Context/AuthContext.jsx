@@ -24,8 +24,8 @@ export function AuthProvider({ children }) {
 
             localStorage.setItem("user", JSON.stringify(decoded));
             setState(decoded);
-            setIsLoggedIn(true);
             localStorage.setItem("userID", userID);
+            setIsLoggedIn(true);
             ToastSuccess("test!");
         } catch (error) {
             console.error(error);

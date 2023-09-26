@@ -4,6 +4,9 @@
     justify-content: space-between;
     margin: 2em 0;
     padding: 0 1em;
+    @include sm {
+        padding: 0;
+    }
 }
 
 .logo-container {
@@ -18,23 +21,23 @@
     }
 }
 
-// .menu-button {
-//     display: none;
-//     margin-right: -15px;
-//     font-size: 3.5rem;
-//     z-index: 5;
-//     @include lg {
-//         display: flex;
-//     }
-// }
+.menu-button {
+    display: none;
+    font-size: 3rem;
+    margin-right: -5px;
+    @include md {
+        display: flex;
+    }
+}
 
 .search-bar {
     outline: none;
     height: 40px;
-    width: clamp(250px, 35vw, 600px);
+    width: clamp(200px, 30vw, 600px);
     @include box;
     padding: 0 1em;
     border: none;
+    margin-right: -5px;
 }
 
 .search-icon {
