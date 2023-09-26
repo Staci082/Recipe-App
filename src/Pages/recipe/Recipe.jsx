@@ -49,6 +49,14 @@ function Recipe({ randomRecipe }) {
         }
     };
 
+    const checkLoggedIn = () => {
+        if (!isLoggedIn) {
+            ToastError("You must be logged in to use this feature.")
+        } else {
+            navigate(`/edit/${recipeID}`);
+        }
+    }
+
     const openModal = () => {
         if (isLoggedIn) {
             setShowModal(true)
@@ -101,9 +109,9 @@ function Recipe({ randomRecipe }) {
                             )}
 
 
-                            <a href={`/edit/${recipeID}`} className="edit-buttons">
+                            <button onClick={checkLoggedIn} className="edit-buttons">
                                 <FaPencil size={26} />
-                            </a>
+                            </button>
 
                             <button onClick={openModal} className="edit-buttons">
                                 <FaTrashCan size={26} />
