@@ -5,10 +5,12 @@ import Pagination from "../pagination/Pagination.jsx";
 import { ToastSuccess, ToastError } from "../../Hooks/useToasts.js";
 import { FaHeart, FaRegHeart } from "react-icons/fa6";
 import UseSearchContext from "../../Context/SearchContext.jsx";
+import { useAuth } from "../../Context/AuthContext.jsx"
 
 
-function FilterRecipes({isLoggedIn}) {
+function FilterRecipes() {
     const { input, results } = UseSearchContext();
+    const { isLoggedIn } = useAuth();
 
     const { route, category } = useParams();
     const [saveButton, setSaveButton] = useState(false);
@@ -39,6 +41,8 @@ function FilterRecipes({isLoggedIn}) {
         if (!isLoggedIn) {
             ToastError("You need to be logged in to save a recipe.");
             return; // Don't proceed if the user is not logged in
+        } else {
+            ToastSuccess("test")
         }
 
         try {

@@ -3,7 +3,8 @@ import AuthForm from "../../Components/auth-form/AuthForm";
 import { useAuth } from "../../Context/AuthContext"
 
 function Login() {
-    const { login } = useAuth();
+    const { login, isLoggedIn } = useAuth();
+    
 
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");

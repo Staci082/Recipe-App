@@ -14,10 +14,6 @@ function menu() {
             href: "/auth/savedrecipes",
         },
         {
-            title: "Add Internet Recipe",
-            href: "/url",
-        },
-        {
             title: "Get Random Recipe",
             href: "/recipe/random",
         },

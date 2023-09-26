@@ -2,14 +2,16 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate, useParams, useLocation } from "react-router-dom";
 import { FaPencil, FaTrashCan, FaArrowRotateLeft } from "react-icons/fa6";
-import { ToastSuccess, ToastError } from "../../Hooks/useToasts"
+import { useAuth } from "../../Context/AuthContext";
+import { ToastSuccess, ToastError } from "../../Hooks/useToasts";
 
 function Recipe({ randomRecipe }) {
-    
+    const { isLoggedIn } = useAuth();
     const params = useParams();
     const recipeID = params.id;
     const location = useLocation();
     const navigate = useNavigate();
+
 
     const [recipe, setRecipe] = useState([]);
     const [showModal, setShowModal] = useState(false);
@@ -48,11 +50,16 @@ function Recipe({ randomRecipe }) {
     };
 
     const openModal = () => {
-        setShowModal(true)
-        if (typeof window != 'undefined' && window.document) {
-            document.body.style.overflow = 'hidden';
+        if (isLoggedIn) {
+            setShowModal(true)
+            if (typeof window != 'undefined' && window.document) {
+                document.body.style.overflow = 'hidden';
+            }
+        } else {
+            ToastError("You must be logged in to use this feature!")
         }
     }
+
     const closeModal = () => {
         setShowModal(false)
             document.body.style.overflow = 'unset';
@@ -92,9 +99,12 @@ function Recipe({ randomRecipe }) {
                                     <FaArrowRotateLeft size={28} />
                                 </a>
                             )}
+
+
                             <a href={`/edit/${recipeID}`} className="edit-buttons">
                                 <FaPencil size={26} />
                             </a>
+
                             <button onClick={openModal} className="edit-buttons">
                                 <FaTrashCan size={26} />
                             </button>

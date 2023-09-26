@@ -29,8 +29,7 @@ export function AuthProvider({ children }) {
             ToastSuccess("test!");
         } catch (error) {
             console.error(error);
-            setIsLoggedIn(false);
-
+            setIsLoggedIn(false)
         }
     };
 
@@ -50,7 +49,7 @@ export function AuthProvider({ children }) {
             })
             .catch((error) => {
                 console.error(error);
-                setIsLoggedIn(false);
+                setIsLoggedIn(false)
                 ToastError("Oops! Somthing went wrong!");
             });
     };
@@ -63,8 +62,11 @@ export function AuthProvider({ children }) {
     };
 
     const checkIsLoggedIn = () => {
-    const user = localStorage.getItem("user");
-    setIsLoggedIn(user)
+        const user = localStorage.getItem("user");
+        if (user) {
+            setState(JSON.parse(user))
+            setIsLoggedIn(true);
+        } 
     };
 
     useEffect(() => {

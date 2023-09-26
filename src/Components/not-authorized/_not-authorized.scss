@@ -1,0 +1,16 @@
+.no-auth-container {
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: $salmon;
+    margin: -0.5em;
+    & .taco-gif {
+        width: 30%;
+    }
+    & .no-auth-text {
+        font-size: 2.5rem;
+    }
+}

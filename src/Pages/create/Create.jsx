@@ -1,11 +1,13 @@
 import RecipeForm from "../../Components/recipe-form/RecipeForm";
 import { useState } from "react";
 import axios from "axios";
-import { ToastSuccess, ToastError } from "../../Hooks/useToasts"
-
+import { ToastSuccess, ToastError } from "../../Hooks/useToasts";
+import { useAuth } from "../../Context/AuthContext";
 import { useNavigate } from "react-router-dom";
+import NotAuthorized from "../../Components/not-authorized/NotAuthorized";
 
 function Create() {
+    const { isLoggedIn } = useAuth();
     const navigate = useNavigate();
 
     const [recipe, setRecipe] = useState({
@@ -38,10 +40,10 @@ function Create() {
             await axios.post("http://localhost:5712/create", { ...recipe });
             console.log(recipe);
             navigate("/");
-            ToastSuccess("Recipe created!")
+            ToastSuccess("Recipe created!");
         } catch (error) {
             console.error(error);
-            ToastError("Oops! Something went wrong!")
+            ToastError("Oops! Something went wrong!");
         }
     };
 
@@ -55,9 +57,18 @@ function Create() {
 
     return (
         <>
-            <RecipeForm label="create" recipe={recipe} handleChange={handleChange} handleIngredientChange={handleIngredientChange} handleAddIngredient={handleAddIngredient} handleSubmit={handleSubmit} handleDelete={handleDelete} />
+        {isLoggedIn ?
+         <RecipeForm 
+         label="create"
+          recipe={recipe} 
+          handleChange={handleChange} 
+          handleIngredientChange={handleIngredientChange} 
+          handleAddIngredient={handleAddIngredient} 
+          handleSubmit={handleSubmit} 
+          handleDelete={handleDelete} /> 
+          : <NotAuthorized/> }
         </>
-    );
+    )
 }
 
 export default Create;

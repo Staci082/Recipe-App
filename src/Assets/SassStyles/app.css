@@ -129,6 +129,23 @@
   box-shadow: 4px 6px 0px 0px rgba(0, 0, 0, 0.75);
 }
 
+.no-auth-container {
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #fbd1d1;
+  margin: -0.5em;
+}
+.no-auth-container .taco-gif {
+  width: 30%;
+}
+.no-auth-container .no-auth-text {
+  font-size: 2.5rem;
+}
+
 .pagination {
   display: flex;
   justify-content: center;
