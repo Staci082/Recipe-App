@@ -19,7 +19,6 @@
 @import "../../Pages/error/error";
 @import "../../Pages/grocery-list/groceryList";
 @import "../../Pages/recipe/recipe";
-@import "../../Pages/url-recipe/url-recipe";
 
 // GLOBAL STYLING
 html {
@@ -76,7 +75,6 @@ button {
     @include backButton;
 }
 
-// APP STYLING
 
 .global-container {
     display: flex;

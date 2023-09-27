@@ -172,9 +172,10 @@
   font-weight: bold;
   border-radius: 5px;
 }
-@media (max-width: 720px) {
+@media (max-width: 480px) {
   .pagination {
-    transform: scale(0.5);
+    transform: scale(0.8);
+    padding-right: 10%;
   }
 }
 
@@ -185,6 +186,10 @@
 }
 .pagination a:hover {
   background: orange;
+}
+
+.pagination-arrows {
+  padding-top: 6px;
 }
 
 .pagination .pagination-active a {
@@ -249,26 +254,6 @@
   margin-right: 5px;
 }
 
-.form-separator {
-  display: flex;
-  justify-content: space-around;
-}
-@media (max-width: 720px) {
-  .form-separator {
-    flex-direction: column;
-  }
-}
-
-.form-inner-separator {
-  position: relative;
-  position: relative;
-  outline: none;
-  width: clamp(300px, 40vw, 300px);
-  flex-direction: column;
-  margin: 2em;
-  gap: 1em;
-}
-
 .recipe-form {
   display: flex;
   flex-direction: column;
@@ -298,8 +283,28 @@
   width: 96.5%;
 }
 .recipe-form textarea {
-  height: 150px;
+  height: 400px;
   padding-top: 1em;
+}
+
+.form-separator {
+  display: flex;
+  justify-content: space-around;
+}
+@media (max-width: 720px) {
+  .form-separator {
+    flex-direction: column;
+  }
+}
+
+.form-inner-separator {
+  position: relative;
+  position: relative;
+  outline: none;
+  width: clamp(300px, 40vw, 300px);
+  flex-direction: column;
+  margin: 2em;
+  gap: 1em;
 }
 
 .add-ingredient-button {
@@ -593,27 +598,6 @@
 .modal-button:hover {
   color: orange;
   transform: scale(1.2);
-}
-
-.url-form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin: 0 1em;
-}
-.url-form input {
-  height: 40px;
-  outline: none;
-  padding: 0 0.5em;
-  margin: 0.8em 0 1.5em 0;
-  width: 90%;
-  font-family: inherit;
-  font-size: 1rem;
-  box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.75);
-  border-radius: 5px;
-  box-shadow: 4px 6px 0px 0px rgba(0, 0, 0, 0.75);
-  width: clamp(300px, 25vw, 450px);
 }
 
 html {

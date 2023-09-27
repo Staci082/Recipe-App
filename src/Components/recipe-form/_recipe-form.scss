@@ -1,18 +1,4 @@
 
-.form-separator {
-    display: flex;
-    justify-content: space-around;
-    @include md{
-        flex-direction: column;
-    }
-
-}
-
-.form-inner-separator {
-    position: relative;
-    @include form;
-}
-
 .recipe-form {
     display: flex;
     flex-direction: column;
@@ -23,7 +9,6 @@
     & label {
         @include label;
     }
-
 
     & input,
     textarea,
@@ -36,9 +21,23 @@
     }
 
     & textarea {
-        height: 150px;
+        height: 400px;
         padding-top: 1em;
     }
+}
+
+.form-separator {
+    display: flex;
+    justify-content: space-around;
+    @include md{
+        flex-direction: column;
+    }
+
+}
+
+.form-inner-separator {
+    position: relative;
+    @include form;
 }
 
 .add-ingredient-button{

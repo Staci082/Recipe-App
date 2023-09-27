@@ -1,25 +1,27 @@
 import RecipeForm from "../../Components/recipe-form/RecipeForm.jsx";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { useParams } from "react-router-dom"
-import { ToastSuccess, ToastError } from "../../Hooks/useToasts"
+import { useParams, useNavigate } from "react-router-dom";
+import { ToastSuccess, ToastError } from "../../Hooks/useToasts";
 
 function Edit() {
-    const { recipeID } = useParams();
+    const { id } = useParams();
+    const navigate = useNavigate()
 
     const [recipe, setRecipe] = useState({
         name: "",
         category: "",
         ingredients: [],
-        method: [],
+        method: [], // Initialize as an empty array
     });
-
     useEffect(() => {
         // Fetch the existing recipe data for the specified recipeID
         const fetchRecipeData = async () => {
             try {
-                const response = await axios.get(`http://localhost:5712/recipe/${recipeID}`, { ...recipe });
-                const existingRecipe = response.data; 
+                const response = await axios.get("http://localhost:5712/recipe/" + id);
+                const existingRecipe = response.data;
+
+                console.log("Response data:", existingRecipe);
                 setRecipe(existingRecipe);
             } catch (error) {
                 console.error(error);
@@ -27,7 +29,7 @@ function Edit() {
         };
 
         fetchRecipeData();
-    }, [recipeID]);
+    }, [id]);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -49,12 +51,12 @@ function Edit() {
     const handleSubmit = async (event) => {
         event.preventDefault();
         try {
-            await axios.put(`http://localhost:5712/edit/${recipeID}`, { ...recipe });
-            console.log(recipe);
-            ToastSuccess("Recipe updated!")
+            ToastSuccess("Recipe updated!");
+            await axios.put(`http://localhost:5712/edit/${id}`, { ...recipe });
+            navigate("/")
         } catch (error) {
             console.error(error);
-            ToastError("Oops! Something went wrong!")
+            ToastError("Oops! Something went wrong!");
         }
     };
 
@@ -64,16 +66,18 @@ function Edit() {
         setRecipe({ ...recipe, ingredients: newArray });
     };
 
-    console.log(recipe);
 
-    return <RecipeForm 
-                label="edit" 
-                recipe={recipe} 
-                handleChange={handleChange} 
-                handleIngredientChange={handleIngredientChange} 
-                handleAddIngredient={handleAddIngredient}
-                handleSubmit={handleSubmit} 
-                handleDelete={handleDelete} />;
+    return (
+        <RecipeForm
+            label="edit"
+            initialRecipeData={recipe} // Pass the initial recipe data correctly
+            handleChange={handleChange}
+            handleIngredientChange={handleIngredientChange}
+            handleAddIngredient={handleAddIngredient}
+            handleSubmit={handleSubmit}
+            handleDelete={handleDelete}
+        />
+    );
 }
 
 export default Edit;

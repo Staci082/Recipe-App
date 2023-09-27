@@ -3,7 +3,7 @@ import { HiPlus, HiOutlineXMark } from "react-icons/hi2";
 
 function RecipeForm({ 
     label, 
-    recipe, 
+    initialRecipeData, 
     handleChange, 
     handleIngredientChange, 
     handleAddIngredient, 
@@ -13,6 +13,8 @@ function RecipeForm({
 	const goBack = () => {
 		navigate(-1);
 	}
+
+    const recipe = initialRecipeData
    
     return (
         <>
@@ -26,11 +28,11 @@ function RecipeForm({
                     <div className="form-separator">
                         <div className="form-inner-separator">
                             <label htmlFor="title">Name:</label>
-                            <input type="text" name="name" maxLength="33" onChange={handleChange}/>
+                            <input type="text" name="name" maxLength="33" value={recipe.name  || ""} onChange={handleChange}/>
 
                             <label htmlFor="category">Category:</label>
                             <select name="category" className="form-control" onChange={handleChange} required>
-                                <option value="">
+                                <option value={recipe.category  || ""}>
                                     Select category
                                 </option>
                                 <option value="appetizer">Appetizer</option>
@@ -43,7 +45,7 @@ function RecipeForm({
                             </select>
 
                             <label htmlFor="method">Instructions:</label>
-                            <textarea className="input-textarea" name="method" maxLength="300" onChange={handleChange}></textarea>
+                            <textarea className="input-textarea" name="method" maxLength="300" value={recipe.method  || ""} onChange={handleChange}></textarea>
                            
                         </div>
 
