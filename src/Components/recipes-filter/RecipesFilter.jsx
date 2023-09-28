@@ -20,46 +20,22 @@ function FilterRecipes() {
     const recipesPerPage = 15;
     const pagesVisited = pageNumber * recipesPerPage;
 
-    const isRecipeSaved = (recipeId) => {
-        return savedRecipes.includes(recipeId);
-      };
-
     const displayRecipes = (recipeList) =>
-    recipeList.slice(pagesVisited, pagesVisited + recipesPerPage).map((recipe) => {
-      const recipeId = recipe._id;
-      const saved = isRecipeSaved(recipeId);
-  
-      const handleToggleSave = () => {
-        if (!isLoggedIn) {
-          ToastError("You need to be logged in to save a recipe.");
-          return;
-        }
-  
-        if (saved) {
-          // Remove the recipe from savedRecipes
-          const updatedSavedRecipes = savedRecipes.filter((id) => id !== recipeId);
-          setSavedRecipes(updatedSavedRecipes);
-          ToastSuccess("Recipe removed from saved recipes!");
-        } else {
-          // Add the recipe to savedRecipes
-          const updatedSavedRecipes = [...savedRecipes, recipeId];
-          setSavedRecipes(updatedSavedRecipes);
-          ToastSuccess("Recipe saved!");
-        }
-      };
-  
-      return (
-        <div className="recipe" key={recipe._id}>
-          <a href={`/recipe/${recipe._id}`} className="recipe-title-container">
-            <h3 className="recipe-title">{recipe.name}</h3>
-            <p className="recipe-category">{recipe.category}</p>
-          </a>
-          <button className="save-icon" onClick={handleToggleSave}>
-            {saved ? <FaHeart /> : <FaRegHeart />}
-          </button>
-        </div>
-      );
-    });
+        recipeList.slice(pagesVisited, pagesVisited + recipesPerPage).map((recipe) => {
+            const isRecipeSaved = savedRecipes.includes(recipe._id);
+            return (
+                <div className="recipe" key={recipe._id}>
+                    <a href={`/recipe/${recipe._id}`} className="recipe-title-container">
+                        <h3 className="recipe-title">{recipe.name}</h3>
+                        <p className="recipe-category">{recipe.category}</p>
+                    </a>
+                    <button className="save-icon" onClick={() => handleSaveRecipe(recipe._id)}>
+                        {isRecipeSaved ? <FaHeart /> : <FaRegHeart />}
+                    </button>
+                </div>
+            );
+        });
+
 
     const handleSaveRecipe = async (recipeId) => {
         if (!isLoggedIn) {
@@ -109,8 +85,6 @@ function FilterRecipes() {
 
         fetchRecipes();
     }, [route, recipes]);
-
-
 
     return (
         <>
