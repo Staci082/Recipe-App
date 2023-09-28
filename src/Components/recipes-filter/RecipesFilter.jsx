@@ -68,6 +68,22 @@ function FilterRecipes() {
         }
     };
 
+    useEffect(() => {
+        if (isLoggedIn) {
+            try {
+                const userId = JSON.parse(localStorage.getItem("user")).userId;
+                const fetchUser = async () => {
+                    const response = await axios.get(`http://localhost:5712/auth/user/${userId}`);
+                    const userData = response.data;
+                    setSavedRecipes(userData.savedRecipes);
+                };
+                fetchUser();
+            } catch (error) {
+                console.error("Error fetching user data:", error);
+            }
+        }
+    }, [isLoggedIn]);
+
     const displayRecipesList = results.length > 0 ? displayRecipes(results) : displayRecipes(recipes);
 
     const pageCount = results.length > 0 ? Math.ceil(results.length / recipesPerPage) : Math.ceil(recipes.length / recipesPerPage);
