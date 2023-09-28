@@ -42,23 +42,26 @@ function FilterRecipes() {
             ToastError("You need to be logged in to save a recipe.");
             return;
         }
-    
         try {
             const userId = JSON.parse(localStorage.getItem("user")).userId;
     
-            // Fetch the user data from the server
             const response = await axios.get(`http://localhost:5712/auth/user/${userId}`);
             const userData = response.data;
     
-            // Update the savedRecipes array
-            userData.savedRecipes.push(recipeId);
+            const isRecipeAlreadySaved = userData.savedRecipes.includes(recipeId);
     
-            // Send the updated user data back to the server
+            if (isRecipeAlreadySaved) {
+                const updatedSavedRecipes = userData.savedRecipes.filter((id) => id !== recipeId);
+                userData.savedRecipes = updatedSavedRecipes;
+            } else {
+                userData.savedRecipes.push(recipeId);
+            }
+    
             await axios.put(`http://localhost:5712/auth/user/${userId}`, userData);
     
-            setSavedRecipes((prevSavedRecipes) => [...prevSavedRecipes, recipeId]);
+            setSavedRecipes(userData.savedRecipes); 
             setSaveButton(true);
-            ToastSuccess("Recipe saved!");
+            ToastSuccess(isRecipeAlreadySaved ? "Recipe removed from saved recipes!" : "Recipe saved!");
         } catch (error) {
             console.error("Error saving recipe:", error);
             console.log("Recipe could not be saved.");
