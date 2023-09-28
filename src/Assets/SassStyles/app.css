@@ -3,6 +3,77 @@
 /*  MEDIA QUERIES */
 /* use content so we can choose properties when using the mixin instead of hardcoding */
 /* mixin for specific breakpoint (flexible) */
+.recipe-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding-bottom: 2em;
+}
+.recipe-form label {
+  width: 100%;
+  font-size: 1.5rem;
+}
+.recipe-form input,
+.recipe-form textarea,
+.recipe-form select {
+  height: 40px;
+  outline: none;
+  padding: 0 0.5em;
+  margin: 0.8em 0 1.5em 0;
+  width: 90%;
+  font-family: inherit;
+  font-size: 1rem;
+  box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 5px;
+  box-shadow: 4px 6px 0px 0px rgba(0, 0, 0, 0.75);
+}
+.recipe-form select {
+  width: 96.5%;
+}
+.recipe-form textarea {
+  height: 400px;
+  padding-top: 1em;
+}
+
+.form-separator {
+  display: flex;
+  justify-content: space-around;
+}
+@media (max-width: 720px) {
+  .form-separator {
+    flex-direction: column;
+  }
+}
+
+.form-inner-separator {
+  position: relative;
+  position: relative;
+  outline: none;
+  width: clamp(300px, 40vw, 300px);
+  flex-direction: column;
+  margin: 2em;
+  gap: 1em;
+}
+
+.add-ingredient-button {
+  margin-left: 30px;
+  background: white;
+  border: black 1px solid;
+  border-radius: 5px;
+  box-shadow: 3px 4px 0px 0px rgba(0, 0, 0, 0.75);
+}
+
+.ingredient-input-container {
+  display: flex;
+  position: relative;
+}
+.ingredient-input-container .remove-ingredient-button {
+  position: absolute;
+  right: 10px;
+  top: 20px;
+}
+
 .categories-container {
   display: flex;
   justify-content: center;
@@ -252,77 +323,6 @@
   color: orange;
   font-size: 1.5rem;
   margin-right: 5px;
-}
-
-.recipe-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  padding-bottom: 2em;
-}
-.recipe-form label {
-  width: 100%;
-  font-size: 1.5rem;
-}
-.recipe-form input,
-.recipe-form textarea,
-.recipe-form select {
-  height: 40px;
-  outline: none;
-  padding: 0 0.5em;
-  margin: 0.8em 0 1.5em 0;
-  width: 90%;
-  font-family: inherit;
-  font-size: 1rem;
-  box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.75);
-  border-radius: 5px;
-  box-shadow: 4px 6px 0px 0px rgba(0, 0, 0, 0.75);
-}
-.recipe-form select {
-  width: 96.5%;
-}
-.recipe-form textarea {
-  height: 400px;
-  padding-top: 1em;
-}
-
-.form-separator {
-  display: flex;
-  justify-content: space-around;
-}
-@media (max-width: 720px) {
-  .form-separator {
-    flex-direction: column;
-  }
-}
-
-.form-inner-separator {
-  position: relative;
-  position: relative;
-  outline: none;
-  width: clamp(300px, 40vw, 300px);
-  flex-direction: column;
-  margin: 2em;
-  gap: 1em;
-}
-
-.add-ingredient-button {
-  margin-left: 30px;
-  background: white;
-  border: black 1px solid;
-  border-radius: 5px;
-  box-shadow: 3px 4px 0px 0px rgba(0, 0, 0, 0.75);
-}
-
-.ingredient-input-container {
-  display: flex;
-  position: relative;
-}
-.ingredient-input-container .remove-ingredient-button {
-  position: absolute;
-  right: 10px;
-  top: 20px;
 }
 
 .menu-container {

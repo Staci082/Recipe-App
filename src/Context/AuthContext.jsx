@@ -11,8 +11,9 @@ export function useAuth() {
 }
 
 export function AuthProvider({ children }) {
-    const [state, setState] = useState();
+    const [state, setState] = useState(null);
     const [isLoggedIn, setIsLoggedIn] = useState(false);
+
 
     const navigate = useNavigate();
 
@@ -26,10 +27,11 @@ export function AuthProvider({ children }) {
             setState(decoded);
             localStorage.setItem("userID", userID);
             setIsLoggedIn(true);
-            ToastSuccess("test!");
+            ToastSuccess("You have been successfully registered!");
         } catch (error) {
             console.error(error);
             setIsLoggedIn(false)
+            ToastError("Oops! Something went wrong!")
         }
     };
 
@@ -41,8 +43,10 @@ export function AuthProvider({ children }) {
             })
             .then((response) => {
                 const decoded = jwt_decode(response.data.token);
-                localStorage.setItem("user", JSON.stringify(decoded));
-                setState(decoded);
+                const userId = decoded.id; // Extract userId from decoded token
+                localStorage.setItem("user", JSON.stringify({ ...decoded, userId }));
+    
+                setState(userId);
                 setIsLoggedIn(true);
                 ToastSuccess("Logged in successfully!");
                 navigate("/");
@@ -50,7 +54,7 @@ export function AuthProvider({ children }) {
             .catch((error) => {
                 console.error(error);
                 setIsLoggedIn(false)
-                ToastError("Oops! Somthing went wrong!");
+                ToastError("Oops! Something went wrong!");
             });
     };
 
