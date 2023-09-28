@@ -409,11 +409,6 @@
   background: lime;
 }
 
-.error-page {
-  background: red;
-  padding: 2em;
-}
-
 .grocery-list-container {
   padding: 4em 0;
   gap: 1em;
@@ -634,8 +629,6 @@ button {
 
 .submit-button {
   font-size: 1.5rem;
-  margin: -1em;
-  margin-top: 1em;
   border: 1px rgb(0, 0, 0) solid;
   box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.75);
   border-radius: 2px;

@@ -16,11 +16,9 @@
 @import "../../Components/menu/theme";
 @import "../../Components/empty/empty";
 
-@import "../../Pages/error/error";
 @import "../../Pages/grocery-list/groceryList";
 @import "../../Pages/recipe/recipe";
 
-// GLOBAL STYLING
 html {
     scroll-behavior: smooth;
 }
@@ -58,8 +56,6 @@ button {
 
 .submit-button {
     font-size: 1.5rem;
-    margin: -1em;
-    margin-top: 1em;
     @include button;
     border-radius: $border-radius-sm;
     padding: 0.5em 1.5em;
