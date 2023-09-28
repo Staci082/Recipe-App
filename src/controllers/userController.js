@@ -78,17 +78,28 @@ export const getList = async (req, res) => {
     }
 };
 
-export const GetSavedRecipes = (req, res) => {
+export const GetSavedRecipes = async (req, res) => {
     const userId = req.params.id;
     User.findById(userId).then((user) => {
         console.log(user.savedRecipes);
         res.status(200).json({
-            likes: user.savedRecipes,
+            savedRecipes: user.savedRecipes,
         });
     });
 };
 
-export async function addListItem(req, res) {
+
+export const saveRecipe = (req, res) => {
+    const userId = req.params.id;
+    try {
+        console.log(userId)
+    } catch (error) {
+        console.log(error)
+    
+    };
+}
+
+ const addListItem = async (req, res) => {
     const { userId, itemName } = req.body;
 
     try {
