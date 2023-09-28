@@ -13,7 +13,6 @@ import Homepage from "./Pages/homepage/Homepage";
 import Login from "./Pages/login/Login";
 import Recipe from "./Pages/recipe/Recipe";
 import Register from "./Pages/register/Register";
-import URLRecipe from "./Pages/url-recipe/URLRecipe";
 import FilterRecipes from "./Components/recipes-filter/RecipesFilter";
 
 
@@ -45,10 +44,6 @@ const router = [
     {
         path: "/register",
         element: <Register />,
-    },
-    {
-        path: "/url",
-        element: <URLRecipe />,
     },
     {
         path: "*",
