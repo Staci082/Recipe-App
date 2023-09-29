@@ -70,6 +70,7 @@ function App() {
             <Routes>
                 <Route path="/" element={<Homepage/>}>
                     <Route path="/:category" element={<FilterRecipes />} />
+                    <Route path="/auth/savedrecipes/:userId" element={<FilterRecipes />} />
                 </Route>
                 {router.map((item) => (
                         <Route path={item.path} element={item.element} key={item.path} />

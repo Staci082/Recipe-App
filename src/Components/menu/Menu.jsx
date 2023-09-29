@@ -1,9 +1,23 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { BsFillDropletFill } from "react-icons/bs";
 import { useAuth } from "../../Context/AuthContext";
 
 function menu() {
+
+    const { isLoggedIn, logout } = useAuth();
+    const [showModal, setShowModal] = useState(false);
+    const [userId, setUserId] = useState("");
+    
+    useEffect(() => {
+        if (isLoggedIn) {
+            const userData = JSON.parse(localStorage.getItem("user"));
+            if (userData) {
+                setUserId(userData.id);
+            }
+        }
+    }, [isLoggedIn]);
+
     const menuItems = [
         {
             title: "Create a Recipe",
@@ -11,7 +25,7 @@ function menu() {
         },
         {
             title: "Saved Recipes",
-            href: "/auth/savedrecipes",
+            href: `/auth/savedrecipes/`,
         },
         {
             title: "Get Random Recipe",
@@ -23,9 +37,8 @@ function menu() {
         },
     ];
 
-    const { isLoggedIn, logout } = useAuth();
 
-    const [showModal, setShowModal] = useState(false);
+
 
     const handleLogout = () => {
         logout();
