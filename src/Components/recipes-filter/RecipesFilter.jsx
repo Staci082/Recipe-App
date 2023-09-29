@@ -119,7 +119,7 @@ function FilterRecipes() {
             const response = await axios.post("http://localhost:5712/auth/savedrecipes", { recipeIds });
             const recipesObj = response.data;
             console.log("Fetched saved recipes:", recipesObj);
-            setSavedRecipes(recipesObj);
+            setRecipes(recipesObj);
         } catch (error) {
             console.error("Error fetching saved recipes:", error);
         }
