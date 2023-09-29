@@ -2,6 +2,7 @@ console.log("Hello world!");
 
 import express from "express";
 import cors from "cors";
+import 'dotenv/config'
 
 import ConnectDB from "./config/db.js";
 import { userRouter } from "./routes/user.js";
@@ -9,6 +10,7 @@ import { recipeRouter } from "./routes/recipe.js";
 
 const app = express();
 const port = 5712;
+
 
 ConnectDB();
 

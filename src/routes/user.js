@@ -1,13 +1,16 @@
 import express from 'express'
-import VerifyToken, { Register, Login, GetSavedRecipes, saveRecipe, getList, editListItem, deleteListItem } from '../controllers/userController.js'
+import VerifyToken, { Register, Login, getList, editListItem, deleteListItem, updateUser, getUser, displaySavedRecipes } from '../controllers/userController.js'
 
 const router = express.Router();
 
 
 router.post('/register', Register)
 router.post('/login', Login)
-router.post("/savedrecipes/:id", saveRecipe)
-router.get("/savedrecipes", VerifyToken, GetSavedRecipes)
+
+router.get("/user/:userId", getUser)
+router.put("/user/:userId", updateUser)
+
+router.post("/savedrecipes", displaySavedRecipes)
 
 router.get("/list", VerifyToken, getList)
 router.post("/list")

@@ -1,6 +1,7 @@
 import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";
 import User from "../models/User.js";
+import Recipe from "../models/Recipe.js";
 
 // POST
 // REGISTER USER
@@ -63,43 +64,22 @@ export default VerifyToken;
 export const getList = async (req, res) => {
     try {
         const { userId } = req.user;
-        console.log('User ID:', userId); 
+        console.log("User ID:", userId);
         const user = await User.findById(userId);
-        console.log('User Document:', user);
+        console.log("User Document:", user);
         if (!user) {
             return res.status(404).json({ message: "User not found" });
         }
         const groceryList = user.groceryItems;
         res.json({ groceryList });
-
     } catch (error) {
         console.error(error);
         res.status(500).json({ message: "Internal server error" });
     }
 };
 
-export const GetSavedRecipes = async (req, res) => {
-    const userId = req.params.id;
-    User.findById(userId).then((user) => {
-        console.log(user.savedRecipes);
-        res.status(200).json({
-            savedRecipes: user.savedRecipes,
-        });
-    });
-};
 
-
-export const saveRecipe = (req, res) => {
-    const userId = req.params.id;
-    try {
-        console.log(userId)
-    } catch (error) {
-        console.log(error)
-    
-    };
-}
-
- const addListItem = async (req, res) => {
+const addListItem = async (req, res) => {
     const { userId, itemName } = req.body;
 
     try {
@@ -120,8 +100,7 @@ export const saveRecipe = (req, res) => {
     } catch (error) {
         console.log(error);
     }
-}
-
+};
 
 export async function editListItem(req, res) {
     try {
@@ -149,3 +128,57 @@ export async function deleteListItem(req, res) {
         console.log(error);
     }
 }
+
+export async function getUser(req, res) {
+    const userId = req.params.userId;
+
+    try {
+        const user = await User.findById(userId);
+
+        if (!user) {
+            return res.status(404).json({ error: "User not found" });
+        }
+
+        res.json(user);
+    } catch (error) {
+        console.error("Error fetching user data:", error);
+        res.status(500).json({ error: "Internal server error" });
+    }
+}
+
+export async function updateUser(req, res) {
+    const { userId } = req.params; 
+    const updatedUserData = req.body; 
+
+    try {
+
+        const updatedUser = await User.findByIdAndUpdate(userId, updatedUserData, {
+            new: true,
+        });
+        console.log(updatedUser);
+
+        if (!updatedUser) {
+            return res.status(404).json({ error: "User not found" });
+        }
+
+        res.json(updatedUser);
+    } catch (error) {
+        console.error("Error updating user data:", error);
+        res.status(500).json({ error: "Internal server error" });
+    }
+}
+
+export const displaySavedRecipes = async (req, res) => {
+    const { recipeIds } = req.body;
+    console.log(recipeIds)
+
+    try {
+        // Find recipes by their IDs in the database
+        const fetchedRecipes = await Recipe.find({ _id: { $in: recipeIds } });
+
+        res.json(fetchedRecipes);
+    } catch (error) {
+        console.error("Error fetching saved recipes:", error);
+        res.status(500).json({ error: "Error fetching saved recipes" });
+    }
+};
