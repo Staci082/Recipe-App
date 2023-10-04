@@ -11,7 +11,30 @@
     justify-content: flex-start;
     padding: 0.5em 1.5em;
     margin-left: 1em;
+    @include md {
+        display: none;
+    }
 }
+
+
+
+#mobile-menu {
+    display: flex;
+    width: 95vw;
+    z-index: 2;
+    @include colorBox;
+    background: rgb(255, 255, 255);
+    border: none;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5em 0;
+    & .menu-container  {
+        display: flex;
+    }
+}   
+
 
 .menuItem,
 .logout-button {

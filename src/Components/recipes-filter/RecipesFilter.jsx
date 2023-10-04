@@ -1,6 +1,6 @@
 import { useState, useEffect, useContext } from "react"; // keep "useContext" here or else "UseSearchContext" fails
 import axios from "axios";
-import { useParams, useLocation  } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import Pagination from "../pagination/Pagination.jsx";
 import { ToastSuccess, ToastError } from "../../Hooks/useToasts.js";
 import { FaHeart, FaRegHeart } from "react-icons/fa6";

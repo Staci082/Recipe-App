@@ -84,11 +84,6 @@ button {
     align-items: flex-start;
 }
 
-.left-container {
-    @include md {
-        display: none;
-    }
-}
 
 .right-container {
     width: 100%;

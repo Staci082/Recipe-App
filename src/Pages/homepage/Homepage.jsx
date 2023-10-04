@@ -1,4 +1,4 @@
-// IMPORT COMPONENTS
+
 import Header from "../../Components/header/Header";
 import RecipesContainer from "../../Components/recipes-container/RecipesContainer";
 import Menu from "../../Components/menu/Menu";
@@ -9,7 +9,7 @@ function Homepage() {
         <>
             <Header />
             <div className="main-container">
-                <div className="left-container">
+                <div id="left-container">
                     <Menu />
                 </div>
                 <div className="right-container">
