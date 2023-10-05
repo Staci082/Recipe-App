@@ -73,7 +73,6 @@ function GroceryList() {
             await axios.put(`http://localhost:5712/auth/user/${userId}`, userData);
 
             setGroceryList(userData.groceryItems);
-            setChecked((prevChecked) => prevChecked.slice(0, index).concat(prevChecked.slice(index + 1)));
         } catch (error) {
             console.log(error);
             if (isLoggedIn) {
@@ -103,7 +102,7 @@ function GroceryList() {
                                 htmlFor="groceryList" 
                                 value={groceryItem} 
                                 onChange={(e) => setGroceryItem(e.target.value)}
-                                onKeyPress={handleInputKeyPress}/>
+                                onKeyDown={handleInputKeyPress}/>
 
                         <button onClick={handleAddItem} className="add-item-button">
                             <HiPlus size={28} />
@@ -111,15 +110,13 @@ function GroceryList() {
 
                         <div className="grocery-list">
                             {groceryList.map((item, index) => (
-                                <>
-                                    <div className="line" key={item.id}>
+                                    <div className="line" key={index}>
                                         <button onClick={() => handleToggleCheck(index)}>{checked[index] ? <MdOutlineCheckBox size={20} /> : <MdOutlineCheckBoxOutlineBlank size={20} />}</button>
                                         <p className={checked[index] ? 'line-through' : ''}>{item}</p>
                                         <button type="button" onClick={() => handleDeleteItem(index)}>
                                             <FiDelete size={20} />
                                         </button>
                                     </div>
-                                </>
                             ))}
                         </div>
                     </div>
