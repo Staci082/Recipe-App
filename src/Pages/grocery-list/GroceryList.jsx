@@ -13,30 +13,65 @@ function GroceryList() {
     const [checked, setChecked] = useState([]);
     const [groceryList, setGroceryList] = useState([]);
 
+    
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const userId = JSON.parse(localStorage.getItem("user")).userId;
+                const response = await axios.get(`http://localhost:5712/auth/user/${userId}`);
+                const userData = response.data;
+                setGroceryList(userData.groceryItems);
+            } catch (error) {
+                console.log(error);
+                ToastError("Oops! Something went wrong!");
+            }
+        };
+
+        fetchData(); 
+    }, []);
+
     const handleAddItem = async () => {
         try {
             const userId = JSON.parse(localStorage.getItem("user")).userId;
 
             const response = await axios.get(`http://localhost:5712/auth/user/${userId}`);
             const userData = response.data;
-
-            console.log(userData);
-            const item = "test";
-            userData.groceryItems.push(item);
+            userData.groceryItems.push(groceryItem);
 
             await axios.put(`http://localhost:5712/auth/user/${userId}`, userData);
 
             setGroceryList(userData.groceryItems);
+            setGroceryItem("");
         } catch (error) {
             console.log(error);
             ToastError("Oops! Something went wrong!");
         }
     };
 
+
     const handleToggleCheck = (index) => {
         const newCheckedItems = [...checked];
         newCheckedItems[index] = !newCheckedItems[index];
         setChecked(newCheckedItems);
+    };
+
+    const handleDeleteItem = async (index) => {
+        try {
+            const userId = JSON.parse(localStorage.getItem("user")).userId;
+
+            const response = await axios.get(`http://localhost:5712/auth/user/${userId}`);
+            const userData = response.data;
+
+            userData.groceryItems.splice(index, 1);
+
+            await axios.put(`http://localhost:5712/auth/user/${userId}`, userData);
+
+            setGroceryList(userData.groceryItems);
+            setChecked((prevChecked) => prevChecked.slice(0, index).concat(prevChecked.slice(index + 1)));
+        } catch (error) {
+            console.log(error);
+            ToastError("Oops! Something went wrong!");
+        }
     };
 
     return (
@@ -49,7 +84,7 @@ function GroceryList() {
                         </a>
                         <h2>Grocery List</h2>
 
-                        <input type="text" className="grocery-input" htmlFor="groceryList" />
+                        <input type="text" className="grocery-input" htmlFor="groceryList" value={groceryItem} onChange={(e) => setGroceryItem(e.target.value)}/>
                         <button onClick={handleAddItem} className="add-item-button">
                             <HiPlus size={28} />
                         </button>
@@ -59,8 +94,8 @@ function GroceryList() {
                                 <>
                                     <div className="line" key={index}>
                                         <button onClick={() => handleToggleCheck(index)}>{checked[index] ? <MdOutlineCheckBox size={20} /> : <MdOutlineCheckBoxOutlineBlank size={20} />}</button>
-                                        <p>{item.item}</p>
-                                        <button type="button" className="remove-ingredient-button">
+                                        <p className={checked[index] ? 'line-through' : ''}>{item}</p>
+                                        <button type="button" onClick={handleDeleteItem}>
                                             <FiDelete size={20} />
                                         </button>
                                     </div>
