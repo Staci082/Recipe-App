@@ -115,7 +115,7 @@ function GroceryList() {
                                     <div className="line" key={item.id}>
                                         <button onClick={() => handleToggleCheck(index)}>{checked[index] ? <MdOutlineCheckBox size={20} /> : <MdOutlineCheckBoxOutlineBlank size={20} />}</button>
                                         <p className={checked[index] ? 'line-through' : ''}>{item}</p>
-                                        <button type="button" onClick={handleDeleteItem}>
+                                        <button type="button" onClick={() => handleDeleteItem(index)}>
                                             <FiDelete size={20} />
                                         </button>
                                     </div>

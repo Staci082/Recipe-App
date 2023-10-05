@@ -16,7 +16,7 @@ function FilterRecipes() {
     const [recipes, setRecipes] = useState([]);
 
     const [pageNumber, setPageNumber] = useState(0);
-    const recipesPerPage = 15;
+    const recipesPerPage = 12;
     const pagesVisited = pageNumber * recipesPerPage;
 
     useEffect(() => {
@@ -128,7 +128,7 @@ function FilterRecipes() {
     return (
         <>
             <div className="recipe-container-header">
-                <button onClick={fetchSavedRecipes}>boop</button>
+                {/* <button onClick={fetchSavedRecipes}>boop</button> */}
                 {results.length > 0 ? (
                     <>
                         <h1>{input} recipes</h1>

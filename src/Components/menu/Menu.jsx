@@ -107,7 +107,7 @@ function menu() {
 
                     <div className="theme-button-container">
                         {themeColors.map((color) => (
-                            <button onClick={changeTheme} className={`theme-button ${color}`}>
+                            <button onClick={changeTheme} className={`theme-button ${color}`} key={color}>
                                 <BsFillDropletFill />
                             </button>
                         ))}
