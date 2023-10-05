@@ -9,7 +9,7 @@ function Register() {
     const [password, setPassword] = useState("");
 
     const navigate = useNavigate();
-    const { register} = useAuth();
+    const { register } = useAuth();
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -21,7 +21,7 @@ function Register() {
             register(userData);
 
             ToastSuccess("Registered successfully!");
-            navigate("/");
+            navigate("/login");
         } catch (error) {
             console.error(error);
             ToastError("Oops! Somthing went wrong!");
