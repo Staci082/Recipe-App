@@ -23,7 +23,9 @@ function GroceryList() {
                 setGroceryList(userData.groceryItems);
             } catch (error) {
                 console.log(error);
-                ToastError("Oops! Something went wrong!");
+                if (isLoggedIn) {
+                    ToastError("Oops! Something went wrong!");
+                }
             }
         };
 
@@ -41,10 +43,14 @@ function GroceryList() {
             await axios.put(`http://localhost:5712/auth/user/${userId}`, userData);
 
             setGroceryList(userData.groceryItems);
+            
             setGroceryItem("");
         } catch (error) {
             console.log(error);
-            ToastError("Oops! Something went wrong!");
+
+            if (isLoggedIn) {
+                ToastError("Oops! Something went wrong!");
+            }
         }
     };
 
@@ -70,7 +76,15 @@ function GroceryList() {
             setChecked((prevChecked) => prevChecked.slice(0, index).concat(prevChecked.slice(index + 1)));
         } catch (error) {
             console.log(error);
-            ToastError("Oops! Something went wrong!");
+            if (isLoggedIn) {
+                ToastError("Oops! Something went wrong!");
+            }
+        }
+    };
+
+    const handleInputKeyPress = (event) => {
+        if (event.key === "Enter") {
+            handleAddItem();
         }
     };
 
@@ -84,7 +98,13 @@ function GroceryList() {
                         </a>
                         <h2>Grocery List</h2>
 
-                        <input type="text" className="grocery-input" htmlFor="groceryList" value={groceryItem} onChange={(e) => setGroceryItem(e.target.value)}/>
+                        <input type="text" 
+                                className="grocery-input" 
+                                htmlFor="groceryList" 
+                                value={groceryItem} 
+                                onChange={(e) => setGroceryItem(e.target.value)}
+                                onKeyPress={handleInputKeyPress}/>
+
                         <button onClick={handleAddItem} className="add-item-button">
                             <HiPlus size={28} />
                         </button>
@@ -92,7 +112,7 @@ function GroceryList() {
                         <div className="grocery-list">
                             {groceryList.map((item, index) => (
                                 <>
-                                    <div className="line" key={index}>
+                                    <div className="line" key={item.id}>
                                         <button onClick={() => handleToggleCheck(index)}>{checked[index] ? <MdOutlineCheckBox size={20} /> : <MdOutlineCheckBoxOutlineBlank size={20} />}</button>
                                         <p className={checked[index] ? 'line-through' : ''}>{item}</p>
                                         <button type="button" onClick={handleDeleteItem}>
