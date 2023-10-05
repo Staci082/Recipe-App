@@ -18,15 +18,9 @@ const UserSchema = new mongoose.Schema(
                 ref: "recipes",
             },
         ],
-        groceryItems: [
-            {
-                name: String,
-                checked: {
-                    type: Boolean,
-                    default: false
-                }
-            }
-        ],
+        groceryItems: {
+            type: Array
+        },
     },
     { collection: "data" }
 );
