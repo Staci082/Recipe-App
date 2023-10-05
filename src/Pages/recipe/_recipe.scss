@@ -18,6 +18,7 @@
         }
     }
 }
+
 .single-recipe-title-container {
     position: relative;
     display: flex;
@@ -27,7 +28,6 @@
         flex-direction: column;
     }
 }
-
 .recipe-name {
     font-size: clamp(1.5rem, 2vw, 2rem);
 }

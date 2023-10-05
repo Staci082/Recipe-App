@@ -16,7 +16,7 @@ function menu() {
                 setUserId(userData.id);
             }
         }
-    }, [isLoggedIn]);
+    }, [isLoggedIn]); 
 
     const menuItems = [
         {
