@@ -10,7 +10,7 @@ export async function Register(req, res) {
 
     const user = await User.findOne({ username });
     if (user) {
-        return res.json({ message: "🐌 User already exists!" });
+        return res.json({ message: "User already exists!" });
     }
 
     const hashedPassword = await bcrypt.hash(password, 10);
@@ -19,7 +19,8 @@ export async function Register(req, res) {
     try {
         await newUser.save();
         console.log(newUser);
-        res.json({ message: "🦄 User registered successfully! " });
+        const token = jwt.sign({ id: newUser._id }, "secret");
+        res.json({ message: "User registered successfully! ", token, userID: newUser._id });
     } catch (error) {
         console.log("An error happened", error);
     }

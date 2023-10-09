@@ -4,7 +4,7 @@ import VerifyToken, { Register, Login, updateUser, getUser, displaySavedRecipes 
 const router = express.Router();
 
 
-router.post('/register', VerifyToken, Register)
+router.post('/register', Register)
 router.post('/login', VerifyToken, Login)
 
 router.get("/user/:userId", getUser)
