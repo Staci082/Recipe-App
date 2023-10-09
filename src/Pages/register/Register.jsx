@@ -19,8 +19,6 @@ function Register() {
                 password,
                 };
             register(userData);
-
-            ToastSuccess("Registered successfully!");
             navigate("/");
 
         } catch (error) {

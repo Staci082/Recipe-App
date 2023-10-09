@@ -35,7 +35,7 @@ function FilterRecipes() {
     useEffect(() => {
         if (isLoggedIn) {
             try {
-                const userId = JSON.parse(localStorage.getItem("user")).userId;
+                const userId = JSON.parse(localStorage.getItem("user")).id;
                 const fetchUser = async () => {
                     const response = await axios.get(`http://localhost:5712/auth/user/${userId}`);
                     const userData = response.data;
