@@ -25,7 +25,7 @@ function FilterRecipes() {
     useEffect(() => {
         const fetchRecipes = async () => {
             try {
-                const response = await axios.get(`${baseAPI} ${category}`);
+                const response = await axios.get(baseAPI + category);
                 setRecipes(response.data);
             } catch (error) {
                 console.log("Error fetching data:", error);
