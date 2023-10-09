@@ -6,10 +6,10 @@ import { ToastSuccess, ToastError } from "../../Hooks/useToasts.js";
 import { FaHeart, FaRegHeart } from "react-icons/fa6";
 import UseSearchContext from "../../Context/SearchContext.jsx";
 import { useAuth } from "../../Context/AuthContext.jsx";
+import baseAPI from "../../Context/baseAPI.js";
 
 function FilterRecipes() {
 
-    const baseAPI = "https://fiesta-flavors.onrender.com/" || 'http://localhost:5712/'
 
     const { input, results } = UseSearchContext();
     const { isLoggedIn } = useAuth();
