@@ -59,7 +59,7 @@ function FilterRecipes() {
         try {
             const userId = JSON.parse(localStorage.getItem("user")).userId;
 
-            const response = await axios.get(`http://localhost:5712/auth/user/${userId}`);
+            const response = await axios.get(`${baseAPI}/auth/user/${userId}`);
             const userData = response.data;
 
             const isRecipeAlreadySaved = userData.savedRecipes.includes(recipeId);
@@ -71,7 +71,7 @@ function FilterRecipes() {
                 userData.savedRecipes.push(recipeId);
             }
 
-            await axios.put(`http://localhost:5712/auth/user/${userId}`, userData);
+            await axios.put(`${baseAPI}/auth/user/${userId}`, userData);
 
             setSavedRecipes(userData.savedRecipes);
             ToastSuccess(isRecipeAlreadySaved ? "Recipe removed from saved recipes!" : "Recipe saved!");
@@ -110,7 +110,7 @@ function FilterRecipes() {
     const fetchSavedRecipes = async () => {
         try {
             const userId = JSON.parse(localStorage.getItem("user")).userId;
-            const response = await axios.get(`http://localhost:5712/auth/user/${userId}`);
+            const response = await axios.get(`${baseAPI}/auth/user/${userId}`);
             const userData = response.data;
             const recipeIds = userData.savedRecipes;
             await fetchSavedRecipesByIds(recipeIds);
@@ -121,7 +121,7 @@ function FilterRecipes() {
 
     const fetchSavedRecipesByIds = async (recipeIds) => {
         try {
-            const response = await axios.post("http://localhost:5712/auth/savedrecipes", { recipeIds });
+            const response = await axios.post("${baseAPI}/auth/savedrecipes", { recipeIds });
             const recipesObj = response.data;
             console.log("Fetched saved recipes:", recipesObj);
             setRecipes(recipesObj);
