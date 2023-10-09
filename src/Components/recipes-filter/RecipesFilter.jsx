@@ -9,7 +9,7 @@ import { useAuth } from "../../Context/AuthContext.jsx";
 
 function FilterRecipes() {
 
-    const baseAPI = import.meta.env.VITE_API_URL || 'http://localhost:5712'
+    const baseAPI = import.meta.env.VITE_API_URL || 'http://localhost:5712/'
 
     const { input, results } = UseSearchContext();
     const { isLoggedIn } = useAuth();
@@ -25,7 +25,7 @@ function FilterRecipes() {
     useEffect(() => {
         const fetchRecipes = async () => {
             try {
-                const response = await axios.get(`${baseAPI}/${category}`);
+                const response = await axios.get(`${baseAPI} ${category}`);
                 setRecipes(response.data);
             } catch (error) {
                 console.log("Error fetching data:", error);
@@ -40,7 +40,7 @@ function FilterRecipes() {
             try {
                 const userId = JSON.parse(localStorage.getItem("user")).id;
                 const fetchUser = async () => {
-                    const response = await axios.get(`${baseAPI}/auth/user/${userId}`);
+                    const response = await axios.get(`${baseAPI}auth/user/${userId}`);
                     const userData = response.data;
                     setSavedRecipes(userData.savedRecipes);
                 };
@@ -59,7 +59,7 @@ function FilterRecipes() {
         try {
             const userId = JSON.parse(localStorage.getItem("user")).userId;
 
-            const response = await axios.get(`${baseAPI}/auth/user/${userId}`);
+            const response = await axios.get(`${baseAPI}auth/user/${userId}`);
             const userData = response.data;
 
             const isRecipeAlreadySaved = userData.savedRecipes.includes(recipeId);
@@ -110,7 +110,7 @@ function FilterRecipes() {
     const fetchSavedRecipes = async () => {
         try {
             const userId = JSON.parse(localStorage.getItem("user")).userId;
-            const response = await axios.get(`${baseAPI}/auth/user/${userId}`);
+            const response = await axios.get(`${baseAPI}auth/user/${userId}`);
             const userData = response.data;
             const recipeIds = userData.savedRecipes;
             await fetchSavedRecipesByIds(recipeIds);
@@ -121,7 +121,7 @@ function FilterRecipes() {
 
     const fetchSavedRecipesByIds = async (recipeIds) => {
         try {
-            const response = await axios.post("${baseAPI}/auth/savedrecipes", { recipeIds });
+            const response = await axios.post("${baseAPI}auth/savedrecipes", { recipeIds });
             const recipesObj = response.data;
             console.log("Fetched saved recipes:", recipesObj);
             setRecipes(recipesObj);
