@@ -9,7 +9,7 @@ import { useAuth } from "../../Context/AuthContext.jsx";
 
 function FilterRecipes() {
 
-    const baseAPI = import.meta.env.VITE_API_URL || 'http://localhost:5712/'
+    const baseAPI = "https://fiesta-flavors.onrender.com/" || 'http://localhost:5712/'
 
     const { input, results } = UseSearchContext();
     const { isLoggedIn } = useAuth();
