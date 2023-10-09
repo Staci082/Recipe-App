@@ -145,9 +145,7 @@ function FilterRecipes() {
 
             <div className="recipe-container">{displayRecipesList}</div>
 
-            <ul role="Pagination">
                 <Pagination pageCount={pageCount} onPageChange={changePage} />
-            </ul>
         </>
     );
 }
