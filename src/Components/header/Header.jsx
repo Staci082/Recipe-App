@@ -18,7 +18,7 @@ function Header() {
         <>
             <div className="header-container">
                 <div className="logo-container">
-                    <img width="48" height="48" src="https://img.icons8.com/color/48/kawaii-taco.png" alt="kawaii-taco" />
+                    <img width="48" height="48" src="/logo.avif" alt="taco logo" />
                     <p className="logo-title">Fiesta Flavors</p>
                 </div>
 

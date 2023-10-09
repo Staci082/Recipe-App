@@ -5,42 +5,50 @@ function Categories() {
     const categories = [
         {
             title: "All recipes",
-            img: "https://img.icons8.com/wired/64/storytelling.png",
+            img: "storytelling.avif",
+            alt: "book",
             href: "/all",
         },
         {
             title: "Appetizers",
-            img: "https://img.icons8.com/wired/64/tapas.png",
+            img: "tapas.avif",
+            alt: "tapas",
             href: "/appetizer",
         },
         {
             title: "Breakfast",
-            img: "https://img.icons8.com/wired/64/american-pancakes.png",
+            img: "pancakes.avif",
+            alt: "pancakes",
             href: "/breakfast",
         },
         {
             title: "Dessert",
-            img: "https://img.icons8.com/wired/64/strawberry-cheesecake.png",
+            img: "cake.avif",
+            alt: "cake",
             href: "/dessert",
         },
         {
             title: "Dinner",
-            img: "https://img.icons8.com/wired/64/spaghetti.png",
+            img: "spaghetti.avif",
+            alt: "spaghetti",
             href: "/dinner",
         },
         {
             title: "Lunch",
-            img: "https://img.icons8.com/wired/64/rice-bowl.png",
+            img: "rice-bowl.avif",
+            alt: "rice-bowl",
             href: "/lunch",
         },
         {
             title: "Sides",
-            img: "https://img.icons8.com/wired/64/pelmeni.png",
+            img: "pelmeni.avif",
+            alt: "pelmeni",
             href: "/side",
         },
         {
             title: "Vegetarian",
-            img: "https://img.icons8.com/wired/64/firm-tofu.png",
+            img: "tofu.avif",
+            alt: "tofu",
             href: "/vegetarian",
         },
     ];
@@ -49,7 +57,7 @@ function Categories() {
         <div className="categories-container">
             {categories.map((item) => (
                 <Link className="cat-item-container" to={item.href} key={item.title}>
-                    <img className="cat-item-img" src={item.img} />
+                    <img className="cat-item-img" src={item.img} alt={item.alt} />
                     <h4 className="cat-item-title">{item.title}</h4>
                 </Link>
             ))}
