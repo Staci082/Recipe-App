@@ -8,6 +8,9 @@ import UseSearchContext from "../../Context/SearchContext.jsx";
 import { useAuth } from "../../Context/AuthContext.jsx";
 
 function FilterRecipes() {
+
+    const baseAPI = import.meta.env.VITE_API_URL || 'http://localhost:5712'
+
     const { input, results } = UseSearchContext();
     const { isLoggedIn } = useAuth();
     const { route, category } = useParams();
@@ -22,7 +25,7 @@ function FilterRecipes() {
     useEffect(() => {
         const fetchRecipes = async () => {
             try {
-                const response = await axios.get("http://localhost:5712/" + category);
+                const response = await axios.get(baseAPI + category);
                 setRecipes(response.data);
             } catch (error) {
                 console.log("Error fetching data:", error);
@@ -37,7 +40,7 @@ function FilterRecipes() {
             try {
                 const userId = JSON.parse(localStorage.getItem("user")).id;
                 const fetchUser = async () => {
-                    const response = await axios.get(`http://localhost:5712/auth/user/${userId}`);
+                    const response = await axios.get(`${baseAPI}/auth/user/${userId}`);
                     const userData = response.data;
                     setSavedRecipes(userData.savedRecipes);
                 };
