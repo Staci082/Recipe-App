@@ -9,8 +9,6 @@ import { useAuth } from "../../Context/AuthContext.jsx";
 import baseAPI from "../../Context/baseAPI.js";
 
 function FilterRecipes() {
-
-
     const { input, results } = UseSearchContext();
     const { isLoggedIn } = useAuth();
     const { route, category } = useParams();
@@ -81,8 +79,6 @@ function FilterRecipes() {
         }
     };
 
-
-
     const displayRecipes = (recipeList) =>
         recipeList.slice(pagesVisited, pagesVisited + recipesPerPage).map((recipe) => {
             const isRecipeSaved = savedRecipes.includes(recipe._id);
@@ -92,7 +88,7 @@ function FilterRecipes() {
                         <h3 className="recipe-title">{recipe.name}</h3>
                         <p className="recipe-category">{recipe.category}</p>
                     </a>
-                    <button className="save-icon" onClick={() => handleSaveRecipe(recipe._id)}>
+                    <button className="save-icon" aria-label="save-button" onClick={() => handleSaveRecipe(recipe._id)}>
                         {isRecipeSaved ? <FaHeart /> : <FaRegHeart />}
                     </button>
                 </div>
@@ -149,7 +145,9 @@ function FilterRecipes() {
 
             <div className="recipe-container">{displayRecipesList}</div>
 
-            <Pagination pageCount={pageCount} onPageChange={changePage} />
+            <ul role="Pagination">
+                <Pagination pageCount={pageCount} onPageChange={changePage} />
+            </ul>
         </>
     );
 }
