@@ -107,12 +107,10 @@ export async function updateUser(req, res) {
         const updatedUser = await User.findByIdAndUpdate(userId, updatedUserData, {
             new: true,
         });
-        console.log(updatedUser);
 
         if (!updatedUser) {
             return res.status(404).json({ error: "User not found" });
         }
-
         res.json(updatedUser);
     } catch (error) {
         console.error("Error updating user data:", error);
