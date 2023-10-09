@@ -32,6 +32,7 @@ export async function Login(req, res) {
     const { username, password } = req.body;
 
     const user = await User.findOne({ username });
+    console.log(user)
     if (!user) {
         return res.json({ message: "Username or password is incorrect!" });
     }
@@ -44,6 +45,7 @@ export async function Login(req, res) {
     // GIVE TOKEN WHEN BOTH ARE VALID
     const token = jwt.sign({ id: user._id }, "secret");
     res.json({ token, userID: user._id });
+    console.log({ token, userID: user._id }); 
 }
 
 const VerifyToken = (req, res, next) => {
