@@ -1,5 +1,4 @@
 import mongoose from 'mongoose';
-import 'dotenv/config'
 mongoose.set('strictQuery', false);
 
 export async function ConnectDB(){
