@@ -3,7 +3,7 @@ mongoose.set('strictQuery', false);
 
 export async function ConnectDB(){
 
-    const url = "mongodb+srv://staci082:WoSDvyDWd8hiPduL@fiestaflavors.ok0fz92.mongodb.net/?retryWrites=true&w=majority"; 
+    const url = "mongodb+srv://staci082:staci082@cluster0.ikvgdf6.mongodb.net/FiestaFlavors?retryWrites=true&w=majority"; 
     try {
         if (!url) {
             throw new Error("DB URL not defined");

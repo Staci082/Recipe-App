@@ -78,57 +78,6 @@ export const getList = async (req, res) => {
     }
 };
 
-
-const addListItem = async (req, res) => {
-    const { userId, itemName } = req.body;
-
-    try {
-        // Find the user by their ID
-        const user = await User.findById(userId);
-
-        if (!user) {
-            return res.status(404).json({ message: "User not found" });
-        }
-
-        // Add the grocery item to the user's list
-        user.groceryList.push({ name: itemName, checked: false });
-
-        // Save the updated user document
-        await user.save();
-
-        res.status(201).json({ message: "Grocery item added successfully" });
-    } catch (error) {
-        console.log(error);
-    }
-};
-
-export async function editListItem(req, res) {
-    try {
-        const { id } = req.params;
-
-        const groceryItem = await User.findById(id, "groceryItems");
-        console.log(groceryItem);
-        if (!groceryItem) {
-            return res.status(404).json({ message: "Grocery item not found" });
-        }
-
-        // Save the updated item
-        await groceryItem.save();
-        console.log(groceryItem.checked);
-    } catch (error) {
-        console.log(error);
-    }
-}
-
-export async function deleteListItem(req, res) {
-    let id = req.params.id || "";
-    try {
-        await User.findByIdAndDelete(id, "groceryItems");
-    } catch (error) {
-        console.log(error);
-    }
-}
-
 export async function getUser(req, res) {
     const userId = req.params.userId;
 
@@ -168,7 +117,7 @@ export async function updateUser(req, res) {
     }
 }
 
-export const displaySavedRecipes = async (req, res) => {
+export async function displaySavedRecipes(req, res) {
     const { recipeIds } = req.body;
     console.log(recipeIds)
 
