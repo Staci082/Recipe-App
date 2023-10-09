@@ -5,6 +5,7 @@ import { ToastSuccess, ToastError } from "../../Hooks/useToasts";
 import { useAuth } from "../../Context/AuthContext";
 import { useNavigate } from "react-router-dom";
 import NotAuthorized from "../../Components/not-authorized/NotAuthorized";
+import baseAPI from "../../Context/baseAPI";
 
 function Create() {
     const { isLoggedIn } = useAuth();
@@ -40,7 +41,7 @@ function Create() {
     const handleSubmit = async (event) => {
         event.preventDefault();
         try {
-            await axios.post("http://localhost:5712/create", { ...recipe });
+            await axios.post(baseAPI + "create", { ...recipe });
             console.log(recipe);
             navigate("/");
             ToastSuccess("Recipe created!");

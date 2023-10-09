@@ -20,7 +20,7 @@ export function AuthProvider({ children }) {
 
     const register = async (userData) => {
         try {
-            const response = await axios.post(`${baseAPI}auth/register`, userData);
+            const response = await axios.post(baseAPI + "auth/register", userData);
             const { token, userID } = response.data;
             const decoded = jwt_decode(token);
 
@@ -29,7 +29,7 @@ export function AuthProvider({ children }) {
             localStorage.setItem("userID", userID);
             setIsLoggedIn(true);
             ToastSuccess("You have been successfully registered!");
-            navigate("/")
+            // navigate("/login")
         } catch (error) {
             console.error(error);
             setIsLoggedIn(false)
@@ -37,29 +37,28 @@ export function AuthProvider({ children }) {
         }
     };
 
-    const login = async (username, password) => {
+    const login = (username, password) => {
 
-        try {
-            const response = await axios.post(`${baseAPI}auth/login`, {
+        axios.post(baseAPI + "auth/login", {
                 username,
                 password,
             })
-            console.log(response);
+            .then((response) => {
+                console.log(response);
+                const decoded = jwt_decode(response.data.token);
+                const userId = decoded.userId;
+                localStorage.setItem("user", JSON.stringify({ ...decoded, userId }));
 
-            // const { token, userID } = response.data;
-            // const decoded = jwt_decode(token);
-
-            // localStorage.setItem("user", JSON.stringify(decoded));
-            // setState(decoded);
-            // localStorage.setItem("userID", userID);
-            // setIsLoggedIn(true);
-            ToastSuccess("Logged in successfully!");
-            navigate("/");
-        } catch (error) {
-            console.log(error)
-            setIsLoggedIn(false)
-            ToastError("Oops! Something went wrong!");
-        }
+                setState(decoded);
+                setIsLoggedIn(true);
+                ToastSuccess("Logged in successfully!");
+                navigate("/");
+            })
+            .catch((error) => {
+                console.error(error);
+                setIsLoggedIn(false)
+                ToastError("Oops! Something went wrong!");
+            });
     };
 
     const logout = () => {

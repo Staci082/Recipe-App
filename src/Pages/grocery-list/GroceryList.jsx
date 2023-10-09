@@ -6,6 +6,7 @@ import axios from "axios";
 import { ToastError, ToastSuccess } from "../../Hooks/useToasts";
 import { FiDelete } from "react-icons/fi";
 import { MdOutlineCheckBox, MdOutlineCheckBoxOutlineBlank } from "react-icons/md";
+import baseAPI from "../../Context/baseAPI";
 
 function GroceryList() {
     const { isLoggedIn } = useAuth();
@@ -17,8 +18,8 @@ function GroceryList() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const userId = JSON.parse(localStorage.getItem("user")).userId;
-                const response = await axios.get(`http://localhost:5712/auth/user/${userId}`);
+                const userId = JSON.parse(localStorage.getItem("user")).id;
+                const response = await axios.get(baseAPI + "auth/user/" + userId);
                 const userData = response.data;
                 setGroceryList(userData.groceryItems);
             } catch (error) {
@@ -34,13 +35,13 @@ function GroceryList() {
 
     const handleAddItem = async () => {
         try {
-            const userId = JSON.parse(localStorage.getItem("user")).userId;
+            const userId = JSON.parse(localStorage.getItem("user")).id;
 
-            const response = await axios.get(`http://localhost:5712/auth/user/${userId}`);
+            const response = await axios.get(baseAPI + "auth/user/" + userId);
             const userData = response.data;
             userData.groceryItems.push(groceryItem);
 
-            await axios.put(`http://localhost:5712/auth/user/${userId}`, userData);
+            await axios.put(baseAPI + "auth/user/" + userId, userData);
 
             setGroceryList(userData.groceryItems);
             
@@ -63,14 +64,14 @@ function GroceryList() {
 
     const handleDeleteItem = async (index) => {
         try {
-            const userId = JSON.parse(localStorage.getItem("user")).userId;
+            const userId = JSON.parse(localStorage.getItem("user")).id;
 
-            const response = await axios.get(`http://localhost:5712/auth/user/${userId}`);
+            const response = await axios.get(baseAPI + "auth/user/" + userId);
             const userData = response.data;
 
             userData.groceryItems.splice(index, 1);
 
-            await axios.put(`http://localhost:5712/auth/user/${userId}`, userData);
+            await axios.put(baseAPI + "auth/user/" + userId, userData);
 
             setGroceryList(userData.groceryItems);
         } catch (error) {

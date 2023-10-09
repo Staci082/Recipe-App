@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
 import { ToastSuccess, ToastError } from "../../Hooks/useToasts";
+import baseAPI from "../../Context/baseAPI";
 
 function Edit() {
     const { id } = useParams();
@@ -22,7 +23,7 @@ function Edit() {
     useEffect(() => {
         const fetchRecipeData = async () => {
             try {
-                const response = await axios.get("http://localhost:5712/recipe/" + id);
+                const response = await axios.get(baseAPI + "recipe/" + id);
                 const existingRecipe = response.data;
 
                 console.log("Response data:", existingRecipe);
@@ -56,7 +57,7 @@ function Edit() {
         event.preventDefault();
         try {
             ToastSuccess("Recipe updated!");
-            await axios.put(`http://localhost:5712/edit/${id}`, { ...recipe });
+            await axios.put(baseAPI + "edit/" + id, { ...recipe });
             navigate("/");
         } catch (error) {
             console.error(error);

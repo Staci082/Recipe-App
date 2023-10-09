@@ -4,6 +4,7 @@ import { useNavigate, useParams, useLocation } from "react-router-dom";
 import { FaPencil, FaTrashCan, FaArrowRotateLeft } from "react-icons/fa6";
 import { useAuth } from "../../Context/AuthContext";
 import { ToastSuccess, ToastError } from "../../Hooks/useToasts";
+import baseAPI from "../../Context/baseAPI";
 
 function Recipe({ randomRecipe }) {
     const { isLoggedIn } = useAuth();
@@ -20,10 +21,10 @@ function Recipe({ randomRecipe }) {
         const fetchRecipe = async () => {
             try {
                 if (randomRecipe) {
-                    const response = await axios.get("http://localhost:5712/recipe/random");
+                    const response = await axios.get(baseAPI + "recipe/random");
                     setRecipe(response.data);
                 } else {
-                    const response = await axios.get("http://localhost:5712/recipe/" + recipeID);
+                    const response = await axios.get(baseAPI + "recipe/" + recipeID);
                     setRecipe(response.data);
                 }
             } catch (error) {
@@ -39,7 +40,7 @@ function Recipe({ randomRecipe }) {
 
     const handleDelete = () => {
         try {
-            axios.delete("http://localhost:5712/recipe/" + recipeID);
+            axios.delete(baseAPI + "recipe/" + recipeID);
             setShowModal(false);
             navigate("/all");
             ToastSuccess("Recipe deleted!")
