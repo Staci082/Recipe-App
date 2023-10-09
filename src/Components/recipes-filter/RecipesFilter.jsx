@@ -57,7 +57,7 @@ function FilterRecipes() {
             return;
         }
         try {
-            const userId = JSON.parse(localStorage.getItem("user")).userId;
+            const userId = JSON.parse(localStorage.getItem("user")).id;
 
             const response = await axios.get(`${baseAPI}auth/user/${userId}`);
             const userData = response.data;
@@ -71,13 +71,13 @@ function FilterRecipes() {
                 userData.savedRecipes.push(recipeId);
             }
 
-            await axios.put(`${baseAPI}/auth/user/${userId}`, userData);
+            await axios.put(`${baseAPI}auth/user/${userId}`, userData);
 
             setSavedRecipes(userData.savedRecipes);
             ToastSuccess(isRecipeAlreadySaved ? "Recipe removed from saved recipes!" : "Recipe saved!");
         } catch (error) {
             console.error("Error saving recipe:", error);
-            console.log("Recipe could not be saved.");
+            ToastError("Recipe could not be saved.");
         }
     };
 

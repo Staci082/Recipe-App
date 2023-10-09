@@ -3,6 +3,7 @@ import { ToastSuccess, ToastError } from "../Hooks/useToasts";
 import axios from "axios";
 import jwt_decode from "jwt-decode";
 import { useNavigate } from "react-router-dom";
+import baseAPI from "./baseAPI";
 
 const AuthContext = createContext();
 
@@ -19,7 +20,7 @@ export function AuthProvider({ children }) {
 
     const register = async (userData) => {
         try {
-            const response = await axios.post("http://localhost:5712/auth/register", userData);
+            const response = await axios.post(`${baseAPI}auth/register`, userData);
             const { token, userID } = response.data;
             const decoded = jwt_decode(token);
 
@@ -28,7 +29,7 @@ export function AuthProvider({ children }) {
             localStorage.setItem("userID", userID);
             setIsLoggedIn(true);
             ToastSuccess("You have been successfully registered!");
-            // navigate("/login")
+            navigate("/")
         } catch (error) {
             console.error(error);
             setIsLoggedIn(false)
@@ -36,27 +37,29 @@ export function AuthProvider({ children }) {
         }
     };
 
-    const login = (username, password) => {
-        axios
-            .post("http://localhost:5712/auth/login", {
+    const login = async (username, password) => {
+
+        try {
+            const response = await axios.post(`${baseAPI}auth/login`, {
                 username,
                 password,
             })
-            .then((response) => {
-                const decoded = jwt_decode(response.data.token);
-                const userId = decoded.id; // Extract userId from decoded token
-                localStorage.setItem("user", JSON.stringify({ ...decoded, userId }));
-    
-                setState(userId);
-                setIsLoggedIn(true);
-                ToastSuccess("Logged in successfully!");
-                navigate("/");
-            })
-            .catch((error) => {
-                console.error(error);
-                setIsLoggedIn(false)
-                ToastError("Oops! Something went wrong!");
-            });
+            console.log(response);
+
+            // const { token, userID } = response.data;
+            // const decoded = jwt_decode(token);
+
+            // localStorage.setItem("user", JSON.stringify(decoded));
+            // setState(decoded);
+            // localStorage.setItem("userID", userID);
+            // setIsLoggedIn(true);
+            ToastSuccess("Logged in successfully!");
+            navigate("/");
+        } catch (error) {
+            console.log(error)
+            setIsLoggedIn(false)
+            ToastError("Oops! Something went wrong!");
+        }
     };
 
     const logout = () => {

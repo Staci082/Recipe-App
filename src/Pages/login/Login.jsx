@@ -11,7 +11,6 @@ function Login() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log("hi2")
         try {
             login(username, password);
         } catch (error) {
