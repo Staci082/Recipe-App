@@ -32,6 +32,22 @@ function FilterRecipes() {
         fetchRecipes();
     }, [route, recipes]);
 
+    useEffect(() => {
+        if (isLoggedIn) {
+            try {
+                const userId = JSON.parse(localStorage.getItem("user")).userId;
+                const fetchUser = async () => {
+                    const response = await axios.get(`http://localhost:5712/auth/user/${userId}`);
+                    const userData = response.data;
+                    setSavedRecipes(userData.savedRecipes);
+                };
+                fetchUser();
+            } catch (error) {
+                console.error("Error fetching user data:", error);
+            }
+        }
+    }, [isLoggedIn]);
+
     const handleSaveRecipe = async (recipeId) => {
         if (!isLoggedIn) {
             ToastError("You need to be logged in to save a recipe.");
@@ -62,21 +78,7 @@ function FilterRecipes() {
         }
     };
 
-    useEffect(() => {
-        if (isLoggedIn) {
-            try {
-                const userId = JSON.parse(localStorage.getItem("user")).userId;
-                const fetchUser = async () => {
-                    const response = await axios.get(`http://localhost:5712/auth/user/${userId}`);
-                    const userData = response.data;
-                    setSavedRecipes(userData.savedRecipes);
-                };
-                fetchUser();
-            } catch (error) {
-                console.error("Error fetching user data:", error);
-            }
-        }
-    }, [isLoggedIn]);
+
 
     const displayRecipes = (recipeList) =>
         recipeList.slice(pagesVisited, pagesVisited + recipesPerPage).map((recipe) => {

@@ -21,7 +21,8 @@ function Register() {
             register(userData);
 
             ToastSuccess("Registered successfully!");
-            navigate("/login");
+            navigate("/");
+
         } catch (error) {
             console.error(error);
             ToastError("Oops! Somthing went wrong!");

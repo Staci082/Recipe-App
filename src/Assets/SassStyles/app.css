@@ -328,7 +328,7 @@
 
 .menu-container {
   width: 200px;
-  background: rgb(252, 247, 239);
+  background: #fcf7ef;
   border: 1px rgb(0, 0, 0) solid;
   border-radius: 10px;
   background: white;
@@ -350,7 +350,7 @@
   display: flex;
   width: 95vw;
   z-index: 2;
-  background: rgb(252, 247, 239);
+  background: #fcf7ef;
   border: 1px rgb(0, 0, 0) solid;
   border-radius: 10px;
   background: rgb(255, 255, 255);
@@ -396,7 +396,7 @@
   border-radius: 10px;
   box-shadow: 4px 6px 0px 0px rgba(0, 0, 0, 0.75);
   flex-direction: column;
-  background: rgb(252, 247, 239);
+  background: #fcf7ef;
   font-weight: bold;
   font-size: 2rem;
   z-index: 2;
@@ -454,7 +454,7 @@
   width: clamp(300px, 20vw, 400px);
   padding: 2em 0 1em 0;
   margin-top: 3em;
-  background: rgb(252, 247, 239);
+  background: #fcf7ef;
   border: 1px rgb(0, 0, 0) solid;
   border-radius: 10px;
   background: white;
@@ -515,7 +515,7 @@
 }
 .recipe-details-container .ingredients-container,
 .recipe-details-container .method-container {
-  background: rgb(252, 247, 239);
+  background: #fcf7ef;
   border: 1px rgb(0, 0, 0) solid;
   border-radius: 10px;
   padding: 1em;
@@ -593,7 +593,7 @@
   align-items: center;
   flex-direction: column;
   width: clamp(300px, 70%, 1000px);
-  background: rgb(252, 247, 239);
+  background: #fcf7ef;
   padding: 2em;
   gap: 2rem;
   border: 1px rgb(0, 0, 0) solid;
@@ -628,7 +628,7 @@ html {
 body {
   font-family: Poppins, sans-serif;
   min-height: 100vh;
-  background: rgb(252, 247, 239);
+  background: #fcf7ef;
   background-size: 60px 60px;
 }
 

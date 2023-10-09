@@ -22,12 +22,14 @@ export function AuthProvider({ children }) {
             const response = await axios.post("http://localhost:5712/auth/register", userData);
             const { token, userID } = response.data;
             const decoded = jwt_decode(token);
+            console.log(response.data)
 
             localStorage.setItem("user", JSON.stringify(decoded));
             setState(decoded);
             localStorage.setItem("userID", userID);
             setIsLoggedIn(true);
             ToastSuccess("You have been successfully registered!");
+            // navigate("/login")
         } catch (error) {
             console.error(error);
             setIsLoggedIn(false)

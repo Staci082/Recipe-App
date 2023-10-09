@@ -18,7 +18,7 @@ function form({ username, setUsername, password, setPassword, label, handleSubmi
                         <input type="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} />
                     </div>
 
-                    <button type="submit" className="submit-button" >
+                    <button type="submit" className="submit-button">
                         {label}
                     </button>
                 </form>
