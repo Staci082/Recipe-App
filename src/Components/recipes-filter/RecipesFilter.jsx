@@ -37,10 +37,12 @@ function FilterRecipes() {
         if (isLoggedIn) {
             try {
                 const userId = JSON.parse(localStorage.getItem("user")).id;
+
                 const fetchUser = async () => {
-                    const response = await axios.get(baseAPI + "auth/user/", userId);
+                    const response = await axios.get(baseAPI + "auth/user/" + userId);
                     const userData = response.data;
                     setSavedRecipes(userData.savedRecipes);
+                    console.log(userData)
                 };
                 fetchUser();
             } catch (error) {
@@ -57,7 +59,7 @@ function FilterRecipes() {
         try {
             const userId = JSON.parse(localStorage.getItem("user")).id;
 
-            const response = await axios.get(baseAPI + "auth/user/", userId);
+            const response = await axios.get(baseAPI + "auth/user/" + userId);
             const userData = response.data;
 
             const isRecipeAlreadySaved = userData.savedRecipes.includes(recipeId);
@@ -68,8 +70,7 @@ function FilterRecipes() {
             } else {
                 userData.savedRecipes.push(recipeId);
             }
-
-            await axios.put(`${baseAPI}auth/user/${userId}`, userData);
+            await axios.put(baseAPI + "auth/user/" + userId, userData);
 
             setSavedRecipes(userData.savedRecipes);
             ToastSuccess(isRecipeAlreadySaved ? "Recipe removed from saved recipes!" : "Recipe saved!");
@@ -103,28 +104,28 @@ function FilterRecipes() {
         setPageNumber(selected);
     };
 
-    const fetchSavedRecipes = async () => {
-        try {
-            const userId = JSON.parse(localStorage.getItem("user")).userId;
-            const response = await axios.get(baseAPI + "auth/user/", userId);
-            const userData = response.data;
-            const recipeIds = userData.savedRecipes;
-            await fetchSavedRecipesByIds(recipeIds);
-        } catch (error) {
-            console.error("Error fetching saved recipes:", error);
-        }
-    };
+    // const fetchSavedRecipes = async () => {
+    //     try {
+    //         const userId = JSON.parse(localStorage.getItem("user")).userId;
+    //         const response = await axios.get(baseAPI + "auth/user/" + userId);
+    //         const userData = response.data;
+    //         const recipeIds = userData.savedRecipes;
+    //         await fetchSavedRecipesByIds(recipeIds);
+    //     } catch (error) {
+    //         console.error("Error fetching saved recipes:", error);
+    //     }
+    // };
 
-    const fetchSavedRecipesByIds = async (recipeIds) => {
-        try {
-            const response = await axios.post(baseAPI + "auth/savedrecipes", { recipeIds });
-            const recipesObj = response.data;
-            console.log("Fetched saved recipes:", recipesObj);
-            setRecipes(recipesObj);
-        } catch (error) {
-            console.error("Error fetching saved recipes:", error);
-        }
-    };
+    // const fetchSavedRecipesByIds = async (recipeIds) => {
+    //     try {
+    //         const response = await axios.post(baseAPI + "auth/savedrecipes", { recipeIds });
+    //         const recipesObj = response.data;
+    //         console.log("Fetched saved recipes:", recipesObj);
+    //         setRecipes(recipesObj);
+    //     } catch (error) {
+    //         console.error("Error fetching saved recipes:", error);
+    //     }
+    // };
 
     return (
         <>

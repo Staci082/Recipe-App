@@ -29,7 +29,6 @@ export function AuthProvider({ children }) {
             localStorage.setItem("userID", userID);
             setIsLoggedIn(true);
             ToastSuccess("You have been successfully registered!");
-            // navigate("/login")
         } catch (error) {
             console.error(error);
             setIsLoggedIn(false)
@@ -44,7 +43,6 @@ export function AuthProvider({ children }) {
                 password,
             })
             .then((response) => {
-                console.log(response);
                 const decoded = jwt_decode(response.data.token);
                 const userId = decoded.userId;
                 localStorage.setItem("user", JSON.stringify({ ...decoded, userId }));
@@ -72,6 +70,7 @@ export function AuthProvider({ children }) {
         const user = localStorage.getItem("user");
         if (user) {
             setState(JSON.parse(user))
+            console.log(user)
             setIsLoggedIn(true);
         } 
     };
