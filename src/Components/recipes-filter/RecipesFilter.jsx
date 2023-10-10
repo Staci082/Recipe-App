@@ -2,23 +2,24 @@ import { useState, useEffect, useContext } from "react"; // keep "useContext" he
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import Pagination from "../pagination/Pagination.jsx";
-import { ToastSuccess, ToastError } from "../../Hooks/useToasts.js";
 import { FaHeart, FaRegHeart } from "react-icons/fa6";
 import UseSearchContext from "../../Context/SearchContext.jsx";
 import { useAuth } from "../../Context/AuthContext.jsx";
 import baseAPI from "../../Context/baseAPI.js";
+import SaveRecipes from "../save-recipes/SaveRecipes.jsx"
 
 function FilterRecipes() {
     const { input, results } = UseSearchContext();
-    const { isLoggedIn } = useAuth();
     const { route, category } = useParams();
 
-    const [savedRecipes, setSavedRecipes] = useState([]);
     const [recipes, setRecipes] = useState([]);
 
     const [pageNumber, setPageNumber] = useState(0);
     const recipesPerPage = 12;
     const pagesVisited = pageNumber * recipesPerPage;
+
+    const { isLoggedIn } = useAuth();
+    const { savedRecipes, handleSaveRecipe } = SaveRecipes({ isLoggedIn });
 
     useEffect(() => {
         const fetchRecipes = async () => {
@@ -33,52 +34,6 @@ function FilterRecipes() {
         fetchRecipes();
     }, [route, recipes]);
 
-    useEffect(() => {
-        if (isLoggedIn) {
-            try {
-                const userId = JSON.parse(localStorage.getItem("user")).id;
-
-                const fetchUser = async () => {
-                    const response = await axios.get(baseAPI + "auth/user/" + userId);
-                    const userData = response.data;
-                    setSavedRecipes(userData.savedRecipes);
-                    console.log(userData)
-                };
-                fetchUser();
-            } catch (error) {
-                console.error("Error fetching user data:", error);
-            }
-        }
-    }, [isLoggedIn]);
-
-    const handleSaveRecipe = async (recipeId) => {
-        if (!isLoggedIn) {
-            ToastError("You need to be logged in to save a recipe.");
-            return;
-        }
-        try {
-            const userId = JSON.parse(localStorage.getItem("user")).id;
-
-            const response = await axios.get(baseAPI + "auth/user/" + userId);
-            const userData = response.data;
-
-            const isRecipeAlreadySaved = userData.savedRecipes.includes(recipeId);
-
-            if (isRecipeAlreadySaved) {
-                const updatedSavedRecipes = userData.savedRecipes.filter((id) => id !== recipeId);
-                userData.savedRecipes = updatedSavedRecipes;
-            } else {
-                userData.savedRecipes.push(recipeId);
-            }
-            await axios.put(baseAPI + "auth/user/" + userId, userData);
-
-            setSavedRecipes(userData.savedRecipes);
-            ToastSuccess(isRecipeAlreadySaved ? "Recipe removed from saved recipes!" : "Recipe saved!");
-        } catch (error) {
-            console.error("Error saving recipe:", error);
-            ToastError("Recipe could not be saved.");
-        }
-    };
 
     const displayRecipes = (recipeList) =>
         recipeList.slice(pagesVisited, pagesVisited + recipesPerPage).map((recipe) => {
@@ -104,28 +59,6 @@ function FilterRecipes() {
         setPageNumber(selected);
     };
 
-    // const fetchSavedRecipes = async () => {
-    //     try {
-    //         const userId = JSON.parse(localStorage.getItem("user")).userId;
-    //         const response = await axios.get(baseAPI + "auth/user/" + userId);
-    //         const userData = response.data;
-    //         const recipeIds = userData.savedRecipes;
-    //         await fetchSavedRecipesByIds(recipeIds);
-    //     } catch (error) {
-    //         console.error("Error fetching saved recipes:", error);
-    //     }
-    // };
-
-    // const fetchSavedRecipesByIds = async (recipeIds) => {
-    //     try {
-    //         const response = await axios.post(baseAPI + "auth/savedrecipes", { recipeIds });
-    //         const recipesObj = response.data;
-    //         console.log("Fetched saved recipes:", recipesObj);
-    //         setRecipes(recipesObj);
-    //     } catch (error) {
-    //         console.error("Error fetching saved recipes:", error);
-    //     }
-    // };
 
     return (
         <>

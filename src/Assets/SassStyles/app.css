@@ -58,7 +58,7 @@
 
 .add-ingredient-button {
   margin-left: 30px;
-  background: white;
+  background: #fcf7ef;
   border: black 1px solid;
   border-radius: 5px;
   box-shadow: 3px 4px 0px 0px rgba(0, 0, 0, 0.75);
@@ -227,7 +227,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #fbd1d1;
+  background: #fcf7ef;
   margin: -0.5em;
 }
 .no-auth-container .taco-gif {
@@ -271,7 +271,7 @@
   color: orange;
 }
 .pagination .pagination-active a:hover {
-  color: white;
+  color: #fcf7ef;
 }
 
 .outer-recipe-container {
@@ -302,7 +302,7 @@
   justify-content: space-between;
   cursor: pointer;
   width: 260px;
-  background: white;
+  background: #fcf7ef;
   border-radius: 15px;
 }
 .recipe .recipe-title-container {
@@ -330,10 +330,10 @@
 
 .menu-container {
   width: 200px;
-  background: #fcf7ef;
+  background: #fcfefc;
   border: 1px rgb(0, 0, 0) solid;
   border-radius: 10px;
-  background: white;
+  background: #fcf7ef;
   border: none;
   position: relative;
   display: flex;
@@ -352,7 +352,7 @@
   display: flex;
   width: 95vw;
   z-index: 2;
-  background: #fcf7ef;
+  background: #fcfefc;
   border: 1px rgb(0, 0, 0) solid;
   border-radius: 10px;
   background: rgb(255, 255, 255);
@@ -398,7 +398,7 @@
   border-radius: 10px;
   box-shadow: 4px 6px 0px 0px rgba(0, 0, 0, 0.75);
   flex-direction: column;
-  background: #fcf7ef;
+  background: #fcfefc;
   font-weight: bold;
   font-size: 2rem;
   z-index: 2;
@@ -456,10 +456,10 @@
   width: clamp(300px, 20vw, 400px);
   padding: 2em 0 1em 0;
   margin-top: 3em;
-  background: #fcf7ef;
+  background: #fcfefc;
   border: 1px rgb(0, 0, 0) solid;
   border-radius: 10px;
-  background: white;
+  background: #fcf7ef;
   color: grey;
 }
 
@@ -492,7 +492,7 @@
 }
 
 .add-item-button {
-  background: white;
+  background: #fcf7ef;
   padding: 5px 10px;
   border: black 1px solid;
   border-radius: 5px;
@@ -517,7 +517,7 @@
 }
 .recipe-details-container .ingredients-container,
 .recipe-details-container .method-container {
-  background: #fcf7ef;
+  background: #fcfefc;
   border: 1px rgb(0, 0, 0) solid;
   border-radius: 10px;
   padding: 1em;
@@ -595,7 +595,7 @@
   align-items: center;
   flex-direction: column;
   width: clamp(300px, 70%, 1000px);
-  background: #fcf7ef;
+  background: #fcfefc;
   padding: 2em;
   gap: 2rem;
   border: 1px rgb(0, 0, 0) solid;
@@ -630,7 +630,7 @@ html {
 body {
   font-family: Poppins, sans-serif;
   min-height: 100vh;
-  background: #fcf7ef;
+  background: #fcfefc;
   background-size: 60px 60px;
 }
 

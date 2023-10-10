@@ -70,7 +70,6 @@ export function AuthProvider({ children }) {
         const user = localStorage.getItem("user");
         if (user) {
             setState(JSON.parse(user))
-            console.log(user)
             setIsLoggedIn(true);
         } 
     };

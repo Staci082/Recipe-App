@@ -17,10 +17,9 @@
     padding: 2em 0 1em 0;
     margin-top: 3em;
     @include colorBox;
-    background: white;
+    background: $background2;
     color: grey;
 }
-
 
 .line {
     display: flex;
@@ -41,7 +40,7 @@
     height: 40px;
 }
 .add-item-button {
-    background: white;
+    background: $background2;
     padding: 5px 10px;
     border: black 1px solid;
     border-radius: 5px;
@@ -50,5 +49,4 @@
 
 .grocery-back-button {
     @include backButton;
-
 }

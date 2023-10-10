@@ -3,7 +3,7 @@ import { HiPlus } from "react-icons/hi2";
 import { useAuth } from "../../Context/AuthContext";
 import NotAuthorized from "../../Components/not-authorized/NotAuthorized";
 import axios from "axios";
-import { ToastError, ToastSuccess } from "../../Hooks/useToasts";
+import { ToastError } from "../../Hooks/useToasts";
 import { FiDelete } from "react-icons/fi";
 import { MdOutlineCheckBox, MdOutlineCheckBoxOutlineBlank } from "react-icons/md";
 import baseAPI from "../../Context/baseAPI";
@@ -14,7 +14,6 @@ function GroceryList() {
     const [checked, setChecked] = useState([]);
     const [groceryList, setGroceryList] = useState([]);
 
-    
     useEffect(() => {
         const fetchData = async () => {
             try {
@@ -30,31 +29,31 @@ function GroceryList() {
             }
         };
 
-        fetchData(); 
+        fetchData();
     }, []);
 
     const handleAddItem = async () => {
-        try {
-            const userId = JSON.parse(localStorage.getItem("user")).id;
+        if (groceryItem != "") {
+            try {
+                const userId = JSON.parse(localStorage.getItem("user")).id;
 
-            const response = await axios.get(baseAPI + "auth/user/" + userId);
-            const userData = response.data;
-            userData.groceryItems.push(groceryItem);
+                const response = await axios.get(baseAPI + "auth/user/" + userId);
+                const userData = response.data;
+                userData.groceryItems.push(groceryItem);
 
-            await axios.put(baseAPI + "auth/user/" + userId, userData);
+                await axios.put(baseAPI + "auth/user/" + userId, userData);
 
-            setGroceryList(userData.groceryItems);
-            
-            setGroceryItem("");
-        } catch (error) {
-            console.log(error);
+                setGroceryList(userData.groceryItems);
+                setGroceryItem("");
+            } catch (error) {
+                console.log(error);
 
-            if (isLoggedIn) {
-                ToastError("Oops! Something went wrong!");
+                if (isLoggedIn) {
+                    ToastError("Oops! Something went wrong!");
+                }
             }
         }
     };
-
 
     const handleToggleCheck = (index) => {
         const newCheckedItems = [...checked];
@@ -98,12 +97,7 @@ function GroceryList() {
                         </a>
                         <h2>Grocery List</h2>
 
-                        <input type="text" 
-                                className="grocery-input" 
-                                htmlFor="groceryList" 
-                                value={groceryItem} 
-                                onChange={(e) => setGroceryItem(e.target.value)}
-                                onKeyDown={handleInputKeyPress}/>
+                        <input type="text" className="grocery-input" htmlFor="groceryList" value={groceryItem} onChange={(e) => setGroceryItem(e.target.value)} onKeyDown={handleInputKeyPress} />
 
                         <button onClick={handleAddItem} className="add-item-button">
                             <HiPlus size={28} />
@@ -111,13 +105,13 @@ function GroceryList() {
 
                         <div className="grocery-list">
                             {groceryList.map((item, index) => (
-                                    <div className="line" key={index}>
-                                        <button onClick={() => handleToggleCheck(index)}>{checked[index] ? <MdOutlineCheckBox size={20} /> : <MdOutlineCheckBoxOutlineBlank size={20} />}</button>
-                                        <p className={checked[index] ? 'line-through' : ''}>{item}</p>
-                                        <button type="button" onClick={() => handleDeleteItem(index)}>
-                                            <FiDelete size={20} />
-                                        </button>
-                                    </div>
+                                <div className="line" key={index}>
+                                    <button onClick={() => handleToggleCheck(index)}>{checked[index] ? <MdOutlineCheckBox size={20} /> : <MdOutlineCheckBoxOutlineBlank size={20} />}</button>
+                                    <p className={checked[index] ? "line-through" : ""}>{item}</p>
+                                    <button type="button" onClick={() => handleDeleteItem(index)}>
+                                        <FiDelete size={20} />
+                                    </button>
+                                </div>
                             ))}
                         </div>
                     </div>

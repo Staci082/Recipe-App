@@ -33,11 +33,11 @@
 }
 
 .recipe-category-title {
-    color: $primary;
+    color: $primary-dark;
 }
 
 .recipe-details-title {
-    color: $primary;
+    color: $primary-dark;
 }
 
 .recipe-button-container {
@@ -51,7 +51,7 @@
 .random-button {
     margin: 0 8px;
     &:hover {
-        color: $primary;
+        color: $primary-dark;
         transform: scale(1.2);
     }
 }
@@ -94,7 +94,7 @@
 .modal-button {
     font-size: 1rem;
     &:hover {
-        color: $primary;
+        color: $primary-dark;
         transform: scale(1.2);
     }
 }
