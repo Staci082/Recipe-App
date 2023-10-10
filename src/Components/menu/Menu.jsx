@@ -25,7 +25,7 @@ function menu() {
         },
         {
             title: "Saved Recipes",
-            href: `/auth/savedrecipes/`,
+            href: "/saved",
         },
         {
             title: "Get Random Recipe",

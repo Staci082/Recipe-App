@@ -15,7 +15,6 @@ function SaveRecipes({ isLoggedIn }) {
                     const response = await axios.get(baseAPI + "auth/user/" + userId);
                     const userData = response.data;
                     setSavedRecipes(userData.savedRecipes);
-                    console.log(userData)
                 };
                 fetchUser();
             } catch (error) {
@@ -53,30 +52,31 @@ function SaveRecipes({ isLoggedIn }) {
         }
     };
 
-        // const fetchSavedRecipes = async () => {
-    //     try {
-    //         const userId = JSON.parse(localStorage.getItem("user")).userId;
-    //         const response = await axios.get(baseAPI + "auth/user/" + userId);
-    //         const userData = response.data;
-    //         const recipeIds = userData.savedRecipes;
-    //         await fetchSavedRecipesByIds(recipeIds);
-    //     } catch (error) {
-    //         console.error("Error fetching saved recipes:", error);
-    //     }
-    // };
+    const fetchSavedRecipes = async () => {
+        try {
+          const userId = JSON.parse(localStorage.getItem("user")).id;
+          const response = await axios.get(baseAPI + "auth/user/" + userId);
+          const userData = response.data;
+          const recipeIds = userData.savedRecipes;
+          const recipesObj = await fetchSavedRecipesByIds(recipeIds);
+          console.log("Fetched saved recipes:", recipesObj);
+          return recipesObj; // Return the recipesObj
+        } catch (error) {
+          console.error("Error fetching saved recipes:", error);
+        }
+      };
 
-    // const fetchSavedRecipesByIds = async (recipeIds) => {
-    //     try {
-    //         const response = await axios.post(baseAPI + "auth/savedrecipes", { recipeIds });
-    //         const recipesObj = response.data;
-    //         console.log("Fetched saved recipes:", recipesObj);
-    //         setRecipes(recipesObj);
-    //     } catch (error) {
-    //         console.error("Error fetching saved recipes:", error);
-    //     }
-    // };
+    const fetchSavedRecipesByIds = async (recipeIds) => {
+        try {
+            const response = await axios.post(baseAPI + "auth/saved", { recipeIds });
+            const recipesObj = response.data
+            return recipesObj
+        } catch (error) {
+            console.error("Error fetching saved recipes:", error);
+        }
+    };
 
-    return { savedRecipes, handleSaveRecipe };
+    return { handleSaveRecipe, fetchSavedRecipes };
 }
 
 export default SaveRecipes;
