@@ -42,7 +42,6 @@ function Create() {
         event.preventDefault();
         try {
             await axios.post(baseAPI + "create", { ...recipe });
-            console.log(recipe);
             navigate("/");
             ToastSuccess("Recipe created!");
         } catch (error) {
@@ -56,8 +55,6 @@ function Create() {
         newArray.splice(i, 1);
         setRecipe({ ...recipe, ingredients: newArray });
     };
-
-    console.log(recipe);
 
     return (
         <>

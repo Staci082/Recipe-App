@@ -110,7 +110,7 @@
   text-align: center;
 }
 .cat-item-container:hover {
-  background: orange;
+  background: #ffebeb;
 }
 
 .cat-item-title {
@@ -139,7 +139,7 @@
   margin-bottom: 1em;
   padding: 0 1em;
 }
-@media (max-width: 480px) {
+@media (max-width: 720px) {
   .header-container {
     padding: 0;
   }
@@ -162,6 +162,7 @@
   font-size: 3rem;
   margin-right: -5px;
   z-index: 3;
+  cursor: pointer;
 }
 @media (max-width: 720px) {
   .menu-button {
@@ -176,7 +177,7 @@
   border: 1px rgb(0, 0, 0) solid;
   border-radius: 10px;
   padding: 0 1em;
-  border: none;
+  border: #fbd1d1 2px solid;
   margin-right: -5px;
 }
 
@@ -227,7 +228,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #fcf7ef;
+  background: #fbd1d1;
   margin: -0.5em;
 }
 .no-auth-container .taco-gif {
@@ -259,7 +260,7 @@
   border-radius: 5px;
 }
 .pagination a:hover {
-  background: orange;
+  background: #faa0a0;
 }
 
 .pagination-arrows {
@@ -268,7 +269,7 @@
 
 .pagination .pagination-active a {
   border-radius: 5px;
-  color: orange;
+  color: #faa0a0;
 }
 .pagination .pagination-active a:hover {
   color: #fcf7ef;
@@ -293,7 +294,7 @@
   gap: 2em;
 }
 .recipe-container-header h2 {
-  color: orange;
+  color: #faa0a0;
 }
 
 .recipe {
@@ -302,7 +303,7 @@
   justify-content: space-between;
   cursor: pointer;
   width: 260px;
-  background: #fcf7ef;
+  background: #ffebeb;
   border-radius: 15px;
 }
 .recipe .recipe-title-container {
@@ -323,9 +324,24 @@
 
 .save-icon {
   width: 40px;
-  color: orange;
+  color: #faa0a0;
   font-size: 1.5rem;
   margin-right: 5px;
+}
+
+.empty-recipes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.loadingtaco {
+  width: 80%;
+}
+
+.empty-text {
+  font-size: clamp(1rem, 5vh, 1.5rem);
 }
 
 .menu-container {
@@ -333,7 +349,7 @@
   background: #fcfefc;
   border: 1px rgb(0, 0, 0) solid;
   border-radius: 10px;
-  background: #fcf7ef;
+  background: #ffebeb;
   border: none;
   position: relative;
   display: flex;
@@ -350,14 +366,16 @@
 
 #mobile-menu {
   display: flex;
-  width: 95vw;
+  width: 250px;
   z-index: 2;
   background: #fcfefc;
   border: 1px rgb(0, 0, 0) solid;
   border-radius: 10px;
-  background: rgb(255, 255, 255);
+  background: #fbd1d1;
   border: none;
-  position: relative;
+  position: absolute;
+  right: 0;
+  top: 0;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -365,6 +383,10 @@
 }
 #mobile-menu .menu-container {
   display: flex;
+  background: #fbd1d1;
+}
+#mobile-menu .menu-container a:hover {
+  color: #fcfefc;
 }
 
 .menuItem,
@@ -375,7 +397,7 @@
 }
 .menuItem a:hover,
 .logout-button a:hover {
-  color: orange;
+  color: #faa0a0;
 }
 
 .logout-button {
@@ -415,7 +437,7 @@
   font-size: 3rem;
 }
 .theme-button.orange {
-  color: orange;
+  color: #faa0a0;
 }
 .theme-button.red {
   color: red;
@@ -428,12 +450,6 @@
 }
 .theme-button.purple {
   color: purple;
-}
-
-.empty-page-container {
-  width: 1000px;
-  height: 100px;
-  background: lime;
 }
 
 .grocery-list-container {
@@ -549,11 +565,11 @@
 }
 
 .recipe-category-title {
-  color: orange;
+  color: #faa0a0;
 }
 
 .recipe-details-title {
-  color: orange;
+  color: #faa0a0;
 }
 
 .recipe-button-container {
@@ -569,7 +585,7 @@
 }
 .edit-buttons:hover,
 .random-button:hover {
-  color: orange;
+  color: #faa0a0;
   transform: scale(1.2);
 }
 
@@ -619,7 +635,7 @@
   font-size: 1rem;
 }
 .modal-button:hover {
-  color: orange;
+  color: #faa0a0;
   transform: scale(1.2);
 }
 
@@ -632,6 +648,11 @@ body {
   min-height: 100vh;
   background: #fcfefc;
   background-size: 60px 60px;
+}
+@media (max-width: 720px) {
+  body {
+    padding: 0 1em;
+  }
 }
 
 a {
@@ -668,8 +689,8 @@ button {
 }
 .submit-button:hover {
   transform: scale(1.1);
-  border: orange solid 2px;
-  box-shadow: 4px 4px 0px 0px rgba(255, 165, 0, 0.75);
+  border: #faa0a0 solid 2px;
+  box-shadow: 4px 4px 0px 0px rgba(250, 160, 160, 0.75);
 }
 
 .back-button {

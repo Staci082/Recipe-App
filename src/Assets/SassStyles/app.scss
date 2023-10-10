@@ -14,8 +14,6 @@
 @import "../../Components/recipes-container/recipes-container";
 @import "../../Components/menu/menu";
 @import "../../Components/menu/theme";
-@import "../../Components/empty/empty";
-
 @import "../../Pages/grocery-list/groceryList";
 @import "../../Pages/recipe/recipe";
 
@@ -28,6 +26,9 @@ body {
     min-height: 100vh;
     background: #fcfefc;
     background-size: 60px 60px;
+    @include md {
+        padding: 0 1em;
+    }
 }
 
 a {

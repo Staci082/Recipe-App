@@ -4,7 +4,7 @@
     justify-content: space-between;
     margin-bottom: 1em;
     padding: 0 1em;
-    @include sm {
+    @include md {
         padding: 0;
     }
 }
@@ -26,6 +26,7 @@
     font-size: 3rem;
     margin-right: -5px;
     z-index: 3;
+    cursor: pointer;
     @include md {
         display: flex;
     }
@@ -37,7 +38,7 @@
     width: clamp(200px, 30vw, 600px);
     @include box;
     padding: 0 1em;
-    border: none;
+    border: $salmon 2px solid;
     margin-right: -5px;
 }
 
@@ -46,22 +47,4 @@
     right: 30px;
     color: grey;
 }
-
-// #mobile-menu {
-//     position: absolute;
-//     right: -5px;
-//     top: -35px;
-//     display: flex;
-//     justify-content: center;
-//     text-align: left;
-//     z-index: 2;
-//     height: auto; 
-
-//     padding: 1em;
-//     & .menu-container {
-
-//         min-width: 100%;
-//         box-shadow: none;
-//     }
-// }
 

@@ -1,9 +1,7 @@
 .menu-container {
     width: 200px;
     @include colorBox;
-    background: $background2;
-    // box-shadow: 5px 5px 0px 0px $primary-dark,
-    // 7px 7px 0px 0px $background2;
+    background: $primary-light;
     border: none;
     position: relative;
     display: flex;
@@ -18,18 +16,24 @@
 
 #mobile-menu {
     display: flex;
-    width: 95vw;
+    width: 250px;
     z-index: 2;
     @include colorBox;
-    background: rgb(255, 255, 255);
+    background: $salmon;
     border: none;
-    position: relative;
+    position: absolute;
+    right: 0;
+    top: 0;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 0.5em 0;
     & .menu-container {
         display: flex;
+        background: $salmon;
+        & a:hover {
+            color: $background;
+        }
     }
 }
 

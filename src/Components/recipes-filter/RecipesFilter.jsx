@@ -43,13 +43,12 @@ function FilterRecipes() {
         fetchRecipes();
     }, [route, location.pathname]);
 
-
     const displayRecipes = (recipeList) => {
         if (!recipeList) {
             return (
                 <div className="empty-recipes">
-                    <p>You don't have any saved recipes yet..</p>
-                    <img src={loadingtaco} alt="happy taco" />
+                    <img src={loadingtaco} alt="happy taco" className="loadingtaco"/>
+                    <p className="empty-text">You don't have any saved recipes yet..</p>
                 </div>
             );
         } else {
@@ -88,10 +87,8 @@ function FilterRecipes() {
 
             <div className="recipe-container">{displayRecipesList}</div>
 
-
-            {location.pathname.endsWith("/saved") && savedRecipes === null 
-                ? <Pagination pageCount={pageCount} onPageChange={changePage} />
-                : null
+            {
+                displayRecipesList === null ? null : <Pagination pageCount={pageCount} onPageChange={changePage} /> // hide pagination arrows on empty page
             }
         </>
     );
