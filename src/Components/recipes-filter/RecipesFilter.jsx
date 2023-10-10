@@ -41,12 +41,13 @@ function FilterRecipes() {
         };
         fetchRecipes();
     }, [route, location.pathname]);
+    console.log(savedRecipes)
 
     const displayRecipes = (recipeList) => {
         return recipeList
             .slice(pagesVisited, pagesVisited + recipesPerPage)
             .map((recipe) => {
-                const isRecipeSaved = savedRecipes ? savedRecipes.includes(recipe._id) : null;
+                const isRecipeSaved = savedRecipes.includes(recipe._id);
                 return (
                     <div className="recipe" key={recipe._id}>
                         <a href={`/recipe/${recipe._id}`} className="recipe-title-container">
@@ -71,8 +72,6 @@ function FilterRecipes() {
     return (
         <>
             <div className="recipe-container-header">
-                <button onClick={fetchSavedRecipes}>boop</button>
-
                 <h1>{results.length > 0 ? `${input} recipes` : `${category} recipes`}</h1>
                 <h2>{Number(recipes.length)}</h2>
             </div>

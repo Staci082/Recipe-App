@@ -56,10 +56,8 @@ function SaveRecipes({ isLoggedIn }) {
         try {
           const userId = JSON.parse(localStorage.getItem("user")).id;
           const response = await axios.get(baseAPI + "auth/user/" + userId);
-          const userData = response.data;
-          const recipeIds = userData.savedRecipes;
+          const recipeIds = response.data.savedRecipes;
           const recipesObj = await fetchSavedRecipesByIds(recipeIds);
-          console.log("Fetched saved recipes:", recipesObj);
           return recipesObj; // Return the recipesObj
         } catch (error) {
           console.error("Error fetching saved recipes:", error);
@@ -76,7 +74,7 @@ function SaveRecipes({ isLoggedIn }) {
         }
     };
 
-    return { handleSaveRecipe, fetchSavedRecipes };
+    return { savedRecipes, handleSaveRecipe, fetchSavedRecipes };
 }
 
 export default SaveRecipes;
