@@ -1,3 +1,5 @@
+import taco from "/runningtaco.gif"
+
 
 function NotAuthorized() {
 
@@ -9,7 +11,7 @@ function NotAuthorized() {
         &times;
     </a>
         <p className="no-auth-text">You must be logged in to use this feature.</p>
-    <img src="../../../public/runningtaco.gif" alt="taco gif" className="taco-gif"/>
+    <img src={taco} alt="taco gif" className="taco-gif"/>
     </div>
 
     </>

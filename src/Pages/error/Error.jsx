@@ -1,3 +1,4 @@
+import taco from "/runningtaco.gif"
 
 function Error() {
   return (
@@ -7,7 +8,7 @@ function Error() {
         &times;
     </a>
         <p className="no-auth-text">Page not found.</p> 
-    <img src="../../../public/runningtaco.gif" alt="taco gif" className="taco-gif"/>
+    <img src={taco} alt="taco gif" className="taco-gif"/>
     </div>
     </>
   )
