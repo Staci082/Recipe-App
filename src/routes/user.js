@@ -10,7 +10,7 @@ router.post('/login', Login)
 router.get("/user/:userId", getUser)
 router.put("/user/:userId", updateUser)
 
-router.post("/savedrecipes", displaySavedRecipes)
+router.post("/saved", displaySavedRecipes)
 
 
 // EXPORT

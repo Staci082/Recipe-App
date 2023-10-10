@@ -62,7 +62,6 @@ export const getList = async (req, res) => {
 
 export async function getUser(req, res) {
     const userId = req.params.userId;
-    console.log(userId)
 
     try {
         const user = await User.findById(userId);
@@ -72,7 +71,6 @@ export async function getUser(req, res) {
         }
 
         res.json(user);
-        console.log(user)
     } catch (error) {
         console.error("Error fetching user data:", error);
         res.status(500).json({ error: "Internal server error" });
