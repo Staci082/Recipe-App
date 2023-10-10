@@ -52,13 +52,6 @@ button {
     background: none;
 }
 
-.submit-button {
-    font-size: 1.5rem;
-    @include button;
-    border-radius: $border-radius-sm;
-    padding: 0.5em 1.5em;
-}
-
 .back-button {
     @include backButton;
 }

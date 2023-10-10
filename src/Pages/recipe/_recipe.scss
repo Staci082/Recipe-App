@@ -1,8 +1,15 @@
+
+.single-recipe-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .recipe-details-container {
     position: relative;
     display: flex;
     flex-direction: column;
-    width: clamp(340px, 50vw, 800px);
+    width: clamp(340px, 60vw, 800px);
     gap: 2em;
     margin-bottom: 6em;
 
@@ -13,8 +20,7 @@
         padding-right: 2.5em;
         box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 0.75);
         @include sm {
-            padding: 0;
-            padding-right: 1.5em;
+            box-shadow: none;
         }
     }
 }
@@ -25,11 +31,13 @@
     align-items: center;
     gap: 2em;
     @include md {
+        gap: 0;
         flex-direction: column;
+        align-items: start;
     }
 }
 .recipe-name {
-    font-size: clamp(1.5rem, 2vw, 2rem);
+    font-size: clamp(1.5rem, 3vw, 2rem);
 }
 
 .recipe-category-title {
