@@ -92,7 +92,7 @@ function GroceryList() {
             {isLoggedIn ? (
                 <div className="global-container">
                     <div className="grocery-list-container">
-                        <a href="/" className="grocery-back-button">
+                        <a href="/" className="back-button">
                             &times;
                         </a>
                         <h2>Grocery List</h2>

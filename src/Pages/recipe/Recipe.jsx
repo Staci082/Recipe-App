@@ -83,7 +83,7 @@ function Recipe({ randomRecipe }) {
                         <h1 className="recipe-name">{recipe.name}</h1>
                         <h2 className="recipe-category-title">{recipe.category}</h2>
                     </div>
-                    <button onClick={goBack} className="recipe-back-button">
+                    <button onClick={goBack} className="back-button">
                         &times;
                     </button>
                     <div className="recipe-details-container">

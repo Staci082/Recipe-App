@@ -6,15 +6,6 @@
 
 @mixin box {
     border: $border;
-    //box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 0.75);
-    border-radius: 10px;
-}
-
-@mixin colorBox {
-    background: $background;
-    border: $border;
-    // box-shadow: 5px 5px 0px 0px $primary-dark,
-    // 7px 7px 0px 0px $background2;
     border-radius: 10px;
 }
 
@@ -59,13 +50,6 @@
     box-shadow: 4px 6px 0px 0px rgba(0, 0, 0, 0.75);
 }
 
-@mixin backButton {
-    cursor: pointer;
-    font-size: 3rem;
-    position: absolute;
-    right: 20px;
-    top: 10px;
-}
 
 /*  MEDIA QUERIES */
 $breakpoints: (

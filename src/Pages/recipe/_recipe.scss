@@ -15,7 +15,7 @@
 
     & .ingredients-container,
     .method-container {
-        @include colorBox;
+        @include box;
         padding: 1em;
         padding-right: 2.5em;
         box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 0.75);
@@ -67,10 +67,6 @@
 .random-button {
     position: absolute;
     left: 0;
-}
-
-.recipe-back-button {
-    @include backButton;
 }
 
 .delete-modal {

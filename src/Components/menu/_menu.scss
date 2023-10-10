@@ -1,6 +1,6 @@
 .menu-container {
     width: 200px;
-    @include colorBox;
+    @include box;
     background: $primary-light;
     border: none;
     position: relative;
@@ -18,7 +18,7 @@
     display: flex;
     width: 250px;
     z-index: 2;
-    @include colorBox;
+    @include box;
     background: $salmon;
     border: none;
     position: absolute;

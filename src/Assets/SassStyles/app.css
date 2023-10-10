@@ -363,7 +363,6 @@
 
 .menu-container {
   width: 200px;
-  background: #fcfefc;
   border: 1px rgb(0, 0, 0) solid;
   border-radius: 10px;
   background: #ffebeb;
@@ -385,7 +384,6 @@
   display: flex;
   width: 250px;
   z-index: 2;
-  background: #fcfefc;
   border: 1px rgb(0, 0, 0) solid;
   border-radius: 10px;
   background: #fbd1d1;
@@ -489,7 +487,6 @@
   width: clamp(300px, 20vw, 400px);
   padding: 2em 0 1em 0;
   margin-top: 3em;
-  background: #fcfefc;
   border: 1px rgb(0, 0, 0) solid;
   border-radius: 10px;
   background: #fcf7ef;
@@ -532,14 +529,6 @@
   box-shadow: 3px 4px 0px 0px rgba(0, 0, 0, 0.75);
 }
 
-.grocery-back-button {
-  cursor: pointer;
-  font-size: 3rem;
-  position: absolute;
-  right: 20px;
-  top: 10px;
-}
-
 .single-recipe-container {
   display: flex;
   flex-direction: column;
@@ -556,7 +545,6 @@
 }
 .recipe-details-container .ingredients-container,
 .recipe-details-container .method-container {
-  background: #fcfefc;
   border: 1px rgb(0, 0, 0) solid;
   border-radius: 10px;
   padding: 1em;
@@ -616,14 +604,6 @@
 .random-button {
   position: absolute;
   left: 0;
-}
-
-.recipe-back-button {
-  cursor: pointer;
-  font-size: 3rem;
-  position: absolute;
-  right: 20px;
-  top: 10px;
 }
 
 .delete-modal {
@@ -704,23 +684,7 @@ button {
   cursor: pointer;
   font-size: 3rem;
   position: absolute;
-  right: 20px;
-  top: 10px;
-}
-
-.form-back-button {
-  cursor: pointer;
-  font-size: 3rem;
-  position: absolute;
-  right: 20px;
-  top: 10px;
-}
-
-.login-back-button {
-  cursor: pointer;
-  font-size: 3rem;
-  position: absolute;
-  right: 20px;
+  right: 10px;
   top: 10px;
 }
 
@@ -728,7 +692,7 @@ button {
   display: flex;
   justify-content: center;
   padding-top: 3em;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .main-container {

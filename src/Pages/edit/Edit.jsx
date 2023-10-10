@@ -25,8 +25,6 @@ function Edit() {
             try {
                 const response = await axios.get(baseAPI + "recipe/" + id);
                 const existingRecipe = response.data;
-
-                console.log("Response data:", existingRecipe);
                 setRecipe(existingRecipe);
             } catch (error) {
                 console.error(error);
@@ -74,7 +72,7 @@ function Edit() {
     return (
         <>
             <div className="global-container">
-                <button onClick={goBack} className="form-back-button">
+                <button onClick={goBack} className="back-button">
                     &times;
                 </button>
                 <form className="recipe-form" onSubmit={handleSubmit}>

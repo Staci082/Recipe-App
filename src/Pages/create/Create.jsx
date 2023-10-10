@@ -60,7 +60,7 @@ function Create() {
         <>
             {isLoggedIn ? (
                 <div className="global-container">
-                    <button onClick={goBack} className="form-back-button">
+                    <button onClick={goBack} className="back-button">
                         &times;
                     </button>
                     <form className="recipe-form" onSubmit={handleSubmit}>

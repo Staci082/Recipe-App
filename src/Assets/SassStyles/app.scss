@@ -28,6 +28,7 @@ body {
     background-size: 60px 60px;
     @include md {
         padding: 0 1em;
+
     }
 }
 
@@ -53,13 +54,11 @@ button {
 }
 
 .back-button {
-    @include backButton;
-}
-.form-back-button {
-    @include backButton;
-}
-.login-back-button {
-    @include backButton;
+    cursor: pointer;
+    font-size: 3rem;
+    position: absolute;
+    right: 10px;
+    top: 10px;
 }
 
 
@@ -67,14 +66,13 @@ button {
     display: flex;
     justify-content: center;
     padding-top: 3em;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .main-container {
     display: flex;
     align-items: flex-start;
 }
-
 
 .right-container {
     width: 100%;

@@ -16,7 +16,7 @@
     width: clamp(300px, 20vw, 400px);
     padding: 2em 0 1em 0;
     margin-top: 3em;
-    @include colorBox;
+    @include box;
     background: $background2;
     color: grey;
 }
@@ -45,8 +45,4 @@
     border: black 1px solid;
     border-radius: 5px;
     box-shadow: 3px 4px 0px 0px rgba(0, 0, 0, 0.75);
-}
-
-.grocery-back-button {
-    @include backButton;
 }
