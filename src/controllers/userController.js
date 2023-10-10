@@ -3,8 +3,7 @@ import bcrypt from "bcrypt";
 import User from "../models/User.js";
 import Recipe from "../models/Recipe.js";
 
-// POST
-// REGISTER USER
+
 export async function Register(req, res) {
     const { username, password } = req.body;
 
@@ -26,8 +25,6 @@ export async function Register(req, res) {
     }
 }
 
-// POST
-// LOG USER IN
 export async function Login(req, res) {
     const { username, password } = req.body;
 
@@ -45,22 +42,6 @@ export async function Login(req, res) {
     const token = jwt.sign({ id: user._id }, "secret");
     res.json({ token, userID: user._id });
 }
-
-const VerifyToken = (req, res, next) => {
-    let token = req.headers.authorization;
-    if (token) {
-        token = token.split(" ")[1];
-        let decoded = jwt.verify(token, "secret");
-        if (decoded) {
-            next();
-        } else {
-            res.status(401).json({
-                message: "Invalid",
-            });
-        }
-    }
-};
-export default VerifyToken;
 
 export const getList = async (req, res) => {
     try {
@@ -81,6 +62,7 @@ export const getList = async (req, res) => {
 
 export async function getUser(req, res) {
     const userId = req.params.userId;
+    console.log(userId)
 
     try {
         const user = await User.findById(userId);
@@ -90,6 +72,7 @@ export async function getUser(req, res) {
         }
 
         res.json(user);
+        console.log(user)
     } catch (error) {
         console.error("Error fetching user data:", error);
         res.status(500).json({ error: "Internal server error" });
