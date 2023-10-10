@@ -7,6 +7,7 @@ import UseSearchContext from "../../Context/SearchContext.jsx";
 import { useAuth } from "../../Context/AuthContext.jsx";
 import baseAPI from "../../Context/baseAPI.js";
 import SaveRecipes from "../save-recipes/SaveRecipes.jsx";
+import loadingtaco from "/loadingtaco.gif";
 
 function FilterRecipes() {
     const { input, results } = UseSearchContext();
@@ -41,12 +42,18 @@ function FilterRecipes() {
         };
         fetchRecipes();
     }, [route, location.pathname]);
-    console.log(savedRecipes)
+
 
     const displayRecipes = (recipeList) => {
-        return recipeList
-            .slice(pagesVisited, pagesVisited + recipesPerPage)
-            .map((recipe) => {
+        if (!recipeList) {
+            return (
+                <div className="empty-recipes">
+                    <p>You don't have any saved recipes yet..</p>
+                    <img src={loadingtaco} alt="happy taco" />
+                </div>
+            );
+        } else {
+            return recipeList.slice(pagesVisited, pagesVisited + recipesPerPage).map((recipe) => {
                 const isRecipeSaved = savedRecipes.includes(recipe._id);
                 return (
                     <div className="recipe" key={recipe._id}>
@@ -60,11 +67,14 @@ function FilterRecipes() {
                     </div>
                 );
             });
+        }
     };
 
     // keep these under displayRecipes function otherwise error
     const displayRecipesList = results.length > 0 ? displayRecipes(results) : displayRecipes(recipes);
-    const pageCount = results.length > 0 ? Math.ceil(results.length / recipesPerPage) : Math.ceil(recipes.length / recipesPerPage);
+
+    const pageCount = results.length > 0 ? Math.ceil(results.length / recipesPerPage) : Math.ceil(recipes && recipes.length / recipesPerPage);
+
     const changePage = ({ selected }) => {
         setPageNumber(selected);
     };
@@ -73,12 +83,16 @@ function FilterRecipes() {
         <>
             <div className="recipe-container-header">
                 <h1>{results.length > 0 ? `${input} recipes` : `${category} recipes`}</h1>
-                <h2>{Number(recipes.length)}</h2>
+                <h2>{recipes && recipes.length}</h2>
             </div>
 
             <div className="recipe-container">{displayRecipesList}</div>
 
-            <Pagination pageCount={pageCount} onPageChange={changePage} />
+
+            {location.pathname.endsWith("/saved") && savedRecipes === null 
+                ? <Pagination pageCount={pageCount} onPageChange={changePage} />
+                : null
+            }
         </>
     );
 }
