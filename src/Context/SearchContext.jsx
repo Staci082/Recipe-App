@@ -1,5 +1,6 @@
 import { createContext, useContext, useState, useEffect } from "react";
 import axios from "axios";
+import baseAPI from "./baseAPI";
 
 const SearchContext = createContext();
 
@@ -24,7 +25,7 @@ export const SearchProvider = ({ children }) => {
 
         const fetchRecipes = async () => {
             try {
-                const response = await axios.post("http://localhost:5712/search", { query: input }, { cancelToken: source.token });
+                const response = await axios.post(baseAPI + "search", { query: input }, { cancelToken: source.token });
                 setResults(response.data);
             } catch (error) {
                 if (axios.isCancel(error)) {
