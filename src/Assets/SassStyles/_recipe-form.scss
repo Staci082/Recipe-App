@@ -40,7 +40,7 @@
 
 .add-ingredient-button {
     margin-left: 30px;
-    background: $background2;
+    background: $background;
     border: black 1px solid;
     border-radius: 5px;
     box-shadow: 3px 4px 0px 0px rgba(0, 0, 0, 0.75);
@@ -52,7 +52,7 @@
 
     & .remove-ingredient-button {
         position: absolute;
-        right: 10px;
+        right: 0px;
         top: 20px;
     }
 }

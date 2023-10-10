@@ -38,13 +38,15 @@
 }
 
 @mixin input {
-    height: 40px;
+    height: auto;
     outline: none;
-    padding: 0 0.5em;
+    padding: 0.5em;
+    padding-right: 2em;
     margin: 0.8em 0 1.5em 0;
     width: 90%;
     font-family: inherit;
     font-size: 1rem;
+    white-space: normal; 
     box-shadow: $box-shadow;
     border-radius: $border-radius-sm;
     box-shadow: 4px 6px 0px 0px rgba(0, 0, 0, 0.75);
