@@ -3,6 +3,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    line-height: 1;
     @include xl {
         padding: 0;
     }
@@ -17,17 +18,20 @@
     padding: 2em 0 1em 0;
     margin-top: 3em;
     @include box;
-    background: $background 2;
-    color: grey;
+    background: var(--color-light);
 }
 
 .line {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: end;
     border-bottom: grey 2px dotted;
     font-size: 1.2rem;
     width: clamp(250px, 18vw, 330px);
+}
+
+.line-text {
+    margin-bottom: 4px; // keeps the text at the bottom of the line
 }
 
 .line-through {
@@ -40,9 +44,12 @@
     height: 40px;
 }
 .add-item-button {
-    background: $background 2;
     padding: 5px 10px;
     border: black 1px solid;
     border-radius: 5px;
     box-shadow: 3px 4px 0px 0px rgba(0, 0, 0, 0.75);
+    &:active {
+        color: var(--color-dark);
+        box-shadow: 3px 4px 0px 0px var(--color-dark);
+    }
 }

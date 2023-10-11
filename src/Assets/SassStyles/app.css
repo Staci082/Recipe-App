@@ -406,7 +406,7 @@
   border: 1px rgb(0, 0, 0) solid;
   border-radius: 10px;
   border-top-right-radius: 0%;
-  background: #fbd1d1;
+  background: var(--color-light);
   border: none;
   position: fixed;
   right: 0;
@@ -418,10 +418,6 @@
 }
 #mobile-menu .menu-container {
   display: flex;
-  background: #fbd1d1;
-}
-#mobile-menu .menu-container a:hover {
-  color: #fcfefc;
 }
 
 .menuItem,
@@ -502,6 +498,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  line-height: 1;
 }
 @media (max-width: 1190px) {
   .grocery-list-container {
@@ -519,17 +516,20 @@
   margin-top: 3em;
   border: 1px rgb(0, 0, 0) solid;
   border-radius: 10px;
-  background: #fcfefc 2;
-  color: grey;
+  background: var(--color-light);
 }
 
 .line {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: end;
   border-bottom: grey 2px dotted;
   font-size: 1.2rem;
   width: clamp(250px, 18vw, 330px);
+}
+
+.line-text {
+  margin-bottom: 4px;
 }
 
 .line-through {
@@ -554,11 +554,14 @@
 }
 
 .add-item-button {
-  background: #fcfefc 2;
   padding: 5px 10px;
   border: black 1px solid;
   border-radius: 5px;
   box-shadow: 3px 4px 0px 0px rgba(0, 0, 0, 0.75);
+}
+.add-item-button:active {
+  color: var(--color-dark);
+  box-shadow: 3px 4px 0px 0px var(--color-dark);
 }
 
 .single-recipe-container {

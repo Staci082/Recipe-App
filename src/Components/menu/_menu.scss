@@ -20,7 +20,7 @@
     z-index: 2;
     @include box;
     border-top-right-radius: 0%;
-    background: $salmon;
+    background: var(--color-light);
     border: none;
     position: fixed;
     right: 0;
@@ -31,10 +31,6 @@
     padding: 0.5em 0;
     & .menu-container {
         display: flex;
-        background: $salmon;
-        & a:hover {
-            color: $background;
-        }
     }
 }
 

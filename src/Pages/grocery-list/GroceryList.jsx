@@ -107,7 +107,7 @@ function GroceryList() {
                             {groceryList.map((item, index) => (
                                 <div className="line" key={index}>
                                     <button onClick={() => handleToggleCheck(index)}>{checked[index] ? <MdOutlineCheckBox size={20} /> : <MdOutlineCheckBoxOutlineBlank size={20} />}</button>
-                                    <p className={checked[index] ? "line-through" : ""}>{item}</p>
+                                    <p className={`line-text ${checked[index] ? "line-through" : ""}`}>{item}</p>
                                     <button type="button" onClick={() => handleDeleteItem(index)}>
                                         <FiDelete size={20} />
                                     </button>

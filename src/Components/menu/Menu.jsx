@@ -53,10 +53,6 @@ function menu({ closeMenu }) {
         document.body.style.overflow = "unset";
     };
 
-    const handleCloseMenu = () => {
-        closeMenu();
-    };
-
     return (
         <>
             <div className="menu-container">
@@ -64,7 +60,14 @@ function menu({ closeMenu }) {
                 <ul>
                     {menuItems.map((item) => (
                         <li className="menuItem" key={item.title}>
-                            <Link to={item.href} onClick={handleCloseMenu}>{item.title}</Link>
+                            <Link
+                                to={item.href}
+                                onClick={() => {
+                                    closeMenu();
+                                }}
+                            >
+                                {item.title}
+                            </Link>
                         </li>
                     ))}
                 </ul>
@@ -90,17 +93,12 @@ function menu({ closeMenu }) {
                         </>
                     )}
                     <li className="menuItem">
-                        <a onClick={() => { openModal(); handleCloseMenu(); }}>Theme</a> {/* using "a" tag so styling stays the same */}
+                        <a
+                            onClick={openModal}> Theme</a>{/* using "a" tag so styling stays the same */}
                     </li>
                 </ul>
             </div>
-            <Theme 
-                showModal={showModal} 
-                closeModal={closeModal} 
-                changeTheme={changeTheme} 
-                themeColors={Object.keys(themes)} 
-            />
-
+            <Theme showModal={showModal} closeModal={closeModal} changeTheme={changeTheme} themeColors={Object.keys(themes)} />
         </>
     );
 }
