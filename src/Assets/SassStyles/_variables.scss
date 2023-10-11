@@ -1,12 +1,10 @@
 
-$background2: #fcf7ef;
-$text: rgb(0, 0, 0);
 
-// using css here because it works (will update to scss later)
+// using css here because it works 
 :root {
-    --color-background: #fcfefc;
-    --color-light: #ffebeb;
-    --color-dark: #faa0a0;
+    --color-background: hsl(37, 100%, 95%);
+    --color-light: hsl(36, 100%, 95%);
+    --color-dark: orange;
 }
 
 $salmon: #fbd1d1;

@@ -11,34 +11,34 @@ export function ThemeProvider({ children }) {
 
     const themes = {
         pink: {
-            "--color-background": "#fcfefc",
-            "--color-light": "#ffebeb",
-            "--color-dark": "#faa0a0",
+            "--color-background": "hsl(0, 100%, 96%)",
+            "--color-light": "hsl(0, 100%, 96%)",
+            "--color-dark": "hsl(0, 90%, 80%)",
         },
         orange: {
-            "--color-background": "rgb(24, 24, 24)",
-            "--color-light": "#fcf7ef",
-            "--color-dark": "rgb(0, 0, 0)",
+            "--color-background": "hsl(37, 100%, 95%)",
+            "--color-light": "hsl(36, 100%, 95%)",
+            "--color-dark": "orange",
         },
-        green: {
-            "--color-background": "rgb(254, 244, 244)",
-            "--color-light": "rgb(255, 80, 80)",
-            "--color-dark": "rgb(255, 50, 50)",
+        black: {
+            "--color-background": "hsl(94, 85%, 95%)",
+            "--color-light": "hsl(94, 100%, 92%)",
+            "--color-dark": "hsl(138, 42%, 65%)",
         },
         blue: {
-            "--color-background": "rgb(254, 244, 244)",
-            "--color-light": "rgb(255, 80, 80)",
-            "--color-dark": "rgb(255, 50, 50)",
+            "--color-background": "hsl(199, 85%, 95%)",
+            "--color-light": "hsl(194, 95%, 92%)",
+            "--color-dark": "hsl(195, 96%, 63%)",
         },
         green: {
-            "--color-background": "rgb(254, 244, 244)",
-            "--color-light": "rgb(255, 80, 80)",
-            "--color-dark": "rgb(255, 50, 50)",
+            "--color-background": "hsl(136, 100%, 93%)",
+            "--color-light": "hsl(138, 80%, 92%)",
+            "--color-dark": "hsl(137, 49%, 59%)",
         },
         purple: {
             "--color-background": "rgb(254, 244, 244)",
-            "--color-light": "rgb(255, 80, 80)",
-            "--color-dark": "rgb(255, 50, 50)",
+            "--color-light": "hsl(272, 89%, 93%)",
+            "--color-dark": "hsl(271, 91%, 74%)",
         },
     };
 

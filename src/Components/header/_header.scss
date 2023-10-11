@@ -39,7 +39,7 @@
     width: clamp(200px, 32vw, 600px);
     @include box;
     padding: 0 1em;
-    border: $salmon 2px solid;
+    border: var(--color-dark) 2px solid;
     margin-right: -5px;
 }
 
