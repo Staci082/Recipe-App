@@ -13,7 +13,7 @@
 @import "../../Components/pagination/pagination";
 @import "../../Components/recipes-container/recipes-container";
 @import "../../Components/menu/menu";
-@import "../../Components/menu/theme";
+@import "../../Components/theme/theme";
 @import "../../Pages/grocery-list/groceryList";
 @import "../../Pages/recipe/recipe";
 
@@ -24,9 +24,7 @@ html {
 body {
     font-family: Poppins, sans-serif;
     min-height: 100vh;
-    background-color: var(var(--color-background));
-    color: var(var(--color-light));
-    background-size: 60px 60px;
+    background-color: var(--color-background);
     @include md {
         padding: 0 1em;
     }

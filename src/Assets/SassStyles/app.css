@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Gluten:wght@500&display=swap");
 :root {
-  --color-background: hsl(37, 100%, 95%);
-  --color-light: hsl(36, 100%, 95%);
-  --color-dark: orange;
+  --color-background: hsl(340, 60%, 98%);
+  --color-light: hsl(340, 100%, 93%);
+  --color-dark: hsl(340, 100%, 78%);
 }
 
 /*  MEDIA QUERIES */
@@ -476,19 +476,19 @@
   font-size: clamp(1rem, 5vw, 3rem);
 }
 .theme-button.pink {
-  color: var(--color-dark);
+  color: hsl(0, 90%, 80%);
 }
 .theme-button.orange {
-  color: rgb(252, 192, 79);
-}
-.theme-button.green {
-  color: rgb(63, 252, 100);
+  color: orange;
 }
 .theme-button.blue {
-  color: rgb(113, 177, 255);
+  color: hsl(195, 96%, 63%);
+}
+.theme-button.green {
+  color: hsl(137, 49%, 59%);
 }
 .theme-button.purple {
-  color: rgb(196, 98, 253);
+  color: hsl(271, 91%, 74%);
 }
 
 .grocery-list-container {
@@ -674,9 +674,7 @@ html {
 body {
   font-family: Poppins, sans-serif;
   min-height: 100vh;
-  background-color: var(var(--color-background));
-  color: var(var(--color-light));
-  background-size: 60px 60px;
+  background-color: var(--color-background);
 }
 @media (max-width: 720px) {
   body {

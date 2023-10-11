@@ -54,18 +54,18 @@ $themes: (
 .theme-button {
     font-size: clamp(1rem, 5vw, 3rem);
     &.pink {
-        color: var(--color-dark);
+        color: hsl(0, 90%, 80%);
     }
     &.orange {
-        color: rgb(252, 192, 79);
-    }
-    &.green {
-        color: rgb(63, 252, 100);
+        color: orange;
     }
     &.blue {
-        color: rgb(113, 177, 255);
+        color: hsl(195, 96%, 63%);
+    }
+    &.green {
+        color: hsl(137, 49%, 59%);
     }
     &.purple {
-        color: rgb(196, 98, 253);
+        color: hsl(271, 91%, 74%);
     }
 }

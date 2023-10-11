@@ -3,7 +3,6 @@ import { useTheme } from "../../Context/ThemeContext";
 
 function Theme({ showModal, closeModal }) {
     const { changeTheme, themes } = useTheme();
-
     const themeColors = Object.keys(themes);
 
     return (
