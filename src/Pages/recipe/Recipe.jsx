@@ -13,7 +13,6 @@ function Recipe({ randomRecipe }) {
     const location = useLocation();
     const navigate = useNavigate();
 
-
     const [recipe, setRecipe] = useState([]);
     const [showModal, setShowModal] = useState(false);
 
@@ -43,37 +42,36 @@ function Recipe({ randomRecipe }) {
             axios.delete(baseAPI + "recipe/" + recipeID);
             setShowModal(false);
             navigate("/all");
-            ToastSuccess("Recipe deleted!")
+            ToastSuccess("Recipe deleted!");
         } catch (error) {
             console.log(error);
-            ToastError("Oops! Something went wrong!")
+            ToastError("Oops! Something went wrong!");
         }
     };
 
     const checkLoggedIn = () => {
         if (!isLoggedIn) {
-            ToastError("You must be logged in to use this feature.")
+            ToastError("You must be logged in to use this feature.");
         } else {
             navigate(`/edit/${recipeID}`);
         }
-    }
+    };
 
     const openModal = () => {
         if (isLoggedIn) {
-            setShowModal(true)
-            if (typeof window != 'undefined' && window.document) {
-                document.body.style.overflow = 'hidden';
+            setShowModal(true);
+            if (typeof window != "undefined" && window.document) {
+                document.body.style.overflow = "hidden";
             }
         } else {
-            ToastError("You must be logged in to use this feature!")
+            ToastError("You must be logged in to use this feature!");
         }
-    }
+    };
 
     const closeModal = () => {
-        setShowModal(false)
-            document.body.style.overflow = 'unset';
-    }
-
+        setShowModal(false);
+        document.body.style.overflow = "unset";
+    };
 
     return (
         <>
@@ -96,9 +94,9 @@ function Recipe({ randomRecipe }) {
                         </div>
 
                         <div className="method-container">
-                        <ul>
-                            <h5 className="recipe-details-title">Instructions</h5>
-                            {recipe.method && recipe.method.map((item) => <li key={item}>{item}</li>)}
+                            <ul>
+                                <h5 className="recipe-details-title">Instructions</h5>
+                                {recipe.method && recipe.method.map((item) => <li key={item}>{item}</li>)}
                             </ul>
                         </div>
                         <div className="recipe-button-container">
@@ -108,7 +106,6 @@ function Recipe({ randomRecipe }) {
                                     <FaArrowRotateLeft size={28} />
                                 </a>
                             )}
-
 
                             <button onClick={checkLoggedIn} className="edit-buttons">
                                 <FaPencil size={26} />

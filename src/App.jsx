@@ -61,7 +61,6 @@ function App() {
 
     return (
         <>
-
             <SearchProvider>
                 <Routes>
                     <Route path="/" element={<Homepage />}>
@@ -73,7 +72,6 @@ function App() {
                     ))}
                 </Routes>
             </SearchProvider>
-
         </>
     );
 }

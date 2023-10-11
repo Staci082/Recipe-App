@@ -54,7 +54,7 @@ function RecipesContainer() {
         if (!recipeList) {
             return (
                 <div className="empty-recipes">
-                    <img src={loadingtaco} alt="happy taco" className="loadingtaco" />
+                    <img src={loadingtaco} alt="happy taco" className="loadingtaco" loading="lazy"/>
                     <p className="empty-text">You don't have any saved recipes yet..</p>
                 </div>
             );
