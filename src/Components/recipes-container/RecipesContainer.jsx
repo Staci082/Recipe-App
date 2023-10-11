@@ -1,6 +1,6 @@
 import { useState, useEffect, useContext } from "react"; // keep "useContext" here or else "UseSearchContext" fails
 import axios from "axios";
-import { useParams, useLocation } from "react-router-dom";
+import { useParams, useLocation, useNavigate } from "react-router-dom";
 import Pagination from "../pagination/Pagination.jsx";
 import { FaHeart, FaRegHeart } from "react-icons/fa6";
 import UseSearchContext from "../../Context/SearchContext.jsx";
@@ -13,6 +13,7 @@ function RecipesContainer() {
     const { input, results } = UseSearchContext();
     const { route, category } = useParams();
     const location = useLocation();
+    const navigate = useNavigate()
 
     const [recipes, setRecipes] = useState([]);
 
@@ -45,6 +46,10 @@ function RecipesContainer() {
         fetchRecipes();
     }, [route, location.pathname]);
 
+    const openRecipe = (recipe) => {
+        navigate(`/recipe/${recipe}`);
+    }
+
     const displayRecipes = (recipeList) => {
         if (!recipeList) {
             return (
@@ -57,15 +62,15 @@ function RecipesContainer() {
             return recipeList.slice(pagesVisited, pagesVisited + recipesPerPage).map((recipe) => {
                 const isRecipeSaved = savedRecipes.includes(recipe._id);
                 return (
-                    <div className="recipe" key={recipe._id}>
+                    <div className="recipe" key={recipe._id} onClick={() => openRecipe(recipe._id)}>
                         <img src={recipe.image} alt={recipe.name} className="recipe-image" />
-                        <a href={`/recipe/${recipe._id}`} className="recipe-title-container">
+                        <div className="recipe-title-container">
                             <h3 className="recipe-title">{recipe.name}</h3>
                             <p className="recipe-category">{recipe.category}</p>
                             <button className="save-icon" aria-label="save-button" onClick={() => handleSaveRecipe(recipe._id)}>
-                                {isRecipeSaved ? <FaHeart size={32} /> : <FaRegHeart size={32} />}
+                                {isRecipeSaved ? <FaHeart size={28} /> : <FaRegHeart size={28} />}
                             </button>
-                        </a>
+                        </div>
                     </div>
                 );
             });

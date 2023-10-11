@@ -84,7 +84,7 @@ function Create() {
                                 </select>
 
                                 <label htmlFor="image">Image url:</label>
-                                <input type="text" name="image" id="image-input" />
+                                <input type="text" name="image" value={recipe.image} id="image-input" onChange={handleChange}/>
 
                                 <label htmlFor="method">Instructions:</label>
                                 <textarea className="input-textarea" name="method" maxLength="300" value={recipe.method} onChange={handleChange}></textarea>
