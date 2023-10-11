@@ -1,4 +1,3 @@
-
 import { HiPlus, HiOutlineXMark } from "react-icons/hi2";
 import { useState, useEffect } from "react";
 import axios from "axios";
@@ -10,15 +9,15 @@ function Edit() {
     const { id } = useParams();
 
     const navigate = useNavigate();
-	const goBack = () => {
-		navigate(-1);
-	}
+    const goBack = () => {
+        navigate(-1);
+    };
 
     const [recipe, setRecipe] = useState({
         name: "",
         category: "",
         ingredients: [],
-        method: []
+        method: [],
     });
     useEffect(() => {
         const fetchRecipeData = async () => {
@@ -94,6 +93,9 @@ function Edit() {
                                 <option value="side">Side</option>
                                 <option value="vegetarian">Vegetarian</option>
                             </select>
+
+                            <label htmlFor="image">Image url:</label>
+                            <input type="text" name="image" value={recipe.image} id="image-input" onChange={handleChange} />
 
                             <label htmlFor="method">Instructions:</label>
                             <textarea className="input-textarea" name="method" maxLength="300" value={recipe.method || ""} onChange={handleChange}></textarea>
