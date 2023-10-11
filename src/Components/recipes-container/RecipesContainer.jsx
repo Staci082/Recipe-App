@@ -62,10 +62,10 @@ function RecipesContainer() {
                         <a href={`/recipe/${recipe._id}`} className="recipe-title-container">
                             <h3 className="recipe-title">{recipe.name}</h3>
                             <p className="recipe-category">{recipe.category}</p>
+                            <button className="save-icon" aria-label="save-button" onClick={() => handleSaveRecipe(recipe._id)}>
+                                {isRecipeSaved ? <FaHeart size={32} /> : <FaRegHeart size={32} />}
+                            </button>
                         </a>
-                        <button className="save-icon" aria-label="save-button" onClick={() => handleSaveRecipe(recipe._id)}>
-                            {isRecipeSaved ? <FaHeart /> : <FaRegHeart />}
-                        </button>
                     </div>
                 );
             });

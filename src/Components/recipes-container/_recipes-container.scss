@@ -63,15 +63,15 @@
     & .recipe-title,
     .recipe-category {
         margin: 0;
-        width: 90%;
+        width: 85%;
     }
 }
 
 .save-icon {
     position: absolute;
-    right: 0;
+    right: 5px;
+    top: 5px;
     bottom: 65px;
-    width: 40px;
     color: var(--color-dark);
     font-size: 1.5rem;
 }
