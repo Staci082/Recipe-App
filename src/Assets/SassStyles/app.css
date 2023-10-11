@@ -329,7 +329,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 2em;
+  gap: 2.2em;
 }
 
 .recipe-container-header {
@@ -350,7 +350,7 @@
   flex-direction: column;
   justify-content: space-between;
   cursor: pointer;
-  width: 250px;
+  width: 230px;
   height: 250px;
   background: var(--color-light);
   border: solid 2px var(--color-light);
