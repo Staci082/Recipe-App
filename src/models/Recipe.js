@@ -1,29 +1,31 @@
 
 import mongoose from "mongoose";
 
-// CREATE DATA SCHEMA
-// const Schema = mongoose.Schema
 const recipeSchema = new mongoose.Schema({
     name: {
         type: String,
         trim: true,
-        required: true,
+        required: true
     },
     category: {
         type: String,
-        required: true,
+        required: true
+    },
+    image: {
+        type: String,
+        required: true
     },
     ingredients: {
         type: Array,
-        required: true,
+        required: true
     },
     method: {
         type: Array,
-        required: true,
+        required: true
     },
     userOwner: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "users",
+        ref: "users"
     },
 });
 
