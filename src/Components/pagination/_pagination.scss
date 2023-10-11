@@ -29,6 +29,6 @@
     color: var(--color-dark);
 
     &:hover {
-        color: var(--color-background) 2;
+        color: $background 2;
     }
 }

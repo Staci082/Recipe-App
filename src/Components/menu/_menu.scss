@@ -19,9 +19,10 @@
     width: 250px;
     z-index: 2;
     @include box;
+    border-top-right-radius: 0%;
     background: $salmon;
     border: none;
-    position: absolute;
+    position: fixed;
     right: 0;
     top: 0;
     flex-direction: column;
@@ -32,7 +33,7 @@
         display: flex;
         background: $salmon;
         & a:hover {
-            color: var(--color-background);
+            color: $background;
         }
     }
 }

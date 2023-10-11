@@ -30,6 +30,8 @@
     cursor: pointer;
     @include md {
         display: flex;
+        position: fixed;
+        right: 5px;
     }
 }
 
@@ -39,8 +41,11 @@
     width: clamp(200px, 32vw, 600px);
     @include box;
     padding: 0 1em;
-    border: var(--color-dark) 2px solid;
+    border: var(--color-light) 2px solid;
     margin-right: -5px;
+    @include md {
+        margin: 0 auto;
+    }
 }
 
 .search-icon {

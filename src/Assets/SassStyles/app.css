@@ -1,9 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Gluten:wght@500&display=swap");
 :root {
-  --color-background: hsl(340, 60%, 98%);
-  --color-light: hsl(340, 100%, 93%);
-  --color-dark: hsl(340, 100%, 78%);
+  --color-light: hsl(36, 100%, 93%);
+  --color-dark: orange;
 }
 
 /*  MEDIA QUERIES */
@@ -66,7 +65,7 @@
 
 .add-ingredient-button {
   margin-left: 30px;
-  background: var(--color-background);
+  background: #fcfefc;
   border: black 1px solid;
   border-radius: 5px;
   box-shadow: 3px 4px 0px 0px rgba(0, 0, 0, 0.75);
@@ -193,6 +192,8 @@
 @media (max-width: 720px) {
   .menu-button {
     display: flex;
+    position: fixed;
+    right: 5px;
   }
 }
 
@@ -203,8 +204,13 @@
   border: 1px rgb(0, 0, 0) solid;
   border-radius: 10px;
   padding: 0 1em;
-  border: var(--color-dark) 2px solid;
+  border: var(--color-light) 2px solid;
   margin-right: -5px;
+}
+@media (max-width: 720px) {
+  .search-bar {
+    margin: 0 auto;
+  }
 }
 
 .search-icon {
@@ -251,9 +257,8 @@
 }
 
 .no-auth-container {
-  min-height: 102vh;
-  min-width: 102vw;
-  overflow: hidden;
+  min-height: 101vh;
+  min-width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -303,7 +308,7 @@
   color: var(--color-dark);
 }
 .pagination .pagination-active a:hover {
-  color: var(--color-background) 2;
+  color: #fcfefc 2;
 }
 
 .outer-recipe-container {
@@ -400,9 +405,10 @@
   z-index: 2;
   border: 1px rgb(0, 0, 0) solid;
   border-radius: 10px;
+  border-top-right-radius: 0%;
   background: #fbd1d1;
   border: none;
-  position: absolute;
+  position: fixed;
   right: 0;
   top: 0;
   flex-direction: column;
@@ -415,7 +421,7 @@
   background: #fbd1d1;
 }
 #mobile-menu .menu-container a:hover {
-  color: var(--color-background);
+  color: #fcfefc;
 }
 
 .menuItem,
@@ -449,9 +455,9 @@
   border-radius: 10px;
   box-shadow: 4px 6px 0px 0px rgba(0, 0, 0, 0.75);
   flex-direction: column;
-  background: var(--color-background);
+  background: #fcfefc;
   font-weight: bold;
-  font-size: 2rem;
+  font-size: clamp(1rem, 5vw, 2rem);
   z-index: 2;
 }
 
@@ -473,7 +479,7 @@
 }
 
 .theme-button {
-  font-size: clamp(1rem, 5vw, 3rem);
+  font-size: clamp(1.5rem, 8vw, 3rem);
 }
 .theme-button.pink {
   color: hsl(0, 90%, 80%);
@@ -513,7 +519,7 @@
   margin-top: 3em;
   border: 1px rgb(0, 0, 0) solid;
   border-radius: 10px;
-  background: var(--color-background) 2;
+  background: #fcfefc 2;
   color: grey;
 }
 
@@ -548,7 +554,7 @@
 }
 
 .add-item-button {
-  background: var(--color-background) 2;
+  background: #fcfefc 2;
   padding: 5px 10px;
   border: black 1px solid;
   border-radius: 5px;
@@ -639,7 +645,7 @@
   align-items: center;
   flex-direction: column;
   width: clamp(300px, 70%, 1000px);
-  background: var(--color-background);
+  background: #fcfefc;
   padding: 2em;
   gap: 2rem;
   border: 1px rgb(0, 0, 0) solid;
@@ -674,7 +680,7 @@ html {
 body {
   font-family: Poppins, sans-serif;
   min-height: 100vh;
-  background-color: var(--color-background);
+  background-color: #fcfefc;
 }
 @media (max-width: 720px) {
   body {

@@ -7,12 +7,16 @@ function Header() {
     const [openMenu, setOpenMenu] = useState(false);
 
     const toggleMenu = () => {
-        setOpenMenu(!openMenu)
-    }
+        setOpenMenu(!openMenu);
+    };
 
-     const mobileMenuStyle = {
-    display: openMenu ? "flex" : "none",
-  };
+    const closeMenu = () => {
+        setOpenMenu(false);
+    };
+
+    const mobileMenuStyle = {
+        display: openMenu ? "flex" : "none",
+    };
 
     return (
         <>
@@ -26,7 +30,7 @@ function Header() {
                 <CgLayoutGridSmall onClick={toggleMenu} className="menu-button" />
             </div>
             <div id="mobile-menu" style={mobileMenuStyle}>
-                <Menu />
+                <Menu closeMenu={closeMenu} />
             </div>
         </>
     );

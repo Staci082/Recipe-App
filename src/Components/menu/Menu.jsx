@@ -4,7 +4,7 @@ import { useAuth } from "../../Context/AuthContext";
 import Theme from "../theme/Theme";
 import { useTheme } from "../../Context/ThemeContext";
 
-function menu() {
+function menu({ closeMenu }) {
     const { changeTheme, themes } = useTheme();
     const { isLoggedIn, logout } = useAuth();
     const [showModal, setShowModal] = useState(false);
@@ -53,6 +53,10 @@ function menu() {
         document.body.style.overflow = "unset";
     };
 
+    const handleCloseMenu = () => {
+        closeMenu();
+    };
+
     return (
         <>
             <div className="menu-container">
@@ -60,7 +64,7 @@ function menu() {
                 <ul>
                     {menuItems.map((item) => (
                         <li className="menuItem" key={item.title}>
-                            <Link to={item.href}>{item.title}</Link>
+                            <Link to={item.href} onClick={handleCloseMenu}>{item.title}</Link>
                         </li>
                     ))}
                 </ul>
@@ -86,7 +90,7 @@ function menu() {
                         </>
                     )}
                     <li className="menuItem">
-                        <a onClick={openModal}>Theme</a>
+                        <a onClick={() => { openModal(); handleCloseMenu(); }}>Theme</a> {/* using "a" tag so styling stays the same */}
                     </li>
                 </ul>
             </div>

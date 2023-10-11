@@ -2,12 +2,12 @@
 
 // using css here because it works 
 :root {
-    --color-background: hsl(340, 60%, 98%);
-    --color-light: hsl(340, 100%, 93%);
-    --color-dark: hsl(340, 100%, 78%);
+    --color-light: hsl(36, 100%, 93%);
+    --color-dark: orange;
 }
 
 $salmon: #fbd1d1;
+$background:#fcfefc;
 
 $border: 1px rgb(0, 0, 0) solid;
 $box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.75);

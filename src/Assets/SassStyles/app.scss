@@ -24,7 +24,7 @@ html {
 body {
     font-family: Poppins, sans-serif;
     min-height: 100vh;
-    background-color: var(--color-background);
+    background-color: $background;
     @include md {
         padding: 0 1em;
     }
