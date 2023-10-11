@@ -27,12 +27,13 @@ function RecipesContainer() {
         const fetchRecipes = async () => {
             try {
                 let response;
+                // fetch saved recipes from db
                 if (location.pathname.endsWith("/saved")) {
                     const recipesObj = await fetchSavedRecipes();
                     response = { data: recipesObj };
                     const savedRecipes = response.data;
                     setRecipes(savedRecipes);
-                } else {
+                } else { // all other categories
                     response = await axios.get(baseAPI + category);
                 }
                 setRecipes(response.data);

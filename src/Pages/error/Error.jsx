@@ -4,7 +4,7 @@ function Error() {
     return (
         <>
             <div className="no-auth-container">
-                <a href="/" className="form-back-button">
+                <a href="/" className="back-button">
                     &times;
                 </a>
                 <p className="no-auth-text">404</p>

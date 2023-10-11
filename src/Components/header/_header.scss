@@ -14,6 +14,7 @@
     align-items: center; 
     font-family: gluten, comic sans-serif;
     gap: 1em;
+    margin-right: 5px;
     & .logo-title {
         @include md {
             display: none;
@@ -23,7 +24,7 @@
 
 .menu-button {
     display: none;
-    font-size: 3rem;
+    font-size: 4rem;
     margin-right: -5px;
     z-index: 3;
     cursor: pointer;
@@ -35,7 +36,7 @@
 .search-bar {
     outline: none;
     height: 40px;
-    width: clamp(200px, 30vw, 600px);
+    width: clamp(200px, 32vw, 600px);
     @include box;
     padding: 0 1em;
     border: $salmon 2px solid;
