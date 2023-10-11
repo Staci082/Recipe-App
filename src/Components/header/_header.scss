@@ -5,13 +5,23 @@
     margin-bottom: 1em;
     padding: 0 1em;
     @include md {
+        gap: 1em;
         padding: 0;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        height: 50px;
+        z-index: 2;
+        padding: 5px;
+        padding-right: 0;
+        background: $background;
     }
 }
 
 .logo-container {
     display: flex;
-    align-items: center; 
+    align-items: center;
     font-family: gluten, comic sans-serif;
     gap: 1em;
     margin-right: 5px;
@@ -30,19 +40,16 @@
     cursor: pointer;
     @include md {
         display: flex;
-        position: fixed;
-        right: 5px;
     }
 }
 
 .search-bar {
     outline: none;
     height: 40px;
-    width: clamp(200px, 32vw, 600px);
+    width: clamp(220px, 32vw, 600px);
     @include box;
     padding: 0 1em;
     border: var(--color-light) 2px solid;
-    margin-right: -5px;
     @include md {
         margin: 0 auto;
     }
@@ -53,4 +60,3 @@
     right: 30px;
     color: grey;
 }
-

@@ -33,7 +33,8 @@ function RecipesContainer() {
                     response = { data: recipesObj };
                     const savedRecipes = response.data;
                     setRecipes(savedRecipes);
-                } else { // all other categories
+                } else {
+                    // all other categories
                     response = await axios.get(baseAPI + category);
                 }
                 setRecipes(response.data);
@@ -48,7 +49,7 @@ function RecipesContainer() {
         if (!recipeList) {
             return (
                 <div className="empty-recipes">
-                    <img src={loadingtaco} alt="happy taco" className="loadingtaco"/>
+                    <img src={loadingtaco} alt="happy taco" className="loadingtaco" />
                     <p className="empty-text">You don't have any saved recipes yet..</p>
                 </div>
             );
@@ -57,6 +58,7 @@ function RecipesContainer() {
                 const isRecipeSaved = savedRecipes.includes(recipe._id);
                 return (
                     <div className="recipe" key={recipe._id}>
+                        <img src={recipe.image} alt={recipe.alt} className="recipe-image" />
                         <a href={`/recipe/${recipe._id}`} className="recipe-title-container">
                             <h3 className="recipe-title">{recipe.name}</h3>
                             <p className="recipe-category">{recipe.category}</p>
