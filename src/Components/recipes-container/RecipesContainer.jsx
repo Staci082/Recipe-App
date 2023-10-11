@@ -58,7 +58,7 @@ function RecipesContainer() {
                 const isRecipeSaved = savedRecipes.includes(recipe._id);
                 return (
                     <div className="recipe" key={recipe._id}>
-                        <img src={recipe.image} alt={recipe.alt} className="recipe-image" />
+                        <img src={recipe.image} alt={recipe.name} className="recipe-image" />
                         <a href={`/recipe/${recipe._id}`} className="recipe-title-container">
                             <h3 className="recipe-title">{recipe.name}</h3>
                             <p className="recipe-category">{recipe.category}</p>
@@ -85,7 +85,7 @@ function RecipesContainer() {
         <>
             <div className="recipe-container-header">
                 <h1>{results.length > 0 ? `${input} recipes` : `${category} recipes`}</h1>
-                <h2>{recipes && recipes.length}</h2>
+                <h2 className="recipes-amount">{recipes && recipes.length}</h2>
             </div>
 
             <div className="recipe-container">{displayRecipesList}</div>

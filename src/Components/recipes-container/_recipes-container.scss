@@ -18,6 +18,9 @@
     & h2 {
         color: var(--color-dark);
     }
+    .recipes-amount {
+        font-size: 1.5rem;
+    }
 }
 
 .recipe {
@@ -50,7 +53,7 @@
         justify-content: space-between;
         height: 35%;
         padding: 0.5em 1em;
-        font-size: clamp(1rem, 1vh, 1.2rem)
+        font-size: clamp(.8rem, 1vh, 1.2rem)
     }
     & .recipe-image {
         background: deeppink;

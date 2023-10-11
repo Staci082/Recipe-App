@@ -83,6 +83,9 @@ function Create() {
                                     <option value="vegetarian">Vegetarian</option>
                                 </select>
 
+                                <label htmlFor="image">Image url:</label>
+                                <input type="text" name="image" id="image-input" />
+
                                 <label htmlFor="method">Instructions:</label>
                                 <textarea className="input-textarea" name="method" maxLength="300" value={recipe.method} onChange={handleChange}></textarea>
                             </div>
