@@ -68,7 +68,7 @@ function RecipesContainer() {
                             <h3 className="recipe-title">{recipe.name}</h3>
                             <p className="recipe-category">{recipe.category}</p>
                             <button className="save-icon" aria-label="save-button" onClick={() => handleSaveRecipe(recipe._id)}>
-                                {isRecipeSaved ? <FaHeart size={28} /> : <FaRegHeart size={28} />}
+                                {isRecipeSaved ? <FaHeart size={30} /> : <FaRegHeart size={30} />}
                             </button>
                         </div>
                     </div>

@@ -350,8 +350,8 @@
   flex-direction: column;
   justify-content: space-between;
   cursor: pointer;
-  width: 260px;
-  height: 240px;
+  width: 250px;
+  height: 250px;
   background: var(--color-light);
   border: solid 2px var(--color-light);
   border-radius: 15px;
@@ -381,8 +381,8 @@
   justify-content: start;
   height: 35%;
   gap: 5px;
-  padding: 1em;
-  font-size: clamp(0.8rem, 1vh, 1.2rem);
+  padding: 0.5em 1em;
+  font-size: clamp(0.9rem, 1vh, 1.2rem);
 }
 .recipe .recipe-image {
   width: 100%;
@@ -402,7 +402,6 @@
   top: 5px;
   bottom: 65px;
   color: var(--color-dark);
-  font-size: 1.5rem;
 }
 
 .empty-recipes {
