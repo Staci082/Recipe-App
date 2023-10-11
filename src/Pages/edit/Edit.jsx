@@ -55,7 +55,6 @@ function Edit() {
         try {
             ToastSuccess("Recipe updated!");
             await axios.put(baseAPI + "edit/" + id, { ...recipe });
-            navigate("/");
         } catch (error) {
             console.error(error);
             ToastError("Oops! Something went wrong!");
