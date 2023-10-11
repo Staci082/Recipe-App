@@ -24,11 +24,11 @@ html {
 body {
     font-family: Poppins, sans-serif;
     min-height: 100vh;
-    background: #fcfefc;
+    background-color: var(var(--color-background));
+    color: var(var(--color-light));
     background-size: 60px 60px;
     @include md {
         padding: 0 1em;
-
     }
 }
 
@@ -58,9 +58,8 @@ button {
     font-size: 3rem;
     position: absolute;
     right: 10px;
-    top: 10px;
+    top: 5px;
 }
-
 
 .global-container {
     display: flex;

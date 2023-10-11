@@ -2,27 +2,22 @@ $themes: (
     red: (
         color-background: rgb(254, 244, 244),
         color-primary: rgb(255, 80, 80),
-        color-text: black,
     ),
     orange: (
         color-background: rgb(252, 247, 239),
         color-primary: orange,
-        color-text: black,
     ),
     green: (
         color-background: rgb(236, 245, 236),
         color-primary: rgb(16, 165, 16),
-        color-text: black,
     ),
     blue: (
         color-background: rgb(240, 245, 245),
         color-primary: rgb(6, 178, 193),
-        color-text: black,
     ),
     purple: (
         color-background: rgb(250, 243, 249),
         color-primary: rgb(224, 122, 224),
-        color-text: black,
     ),
 );
 
@@ -39,7 +34,7 @@ $themes: (
     @include box;
     box-shadow: 4px 6px 0px 0px rgba(0, 0, 0, 0.75);
     flex-direction: column;
-    background: $background;
+    background: var(--color-background);
     font-weight: bold;
     font-size: 2rem;
     z-index: 2;
@@ -48,23 +43,29 @@ $themes: (
 .theme-button-container {
     @include flex;
     gap: 2em;
+    @include md {
+        gap: 1em;
+    }
+    @include sm {
+        gap: 0.5em;
+    }
 }
 
 .theme-button {
-    font-size: 3rem;
-    &.orange {
-        color: $primary-dark;
+    font-size: clamp(1rem, 5vw, 3rem);
+    &.pink {
+        color: var(--color-dark);
     }
-    &.red {
-        color: red;
+    &.orange {
+        color: rgb(252, 192, 79);
     }
     &.green {
-        color: green;
+        color: rgb(63, 252, 100);
     }
     &.blue {
-        color: blue;
+        color: rgb(113, 177, 255);
     }
     &.purple {
-        color: purple;
+        color: rgb(196, 98, 253);
     }
 }

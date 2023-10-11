@@ -1,7 +1,7 @@
 .menu-container {
     width: 200px;
     @include box;
-    background: $primary-light;
+    background: var(--color-light);
     border: none;
     position: relative;
     display: flex;
@@ -32,7 +32,7 @@
         display: flex;
         background: $salmon;
         & a:hover {
-            color: $background;
+            color: var(--color-background);
         }
     }
 }
@@ -43,7 +43,7 @@
     margin-bottom: clamp(0.5rem, 5vh, 1.5rem);
     font-weight: bold;
     & a:hover {
-        color: $primary-dark;
+        color: var(--color-dark);
     }
 }
 

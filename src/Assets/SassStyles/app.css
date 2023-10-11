@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Gluten:wght@500&display=swap");
+:root {
+  --color-background: #fcfefc;
+  --color-light: #ffebeb;
+  --color-dark: #faa0a0;
+}
+
 /*  MEDIA QUERIES */
 /* use content so we can choose properties when using the mixin instead of hardcoding */
 /* mixin for specific breakpoint (flexible) */
@@ -60,7 +66,7 @@
 
 .add-ingredient-button {
   margin-left: 30px;
-  background: #fcfefc;
+  background: var(--color-background);
   border: black 1px solid;
   border-radius: 5px;
   box-shadow: 3px 4px 0px 0px rgba(0, 0, 0, 0.75);
@@ -89,8 +95,8 @@
 }
 .submit-button:hover {
   transform: scale(1.1);
-  border: #faa0a0 solid 2px;
-  box-shadow: 4px 4px 0px 0px rgba(250, 160, 160, 0.75);
+  border: var(--color-dark) solid 2px;
+  box-shadow: 4px 4px 0px 0px var(--color-dark, 0.75);
 }
 
 .categories-container {
@@ -129,7 +135,7 @@
   text-align: center;
 }
 .cat-item-container:hover {
-  background: #ffebeb;
+  background: var(--color-dark);
 }
 
 .cat-item-title {
@@ -210,6 +216,7 @@
 .auth-container {
   display: flex;
   justify-content: center;
+  margin-top: -200px;
 }
 
 .auth-form {
@@ -284,7 +291,7 @@
   border-radius: 5px;
 }
 .pagination a:hover {
-  background: #faa0a0;
+  background: var(--color-dark);
 }
 
 .pagination-arrows {
@@ -293,10 +300,10 @@
 
 .pagination .pagination-active a {
   border-radius: 5px;
-  color: #faa0a0;
+  color: var(--color-dark);
 }
 .pagination .pagination-active a:hover {
-  color: #fcf7ef;
+  color: var(--color-background) 2;
 }
 
 .outer-recipe-container {
@@ -318,7 +325,7 @@
   gap: 2em;
 }
 .recipe-container-header h2 {
-  color: #faa0a0;
+  color: var(--color-dark);
 }
 
 .recipe {
@@ -327,7 +334,7 @@
   justify-content: space-between;
   cursor: pointer;
   width: 260px;
-  background: #ffebeb;
+  background: var(--color-light);
   border-radius: 15px;
 }
 .recipe .recipe-title-container {
@@ -348,7 +355,7 @@
 
 .save-icon {
   width: 40px;
-  color: #faa0a0;
+  color: var(--color-dark);
   font-size: 1.5rem;
   margin-right: 5px;
 }
@@ -372,7 +379,7 @@
   width: 200px;
   border: 1px rgb(0, 0, 0) solid;
   border-radius: 10px;
-  background: #ffebeb;
+  background: var(--color-light);
   border: none;
   position: relative;
   display: flex;
@@ -408,7 +415,7 @@
   background: #fbd1d1;
 }
 #mobile-menu .menu-container a:hover {
-  color: #fcfefc;
+  color: var(--color-background);
 }
 
 .menuItem,
@@ -419,7 +426,7 @@
 }
 .menuItem a:hover,
 .logout-button a:hover {
-  color: #faa0a0;
+  color: var(--color-dark);
 }
 
 .logout-button {
@@ -442,7 +449,7 @@
   border-radius: 10px;
   box-shadow: 4px 6px 0px 0px rgba(0, 0, 0, 0.75);
   flex-direction: column;
-  background: #fcfefc;
+  background: var(--color-background);
   font-weight: bold;
   font-size: 2rem;
   z-index: 2;
@@ -454,24 +461,34 @@
   align-items: center;
   gap: 2em;
 }
+@media (max-width: 720px) {
+  .theme-button-container {
+    gap: 1em;
+  }
+}
+@media (max-width: 480px) {
+  .theme-button-container {
+    gap: 0.5em;
+  }
+}
 
 .theme-button {
-  font-size: 3rem;
+  font-size: clamp(1rem, 5vw, 3rem);
+}
+.theme-button.pink {
+  color: var(--color-dark);
 }
 .theme-button.orange {
-  color: #faa0a0;
-}
-.theme-button.red {
-  color: red;
+  color: rgb(252, 192, 79);
 }
 .theme-button.green {
-  color: green;
+  color: rgb(63, 252, 100);
 }
 .theme-button.blue {
-  color: blue;
+  color: rgb(113, 177, 255);
 }
 .theme-button.purple {
-  color: purple;
+  color: rgb(196, 98, 253);
 }
 
 .grocery-list-container {
@@ -496,7 +513,7 @@
   margin-top: 3em;
   border: 1px rgb(0, 0, 0) solid;
   border-radius: 10px;
-  background: #fcf7ef;
+  background: var(--color-background) 2;
   color: grey;
 }
 
@@ -531,7 +548,7 @@
 }
 
 .add-item-button {
-  background: #fcf7ef;
+  background: var(--color-background) 2;
   padding: 5px 10px;
   border: black 1px solid;
   border-radius: 5px;
@@ -571,6 +588,7 @@
   position: relative;
   display: flex;
   align-items: center;
+  width: clamp(340px, 60vw, 800px);
   gap: 2em;
 }
 @media (max-width: 720px) {
@@ -585,12 +603,9 @@
   font-size: clamp(1.5rem, 3vw, 2rem);
 }
 
-.recipe-category-title {
-  color: #faa0a0;
-}
-
+.recipe-category-title,
 .recipe-details-title {
-  color: #faa0a0;
+  color: var(--color-dark);
 }
 
 .recipe-button-container {
@@ -606,7 +621,7 @@
 }
 .edit-buttons:hover,
 .random-button:hover {
-  color: #faa0a0;
+  color: var(--color-dark);
   transform: scale(1.2);
 }
 
@@ -624,7 +639,7 @@
   align-items: center;
   flex-direction: column;
   width: clamp(300px, 70%, 1000px);
-  background: #fcfefc;
+  background: var(--color-background);
   padding: 2em;
   gap: 2rem;
   border: 1px rgb(0, 0, 0) solid;
@@ -648,7 +663,7 @@
   font-size: 1rem;
 }
 .modal-button:hover {
-  color: #faa0a0;
+  color: var(--color-dark);
   transform: scale(1.2);
 }
 
@@ -659,7 +674,8 @@ html {
 body {
   font-family: Poppins, sans-serif;
   min-height: 100vh;
-  background: #fcfefc;
+  background-color: var(var(--color-background));
+  color: var(var(--color-light));
   background-size: 60px 60px;
 }
 @media (max-width: 720px) {
@@ -694,7 +710,7 @@ button {
   font-size: 3rem;
   position: absolute;
   right: 10px;
-  top: 10px;
+  top: 5px;
 }
 
 .global-container {

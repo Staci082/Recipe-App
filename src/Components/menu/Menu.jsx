@@ -1,14 +1,15 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { BsFillDropletFill } from "react-icons/bs";
 import { useAuth } from "../../Context/AuthContext";
+import Theme from "../theme/Theme";
+import { useTheme } from "../../Context/ThemeContext";
 
 function menu() {
-
+    const { changeTheme, themes } = useTheme();
     const { isLoggedIn, logout } = useAuth();
     const [showModal, setShowModal] = useState(false);
     const [userId, setUserId] = useState("");
-    
+
     useEffect(() => {
         if (isLoggedIn) {
             const userData = JSON.parse(localStorage.getItem("user"));
@@ -16,7 +17,7 @@ function menu() {
                 setUserId(userData.id);
             }
         }
-    }, [isLoggedIn]); 
+    }, [isLoggedIn]);
 
     const menuItems = [
         {
@@ -37,15 +38,8 @@ function menu() {
         },
     ];
 
-
-
-
     const handleLogout = () => {
         logout();
-    };
-
-    const changeTheme = (e) => {
-        setShowModal(!showModal);
     };
 
     const openModal = () => {
@@ -58,8 +52,6 @@ function menu() {
         setShowModal(false);
         document.body.style.overflow = "unset";
     };
-
-    const themeColors = ["red", "orange", "green", "blue", "purple"];
 
     return (
         <>
@@ -98,22 +90,13 @@ function menu() {
                     </li>
                 </ul>
             </div>
-            {showModal && (
-                <div className="theme-modal">
-                    <button onClick={closeModal} className="recipe-back-button">
-                        &times;
-                    </button>
-                    <p className="theme-modal-title">Choose your theme:</p>
+            <Theme 
+                showModal={showModal} 
+                closeModal={closeModal} 
+                changeTheme={changeTheme} 
+                themeColors={Object.keys(themes)} 
+            />
 
-                    <div className="theme-button-container">
-                        {themeColors.map((color) => (
-                            <button onClick={changeTheme} className={`theme-button ${color}`} key={color}>
-                                <BsFillDropletFill />
-                            </button>
-                        ))}
-                    </div>
-                </div>
-            )}
         </>
     );
 }
