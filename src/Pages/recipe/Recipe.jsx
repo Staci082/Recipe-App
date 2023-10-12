@@ -16,6 +16,9 @@ function Recipe({ randomRecipe }) {
     const [recipe, setRecipe] = useState([]);
     const [showModal, setShowModal] = useState(false);
 
+
+    window.scrollTo(0, 0)
+    
     useEffect(() => {
         const fetchRecipe = async () => {
             try {
