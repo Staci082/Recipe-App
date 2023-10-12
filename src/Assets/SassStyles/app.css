@@ -35,6 +35,13 @@
   border-radius: 5px;
   box-shadow: 4px 6px 0px 0px rgba(0, 0, 0, 0.75);
 }
+@media (max-width: 480px) {
+  .recipe-form input,
+  .recipe-form textarea,
+  .recipe-form select {
+    box-shadow: none;
+  }
+}
 .recipe-form select {
   width: 105%;
 }
@@ -215,6 +222,11 @@
   padding: 0 1em;
   border: var(--color-light) 2px solid;
 }
+@media (max-width: 480px) {
+  .search-bar {
+    box-shadow: none;
+  }
+}
 @media (max-width: 720px) {
   .search-bar {
     margin: 0 auto;
@@ -262,6 +274,11 @@
   box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.75);
   border-radius: 5px;
   box-shadow: 4px 6px 0px 0px rgba(0, 0, 0, 0.75);
+}
+@media (max-width: 480px) {
+  .auth-form input {
+    box-shadow: none;
+  }
 }
 
 .no-auth-container {
@@ -432,6 +449,11 @@
   padding: 0.5em 1.5em;
   margin-left: 1em;
 }
+@media (max-width: 480px) {
+  .menu-container {
+    box-shadow: none;
+  }
+}
 @media (max-width: 720px) {
   .menu-container {
     display: none;
@@ -454,6 +476,11 @@
   justify-content: center;
   align-items: center;
   padding: 0.5em 0;
+}
+@media (max-width: 480px) {
+  #mobile-menu {
+    box-shadow: none;
+  }
 }
 #mobile-menu .menu-container {
   display: flex;
@@ -494,6 +521,11 @@
   font-weight: bold;
   font-size: clamp(1rem, 5vw, 2rem);
   z-index: 2;
+}
+@media (max-width: 480px) {
+  .theme-modal {
+    box-shadow: none;
+  }
 }
 
 .theme-button-container {
@@ -557,6 +589,11 @@
   border-radius: 10px;
   background: var(--color-light);
 }
+@media (max-width: 480px) {
+  .grocery-list {
+    box-shadow: none;
+  }
+}
 
 .line {
   display: flex;
@@ -590,6 +627,11 @@
   box-shadow: 4px 6px 0px 0px rgba(0, 0, 0, 0.75);
   width: 250px;
   height: 40px;
+}
+@media (max-width: 480px) {
+  .grocery-input {
+    box-shadow: none;
+  }
 }
 
 .add-item-button {
@@ -693,6 +735,11 @@
   border: 1px rgb(0, 0, 0) solid;
   border-radius: 10px;
   box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 0.75);
+}
+@media (max-width: 480px) {
+  .delete-modal {
+    box-shadow: none;
+  }
 }
 
 .modal-button-container {

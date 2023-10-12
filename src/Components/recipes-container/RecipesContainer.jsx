@@ -54,7 +54,7 @@ function RecipesContainer() {
         if (!recipeList) {
             return (
                 <div className="empty-recipes">
-                    <img src={loadingtaco} alt="happy taco" className="loadingtaco" loading="lazy"/>
+                    <img src={loadingtaco} alt="happy taco" className="loadingtaco"/>
                     <p className="empty-text">You don't have any saved recipes yet..</p>
                 </div>
             );
@@ -63,7 +63,7 @@ function RecipesContainer() {
                 const isRecipeSaved = savedRecipes.includes(recipe._id);
                 return (
                     <div className="recipe" key={recipe._id} onClick={() => openRecipe(recipe._id)}>
-                        <img src={recipe.image} alt={recipe.name} className="recipe-image" />
+                        <img src={recipe.image} alt={recipe.name} className="recipe-image" loading="lazy"/>
                         <div className="recipe-title-container">
                             <h3 className="recipe-title">{recipe.name}</h3>
                             <p className="recipe-category">{recipe.category}</p>

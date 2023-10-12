@@ -7,6 +7,9 @@
 @mixin box {
     border: $border;
     border-radius: 10px;
+    @include sm {
+        box-shadow: none;
+    }
 }
 
 @mixin button {
@@ -50,6 +53,9 @@
     box-shadow: $box-shadow;
     border-radius: $border-radius-sm;
     box-shadow: 4px 6px 0px 0px rgba(0, 0, 0, 0.75);
+    @include sm {
+        box-shadow: none;
+    }
 }
 
 
