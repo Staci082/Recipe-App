@@ -17,6 +17,7 @@ You can try out Fiesta Flavors by visiting [here](https://fiesta-flavors.vercel.
 - **Manage Your Recipes:** Edit, update, or delete your recipes.
 - **Favorite Recipes:** Save your favorite recipes for quick access.
 - **Grocery List:** Create and manage a grocery list based on the recipes you want to prepare.
+- **Change Theme:** Personalize your experience with five different pastel themes.
 
 
 ## Technologies Used
