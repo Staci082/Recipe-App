@@ -51,7 +51,7 @@
         position: relative;
         display: flex;
         flex-direction: column;
-        justify-content: start;
+        justify-content: space-between;
         height: 35%;
         gap: 5px;
         padding: 0.5em 1em;
@@ -60,7 +60,8 @@
 
     & .recipe-image {
         width: 100%;
-        height: 65%;
+        max-height: 65%;
+        min-height: 65%;
         border-top-right-radius: 15px;
         border-top-left-radius: 15px;
     }
@@ -73,10 +74,12 @@
 }
 
 .save-icon {
+    height: 50%;
     position: absolute;
-    right: 5px;
-    top: 5px;
-    bottom: 65px;
+    right: 3px;
+    top: 25%;
+    z-index: 5;
+    margin: 0 auto;
     color: var(--color-dark);
 }
 

@@ -62,11 +62,11 @@ function RecipesContainer() {
             return recipeList.slice(pagesVisited, pagesVisited + recipesPerPage).map((recipe) => {
                 const isRecipeSaved = savedRecipes.includes(recipe._id);
                 return (
-                    <div className="recipe" key={recipe._id} onClick={() => openRecipe(recipe._id)}>
-                        <img src={recipe.image} alt={recipe.name} className="recipe-image" loading="lazy"/>
+                    <div className="recipe" key={recipe._id}>
+                        <img  onClick={() => openRecipe(recipe._id)} src={recipe.image} alt={recipe.name} className="recipe-image" loading="lazy"/>
                         <div className="recipe-title-container">
-                            <h3 className="recipe-title">{recipe.name}</h3>
-                            <p className="recipe-category">{recipe.category}</p>
+                            <h3  onClick={() => openRecipe(recipe._id)} className="recipe-title">{recipe.name}</h3>
+                            <p  onClick={() => openRecipe(recipe._id)} className="recipe-category">{recipe.category}</p>
                             <button className="save-icon" aria-label="save-button" onClick={() => handleSaveRecipe(recipe._id)}>
                                 {isRecipeSaved ? <FaHeart size={30} /> : <FaRegHeart size={30} />}
                             </button>
