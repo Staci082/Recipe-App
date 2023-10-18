@@ -6,7 +6,7 @@ Welcome to the MERN Stack Recipe App, "Fiesta Flavors", a simple CRUD applicatio
 
 You can find the frontend in the Client branch and the backend in the Server branch.
 
-You can try out Fiesta Flavors by visiting [here](fiesta-flavors.vercel.app).
+You can try out Fiesta Flavors by visiting [here](https://fiesta-flavors.vercel.app).
 
 
 ## Features
