@@ -30,7 +30,7 @@
     justify-content: space-between;
     cursor: pointer;
     width: 230px;
-    height: 250px;
+    height: 230px;
     background: var(--color-light);
     border: solid 2px var(--color-light);
     border-radius: 15px;
@@ -51,7 +51,7 @@
         position: relative;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: start;
         height: 35%;
         gap: 5px;
         padding: 0.5em 1em;
@@ -74,11 +74,14 @@
 }
 
 .save-icon {
-    height: 50%;
+    height: 50px;
+    padding: 0 8px 0 8px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
     position: absolute;
-    right: 3px;
-    top: 25%;
-    margin: 0 auto;
+    right:0;
+    top: 0;
+    background: white;
     color: var(--color-dark);
 }
 

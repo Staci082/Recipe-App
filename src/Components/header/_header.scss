@@ -46,7 +46,7 @@
 .search-bar {
     outline: none;
     height: 40px;
-    width: clamp(220px, 32vw, 600px);
+    width: clamp(220px, 55vw, 600px);
     @include box;
     padding: 0 1em;
     border: var(--color-light) 2px solid;

@@ -2,7 +2,7 @@ import { useState, useEffect, useContext } from "react"; // keep "useContext" he
 import axios from "axios";
 import { useParams, useLocation, useNavigate } from "react-router-dom";
 import Pagination from "../pagination/Pagination.jsx";
-import { FaHeart, FaRegHeart } from "react-icons/fa6";
+import { GoBookmark, GoBookmarkFill } from "react-icons/go";
 import UseSearchContext from "../../Context/SearchContext.jsx";
 import { useAuth } from "../../Context/AuthContext.jsx";
 import baseAPI from "../../Context/baseAPI.js";
@@ -63,14 +63,18 @@ function RecipesContainer() {
                 const isRecipeSaved = savedRecipes.includes(recipe._id);
                 return (
                     <div className="recipe" key={recipe._id}>
+                            
                         <img  onClick={() => openRecipe(recipe._id)} src={recipe.image} alt={recipe.name} className="recipe-image" loading="lazy"/>
                         <div className="recipe-title-container">
                             <h3  onClick={() => openRecipe(recipe._id)} className="recipe-title">{recipe.name}</h3>
                             <p  onClick={() => openRecipe(recipe._id)} className="recipe-category">{recipe.category}</p>
                             <button className="save-icon" aria-label="save-button" onClick={() => handleSaveRecipe(recipe._id)}>
-                                {isRecipeSaved ? <FaHeart size={30} /> : <FaRegHeart size={30} />}
+                                {isRecipeSaved ? <GoBookmarkFill size={30} /> : <GoBookmark size={30} />}
                             </button>
                         </div>
+
+
+                        
                     </div>
                 );
             });

@@ -3,7 +3,7 @@
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
-    width: 90%;
+    width: 100%;
     gap: 1em;
     @include lg {
         justify-content: center;
@@ -19,14 +19,17 @@
 }
 
 .cat-item-container {
-    width: clamp(0.8rem, 15vw, 6rem);
+    height: 90px;
+    width: clamp(0.8rem, 16vw, 6rem);
     display: flex;
     flex-direction: column;
     align-items: center;
     border-radius: 15px;
     text-align: center;
     &:hover {
-        background: var(--color-dark);
+        
+            color: var(--color-dark);
+        
     }
 }
 
@@ -39,10 +42,4 @@
     height: auto;
     transform: scale(0.8);
     margin-bottom: -1em;
-}
-
-.slider {
-    border: 2px solid deeppink;
-    width: 80%;
-    max-height: 100px;
 }
