@@ -56,6 +56,10 @@ function menu({ closeMenu }) {
     return (
         <>
             <div className="menu-container">
+            <div className="logo-container">
+                    <img width="48" height="48" src="/logo.avif" alt="taco logo" />
+                    <p className="logo-title">Fiesta Flavors</p>
+                </div>
                 <h5>Menu</h5>
                 <ul>
                     {menuItems.map((item) => (

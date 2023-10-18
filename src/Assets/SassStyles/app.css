@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Gluten:wght@500&display=swap");
 :root {
-  --color-light: hsl(0, 0%, 100%);
-  --color-dark: rgb(184, 10, 140);
+  --color-light: white;
+  --color-dark: hsl(0, 100%, 72%);
 }
 
 /*  MEDIA QUERIES */
@@ -72,7 +72,7 @@
 
 .add-ingredient-button {
   margin-left: 30px;
-  background: #FFEEF4;
+  background: hsl(0, 84%, 97%);
   border: black 1px solid;
   border-radius: 5px;
   box-shadow: 3px 4px 0px 0px rgba(0, 0, 0, 0.75);
@@ -112,8 +112,7 @@
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-around;
-  width: 100%;
-  gap: 1em;
+  width: 90%;
 }
 @media (max-width: 960px) {
   .categories-container {
@@ -162,7 +161,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   margin-bottom: 1em;
   padding: 0 1em;
 }
@@ -178,20 +177,16 @@
     z-index: 2;
     padding: 5px;
     padding-right: 0;
-    background: #FFEEF4;
+    background: hsl(0, 84%, 97%);
   }
 }
 
-.logo-container {
-  display: flex;
-  align-items: center;
-  font-family: gluten, comic sans-serif;
-  gap: 1em;
-  margin-right: 5px;
+.logo-img {
+  display: none;
 }
 @media (max-width: 720px) {
-  .logo-container .logo-title {
-    display: none;
+  .logo-img {
+    display: flex;
   }
 }
 
@@ -328,7 +323,7 @@
   color: var(--color-dark);
 }
 .pagination .pagination-active a:hover {
-  color: #FFEEF4 2;
+  color: hsl(0, 84%, 97%) 2;
 }
 
 .outer-recipe-container {
@@ -364,8 +359,8 @@
   cursor: pointer;
   width: 230px;
   height: 230px;
-  background: var(--color-light);
-  border: solid 2px var(--color-light);
+  background: white;
+  border: solid 2px white;
   border-radius: 15px;
 }
 @media (max-width: 960px) {
@@ -392,7 +387,6 @@
   flex-direction: column;
   justify-content: start;
   height: 35%;
-  gap: 5px;
   padding: 0.5em 1em;
   font-size: clamp(0.9rem, 1vh, 1.2rem);
 }
@@ -437,17 +431,14 @@
 }
 
 .menu-container {
-  width: 200px;
+  width: inherit;
   border: 1px rgb(0, 0, 0) solid;
   border-radius: 10px;
-  background: var(--color-light);
   border: none;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding: 0.5em 1.5em;
-  margin-left: 1em;
 }
 @media (max-width: 480px) {
   .menu-container {
@@ -458,6 +449,14 @@
   .menu-container {
     display: none;
   }
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  font-family: gluten, comic sans-serif;
+  gap: 1em;
+  margin-bottom: 2em;
 }
 
 #mobile-menu {
@@ -517,7 +516,7 @@
   border-radius: 10px;
   box-shadow: 4px 6px 0px 0px rgba(0, 0, 0, 0.75);
   flex-direction: column;
-  background: #FFEEF4;
+  background: hsl(0, 84%, 97%);
   font-weight: bold;
   font-size: clamp(1rem, 5vw, 2rem);
   z-index: 2;
@@ -729,7 +728,7 @@
   align-items: center;
   flex-direction: column;
   width: clamp(300px, 70%, 1000px);
-  background: #FFEEF4;
+  background: hsl(0, 84%, 97%);
   padding: 2em;
   gap: 2rem;
   border: 1px rgb(0, 0, 0) solid;
@@ -769,7 +768,7 @@ html {
 body {
   font-family: Poppins, sans-serif;
   min-height: 100vh;
-  background-color: #FFEEF4;
+  background-color: hsl(0, 84%, 97%);
 }
 @media (max-width: 720px) {
   body {
@@ -828,5 +827,18 @@ button {
 @media (max-width: 720px) {
   .right-container {
     margin: 0;
+  }
+}
+
+.left-container {
+  background: white;
+  height: 100vh;
+  width: 200px;
+  padding: 0.5em 2em;
+  margin: -0.5em 0 0 -0.5em;
+}
+@media (max-width: 720px) {
+  .left-container {
+    display: none;
   }
 }/*# sourceMappingURL=app.css.map */

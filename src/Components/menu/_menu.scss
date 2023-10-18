@@ -1,17 +1,23 @@
 .menu-container {
-    width: 200px;
+    width: inherit;
     @include box;
-    background: var(--color-light);
     border: none;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    padding: 0.5em 1.5em;
-    margin-left: 1em;
+
     @include md {
         display: none;
     }
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    font-family: gluten, comic sans-serif;
+    gap: 1em;
+    margin-bottom: 2em;
 }
 
 #mobile-menu {

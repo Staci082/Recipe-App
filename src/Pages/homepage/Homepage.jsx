@@ -7,13 +7,13 @@ import Categories from "../../Components/categories/Categories";
 function Homepage() {
     return (
         <>
-            <Header />
+           
             <div className="main-container">
-                <div id="left-container">
+                <div className="left-container">
                     <Menu />
                 </div>
                 <div className="right-container">
-                    
+                     <Header />
                     <Categories />
                     <RecipesContainer />
                 </div>
