@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Gluten:wght@500&display=swap");
 :root {
   --color-background: hsl(0, 84%, 97%);
-  --color-light: #fbd1d1;
+  --color-light: hsl(0, 84%, 90%);
   --color-primary: hsl(0, 100%, 72%);
 }
 
@@ -112,17 +112,12 @@
   align-items: center;
   flex-wrap: wrap;
   justify-content: start;
-  width: 90%;
+  width: 100%;
   gap: 2em;
-}
-@media (max-width: 960px) {
-  .categories-container {
-    justify-content: center;
-  }
 }
 @media (max-width: 720px) {
   .categories-container {
-    width: 100%;
+    justify-content: center;
     margin-top: 4em;
   }
 }
@@ -161,23 +156,21 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   margin-bottom: 1em;
-  padding: 1em 1em;
+  padding: 1em;
 }
 @media (max-width: 720px) {
   .header-container {
     gap: 1em;
-    padding: 0;
     position: fixed;
+    justify-content: space-between;
     left: 0;
     right: 0;
     top: 0;
     height: 50px;
     z-index: 2;
     padding: 5px;
-    padding-right: 0;
-    background: var(--color-background);
   }
 }
 
@@ -204,16 +197,21 @@
 }
 
 .search-container {
-  width: clamp(220px, 55vw, 600px);
+  width: clamp(200px, 50vw, 600px);
   position: relative;
+}
+@media (max-width: 480px) {
+  .search-container {
+    margin-left: -3em;
+  }
 }
 
 .search-bar {
   height: 40px;
-  width: clamp(220px, 55vw, 600px);
+  width: clamp(200px, 50vw, 600px);
   border: 1px rgb(0, 0, 0) solid;
   border-radius: 10px;
-  padding: 0 4em;
+  padding: 0 1em 0 4em;
   outline: none;
   border: none;
 }
@@ -443,7 +441,6 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
 }
 @media (max-width: 480px) {
   .menu-container {
@@ -461,7 +458,7 @@
   align-items: center;
   font-family: gluten, comic sans-serif;
   gap: 1em;
-  margin-bottom: 2em;
+  margin-bottom: 4em;
 }
 @media (max-width: 720px) {
   .logo-container {
@@ -846,7 +843,7 @@ button {
   height: 100vh;
   width: 200px;
   padding: 0.5em 2em;
-  margin: -0.5em 0 0 -0.5em;
+  margin: -0.5em 2em 0 -0.5em;
 }
 @media (max-width: 720px) {
   .left-container {

@@ -12,28 +12,28 @@ export function ThemeProvider({ children }) {
     const themes = {
         pink: {
             "--color-background": "hsl(0, 84%, 97%)",
-            "--color-light": "#fbd1d1",
+            "--color-light": "hsl(0, 84%, 90%)",
             "--color-primary": "hsl(0, 100%, 72%)",
         },
         orange: {
-            "--color-background": "hsl(36, 100%, 93%)",
-            "--color-light": "",
-            "--color-primary": "orange",
+            "--color-background": "hsl(28, 100%, 97%)",
+            "--color-light": "hsl(37, 100%, 74%)",
+            "--color-primary": "hsl(39, 100%, 50%)",
         },
         blue: {
-            "--color-background": "hsl(194, 95%, 92%)",
-            "--color-light": "",
-            "--color-primary": "hsl(195, 96%, 63%)",
+            "--color-background": "hsl(193, 100%, 96%)",
+            "--color-light": "hsl(194, 81%, 86%)",
+            "--color-primary": "hsl(195, 98%, 61%)",
         },
         green: {
-            "--color-background": "hsl(138, 80%, 92%)",
-            "--color-light": "",
-            "--color-primary": "hsl(137, 49%, 59%)",
+            "--color-background": "hsl(150, 100%, 97%)",
+            "--color-light": "hsl(138, 81%, 85%)",
+            "--color-primary": "hsl(152, 95%, 38%)",
         },
         purple: {
-            "--color-background": "hsl(272, 89%, 93%)",
-            "--color-light": "",
-            "--color-primary": "hsl(271, 91%, 74%)",
+            "--color-background": "hsl(270, 100%, 97%)",
+            "--color-light": "hsl(272, 93%, 88%)",
+            "--color-primary": "hsl(271, 90%, 64%)",
         },
     };
 

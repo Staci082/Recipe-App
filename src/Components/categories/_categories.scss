@@ -2,14 +2,10 @@
     @include flex;
     flex-wrap: wrap;
     justify-content: start;
-    width: 90%;
+    width: 100%;
     gap: 2em;
-
-    @include lg {
-        justify-content: center;
-    }
     @include md {
-        width: 100%;
+        justify-content: center;
         margin-top: 4em; // header covers categories without this margin here
     }
     @include sm {
