@@ -11,30 +11,35 @@ export function ThemeProvider({ children }) {
 
     const themes = {
         pink: {
-            "--color-light": "hsl(340, 100%, 93%)",
-            "--color-dark": "hsl(340, 100%, 78%)",
+            "--color-background": "hsl(0, 84%, 97%)",
+            "--color-light": "#fbd1d1",
+            "--color-primary": "hsl(0, 100%, 72%)",
         },
         orange: {
-            "--color-light": "hsl(36, 100%, 93%)",
-            "--color-dark": "orange",
+            "--color-background": "hsl(36, 100%, 93%)",
+            "--color-light": "",
+            "--color-primary": "orange",
         },
         blue: {
-            "--color-light": "hsl(194, 95%, 92%)",
-            "--color-dark": "hsl(195, 96%, 63%)",
+            "--color-background": "hsl(194, 95%, 92%)",
+            "--color-light": "",
+            "--color-primary": "hsl(195, 96%, 63%)",
         },
         green: {
-            "--color-light": "hsl(138, 80%, 92%)",
-            "--color-dark": "hsl(137, 49%, 59%)",
+            "--color-background": "hsl(138, 80%, 92%)",
+            "--color-light": "",
+            "--color-primary": "hsl(137, 49%, 59%)",
         },
         purple: {
-            "--color-light": "hsl(272, 89%, 93%)",
-            "--color-dark": "hsl(271, 91%, 74%)",
+            "--color-background": "hsl(272, 89%, 93%)",
+            "--color-light": "",
+            "--color-primary": "hsl(271, 91%, 74%)",
         },
     };
 
     const changeTheme = (newTheme) => {
         setTheme(newTheme);
-      
+
         if (themes[newTheme]) {
             for (const [property, value] of Object.entries(themes[newTheme])) {
                 document.documentElement.style.setProperty(property, value);

@@ -1,17 +1,16 @@
 .categories-container {
     @include flex;
     flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-around;
+    justify-content: start;
     width: 90%;
+    gap: 2em;
 
     @include lg {
         justify-content: center;
     }
     @include md {
         width: 100%;
-        gap: 2em;
-        margin-top: 4em;
+        margin-top: 4em; // header covers categories without this margin here
     }
     @include sm {
         max-width: 400px;
@@ -27,9 +26,7 @@
     border-radius: 15px;
     text-align: center;
     &:hover {
-        
-            color: var(--color-dark);
-        
+        background: var(--color-light);
     }
 }
 

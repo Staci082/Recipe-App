@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Gluten:wght@500&display=swap");
 :root {
-  --color-light: white;
-  --color-dark: hsl(0, 100%, 72%);
+  --color-background: hsl(0, 84%, 97%);
+  --color-light: #fbd1d1;
+  --color-primary: hsl(0, 100%, 72%);
 }
 
 /*  MEDIA QUERIES */
@@ -72,7 +73,7 @@
 
 .add-ingredient-button {
   margin-left: 30px;
-  background: hsl(0, 84%, 97%);
+  background: var(--color-background);
   border: black 1px solid;
   border-radius: 5px;
   box-shadow: 3px 4px 0px 0px rgba(0, 0, 0, 0.75);
@@ -101,8 +102,8 @@
 }
 .submit-button:hover {
   transform: scale(1.1);
-  border: var(--color-dark) solid 2px;
-  box-shadow: 4px 4px 0px 0px var(--color-dark, 0.75);
+  border: var(--color-primary) solid 2px;
+  box-shadow: 4px 4px 0px 0px var(--color-primary, 0.75);
 }
 
 .categories-container {
@@ -110,9 +111,9 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-around;
+  justify-content: start;
   width: 90%;
+  gap: 2em;
 }
 @media (max-width: 960px) {
   .categories-container {
@@ -122,7 +123,6 @@
 @media (max-width: 720px) {
   .categories-container {
     width: 100%;
-    gap: 2em;
     margin-top: 4em;
   }
 }
@@ -142,7 +142,7 @@
   text-align: center;
 }
 .cat-item-container:hover {
-  color: var(--color-dark);
+  background: var(--color-light);
 }
 
 .cat-item-title {
@@ -163,7 +163,7 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 1em;
-  padding: 0 1em;
+  padding: 1em 1em;
 }
 @media (max-width: 720px) {
   .header-container {
@@ -177,7 +177,7 @@
     z-index: 2;
     padding: 5px;
     padding-right: 0;
-    background: hsl(0, 84%, 97%);
+    background: var(--color-background);
   }
 }
 
@@ -203,14 +203,19 @@
   }
 }
 
+.search-container {
+  width: clamp(220px, 55vw, 600px);
+  position: relative;
+}
+
 .search-bar {
-  outline: none;
   height: 40px;
   width: clamp(220px, 55vw, 600px);
   border: 1px rgb(0, 0, 0) solid;
   border-radius: 10px;
-  padding: 0 1em;
-  border: var(--color-light) 2px solid;
+  padding: 0 4em;
+  outline: none;
+  border: none;
 }
 @media (max-width: 480px) {
   .search-bar {
@@ -225,7 +230,8 @@
 
 .search-icon {
   position: absolute;
-  right: 30px;
+  left: 10px;
+  top: 12px;
   color: grey;
 }
 
@@ -311,7 +317,7 @@
   border-radius: 5px;
 }
 .pagination a:hover {
-  background: var(--color-dark);
+  background: var(--color-primary);
 }
 
 .pagination-arrows {
@@ -320,23 +326,22 @@
 
 .pagination .pagination-active a {
   border-radius: 5px;
-  color: var(--color-dark);
+  color: var(--color-primary);
 }
 .pagination .pagination-active a:hover {
-  color: hsl(0, 84%, 97%) 2;
-}
-
-.outer-recipe-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  color: var(--color-background) 2;
 }
 
 .recipe-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: start;
   gap: 2.2em;
+}
+@media (max-width: 720px) {
+  .recipe-container {
+    justify-content: center;
+  }
 }
 
 .recipe-container-header {
@@ -345,7 +350,7 @@
   gap: 2em;
 }
 .recipe-container-header h2 {
-  color: var(--color-dark);
+  color: var(--color-primary);
 }
 .recipe-container-header .recipes-amount {
   font-size: 1.5rem;
@@ -412,7 +417,7 @@
   right: 0;
   top: 0;
   background: white;
-  color: var(--color-dark);
+  color: var(--color-primary);
 }
 
 .empty-recipes {
@@ -458,23 +463,28 @@
   gap: 1em;
   margin-bottom: 2em;
 }
+@media (max-width: 720px) {
+  .logo-container {
+    display: none;
+  }
+}
 
 #mobile-menu {
   display: flex;
-  width: 250px;
+  width: 230px;
   z-index: 1;
   border: 1px rgb(0, 0, 0) solid;
   border-radius: 10px;
   border-top-right-radius: 0%;
-  background: var(--color-light);
+  background: white;
   border: none;
   position: fixed;
   right: 0;
   top: 60px;
+  padding-left: 2em;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0.5em 0;
 }
 @media (max-width: 480px) {
   #mobile-menu {
@@ -493,7 +503,7 @@
 }
 .menuItem a:hover,
 .logout-button a:hover {
-  color: var(--color-dark);
+  color: var(--color-primary);
 }
 
 .logout-button {
@@ -516,7 +526,7 @@
   border-radius: 10px;
   box-shadow: 4px 6px 0px 0px rgba(0, 0, 0, 0.75);
   flex-direction: column;
-  background: hsl(0, 84%, 97%);
+  background: var(--color-background);
   font-weight: bold;
   font-size: clamp(1rem, 5vw, 2rem);
   z-index: 2;
@@ -586,7 +596,7 @@
   margin-top: 3em;
   border: 1px rgb(0, 0, 0) solid;
   border-radius: 10px;
-  background: var(--color-light);
+  background: white;
 }
 @media (max-width: 480px) {
   .grocery-list {
@@ -625,7 +635,7 @@
   border-radius: 5px;
   box-shadow: 4px 6px 0px 0px rgba(0, 0, 0, 0.75);
   width: 250px;
-  height: 40px;
+  height: 30px;
 }
 @media (max-width: 480px) {
   .grocery-input {
@@ -640,8 +650,8 @@
   box-shadow: 3px 4px 0px 0px rgba(0, 0, 0, 0.75);
 }
 .add-item-button:active {
-  color: var(--color-dark);
-  box-shadow: 3px 4px 0px 0px var(--color-dark);
+  color: var(--color-primary);
+  box-shadow: 3px 4px 0px 0px var(--color-primary);
 }
 
 .single-recipe-container {
@@ -662,6 +672,7 @@
 .recipe-details-container .method-container {
   border: 1px rgb(0, 0, 0) solid;
   border-radius: 10px;
+  background: white;
   padding: 1em;
   padding-right: 2.5em;
   box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 0.75);
@@ -694,7 +705,7 @@
 
 .recipe-category-title,
 .recipe-details-title {
-  color: var(--color-dark);
+  color: var(--color-primary);
 }
 
 .recipe-button-container {
@@ -710,7 +721,7 @@
 }
 .edit-buttons:hover,
 .random-button:hover {
-  color: var(--color-dark);
+  color: var(--color-primary);
   transform: scale(1.2);
 }
 
@@ -728,7 +739,7 @@
   align-items: center;
   flex-direction: column;
   width: clamp(300px, 70%, 1000px);
-  background: hsl(0, 84%, 97%);
+  background: var(--color-background);
   padding: 2em;
   gap: 2rem;
   border: 1px rgb(0, 0, 0) solid;
@@ -757,7 +768,7 @@
   font-size: 1rem;
 }
 .modal-button:hover {
-  color: var(--color-dark);
+  color: var(--color-primary);
   transform: scale(1.2);
 }
 
@@ -768,7 +779,7 @@ html {
 body {
   font-family: Poppins, sans-serif;
   min-height: 100vh;
-  background-color: hsl(0, 84%, 97%);
+  background-color: var(--color-background);
 }
 @media (max-width: 720px) {
   body {

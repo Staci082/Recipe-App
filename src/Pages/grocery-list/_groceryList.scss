@@ -18,7 +18,7 @@
     padding: 2em 0 1em 0;
     margin-top: 3em;
     @include box;
-    background: var(--color-light);
+    background: white;
 }
 
 .line {
@@ -41,7 +41,7 @@
 .grocery-input {
     @include input;
     width: 250px;
-    height: 40px;
+    height: 30px;
 }
 .add-item-button {
     padding: 5px 10px;
@@ -49,7 +49,7 @@
     border-radius: 5px;
     box-shadow: 3px 4px 0px 0px rgba(0, 0, 0, 0.75);
     &:active {
-        color: var(--color-dark);
-        box-shadow: 3px 4px 0px 0px var(--color-dark);
+        color: var(--color-primary);
+        box-shadow: 3px 4px 0px 0px var(--color-primary);
     }
 }

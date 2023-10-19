@@ -1,13 +1,11 @@
-
-
-// using css here because it works 
+// using css here because it works
 :root {
-    --color-light: white;
-    --color-dark: hsl(0, 100%, 72%);
+    --color-background: hsl(0, 84%, 97%);
+    --color-light: #fbd1d1;
+    --color-primary: hsl(0, 100%, 72%);
 }
 
 $salmon: #fbd1d1;
-$background: hsl(0, 84%, 97%);
 
 $border: 1px rgb(0, 0, 0) solid;
 $box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.75);

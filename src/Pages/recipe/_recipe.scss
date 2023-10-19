@@ -15,6 +15,7 @@
     & .ingredients-container,
     .method-container {
         @include box;
+        background: white;
         padding: 1em;
         padding-right: 2.5em;
         box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 0.75);
@@ -39,7 +40,7 @@
 
 .recipe-category-title,
 .recipe-details-title {
-    color: var(--color-dark);
+    color: var(--color-primary);
 }
 
 .recipe-button-container {
@@ -53,7 +54,7 @@
 .random-button {
     margin: 0 8px;
     &:hover {
-        color: var(--color-dark);
+        color: var(--color-primary);
         transform: scale(1.2);
     }
 }
@@ -70,7 +71,7 @@
     @include flex;
     flex-direction: column;
     width: clamp(300px, 70%, 1000px);
-    background: $background;
+    background: var(--color-background);
     padding: 2em;
     gap: 2rem;
     @include box;
@@ -92,7 +93,7 @@
 .modal-button {
     font-size: 1rem;
     &:hover {
-        color: var(--color-dark);
+        color: var(--color-primary);
         transform: scale(1.2);
     }
 }
