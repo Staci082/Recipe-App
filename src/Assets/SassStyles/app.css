@@ -414,6 +414,9 @@
 .welcome {
   margin-top: 2em;
 }
+.welcome .welcome-text {
+  font-family: gluten, comic sans-serif;
+}
 
 .empty-recipes {
   display: flex;

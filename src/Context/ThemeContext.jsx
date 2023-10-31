@@ -7,8 +7,6 @@ export function useTheme() {
 }
 
 export function ThemeProvider({ children }) {
-    const [theme, setTheme] = useState("pink");
-
     const themes = {
         pink: {
             "--color-background": "hsl(0, 84%, 97%)",
@@ -37,6 +35,20 @@ export function ThemeProvider({ children }) {
         },
     };
 
+    const initialTheme = localStorage.getItem("theme") || "pink";
+    const [theme, setTheme] = useState(initialTheme);
+
+    useEffect(() => {
+        const selectedTheme = themes[theme];
+        if (selectedTheme) {
+            for (const [property, value] of Object.entries(selectedTheme)) {
+                document.documentElement.style.setProperty(property, value);
+            }
+        }
+
+        localStorage.setItem("theme", theme);
+    }, [theme]);
+
     const changeTheme = (newTheme) => {
         setTheme(newTheme);
 
@@ -45,6 +57,7 @@ export function ThemeProvider({ children }) {
                 document.documentElement.style.setProperty(property, value);
             }
         }
+
     };
     return <ThemeContext.Provider value={{ theme, changeTheme, themes }}>{children}</ThemeContext.Provider>;
 }
