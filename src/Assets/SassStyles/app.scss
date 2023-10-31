@@ -24,7 +24,7 @@ html {
 body {
     font-family: Poppins, sans-serif;
     min-height: 100vh;
-    background-color: var(--color-background);
+    background-color: white;
     @include md {
         padding: 0 1em;
     }
@@ -76,17 +76,17 @@ button {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 0 2em;
+
     @include md {
         margin: 0;
     }
 }
 
 .left-container {
-    background: white;
+    background: var(--color-light);
     height: 100vh;
     width: 200px;
-    padding: 0.5em 2em;
+    padding: 1em 2em;
     margin: -0.5em 2em 0 -0.5em;
     @include md {
         display: none;

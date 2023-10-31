@@ -1,6 +1,5 @@
 import "./Assets/SassStyles/app.scss";
-import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
-import { useEffect } from "react";
+import { Routes, Route} from "react-router-dom";
 
 import { SearchProvider } from "./Context/SearchContext";
 
@@ -50,14 +49,6 @@ const router = [
 ];
 
 function App() {
-    const navigate = useNavigate();
-    const location = useLocation();
-
-    useEffect(() => {
-        if (location.pathname === "/") {
-            navigate("/all");
-        }
-    }, [navigate, location]);
 
     return (
         <>

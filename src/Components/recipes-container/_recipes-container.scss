@@ -1,7 +1,7 @@
 .recipe-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: start;
+    justify-content: center;
     gap: 2.2em;
     @include md {
         justify-content: center;
@@ -29,7 +29,7 @@
     width: 230px;
     height: 230px;
     background: white;
-    border: solid 2px white;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
     border-radius: 15px;
     @include lg {
         transform: scale(0.9);
@@ -50,7 +50,7 @@
         flex-direction: column;
         justify-content: start;
         height: 35%;
-        padding: 0.5em 1em;
+        padding: 0.3em 1em;
         font-size: clamp(0.9rem, 1vh, 1.2rem);
     }
 
@@ -81,6 +81,10 @@
     color: var(--color-primary);
 }
 
+.welcome {
+    margin-top: 2em;
+}
+
 .empty-recipes {
     display: flex;
     flex-direction: column;
@@ -89,7 +93,7 @@
 }
 
 .loadingtaco {
-    width: 80%;
+    width: 300px;
 }
 
 .empty-text {

@@ -1,34 +1,29 @@
 .header-container {
     position: relative;
     @include flex;
-    justify-content: start;
+    justify-content: center;
     margin-bottom: 1em;
     padding: 1em;
+    border-bottom: solid 2px var(--color-light);
 
     @include md {
         gap: 1em;
         position: fixed;
-        justify-content: space-between;
+        justify-content: space-around;
         left: 0;
         right: 0;
         top: 0;
         height: 50px;
         z-index: 2;
         padding: 5px;
+        background: var(--color-light);
     }
 }
 
-.logo-img {
-    display: none;
-    @include md {
-        display: flex;
-    }
-}
 
 .menu-button {
     display: none;
     font-size: 4rem;
-    margin-right: -5px;
     z-index: 3;
     cursor: pointer;
     @include md {
@@ -37,20 +32,17 @@
 }
 
 .search-container {
-    width: clamp(200px, 50vw, 600px);
     position: relative;
-    @include sm {
-        margin-left: -3em;
-    }
 }
 
 .search-bar {
     height: 40px;
-    width: clamp(200px, 50vw, 600px);
+    width: clamp(200px, 60vw, 600px);
     @include box;
     padding: 0 1em 0 4em;
     outline: none;
     border: none;
+    border: solid 2px var(--color-light);
     @include md {
         margin: 0 auto;
     }

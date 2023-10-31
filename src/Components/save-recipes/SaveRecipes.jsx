@@ -54,21 +54,21 @@ function SaveRecipes({ isLoggedIn }) {
 
     const fetchSavedRecipes = async () => {
         try {
-          const userId = JSON.parse(localStorage.getItem("user")).id;
-          const response = await axios.get(baseAPI + "auth/user/" + userId);
-          const recipeIds = response.data.savedRecipes;
-          const recipesObj = await fetchSavedRecipesByIds(recipeIds);
-          return recipesObj; // Return the recipesObj
+            const userId = JSON.parse(localStorage.getItem("user")).id;
+            const response = await axios.get(baseAPI + "auth/user/" + userId);
+            const recipeIds = response.data.savedRecipes;
+            const recipesObj = await fetchSavedRecipesByIds(recipeIds);
+            return recipesObj; // Return the recipesObj
         } catch (error) {
-          console.error("Error fetching saved recipes:", error);
+            console.error("Error fetching saved recipes:", error);
         }
-      };
+    };
 
     const fetchSavedRecipesByIds = async (recipeIds) => {
         try {
             const response = await axios.post(baseAPI + "auth/saved", { recipeIds });
-            const recipesObj = response.data
-            return recipesObj
+            const recipesObj = response.data;
+            return recipesObj;
         } catch (error) {
             console.error("Error fetching saved recipes:", error);
         }

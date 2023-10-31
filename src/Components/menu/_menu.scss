@@ -5,7 +5,6 @@
     position: relative;
     display: flex;
     flex-direction: column;
-
     @include md {
         display: none;
     }
@@ -28,7 +27,7 @@
     z-index: 1;
     @include box;
     border-top-right-radius: 0%;
-    background: white;
+    background: var(--color-light);
     border: none;
     position: fixed;
     right: 0;
@@ -37,8 +36,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    @include lg {
+        display: none;
+    }
     & .menu-container {
-        display: flex;
+        display: none;
+        @include md {
+            display: flex;
+        }
     }
 }
 

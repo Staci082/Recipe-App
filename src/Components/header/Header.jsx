@@ -21,9 +21,6 @@ function Header() {
     return (
         <>
             <div className="header-container">
-               
-                    <img className="logo-img" width="48" height="48" src="/logo.avif" alt="taco logo" />
-               
 
                 <Search />
                 <CgLayoutGridSmall onClick={toggleMenu} className="menu-button" />

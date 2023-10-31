@@ -71,7 +71,7 @@
     @include flex;
     flex-direction: column;
     width: clamp(300px, 70%, 1000px);
-    background: var(--color-background);
+    background: white;
     padding: 2em;
     gap: 2rem;
     @include box;

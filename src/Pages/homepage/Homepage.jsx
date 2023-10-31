@@ -1,10 +1,15 @@
+import { useLocation } from "react-router-dom";
 
 import Header from "../../Components/header/Header";
 import RecipesContainer from "../../Components/recipes-container/RecipesContainer";
 import Menu from "../../Components/menu/Menu";
 import Categories from "../../Components/categories/Categories";
+import Welcome from "../../Components/welcome/Welcome"
 
 function Homepage() {
+    const location = useLocation();
+    const pathname = location.pathname;
+    const welcomePage = pathname.endsWith("/");
     return (
         <>
            
@@ -13,9 +18,12 @@ function Homepage() {
                     <Menu />
                 </div>
                 <div className="right-container">
-                     <Header />
+                    <Header />
                     <Categories />
-                    <RecipesContainer />
+                    {
+                        welcomePage ? <Welcome/> : <RecipesContainer />
+                    }
+
                 </div>
             </div>
         </>

@@ -73,7 +73,7 @@
 
 .add-ingredient-button {
   margin-left: 30px;
-  background: var(--color-background);
+  background: white;
   border: black 1px solid;
   border-radius: 5px;
   box-shadow: 3px 4px 0px 0px rgba(0, 0, 0, 0.75);
@@ -111,9 +111,14 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  justify-content: start;
+  justify-content: center;
   width: 100%;
   gap: 2em;
+}
+@media (max-width: 960px) {
+  .categories-container {
+    justify-content: start;
+  }
 }
 @media (max-width: 720px) {
   .categories-container {
@@ -124,6 +129,7 @@
 @media (max-width: 480px) {
   .categories-container {
     max-width: 400px;
+    gap: 1.5em;
   }
 }
 
@@ -156,37 +162,29 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  justify-content: start;
+  justify-content: center;
   margin-bottom: 1em;
   padding: 1em;
+  border-bottom: solid 2px var(--color-light);
 }
 @media (max-width: 720px) {
   .header-container {
     gap: 1em;
     position: fixed;
-    justify-content: space-between;
+    justify-content: space-around;
     left: 0;
     right: 0;
     top: 0;
     height: 50px;
     z-index: 2;
     padding: 5px;
-  }
-}
-
-.logo-img {
-  display: none;
-}
-@media (max-width: 720px) {
-  .logo-img {
-    display: flex;
+    background: var(--color-light);
   }
 }
 
 .menu-button {
   display: none;
   font-size: 4rem;
-  margin-right: -5px;
   z-index: 3;
   cursor: pointer;
 }
@@ -197,23 +195,18 @@
 }
 
 .search-container {
-  width: clamp(200px, 50vw, 600px);
   position: relative;
-}
-@media (max-width: 480px) {
-  .search-container {
-    margin-left: -3em;
-  }
 }
 
 .search-bar {
   height: 40px;
-  width: clamp(200px, 50vw, 600px);
+  width: clamp(200px, 60vw, 600px);
   border: 1px rgb(0, 0, 0) solid;
   border-radius: 10px;
   padding: 0 1em 0 4em;
   outline: none;
   border: none;
+  border: solid 2px var(--color-light);
 }
 @media (max-width: 480px) {
   .search-bar {
@@ -327,13 +320,13 @@
   color: var(--color-primary);
 }
 .pagination .pagination-active a:hover {
-  color: var(--color-background) 2;
+  color: white 2;
 }
 
 .recipe-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: start;
+  justify-content: center;
   gap: 2.2em;
 }
 @media (max-width: 720px) {
@@ -363,7 +356,7 @@
   width: 230px;
   height: 230px;
   background: white;
-  border: solid 2px white;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
   border-radius: 15px;
 }
 @media (max-width: 960px) {
@@ -390,7 +383,7 @@
   flex-direction: column;
   justify-content: start;
   height: 35%;
-  padding: 0.5em 1em;
+  padding: 0.3em 1em;
   font-size: clamp(0.9rem, 1vh, 1.2rem);
 }
 .recipe .recipe-image {
@@ -418,6 +411,10 @@
   color: var(--color-primary);
 }
 
+.welcome {
+  margin-top: 2em;
+}
+
 .empty-recipes {
   display: flex;
   flex-direction: column;
@@ -426,7 +423,7 @@
 }
 
 .loadingtaco {
-  width: 80%;
+  width: 300px;
 }
 
 .empty-text {
@@ -473,7 +470,7 @@
   border: 1px rgb(0, 0, 0) solid;
   border-radius: 10px;
   border-top-right-radius: 0%;
-  background: white;
+  background: var(--color-light);
   border: none;
   position: fixed;
   right: 0;
@@ -488,8 +485,18 @@
     box-shadow: none;
   }
 }
+@media (max-width: 960px) {
+  #mobile-menu {
+    display: none;
+  }
+}
 #mobile-menu .menu-container {
-  display: flex;
+  display: none;
+}
+@media (max-width: 720px) {
+  #mobile-menu .menu-container {
+    display: flex;
+  }
 }
 
 .menuItem,
@@ -523,7 +530,7 @@
   border-radius: 10px;
   box-shadow: 4px 6px 0px 0px rgba(0, 0, 0, 0.75);
   flex-direction: column;
-  background: var(--color-background);
+  background: white;
   font-weight: bold;
   font-size: clamp(1rem, 5vw, 2rem);
   z-index: 2;
@@ -736,7 +743,7 @@
   align-items: center;
   flex-direction: column;
   width: clamp(300px, 70%, 1000px);
-  background: var(--color-background);
+  background: white;
   padding: 2em;
   gap: 2rem;
   border: 1px rgb(0, 0, 0) solid;
@@ -776,7 +783,7 @@ html {
 body {
   font-family: Poppins, sans-serif;
   min-height: 100vh;
-  background-color: var(--color-background);
+  background-color: white;
 }
 @media (max-width: 720px) {
   body {
@@ -830,7 +837,6 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 0 2em;
 }
 @media (max-width: 720px) {
   .right-container {
@@ -839,10 +845,10 @@ button {
 }
 
 .left-container {
-  background: white;
+  background: var(--color-light);
   height: 100vh;
   width: 200px;
-  padding: 0.5em 2em;
+  padding: 1em 2em;
   margin: -0.5em 2em 0 -0.5em;
 }
 @media (max-width: 720px) {
