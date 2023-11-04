@@ -33,6 +33,7 @@
     flex-direction: column;
     margin: 2em;
     gap: 1em;
+    padding: 0 1em;
 }
 
 @mixin label {
@@ -46,7 +47,7 @@
     padding: 0.5em;
     padding-right: 2em;
     margin: 0.8em 0 1.5em 0;
-    width: 90%;
+    width: 85%;
     font-family: inherit;
     font-size: 1rem;
     white-space: normal;

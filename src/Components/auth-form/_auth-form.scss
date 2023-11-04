@@ -3,13 +3,18 @@
 .auth-container {
     display: flex; 
     justify-content: center;
+    align-items: center;
+    width: 100vw;
     margin-top: -200px;
+    background: var(--color-light);
+
 }
 
 .auth-form {
     @include flex;
     @include form;
     margin-top: -1em;
+    height: 500px;
     
     & label {
         @include label;

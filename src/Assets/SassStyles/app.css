@@ -28,7 +28,7 @@
   padding: 0.5em;
   padding-right: 2em;
   margin: 0.8em 0 1.5em 0;
-  width: 90%;
+  width: 85%;
   font-family: inherit;
   font-size: 1rem;
   white-space: normal;
@@ -69,11 +69,12 @@
   flex-direction: column;
   margin: 2em;
   gap: 1em;
+  padding: 0 1em;
 }
 
 .add-ingredient-button {
   margin-left: 30px;
-  background: white;
+  background: var(--color-background);
   border: black 1px solid;
   border-radius: 5px;
   box-shadow: 3px 4px 0px 0px rgba(0, 0, 0, 0.75);
@@ -229,7 +230,10 @@
 .auth-container {
   display: flex;
   justify-content: center;
+  align-items: center;
+  width: 100vw;
   margin-top: -200px;
+  background: var(--color-light);
 }
 
 .auth-form {
@@ -242,7 +246,9 @@
   flex-direction: column;
   margin: 2em;
   gap: 1em;
+  padding: 0 1em;
   margin-top: -1em;
+  height: 500px;
 }
 .auth-form label {
   width: 100%;
@@ -254,7 +260,7 @@
   padding: 0.5em;
   padding-right: 2em;
   margin: 0.8em 0 1.5em 0;
-  width: 90%;
+  width: 85%;
   font-family: inherit;
   font-size: 1rem;
   white-space: normal;
@@ -634,7 +640,7 @@
   padding: 0.5em;
   padding-right: 2em;
   margin: 0.8em 0 1.5em 0;
-  width: 90%;
+  width: 85%;
   font-family: inherit;
   font-size: 1rem;
   white-space: normal;
@@ -787,11 +793,8 @@ body {
   font-family: Poppins, sans-serif;
   min-height: 100vh;
   background-color: white;
-}
-@media (max-width: 720px) {
-  body {
-    padding: 0 1em;
-  }
+  padding: 0;
+  margin: 0;
 }
 
 a {
@@ -826,7 +829,6 @@ button {
 .global-container {
   display: flex;
   justify-content: center;
-  padding-top: 3em;
   min-height: 100vh;
 }
 
