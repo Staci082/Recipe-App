@@ -1,4 +1,4 @@
-import "./Assets/SassStyles/app.scss";
+import "./Assets/SassStyles/global.scss";
 import { Routes, Route} from "react-router-dom";
 
 import { SearchProvider } from "./Context/SearchContext";

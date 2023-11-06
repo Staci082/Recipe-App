@@ -5,6 +5,7 @@ import { FaPencil, FaTrashCan, FaArrowRotateLeft } from "react-icons/fa6";
 import { useAuth } from "../../Context/AuthContext";
 import { ToastSuccess, ToastError } from "../../Hooks/useToasts";
 import baseAPI from "../../Context/baseAPI";
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 
 function Recipe({ randomRecipe }) {
     const { isLoggedIn } = useAuth();
@@ -16,9 +17,8 @@ function Recipe({ randomRecipe }) {
     const [recipe, setRecipe] = useState([]);
     const [showModal, setShowModal] = useState(false);
 
+    window.scrollTo(0, 0);
 
-    window.scrollTo(0, 0)
-    
     useEffect(() => {
         const fetchRecipe = async () => {
             try {
@@ -80,45 +80,57 @@ function Recipe({ randomRecipe }) {
         <>
             <div className="global-container">
                 <div className="single-recipe-container">
-                    <div className="single-recipe-title-container">
-                        <h1 className="recipe-name">{recipe.name}</h1>
-                        <h2 className="recipe-category-title">{recipe.category}</h2>
-                    </div>
-                    <button onClick={goBack} className="back-button">
+                <button onClick={goBack} className="back-button">
                         &times;
                     </button>
-                    <div className="recipe-details-container">
-                        <div className="ingredients-container">
-                            <ul>
-                                <h5 className="recipe-details-title">Ingredients</h5>
-                                {/* have to get values after data is fetched */}
-                                {recipe.ingredients && recipe.ingredients.map((item) => <li key={item}>{item}</li>)}
-                            </ul>
-                        </div>
+                <img className="recipe-image" src={recipe.image} alt={recipe.name} />
+                    <div className="single-recipe-title-container">
 
-                        <div className="method-container">
-                            <ul>
-                                <h5 className="recipe-details-title">Instructions</h5>
-                                {recipe.method && recipe.method.map((item) => <li key={item}>{item}</li>)}
-                            </ul>
-                        </div>
+                        <h1 className="recipe-name">{recipe.name}</h1>
                         <div className="recipe-button-container">
+                        <h2 className="recipe-category">{recipe.category}</h2>
+                            <div>
                             {/* hide random shuffle button unless on random page */}
                             {location.pathname === "/recipe/random" && (
-                                <a href="/recipe/random" className="random-button">
-                                    <FaArrowRotateLeft size={28} />
-                                </a>
+                                <a href="/recipe/random" ><button className="edit-buttons">
+                                    <FaArrowRotateLeft size={26} />
+                                </button></a>
                             )}
 
                             <button onClick={checkLoggedIn} className="edit-buttons">
-                                <FaPencil size={26} />
+                                <FaPencil size={24} />
                             </button>
 
                             <button onClick={openModal} className="edit-buttons">
-                                <FaTrashCan size={26} />
+                                <FaTrashCan size={24} />
                             </button>
+                            </div>
                         </div>
                     </div>
+
+                   
+                        <Tabs className="tabs">
+                            <TabList className="tablist">
+                                <Tab><h5 className="tab-title">Ingredients</h5></Tab>
+                                <Tab><h5 className="tab-title">Instructions</h5></Tab>
+                            </TabList>
+                            <div className="recipe-details-container">
+                            <TabPanel>
+                            <ul>
+                                {/* have to get values after data is fetched */}
+                                {recipe.ingredients && recipe.ingredients.map((item) => <li key={item}>{item}</li>)}
+                            </ul>
+                        </TabPanel>
+                        <TabPanel>
+                            <ul>
+                                {recipe.method && recipe.method.map((item) => <li key={item}>{item}</li>)}
+                            </ul>
+                            </TabPanel>
+                            </div>
+                        </Tabs>
+
+                        
+                   
                 </div>
 
                 {showModal && (

@@ -52,9 +52,11 @@ button {
 
 .back-button {
     cursor: pointer;
-    font-size: 3rem;
+    background: white;
+    border-radius: 50%;
+    font-size: 2rem;
     position: absolute;
-    right: 10px;
+    left: 10px;
     top: 5px;
 }
 
