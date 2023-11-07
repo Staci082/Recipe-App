@@ -114,7 +114,7 @@
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
-  gap: 2em;
+  gap: 1.5em;
 }
 @media (max-width: 960px) {
   .categories-container {
@@ -130,13 +130,11 @@
 @media (max-width: 480px) {
   .categories-container {
     max-width: 400px;
-    gap: 1.5em;
   }
 }
 
 .cat-item-container {
-  height: 90px;
-  width: clamp(0.8rem, 16vw, 6rem);
+  width: clamp(0.8rem, 18vw, 6rem);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -345,6 +343,7 @@
   display: flex;
   align-items: center;
   gap: 2em;
+  margin-left: 1em;
 }
 .recipe-container-header h2 {
   color: var(--color-primary);
@@ -836,10 +835,14 @@ button {
 }
 
 .back-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
   background: white;
   border-radius: 50%;
-  font-size: 2rem;
+  height: 35px;
+  font-size: 1.5rem;
   position: absolute;
   left: 10px;
   top: 5px;

@@ -1,4 +1,5 @@
 import { HiPlus, HiOutlineXMark } from "react-icons/hi2";
+import { MdOutlineArrowBack } from "react-icons/md";
 import { useState } from "react";
 import axios from "axios";
 import { ToastSuccess, ToastError } from "../../Hooks/useToasts";
@@ -61,7 +62,7 @@ function Create() {
             {isLoggedIn ? (
                 <div className="global-container">
                     <button onClick={goBack} className="back-button">
-                        &times;
+                        <MdOutlineArrowBack/>
                     </button>
                     <form className="recipe-form" onSubmit={handleSubmit}>
                         <h2>create recipe</h2>

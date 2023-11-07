@@ -1,4 +1,5 @@
 import { HiPlus, HiOutlineXMark } from "react-icons/hi2";
+import { MdOutlineArrowBack } from "react-icons/md";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
@@ -71,7 +72,7 @@ function Edit() {
         <>
             <div className="global-container">
                 <button onClick={goBack} className="back-button">
-                    &times;
+                <MdOutlineArrowBack/>
                 </button>
                 <form className="recipe-form" onSubmit={handleSubmit}>
                     <h2>update recipe</h2>
