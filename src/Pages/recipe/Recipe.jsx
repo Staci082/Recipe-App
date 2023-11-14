@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate, useParams, useLocation } from "react-router-dom";
 import { FaPencil, FaTrashCan, FaArrowRotateLeft } from "react-icons/fa6";
-import { MdOutlineArrowBack } from "react-icons/md";
+import { MdOutlineChevronLeft } from "react-icons/md";
 import { useAuth } from "../../Context/AuthContext";
 import { ToastSuccess, ToastError } from "../../Hooks/useToasts";
 import baseAPI from "../../Context/baseAPI";
@@ -81,9 +81,9 @@ function Recipe({ randomRecipe }) {
         <>
             <div className="global-container">
                 <div className="single-recipe-container">
-                <button onClick={goBack} className="back-button">
-                        <MdOutlineArrowBack/>
-                    </button>
+                <a onClick={goBack} className="back-button">
+                        <MdOutlineChevronLeft />
+                    </a>
                 <img className="recipe-image" src={recipe.image} alt={recipe.name} />
                     <div className="single-recipe-title-container">
 

@@ -1,9 +1,13 @@
+import { MdOutlineChevronLeft } from "react-icons/md";
+
+
 function form({ username, setUsername, password, setPassword, label, handleSubmit }) {
     return (
         <div className="global-container">
             <div className="auth-container">
                 <a href="/" className="back-button">
-                    &times;
+                    <MdOutlineChevronLeft />
+
                 </a>
                 <form className="auth-form" onSubmit={handleSubmit}>
                     <h2>{label}</h2>
