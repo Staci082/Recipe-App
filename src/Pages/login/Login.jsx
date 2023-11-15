@@ -1,5 +1,5 @@
 import { useState } from "react";
-import AuthForm from "../../Components/auth-form/authForm";
+import AuthForm from "../../Components/forms/authForm";
 import { useAuth } from "../../Context/AuthContext"
 
 function Login() {

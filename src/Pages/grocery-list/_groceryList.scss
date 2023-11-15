@@ -1,12 +1,17 @@
 .grocery-list-container {
+    background: var(--color-primary);
     padding: 4em 0;
     display: flex;
+    width: 100%;
     flex-direction: column;
     align-items: center;
     line-height: 1;
     @include xl {
         padding: 0;
     }
+}
+.grocery-title {
+    color:  var(--color-light);
 }
 
 .grocery-list {
@@ -18,7 +23,7 @@
     padding: 2em 0 1em 0;
     margin-top: 3em;
     @include box;
-    background: white;
+    background: var(--color-light);
 }
 
 .line {
@@ -44,6 +49,7 @@
     height: 30px;
 }
 .add-item-button {
+    background: var(--color-light);
     padding: 5px 10px;
     border: black 1px solid;
     border-radius: 5px;

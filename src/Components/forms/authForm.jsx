@@ -15,7 +15,6 @@ function form({ username, setUsername, password, setPassword, label, handleSubmi
                     </div>
 
                     <div className="form-group">
-    
                         <input placeholder="Password" type="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} />
                     </div>
 

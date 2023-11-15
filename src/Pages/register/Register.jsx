@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom";
-import AuthForm from "../../Components/auth-form/authForm"
+import AuthForm from "../../Components/forms/authForm"
 import { useAuth } from "../../Context/AuthContext";
 import { ToastSuccess, ToastError } from "../../Hooks/useToasts";
 

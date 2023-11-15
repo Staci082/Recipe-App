@@ -3,12 +3,12 @@
 
 @import "./variables";
 @import "./mixins";
-@import "./recipe-form";
 
 // COMPONENT IMPORTS
 @import "../../Components/categories/categories";
 @import "../../Components/header/header";
-@import "../../Components/auth-form/auth-form";
+@import "../../Components/forms/auth-form";
+@import "../../Components/forms/recipe-form";
 @import "../../Components/not-authorized/not-authorized";
 @import "../../Components/pagination/pagination";
 @import "../../Components/recipes-container/recipes-container";

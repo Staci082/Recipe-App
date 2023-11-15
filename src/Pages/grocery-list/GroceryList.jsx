@@ -5,7 +5,7 @@ import NotAuthorized from "../../Components/not-authorized/NotAuthorized";
 import axios from "axios";
 import { ToastError } from "../../Hooks/useToasts";
 import { FiDelete } from "react-icons/fi";
-import { MdOutlineCheckBox, MdOutlineCheckBoxOutlineBlank } from "react-icons/md";
+import { MdOutlineChevronLeft, MdOutlineCheckBox, MdOutlineCheckBoxOutlineBlank } from "react-icons/md";
 import baseAPI from "../../Context/baseAPI";
 
 function GroceryList() {
@@ -93,9 +93,9 @@ function GroceryList() {
                 <div className="global-container">
                     <div className="grocery-list-container">
                         <a href="/" className="back-button">
-                            &times;
+                            <MdOutlineChevronLeft/>
                         </a>
-                        <h2>Grocery List</h2>
+                        <h2 className="grocery-title">Grocery List</h2>
 
                         <input type="text" className="grocery-input" htmlFor="groceryList" value={groceryItem} onChange={(e) => setGroceryItem(e.target.value)} onKeyDown={handleInputKeyPress} />
 
