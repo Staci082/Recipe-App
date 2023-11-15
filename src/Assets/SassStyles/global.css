@@ -18,7 +18,14 @@
 }
 .recipe-form label {
   width: 100%;
-  font-size: 1.5rem;
+  color: grey;
+  font-size: 1rem;
+  pointer-events: none;
+  position: absolute;
+  transform-origin: 0 50%;
+  transition: transform 200ms, color 200ms;
+  top: 21px;
+  left: 12px;
 }
 .recipe-form input,
 .recipe-form textarea,
@@ -32,9 +39,9 @@
   font-family: inherit;
   font-size: 1rem;
   white-space: normal;
-  box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.75);
-  border-radius: 5px;
-  box-shadow: 4px 6px 0px 0px rgba(0, 0, 0, 0.75);
+  border: none;
+  border-radius: 10px;
+  background: var(--color-light);
 }
 @media (max-width: 480px) {
   .recipe-form input,
@@ -88,23 +95,6 @@
   position: absolute;
   right: 0px;
   top: 20px;
-}
-
-.submit-button {
-  font-size: 1.5rem;
-  border: 1px rgb(0, 0, 0) solid;
-  box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.75);
-  border-radius: 2px;
-  cursor: pointer;
-  padding: 10px;
-  transition: ease-in-out 0.3s;
-  border-radius: 5px;
-  padding: 0.5em 1.5em;
-}
-.submit-button:hover {
-  transform: scale(1.1);
-  border: var(--color-primary) solid 2px;
-  box-shadow: 4px 4px 0px 0px var(--color-primary, 0.75);
 }
 
 .categories-container {
@@ -231,7 +221,7 @@
   align-items: center;
   width: 100vw;
   margin-top: -200px;
-  background: var(--color-light);
+  background: var(--color-primary);
 }
 
 .auth-form {
@@ -250,7 +240,14 @@
 }
 .auth-form label {
   width: 100%;
-  font-size: 1.5rem;
+  color: grey;
+  font-size: 1rem;
+  pointer-events: none;
+  position: absolute;
+  transform-origin: 0 50%;
+  transition: transform 200ms, color 200ms;
+  top: 21px;
+  left: 12px;
 }
 .auth-form input {
   height: auto;
@@ -262,9 +259,9 @@
   font-family: inherit;
   font-size: 1rem;
   white-space: normal;
-  box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.75);
-  border-radius: 5px;
-  box-shadow: 4px 6px 0px 0px rgba(0, 0, 0, 0.75);
+  border: none;
+  border-radius: 10px;
+  background: var(--color-light);
 }
 @media (max-width: 480px) {
   .auth-form input {
@@ -643,9 +640,9 @@
   font-family: inherit;
   font-size: 1rem;
   white-space: normal;
-  box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.75);
-  border-radius: 5px;
-  box-shadow: 4px 6px 0px 0px rgba(0, 0, 0, 0.75);
+  border: none;
+  border-radius: 10px;
+  background: var(--color-light);
   width: 250px;
   height: 30px;
 }
@@ -881,4 +878,35 @@ button {
   .left-container {
     display: none;
   }
+}
+
+.form-group {
+  position: relative;
+}
+
+.submit-button {
+  font-size: 1.5rem;
+  width: 85%;
+  border: 1px rgb(0, 0, 0) solid;
+  box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 2px;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 1.3rem;
+  transition: ease-in-out 0.3s;
+  background: var(--color-light);
+  border-radius: 10px;
+  padding: 0.5em 1.5em;
+}
+.submit-button:hover {
+  transform: scale(1.1);
+  border: var(--color-primary) solid 2px;
+  box-shadow: 4px 4px 0px 0px var(--color-primary, 0.75);
+}
+
+.form-title {
+  color: white;
+  position: absolute;
+  left: 0;
+  top: 2em;
 }/*# sourceMappingURL=global.css.map */

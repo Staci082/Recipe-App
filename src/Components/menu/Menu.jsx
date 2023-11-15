@@ -81,7 +81,7 @@ function menu({ closeMenu }) {
                     {!isLoggedIn ? (
                         <>
                             <li className="menuItem">
-                                <Link to="/login">Log in </Link>
+                                <Link to="/login">Log in</Link>
                             </li>
                             <li className="menuItem">
                                 <Link to="/register"> Register</Link>

@@ -32,7 +32,7 @@ function Register() {
                 setUsername={setUsername} 
                 password={password} 
                 setPassword={setPassword} 
-                label="register" 
+                label="Register" 
                 handleSubmit={handleSubmit} />;
 }
 

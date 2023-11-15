@@ -18,7 +18,7 @@ function Login() {
         }
     };
 
-    return <AuthForm username={username} setUsername={setUsername} password={password} setPassword={setPassword} label="login" handleSubmit={handleSubmit} />;
+    return <AuthForm username={username} setUsername={setUsername} password={password} setPassword={setPassword} label="Log in" handleSubmit={handleSubmit} />;
 }
 
 export default Login;
