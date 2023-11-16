@@ -18,6 +18,7 @@ function Create() {
     const [recipe, setRecipe] = useState({
         name: "",
         category: "",
+        image: "",
         ingredients: [],
         methods: [],
         description: "",
@@ -152,7 +153,6 @@ function Create() {
                             {recipe.methods.map((method, index) => (
                                 <div className="input-container" key={index}>
                                     <textarea className="input-textarea" name="method" maxLength="300" value={method} onChange={(e) => handleMethodChange(e, index)}></textarea>
-
                                     <button type="button" onClick={() => handleDelete(index, "methods")} className="remove-method-button">
                                         <HiOutlineXMark size={26} />
                                     </button>

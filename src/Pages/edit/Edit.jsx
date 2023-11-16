@@ -61,7 +61,7 @@ function Edit() {
         setRecipe({ ...recipe, ingredients });
     };
     const handleAddMethod = () => {
-        const methods = [...recipe.methods, ""];
+        const methods = Array.isArray(recipe.methods) ? [...recipe.methods, ""] : [""];
         setRecipe({ ...recipe, methods });
     };
     const handleSubmit = async (event) => {
@@ -173,7 +173,7 @@ function Edit() {
                                 </div>
                             ))}
  </div>
-                    <button type="submit" className="submit-button">
+                    <button type="submit" className="submit-button" onClick={goBack}>
                         Save
                     </button>
                 </form>

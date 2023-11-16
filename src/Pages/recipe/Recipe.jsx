@@ -81,61 +81,95 @@ function Recipe({ randomRecipe }) {
         <>
             <div className="global-container">
                 <div className="single-recipe-container">
-                <a onClick={goBack} className="back-button">
+                    <a onClick={goBack} className="back-button">
                         <MdOutlineChevronLeft />
                     </a>
-                <img className="recipe-image" src={recipe.image} alt={recipe.name} />
+                    <img className="recipe-image" src={recipe.image} alt={recipe.name} />
                     <div className="single-recipe-title-container">
-
                         <h1 className="recipe-name">{recipe.name}</h1>
                         <div className="recipe-button-container">
-                        <h2 className="recipe-category">{recipe.category}</h2>
+                            <h2 className="recipe-category">{recipe.category}</h2>
                             <div>
-                            {/* hide random shuffle button unless on random page */}
-                            {location.pathname === "/recipe/random" && (
-                                <a href="/recipe/random" ><button className="edit-buttons">
-                                    <FaArrowRotateLeft size={26} />
-                                </button></a>
-                            )}
+                                {/* hide random shuffle button unless on random page */}
+                                {location.pathname === "/recipe/random" && (
+                                    <a href="/recipe/random">
+                                        <button className="edit-buttons">
+                                            <FaArrowRotateLeft size={26} />
+                                        </button>
+                                    </a>
+                                )}
 
-                            <button onClick={checkLoggedIn} className="edit-buttons">
-                                <FaPencil size={24} />
-                            </button>
+                                <button onClick={checkLoggedIn} className="edit-buttons">
+                                    <FaPencil size={24} />
+                                </button>
 
-                            <button onClick={openModal} className="edit-buttons">
-                                <FaTrashCan size={24} />
-                            </button>
+                                <button onClick={openModal} className="edit-buttons">
+                                    <FaTrashCan size={24} />
+                                </button>
                             </div>
                         </div>
                     </div>
 
-                   
-                        <Tabs className="tabs">
-                            <TabList className="tablist">
-                                <Tab><h5 className="tab-title">Summary</h5></Tab>
-                                <Tab><h5 className="tab-title">Ingredients</h5></Tab>
-                                <Tab><h5 className="tab-title">Instructions</h5></Tab>
-                            </TabList>
-                            <div className="recipe-details-container">
-                                <TabPanel>
-                                    
-                                </TabPanel>
+                    <Tabs className="tabs">
+                        <TabList className="tablist">
+                            <Tab>
+                                <h5 className="tab-title">Summary</h5>
+                            </Tab>
+                            <Tab>
+                                <h5 className="tab-title">Ingredients</h5>
+                            </Tab>
+                            <Tab>
+                                <h5 className="tab-title">Instructions</h5>
+                            </Tab>
+                        </TabList>
+                        <div className="recipe-details-container">
                             <TabPanel>
-                            <ul>
-                                {/* have to get values after data is fetched */}
-                                {recipe.ingredients && recipe.ingredients.map((item) => <li key={item}>{item}</li>)}
-                            </ul>
-                        </TabPanel>
-                        <TabPanel>
-                            <ul>
-                                {recipe.method && recipe.method.map((item) => <li key={item}>{item}</li>)}
-                            </ul>
+                                <ul>
+                                    <div className="makeRow">
+                                        <li>
+                                            <span className="primaryColor">Servings:</span> 20{recipe.servingSize}
+                                        </li>
+                                        <li>
+                                            <span className="primaryColor">Prep time:</span> 30min{recipe.prepTime}
+                                        </li>
+                                        <li>
+                                            <span className="primaryColor">Cooking time:</span> 30min{recipe.cookTime}
+                                        </li>
+                                    </div>
+                                    <div></div>
+                                    <br />
+                                    <li>
+                                        <span className="primaryColor">Source:</span> <br />
+                                        {recipe.source
+                                            ? recipe.source
+                                            : recipe.userOwner
+                                        }
+                                    </li>
+                                    <br />
+                                    <li>
+                                        <span className="primaryColor">Description:</span> <br /> Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe officiis enim nemo fuga provident quas excepturi voluptatum, voluptatibus dolorum perspiciatis voluptates, temporibus recusandae? Quidem
+                                        earum, corporis cupiditate eligendi consectetur ipsam.{recipe.description}
+                                    </li>
+                                </ul>
                             </TabPanel>
-                            </div>
-                        </Tabs>
-
-                        
-                   
+                            <TabPanel>
+                                <ul>
+                                    {/* have to get values after data is fetched */}
+                                    {recipe.ingredients && recipe.ingredients.map((item) => <li key={item}>{item}</li>)}
+                                </ul>
+                            </TabPanel>
+                            <TabPanel>
+                                <ul>
+                                    {recipe.method &&
+                                        recipe.method.map((item, index) => (
+                                            <li key={item}>
+                                                <span className="primaryColor">{index + 1}.</span> {item}
+                                            </li>
+                                        ))}
+                                </ul>
+                            </TabPanel>
+                        </div>
+                    </Tabs>
                 </div>
 
                 {showModal && (

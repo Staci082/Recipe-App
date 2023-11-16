@@ -949,4 +949,8 @@ button {
   position: absolute;
   left: 0;
   top: 2em;
+}
+
+.primaryColor {
+  color: var(--color-primary);
 }/*# sourceMappingURL=global.css.map */
