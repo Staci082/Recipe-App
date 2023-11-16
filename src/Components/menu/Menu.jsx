@@ -4,7 +4,7 @@ import { useAuth } from "../../Context/AuthContext";
 import Theme from "../theme/Theme";
 import { useTheme } from "../../Context/ThemeContext";
 
-import { IoCreateOutline, IoSaveOutline, IoListOutline, IoLogInOutline, IoStarOutline } from "react-icons/io5";
+import { IoCreateOutline, IoSaveOutline, IoListOutline, IoStarOutline, IoLogOutOutline } from "react-icons/io5";
 import { LiaRandomSolid } from "react-icons/lia";
 import { AiOutlineBgColors } from "react-icons/ai";
 import { LuClipboardEdit } from "react-icons/lu";
@@ -15,6 +15,7 @@ function menu({ closeMenu }) {
     const [showThemeModal, setShowThemeModal] = useState(false);
     const [userId, setUserId] = useState("");
 
+    // Check if logged in
     useEffect(() => {
         if (isLoggedIn) {
             const userData = JSON.parse(localStorage.getItem("user"));
@@ -51,6 +52,7 @@ function menu({ closeMenu }) {
         logout();
     };
 
+    // Theme modal
     const openThemeModal = () => {
         setShowThemeModal(true);
         if (typeof window != "undefined" && window.document) {
@@ -75,6 +77,7 @@ function menu({ closeMenu }) {
                 </div>
                 <h5>Menu</h5>
                 <ul>
+                    {/* MENU ITEMS ARRAY LIST */}
                     {menuItems.map((item) => (
                         <li className="menuItem" key={item.title}>
                             <Link
@@ -97,18 +100,18 @@ function menu({ closeMenu }) {
 
                 <h5>Settings</h5>
                 <ul>
+                    {/* LOG IN / REGISTER */}
                     {!isLoggedIn ? (
                         <>
                             <li className="menuItem">
                                 <Link to="/login" className="menuLink">
-                                    <IoLogInOutline />
+                                <IoLogOutOutline />
                                     Log in
                                 </Link>
                             </li>
                             <li className="menuItem">
                                 <Link to="/register" className="menuLink">
-                                <LuClipboardEdit />
-
+                                    <LuClipboardEdit />
                                     Register
                                 </Link>
                             </li>
@@ -116,12 +119,15 @@ function menu({ closeMenu }) {
                     ) : (
                         <>
                             <li className="menuItem">
-                                <Link to="/" onClick={handleLogout} className="logout-button menuLink">
+                                <Link to="/" onClick={handleLogout} className="menuLink">
+                                    <IoLogOutOutline />
                                     Log out
                                 </Link>
                             </li>
                         </>
                     )}
+
+                    {/* THEMES */}
                     <li className="menuItem">
                         <a onClick={openThemeModal} className="menuLink">
                             <AiOutlineBgColors />

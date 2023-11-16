@@ -112,10 +112,14 @@ function Recipe({ randomRecipe }) {
                    
                         <Tabs className="tabs">
                             <TabList className="tablist">
+                                <Tab><h5 className="tab-title">Summary</h5></Tab>
                                 <Tab><h5 className="tab-title">Ingredients</h5></Tab>
                                 <Tab><h5 className="tab-title">Instructions</h5></Tab>
                             </TabList>
                             <div className="recipe-details-container">
+                                <TabPanel>
+                                    
+                                </TabPanel>
                             <TabPanel>
                             <ul>
                                 {/* have to get values after data is fetched */}

@@ -4,6 +4,7 @@
     align-items: center;
     position: relative;
     padding-bottom: 2em;
+    margin-top: 2em;
     width: 100vw;
     & label {
         @include label;
@@ -11,20 +12,23 @@
     }
 
     & input,
-    textarea,
     select {
         @include input;
-        width: 90%;
+        width: 95%;
         background: white;
     }
 
     & select {
-        width: 95%;
+        width:100%;
         }
 
     & textarea {
-        height: 400px;
+        @include input;
+        background: white;
+        height: 50px;
+        width: 95%;
         padding-top: 1em;
+        resize: none;
     }
 }
 
@@ -40,25 +44,25 @@
 }
 
 
-.add-ingredient-button {
+.add-button {
     width: 50px;
-    margin-left: 30px;
 }
 
-.ingredient-input-container {
+.input-container {
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    width: 95%;
-
-    & input {
-        width: 100%;
+    width: 100%;
+    & .remove-method-button {
+        position: absolute;
+        right: 0;
+        top: 27px;
     }
 
     & .remove-ingredient-button {
         position: absolute;
-        right: 0px;
+        right: 0;
         top: 10px;
     }
 }
@@ -71,3 +75,14 @@
     width: 300px;
     margin: 1em 0;
 }
+
+.formRow {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    .smallInput {
+        width: clamp(50px, 15vw, 200px);
+    }
+}
+

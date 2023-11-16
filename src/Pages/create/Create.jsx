@@ -1,6 +1,6 @@
 import { HiPlus, HiOutlineXMark } from "react-icons/hi2";
 import { MdOutlineChevronLeft } from "react-icons/md";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 import { ToastSuccess, ToastError } from "../../Hooks/useToasts";
 import { useAuth } from "../../Context/AuthContext";
@@ -19,7 +19,12 @@ function Create() {
         name: "",
         category: "",
         ingredients: [],
-        method: [],
+        methods: [],
+        description: "",
+        source: "", // if empty add creator's name
+        servingSize: "",
+        prepTime: "",
+        cookTime: "",
     });
 
     const handleChange = (e) => {
@@ -33,10 +38,21 @@ function Create() {
         ingredients[index] = value;
         setRecipe({ ...recipe, ingredients });
     };
+    const handleMethodChange = (e, index) => {
+        const { value } = e.target;
+        const methods = recipe.methods;
+        methods[index] = value;
+        setRecipe({ ...recipe, methods });
+    };
 
     const handleAddIngredient = () => {
         const ingredients = [...recipe.ingredients, ""];
         setRecipe({ ...recipe, ingredients });
+    };
+
+    const handleAddMethod = () => {
+        const methods = [...recipe.methods, ""];
+        setRecipe({ ...recipe, methods });
     };
 
     const handleSubmit = async (event) => {
@@ -51,11 +67,29 @@ function Create() {
         }
     };
 
-    const handleDelete = (i) => {
-        const newArray = [...recipe.ingredients];
-        newArray.splice(i, 1);
-        setRecipe({ ...recipe, ingredients: newArray });
+    const handleDelete = (index, type) => {
+        if (type === "ingredients") {
+            const newIngredients = [...recipe.ingredients];
+            newIngredients.splice(index, 1);
+            setRecipe({ ...recipe, ingredients: newIngredients });
+        } else if (type === "methods") {
+            const newMethods = [...recipe.methods];
+            newMethods.splice(index, 1);
+            setRecipe({ ...recipe, methods: newMethods });
+        }
     };
+
+    // start with one method and one ingredient field open
+    const initializeInput = () => {
+        setRecipe({
+            ...recipe,
+            ingredients: [""],
+            methods: [""],
+        });
+    };
+    useEffect(() => {
+        initializeInput();
+    }, []);
 
     return (
         <>
@@ -86,20 +120,56 @@ function Create() {
                             <label htmlFor="image">Image url:</label>
                             <input type="text" name="image" value={recipe.image} id="image-input" onChange={handleChange} />
 
-                            <label htmlFor="method">Instructions:</label>
-                            <textarea className="input-textarea" name="method" maxLength="300" value={recipe.method} onChange={handleChange}></textarea>
+                            <label htmlFor="source">Source:</label>
+                            <input type="text" name="source" value={recipe.source} onChange={handleChange} />
+
+
+                            <label htmlFor="description">Description:</label>
+                            <textarea className="input-textarea" name="description" maxLength="300" value={recipe.description} onChange={handleChange}></textarea>
+
+                            <div className="formRow">
+                                <div>
+                                <label htmlFor="servingSize">Serving size:</label>
+                                <input type="text" value={recipe.servingSize} className="smallInput" maxLength="30" name="servingSize" onChange={handleChange}></input>
+                                </div>
+                                <div>
+                                <label htmlFor="prepTime">Prep time:</label>
+                                <input type="text" value={recipe.prepTime} className="smallInput" maxLength="30" name="prepTime" onChange={handleChange}></input>
+                                </div>
+                                <div>
+                                <label htmlFor="cookTime">Cooking time:</label>
+                                <input type="text" value={recipe.cookTime} className="smallInput" maxLength="30" name="cookTime" onChange={handleChange}></input>
+                                </div>
+                            </div>
+
+                            <label htmlFor="method">
+                                Instructions:
+                                <button type="button" onClick={handleAddMethod} className="add-button">
+                                    <HiPlus size={28} />
+                                </button>
+                            </label>
+
+                            {recipe.methods.map((method, index) => (
+                                <div className="input-container" key={index}>
+                                    <textarea className="input-textarea" name="method" maxLength="300" value={method} onChange={(e) => handleMethodChange(e, index)}></textarea>
+
+                                    <button type="button" onClick={() => handleDelete(index, "methods")} className="remove-method-button">
+                                        <HiOutlineXMark size={26} />
+                                    </button>
+                                </div>
+                            ))}
 
                             <label htmlFor="ingredients">
                                 Ingredients:
-                                <button type="button" onClick={handleAddIngredient} className="add-ingredient-button">
+                                <button type="button" onClick={handleAddIngredient} className="add-button">
                                     <HiPlus size={28} />
                                 </button>
                             </label>
 
                             {recipe.ingredients.map((ingredient, index) => (
-                                <div className="ingredient-input-container" key={index}>
+                                <div className="input-container" key={index}>
                                     <input key={index} type="text" name="ingredients" value={ingredient} onChange={(e) => handleIngredientChange(e, index)} />
-                                    <button type="button" onClick={() => handleDelete(index)} className="remove-ingredient-button">
+                                    <button type="button" onClick={() => handleDelete(index, "ingredients")} className="remove-ingredient-button">
                                         <HiOutlineXMark size={26} />
                                     </button>
                                 </div>

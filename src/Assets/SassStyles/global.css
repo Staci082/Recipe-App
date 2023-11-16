@@ -201,6 +201,7 @@
   align-items: center;
   position: relative;
   padding-bottom: 2em;
+  margin-top: 2em;
   width: 100vw;
 }
 .recipe-form label {
@@ -209,7 +210,6 @@
   display: flex;
 }
 .recipe-form input,
-.recipe-form textarea,
 .recipe-form select {
   height: auto;
   outline: none;
@@ -223,22 +223,41 @@
   border: none;
   border-radius: 10px;
   background: var(--color-light);
-  width: 90%;
+  width: 95%;
   background: white;
 }
 @media (max-width: 480px) {
   .recipe-form input,
-  .recipe-form textarea,
   .recipe-form select {
     box-shadow: none;
   }
 }
 .recipe-form select {
-  width: 95%;
+  width: 100%;
 }
 .recipe-form textarea {
-  height: 400px;
+  height: auto;
+  outline: none;
+  padding: 0.5em;
+  padding-right: 2em;
+  margin: 0.2em 0 1.5em 0;
+  width: 85%;
+  font-family: inherit;
+  font-size: 1rem;
+  white-space: normal;
+  border: none;
+  border-radius: 10px;
+  background: var(--color-light);
+  background: white;
+  height: 50px;
+  width: 95%;
   padding-top: 1em;
+  resize: none;
+}
+@media (max-width: 480px) {
+  .recipe-form textarea {
+    box-shadow: none;
+  }
 }
 
 .form-separator {
@@ -254,24 +273,25 @@
   }
 }
 
-.add-ingredient-button {
+.add-button {
   width: 50px;
-  margin-left: 30px;
 }
 
-.ingredient-input-container {
+.input-container {
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  width: 95%;
-}
-.ingredient-input-container input {
   width: 100%;
 }
-.ingredient-input-container .remove-ingredient-button {
+.input-container .remove-method-button {
   position: absolute;
-  right: 0px;
+  right: 0;
+  top: 27px;
+}
+.input-container .remove-ingredient-button {
+  position: absolute;
+  right: 0;
   top: 10px;
 }
 
@@ -295,6 +315,16 @@
   transform: scale(1.1);
   border: var(--color-primary) solid 2px;
   box-shadow: 4px 4px 0px 0px var(--color-primary, 0.75);
+}
+
+.formRow {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+.formRow .smallInput {
+  width: clamp(50px, 15vw, 200px);
 }
 
 .no-auth-container {
@@ -538,17 +568,14 @@
   }
 }
 
-.menuItem,
-.logout-button {
+.menuItem {
   font-size: clamp(0.5rem, 5vh, 1rem);
   margin-bottom: clamp(0.5rem, 5vh, 1.5rem);
   font-weight: bold;
   cursor: pointer;
   margin-left: -26px;
 }
-.menuItem:hover, .menuItem a:hover,
-.logout-button:hover,
-.logout-button a:hover {
+.menuItem:hover, .menuItem a:hover {
   color: var(--color-primary);
 }
 
@@ -858,10 +885,6 @@ ul {
 
 li {
   font-weight: bold;
-}
-
-textarea {
-  resize: none;
 }
 
 button {
