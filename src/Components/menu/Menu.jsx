@@ -4,6 +4,11 @@ import { useAuth } from "../../Context/AuthContext";
 import Theme from "../theme/Theme";
 import { useTheme } from "../../Context/ThemeContext";
 
+import { IoCreateOutline, IoSaveOutline, IoListOutline, IoLogInOutline, IoStarOutline } from "react-icons/io5";
+import { LiaRandomSolid } from "react-icons/lia";
+import { AiOutlineBgColors } from "react-icons/ai";
+import { LuClipboardEdit } from "react-icons/lu";
+
 function menu({ closeMenu }) {
     const { changeTheme, themes } = useTheme();
     const { isLoggedIn, logout } = useAuth();
@@ -23,18 +28,22 @@ function menu({ closeMenu }) {
         {
             title: "Create a Recipe",
             href: "/create",
+            icon: <IoCreateOutline />,
         },
         {
             title: "Saved Recipes",
             href: "/saved",
+            icon: <IoSaveOutline />,
         },
         {
             title: "Get Random Recipe",
             href: "/recipe/random",
+            icon: <IoStarOutline />,
         },
         {
             title: "Grocery List",
             href: "/auth/list",
+            icon: <IoListOutline />,
         },
     ];
 
@@ -54,13 +63,13 @@ function menu({ closeMenu }) {
     };
 
     const openConvertModal = () => {
-console.log(converter)
-    }
+        console.log(converter);
+    };
 
     return (
         <>
             <div className="menu-container">
-            <div className="logo-container">
+                <div className="logo-container">
                     <img width="48" height="48" src="/logo.avif" alt="taco logo" />
                     <p className="logo-title">Fiesta Flavors</p>
                 </div>
@@ -69,16 +78,21 @@ console.log(converter)
                     {menuItems.map((item) => (
                         <li className="menuItem" key={item.title}>
                             <Link
+                                className="menuLink"
                                 to={item.href}
                                 onClick={() => {
                                     closeMenu();
                                 }}
                             >
+                                {item.icon}
                                 {item.title}
                             </Link>
                         </li>
                     ))}
-                    <li onClick={openConvertModal} className="menuItem">Converter</li>
+                    <li onClick={openConvertModal} className="menuItem menuLink">
+                        <LiaRandomSolid />
+                        Converter
+                    </li>
                 </ul>
 
                 <h5>Settings</h5>
@@ -86,24 +100,34 @@ console.log(converter)
                     {!isLoggedIn ? (
                         <>
                             <li className="menuItem">
-                                <Link to="/login">Log in</Link>
+                                <Link to="/login" className="menuLink">
+                                    <IoLogInOutline />
+                                    Log in
+                                </Link>
                             </li>
                             <li className="menuItem">
-                                <Link to="/register">Register</Link>
+                                <Link to="/register" className="menuLink">
+                                <LuClipboardEdit />
+
+                                    Register
+                                </Link>
                             </li>
                         </>
                     ) : (
                         <>
                             <li className="menuItem">
-                                <Link to="/" onClick={handleLogout} className="logout-button">
+                                <Link to="/" onClick={handleLogout} className="logout-button menuLink">
                                     Log out
                                 </Link>
                             </li>
                         </>
                     )}
                     <li className="menuItem">
-                        <a
-                            onClick={openThemeModal}> Theme</a>{/* using "a" tag so styling stays the same */}
+                        <a onClick={openThemeModal} className="menuLink">
+                            <AiOutlineBgColors />
+                            Theme
+                        </a>
+                        {/* using "a" tag so styling stays the same */}
                     </li>
                 </ul>
             </div>
