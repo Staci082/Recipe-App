@@ -23,6 +23,26 @@ const recipeSchema = new mongoose.Schema({
         type: Array,
         required: true
     },
+    description: {
+        type: String,
+        required: true
+    },
+    source: {
+        type: String,
+        required: false
+    },
+    servingSize: {
+        type: Number,
+        required: false
+    },
+    prepTime: {
+        type: String,
+        required: false
+    },
+    cookTime: {
+        type: String,
+        required: false
+    },
     userOwner: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "users"
