@@ -61,9 +61,9 @@ function Create() {
         <>
             {isLoggedIn ? (
                 <div className="global-container">
-                    <button onClick={goBack} className="back-button">
+                    <a onClick={goBack} className="back-button">
                         <MdOutlineChevronLeft />
-                    </button>
+                    </a>
                     <form className="recipe-form" onSubmit={handleSubmit}>
                         <h2>Create a recipe</h2>
 

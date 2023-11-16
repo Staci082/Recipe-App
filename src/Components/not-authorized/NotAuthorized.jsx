@@ -1,5 +1,5 @@
 import taco from "/runningtaco.gif"
-
+import { MdOutlineChevronLeft } from "react-icons/md"
 
 function NotAuthorized() {
 
@@ -8,7 +8,7 @@ function NotAuthorized() {
 
     <div className="no-auth-container">
     <a href="/" className="back-button">
-        &times;
+        <MdOutlineChevronLeft/>
     </a>
         <p className="no-auth-text">You must be logged in to use this feature.</p>
     <img src={taco} alt="taco gif" className="taco-gif"/>
