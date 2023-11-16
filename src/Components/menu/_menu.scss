@@ -52,7 +52,8 @@
     font-size: clamp(0.5rem, 5vh, 1rem);
     margin-bottom: clamp(0.5rem, 5vh, 1.5rem);
     font-weight: bold;
-    & a:hover {
+    cursor: pointer;
+    &:hover, a:hover {
         color: var(--color-primary);
     }
 }

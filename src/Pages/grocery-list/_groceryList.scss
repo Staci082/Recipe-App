@@ -1,5 +1,5 @@
 .grocery-list-container {
-    background: var(--color-primary);
+
     padding: 4em 0;
     display: flex;
     width: 100%;
@@ -10,9 +10,7 @@
         padding: 0;
     }
 }
-.grocery-title {
-    color:  var(--color-light);
-}
+
 
 .grocery-list {
     position: relative;
@@ -22,8 +20,8 @@
     width: clamp(300px, 20vw, 400px);
     padding: 2em 0 1em 0;
     margin-top: 3em;
-    @include box;
-    background: var(--color-light);
+    border-radius: 10px;
+    background: white;
 }
 
 .line {
@@ -47,6 +45,7 @@
     @include input;
     width: 250px;
     height: 30px;
+    background: white;
 }
 .add-item-button {
     background: var(--color-light);

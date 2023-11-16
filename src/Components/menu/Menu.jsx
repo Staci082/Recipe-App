@@ -7,7 +7,7 @@ import { useTheme } from "../../Context/ThemeContext";
 function menu({ closeMenu }) {
     const { changeTheme, themes } = useTheme();
     const { isLoggedIn, logout } = useAuth();
-    const [showModal, setShowModal] = useState(false);
+    const [showThemeModal, setShowThemeModal] = useState(false);
     const [userId, setUserId] = useState("");
 
     useEffect(() => {
@@ -42,16 +42,20 @@ function menu({ closeMenu }) {
         logout();
     };
 
-    const openModal = () => {
-        setShowModal(true);
+    const openThemeModal = () => {
+        setShowThemeModal(true);
         if (typeof window != "undefined" && window.document) {
             document.body.style.overflow = "hidden";
         }
     };
-    const closeModal = () => {
-        setShowModal(false);
+    const closeThemeModal = () => {
+        setShowThemeModal(false);
         document.body.style.overflow = "unset";
     };
+
+    const openConvertModal = () => {
+console.log(converter)
+    }
 
     return (
         <>
@@ -74,6 +78,7 @@ function menu({ closeMenu }) {
                             </Link>
                         </li>
                     ))}
+                    <li onClick={openConvertModal} className="menuItem">Converter</li>
                 </ul>
 
                 <h5>Settings</h5>
@@ -84,7 +89,7 @@ function menu({ closeMenu }) {
                                 <Link to="/login">Log in</Link>
                             </li>
                             <li className="menuItem">
-                                <Link to="/register"> Register</Link>
+                                <Link to="/register">Register</Link>
                             </li>
                         </>
                     ) : (
@@ -98,11 +103,11 @@ function menu({ closeMenu }) {
                     )}
                     <li className="menuItem">
                         <a
-                            onClick={openModal}> Theme</a>{/* using "a" tag so styling stays the same */}
+                            onClick={openThemeModal}> Theme</a>{/* using "a" tag so styling stays the same */}
                     </li>
                 </ul>
             </div>
-            <Theme showModal={showModal} closeModal={closeModal} changeTheme={changeTheme} themeColors={Object.keys(themes)} />
+            <Theme showModal={showThemeModal} closeModal={closeThemeModal} changeTheme={changeTheme} themeColors={Object.keys(themes)} />
         </>
     );
 }

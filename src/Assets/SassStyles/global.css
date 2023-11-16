@@ -201,7 +201,6 @@
   align-items: center;
   position: relative;
   padding-bottom: 2em;
-  background: var(--color-light);
   width: 100vw;
 }
 .recipe-form label {
@@ -538,8 +537,10 @@
   font-size: clamp(0.5rem, 5vh, 1rem);
   margin-bottom: clamp(0.5rem, 5vh, 1.5rem);
   font-weight: bold;
+  cursor: pointer;
 }
-.menuItem a:hover,
+.menuItem:hover, .menuItem a:hover,
+.logout-button:hover,
 .logout-button a:hover {
   color: var(--color-primary);
 }
@@ -612,7 +613,6 @@
 }
 
 .grocery-list-container {
-  background: var(--color-primary);
   padding: 4em 0;
   display: flex;
   width: 100%;
@@ -626,10 +626,6 @@
   }
 }
 
-.grocery-title {
-  color: var(--color-light);
-}
-
 .grocery-list {
   position: relative;
   display: flex;
@@ -638,14 +634,8 @@
   width: clamp(300px, 20vw, 400px);
   padding: 2em 0 1em 0;
   margin-top: 3em;
-  border: 1px rgb(0, 0, 0) solid;
   border-radius: 10px;
-  background: var(--color-light);
-}
-@media (max-width: 480px) {
-  .grocery-list {
-    box-shadow: none;
-  }
+  background: white;
 }
 
 .line {
@@ -680,6 +670,7 @@
   background: var(--color-light);
   width: 250px;
   height: 30px;
+  background: white;
 }
 @media (max-width: 480px) {
   .grocery-input {
@@ -705,6 +696,7 @@
   align-items: center;
   width: clamp(350px, 70vw, 1000px);
   margin-bottom: 4em;
+  background: white;
 }
 @media (max-width: 960px) {
   .single-recipe-container {
@@ -718,7 +710,7 @@
 .recipe-details-container {
   position: relative;
   display: flex;
-  padding-right: 2em;
+  padding: 0 2em 2em 0;
 }
 
 .single-recipe-title-container {
@@ -857,6 +849,10 @@ ul {
   list-style: none;
 }
 
+li {
+  font-weight: bold;
+}
+
 textarea {
   resize: none;
 }
@@ -874,16 +870,18 @@ button {
   cursor: pointer;
   background: white;
   border-radius: 50%;
-  font-size: 1.5rem;
+  font-size: 2rem;
   position: absolute;
   left: 10px;
   top: 10px;
+  z-index: 2;
 }
 
 .global-container {
   display: flex;
   justify-content: center;
   min-height: 100vh;
+  background: var(--color-light);
 }
 
 .main-container {

@@ -75,10 +75,10 @@ function Edit() {
                 <MdOutlineChevronLeft />
                 </button>
                 <form className="recipe-form" onSubmit={handleSubmit}>
-                    <h2>update recipe</h2>
+                    <h2>Edit recipe</h2>
 
                     <div className="form-separator">
-                        <div className="form-inner-separator">
+                    
                             <label htmlFor="title">Name:</label>
                             <input type="text" name="name" maxLength="33" value={recipe.name || ""} onChange={handleChange} />
 
@@ -99,13 +99,15 @@ function Edit() {
 
                             <label htmlFor="method">Instructions:</label>
                             <textarea className="input-textarea" name="method" maxLength="300" value={recipe.method || ""} onChange={handleChange}></textarea>
-                        </div>
+                        
 
-                        <div className="form-inner-separator">
-                            <label htmlFor="ingredients">Ingredients:</label>
-                            <button type="button" onClick={handleAddIngredient} className="add-ingredient-button">
-                                <HiPlus size={28} />
-                            </button>
+                        
+                        <label htmlFor="ingredients">
+                                Ingredients:
+                                <button type="button" onClick={handleAddIngredient} className="add-ingredient-button">
+                                    <HiPlus size={28} />
+                                </button>
+                            </label>
 
                             {recipe.ingredients.map((ingredient, index) => (
                                 <div className="ingredient-input-container" key={index}>
@@ -115,10 +117,9 @@ function Edit() {
                                     </button>
                                 </div>
                             ))}
-                        </div>
-                    </div>
+ </div>
                     <button type="submit" className="submit-button">
-                        update recipe
+                        Save
                     </button>
                 </form>
             </div>

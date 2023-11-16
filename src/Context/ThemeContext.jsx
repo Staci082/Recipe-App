@@ -35,7 +35,7 @@ export function ThemeProvider({ children }) {
         },
     };
 
-    const initialTheme = localStorage.getItem("theme") || "pink";
+    const initialTheme = localStorage.getItem("theme") || "orange";
     const [theme, setTheme] = useState(initialTheme);
 
     useEffect(() => {

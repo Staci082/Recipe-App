@@ -4,7 +4,6 @@
     align-items: center;
     position: relative;
     padding-bottom: 2em;
-    background: var(--color-light);
     width: 100vw;
     & label {
         @include label;
