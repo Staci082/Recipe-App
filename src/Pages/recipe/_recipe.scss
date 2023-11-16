@@ -2,10 +2,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: clamp(350px, 60vw, 800px);
+    width: clamp(350px, 70vw, 1000px);
     margin-bottom: 4em;
 
-    @include md {
+    @include lg {
         width: 100vw;
     }
     & .recipe-image {

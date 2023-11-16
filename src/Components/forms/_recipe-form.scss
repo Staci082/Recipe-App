@@ -4,19 +4,24 @@
     align-items: center;
     position: relative;
     padding-bottom: 2em;
+    background: var(--color-light);
+    width: 100vw;
     & label {
         @include label;
+        display: flex;
     }
 
     & input,
     textarea,
     select {
         @include input;
+        width: 90%;
+        background: white;
     }
 
     & select {
-        width: 105%;
-    }
+        width: 95%;
+        }
 
     & textarea {
         height: 400px;
@@ -27,33 +32,43 @@
 .form-separator {
     display: flex;
     justify-content: space-around;
-    @include md {
-        flex-direction: column;
+    align-items: center;
+    flex-direction: column;
+    width: 60vw;
+    @include lg {
+        width: 90vw;
     }
 }
 
-.form-inner-separator {
-    position: relative;
-    @include form;
-}
 
 .add-ingredient-button {
+    width: 50px;
     margin-left: 30px;
-    background: var(--color-background);
-    border: black 1px solid;
-    border-radius: 5px;
-    box-shadow: 3px 4px 0px 0px rgba(0, 0, 0, 0.75);
 }
 
 .ingredient-input-container {
     display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
+    width: 95%;
+
+    & input {
+        width: 100%;
+    }
 
     & .remove-ingredient-button {
         position: absolute;
         right: 0px;
-        top: 20px;
+        top: 10px;
     }
 }
 
-
+.submit-button {
+    font-size: 1.5rem;
+    @include button;
+    border-radius: 10px;
+    padding: 0.5em 1.5em;
+    width: 300px;
+    margin: 1em 0;
+}

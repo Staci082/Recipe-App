@@ -10,15 +10,15 @@ function form({ username, setUsername, password, setPassword, label, handleSubmi
                 <form className="auth-form" onSubmit={handleSubmit}>
                     <h2 className="form-title">{label}</h2>
 
-                    <div className="form-group">
+                    <div className="auth-form-group">
                         <input placeholder="Username" type="text" id="username" value={username} onChange={(e) => setUsername(e.target.value)} />
                     </div>
 
-                    <div className="form-group">
+                    <div className="auth-form-group">
                         <input placeholder="Password" type="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} />
                     </div>
 
-                    <button type="submit" className="submit-button">
+                    <button type="submit" className="auth-submit-button">
                         {label}
                     </button>
                 </form>
