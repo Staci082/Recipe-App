@@ -20,7 +20,7 @@ function Create() {
         category: "",
         image: "",
         ingredients: [],
-        methods: [],
+        method: [],
         description: "",
         source: "", // if empty add creator's name
         servingSize: "",
@@ -41,9 +41,9 @@ function Create() {
     };
     const handleMethodChange = (e, index) => {
         const { value } = e.target;
-        const methods = recipe.methods;
-        methods[index] = value;
-        setRecipe({ ...recipe, methods });
+        const method = recipe.method;
+        method[index] = value;
+        setRecipe({ ...recipe, method });
     };
 
     const handleAddIngredient = () => {
@@ -52,8 +52,8 @@ function Create() {
     };
 
     const handleAddMethod = () => {
-        const methods = [...recipe.methods, ""];
-        setRecipe({ ...recipe, methods });
+        const method = [...recipe.method, ""];
+        setRecipe({ ...recipe, method });
     };
 
     const handleSubmit = async (event) => {
@@ -73,10 +73,10 @@ function Create() {
             const newIngredients = [...recipe.ingredients];
             newIngredients.splice(index, 1);
             setRecipe({ ...recipe, ingredients: newIngredients });
-        } else if (type === "methods") {
-            const newMethods = [...recipe.methods];
+        } else if (type === "method") {
+            const newMethods = [...recipe.method];
             newMethods.splice(index, 1);
-            setRecipe({ ...recipe, methods: newMethods });
+            setRecipe({ ...recipe, method: newMethods });
         }
     };
 
@@ -85,7 +85,7 @@ function Create() {
         setRecipe({
             ...recipe,
             ingredients: [""],
-            methods: [""],
+            method: [""],
         });
     };
     useEffect(() => {
@@ -124,22 +124,21 @@ function Create() {
                             <label htmlFor="source">Source:</label>
                             <input type="text" name="source" value={recipe.source} onChange={handleChange} />
 
-
                             <label htmlFor="description">Description:</label>
                             <textarea className="input-textarea" name="description" maxLength="300" value={recipe.description} onChange={handleChange}></textarea>
 
                             <div className="formRow">
                                 <div>
-                                <label htmlFor="servingSize">Serving size:</label>
-                                <input type="text" value={recipe.servingSize} className="smallInput" maxLength="30" name="servingSize" onChange={handleChange}></input>
+                                    <label htmlFor="servingSize">Serving size:</label>
+                                    <input type="text" value={recipe.servingSize} className="smallInput" maxLength="30" name="servingSize" onChange={handleChange}></input>
                                 </div>
                                 <div>
-                                <label htmlFor="prepTime">Prep time:</label>
-                                <input type="text" value={recipe.prepTime} className="smallInput" maxLength="30" name="prepTime" onChange={handleChange}></input>
+                                    <label htmlFor="prepTime">Prep time:</label>
+                                    <input type="text" value={recipe.prepTime} className="smallInput" maxLength="30" name="prepTime" onChange={handleChange}></input>
                                 </div>
                                 <div>
-                                <label htmlFor="cookTime">Cooking time:</label>
-                                <input type="text" value={recipe.cookTime} className="smallInput" maxLength="30" name="cookTime" onChange={handleChange}></input>
+                                    <label htmlFor="cookTime">Cooking time:</label>
+                                    <input type="text" value={recipe.cookTime} className="smallInput" maxLength="30" name="cookTime" onChange={handleChange}></input>
                                 </div>
                             </div>
 
@@ -150,10 +149,10 @@ function Create() {
                                 </button>
                             </label>
 
-                            {recipe.methods.map((method, index) => (
+                            {recipe.method.map((method, index) => (
                                 <div className="input-container" key={index}>
                                     <textarea className="input-textarea" name="method" maxLength="300" value={method} onChange={(e) => handleMethodChange(e, index)}></textarea>
-                                    <button type="button" onClick={() => handleDelete(index, "methods")} className="remove-method-button">
+                                    <button type="button" onClick={() => handleDelete(index, "method")} className="remove-method-button">
                                         <HiOutlineXMark size={26} />
                                     </button>
                                 </div>

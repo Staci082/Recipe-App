@@ -18,7 +18,7 @@ function Edit() {
         name: "",
         category: "",
         ingredients: [],
-        methods: [],
+        method: [],
         description: "",
         source: "", // if empty add creator's name
         servingSize: "",
@@ -45,9 +45,9 @@ function Edit() {
     };
     const handleMethodChange = (e, index) => {
         const { value } = e.target;
-        const methods = recipe.methods;
-        methods[index] = value;
-        setRecipe({ ...recipe, methods });
+        const method = [...recipe.method]; // Create a copy of method array
+        method[index] = value; // Update the value at the specified index
+        setRecipe({ ...recipe, method }); // Update the state with the modified method array
     };
     const handleIngredientChange = (e, index) => {
         const { value } = e.target;
@@ -61,8 +61,8 @@ function Edit() {
         setRecipe({ ...recipe, ingredients });
     };
     const handleAddMethod = () => {
-        const methods = Array.isArray(recipe.methods) ? [...recipe.methods, ""] : [""];
-        setRecipe({ ...recipe, methods });
+        const method = Array.isArray(recipe.method) ? [...recipe.method, ""] : [""];
+        setRecipe({ ...recipe, method });
     };
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -80,10 +80,10 @@ function Edit() {
             const newIngredients = [...recipe.ingredients];
             newIngredients.splice(index, 1);
             setRecipe({ ...recipe, ingredients: newIngredients });
-        } else if (type === "methods") {
-            const newMethods = [...recipe.methods];
+        } else if (type === "method") {
+            const newMethods = [...recipe.method];
             newMethods.splice(index, 1);
-            setRecipe({ ...recipe, methods: newMethods });
+            setRecipe({ ...recipe, method: newMethods });
         }
     };
 
@@ -91,88 +91,85 @@ function Edit() {
         <>
             <div className="global-container">
                 <a onClick={goBack} className="back-button">
-                <MdOutlineChevronLeft />
+                    <MdOutlineChevronLeft />
                 </a>
                 <form className="recipe-form" onSubmit={handleSubmit}>
                     <h2>Edit recipe</h2>
 
                     <div className="form-separator">
-                    
-                            <label htmlFor="title">Name:</label>
-                            <input type="text" name="name" maxLength="33" value={recipe.name || ""} onChange={handleChange} />
+                        <label htmlFor="title">Name:</label>
+                        <input type="text" name="name" maxLength="33" value={recipe.name || ""} onChange={handleChange} />
 
-                            <label htmlFor="category">Category:</label>
-                            <select name="category" className="form-control" onChange={handleChange} value={recipe.category || ""} required>
-                                <option value="">Select category</option>
-                                <option value="appetizer">Appetizer</option>
-                                <option value="breakfast">Breakfast</option>
-                                <option value="dessert">Dessert</option>
-                                <option value="dinner">Dinner</option>
-                                <option value="lunch">Lunch</option>
-                                <option value="side">Side</option>
-                                <option value="vegetarian">Vegetarian</option>
-                            </select>
+                        <label htmlFor="category">Category:</label>
+                        <select name="category" className="form-control" onChange={handleChange} value={recipe.category || ""} required>
+                            <option value="">Select category</option>
+                            <option value="appetizer">Appetizer</option>
+                            <option value="breakfast">Breakfast</option>
+                            <option value="dessert">Dessert</option>
+                            <option value="dinner">Dinner</option>
+                            <option value="lunch">Lunch</option>
+                            <option value="side">Side</option>
+                            <option value="vegetarian">Vegetarian</option>
+                        </select>
 
-                            <label htmlFor="image">Image url:</label>
-                            <input type="text" name="image" value={recipe.image} id="image-input" onChange={handleChange} />
+                        <label htmlFor="image">Image url:</label>
+                        <input type="text" name="image" value={recipe.image} id="image-input" onChange={handleChange} />
 
-                            <label htmlFor="source">Source:</label>
-                            <input type="text" name="source" value={recipe.source} onChange={handleChange} />
+                        <label htmlFor="source">Source:</label>
+                        <input type="text" name="source" value={recipe.source} onChange={handleChange} />
 
+                        <label htmlFor="description">Description:</label>
+                        <textarea className="input-textarea" name="description" maxLength="300" value={recipe.description} onChange={handleChange}></textarea>
 
-                            <label htmlFor="description">Description:</label>
-                            <textarea className="input-textarea" name="description" maxLength="300" value={recipe.description} onChange={handleChange}></textarea>
-
-                            <div className="formRow">
-                                <div>
+                        <div className="formRow">
+                            <div>
                                 <label htmlFor="servingSize">Serving size:</label>
                                 <input type="text" value={recipe.servingSize} className="smallInput" maxLength="30" name="servingSize" onChange={handleChange}></input>
-                                </div>
-                                <div>
+                            </div>
+                            <div>
                                 <label htmlFor="prepTime">Prep time:</label>
                                 <input type="text" value={recipe.prepTime} className="smallInput" maxLength="30" name="prepTime" onChange={handleChange}></input>
-                                </div>
-                                <div>
+                            </div>
+                            <div>
                                 <label htmlFor="cookTime">Cooking time:</label>
                                 <input type="text" value={recipe.cookTime} className="smallInput" maxLength="30" name="cookTime" onChange={handleChange}></input>
-                                </div>
                             </div>
+                        </div>
 
-                            <label htmlFor="method">
-                                Instructions:
-                                <button type="button" onClick={handleAddMethod} className="add-button">
-                                    <HiPlus size={28} />
-                                </button>
-                            </label>
+                        <label htmlFor="method">
+                            Instructions:
+                            <button type="button" onClick={handleAddMethod} className="add-button">
+                                <HiPlus size={28} />
+                            </button>
+                        </label>
 
-                            {recipe.methods && recipe.methods.map((method, index) => (
+                        {recipe.method &&
+                            recipe.method.map((method, index) => (
                                 <div className="input-container" key={index}>
                                     <textarea className="input-textarea" name="method" maxLength="300" value={method} onChange={(e) => handleMethodChange(e, index)}></textarea>
 
-                                    <button type="button" onClick={() => handleDelete(index, "methods")} className="remove-method-button">
+                                    <button type="button" onClick={() => handleDelete(index, "method")} className="remove-method-button">
                                         <HiOutlineXMark size={26} />
                                     </button>
                                 </div>
                             ))}
-                        
 
-                        
                         <label htmlFor="ingredients">
-                                Ingredients:
-                                <button type="button" onClick={handleAddIngredient} className="add-button">
-                                    <HiPlus size={28} />
-                                </button>
-                            </label>
+                            Ingredients:
+                            <button type="button" onClick={handleAddIngredient} className="add-button">
+                                <HiPlus size={28} />
+                            </button>
+                        </label>
 
-                            {recipe.ingredients.map((ingredient, index) => (
-                                <div className="input-container" key={index}>
-                                    <input key={index} type="text" name="ingredients" value={ingredient} onChange={(e) => handleIngredientChange(e, index)} />
-                                    <button type="button" onClick={() => handleDelete(index)} className="remove-ingredient-button">
-                                        <HiOutlineXMark size={26} />
-                                    </button>
-                                </div>
-                            ))}
- </div>
+                        {recipe.ingredients.map((ingredient, index) => (
+                            <div className="input-container" key={index}>
+                                <input key={index} type="text" name="ingredients" value={ingredient} onChange={(e) => handleIngredientChange(e, index)} />
+                                <button type="button" onClick={() => handleDelete(index)} className="remove-ingredient-button">
+                                    <HiOutlineXMark size={26} />
+                                </button>
+                            </div>
+                        ))}
+                    </div>
                     <button type="submit" className="submit-button" onClick={goBack}>
                         Save
                     </button>

@@ -249,10 +249,12 @@
   border-radius: 10px;
   background: var(--color-light);
   background: white;
-  height: 50px;
+  height: auto;
+  min-height: 80px;
   width: 95%;
   padding-top: 1em;
   resize: none;
+  overflow: hidden;
 }
 @media (max-width: 480px) {
   .recipe-form textarea {
@@ -287,7 +289,7 @@
 .input-container .remove-method-button {
   position: absolute;
   right: 0;
-  top: 27px;
+  top: 42px;
 }
 .input-container .remove-ingredient-button {
   position: absolute;
@@ -744,7 +746,7 @@
 .recipe-details-container {
   position: relative;
   display: flex;
-  padding: 0 2em 2em 0;
+  padding: 0 2em 4em 0;
 }
 
 .single-recipe-title-container {

@@ -127,23 +127,20 @@ function Recipe({ randomRecipe }) {
                                 <ul>
                                     <div className="makeRow">
                                         <li>
-                                            <span className="primaryColor">Servings:</span> 20{recipe.servingSize}
+                                            <span className="primaryColor">Servings:&nbsp; </span> 20{recipe.servingSize}
                                         </li>
                                         <li>
-                                            <span className="primaryColor">Prep time:</span> 30min{recipe.prepTime}
+                                            <span className="primaryColor">Prep time:&nbsp; </span> 30min{recipe.prepTime}
                                         </li>
                                         <li>
-                                            <span className="primaryColor">Cooking time:</span> 30min{recipe.cookTime}
+                                            <span className="primaryColor">Cooking time:&nbsp; </span> 30min{recipe.cookTime}
                                         </li>
                                     </div>
                                     <div></div>
                                     <br />
                                     <li>
-                                        <span className="primaryColor">Source:</span> <br />
-                                        {recipe.source
-                                            ? recipe.source
-                                            : recipe.userOwner
-                                        }
+                                        <span className="primaryColor">Source:&nbsp; </span> <br />
+                                        {recipe.source}
                                     </li>
                                     <br />
                                     <li>
@@ -163,7 +160,7 @@ function Recipe({ randomRecipe }) {
                                     {recipe.method &&
                                         recipe.method.map((item, index) => (
                                             <li key={item}>
-                                                <span className="primaryColor">{index + 1}.</span> {item}
+                                                <span className="primaryColor">{index + 1}.&nbsp; </span> {item}
                                             </li>
                                         ))}
                                 </ul>

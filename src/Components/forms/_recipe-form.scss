@@ -25,10 +25,12 @@
     & textarea {
         @include input;
         background: white;
-        height: 50px;
+        height: auto;
+        min-height: 80px;
         width: 95%;
         padding-top: 1em;
         resize: none;
+        overflow: hidden;
     }
 }
 
@@ -57,7 +59,7 @@
     & .remove-method-button {
         position: absolute;
         right: 0;
-        top: 27px;
+        top: 42px;
     }
 
     & .remove-ingredient-button {
