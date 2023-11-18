@@ -2,11 +2,13 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate, useParams, useLocation } from "react-router-dom";
 import { FaPencil, FaTrashCan, FaArrowRotateLeft } from "react-icons/fa6";
+import { GoBookmarkFill, GoBookmark } from "react-icons/go"
 import { MdOutlineChevronLeft } from "react-icons/md";
 import { useAuth } from "../../Context/AuthContext";
 import { ToastSuccess, ToastError } from "../../Hooks/useToasts";
 import baseAPI from "../../Context/baseAPI";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import SaveRecipes from "../../Components/save-recipes/SaveRecipes.jsx";
 
 function Recipe({ randomRecipe }) {
     const { isLoggedIn } = useAuth();
@@ -14,6 +16,8 @@ function Recipe({ randomRecipe }) {
     const recipeID = params.id;
     const location = useLocation();
     const navigate = useNavigate();
+    const { savedRecipes, handleSaveRecipe } = SaveRecipes({ isLoggedIn });
+
 
     const [recipe, setRecipe] = useState([]);
     const [showModal, setShowModal] = useState(false);
@@ -77,6 +81,8 @@ function Recipe({ randomRecipe }) {
         document.body.style.overflow = "unset";
     };
 
+    const isRecipeSaved = savedRecipes.includes(recipe._id);
+
     return (
         <>
             <div className="global-container">
@@ -90,6 +96,12 @@ function Recipe({ randomRecipe }) {
                         <div className="recipe-button-container">
                             <h2 className="recipe-category">{recipe.category}</h2>
                             <div>
+                                
+
+                                <button className="save-icon" aria-label="save-button" onClick={() => handleSaveRecipe(recipe._id)}>
+                                    {isRecipeSaved ? <GoBookmarkFill size={30} /> : <GoBookmark size={30} />}
+                                </button>
+
                                 {/* hide random shuffle button unless on random page */}
                                 {location.pathname === "/recipe/random" && (
                                     <a href="/recipe/random">

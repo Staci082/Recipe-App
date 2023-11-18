@@ -60,7 +60,7 @@ function Create() {
         event.preventDefault();
         try {
             await axios.post(baseAPI + "create", { ...recipe });
-            navigate("/");
+            navigate("/")
             ToastSuccess("Recipe created!");
         } catch (error) {
             console.error(error);
@@ -91,6 +91,7 @@ function Create() {
     useEffect(() => {
         initializeInput();
     }, []);
+
 
     return (
         <>
