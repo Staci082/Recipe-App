@@ -2,9 +2,9 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 2.2em;
+    gap: 1em;
     @include md {
-        justify-content: center;
+        gap: 0;
     }
 }
 
@@ -27,32 +27,27 @@
     flex-direction: column;
     justify-content: space-between;
     cursor: pointer;
-    width: 230px;
-    height: 230px;
+    width: 200px;
+    height: 200px;
     background: white;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     border-radius: 15px;
-    @include lg {
-        transform: scale(0.9);
-        margin: -1em;
-    }
+
     @include md {
-        transform: scale(0.8);
-        margin: -2em;
+        transform: scale(0.9);
     }
     @include sm {
         transform: scale(0.7);
-        margin: -3em;
+        margin: -1em;
     }
 
     & .recipe-title-container {
         position: relative;
         display: flex;
         flex-direction: column;
-        justify-content: start;
+        justify-content: space-between;
         height: 35%;
-        padding: 0.3em 1em;
-        font-size: clamp(0.9rem, 1vh, 1.2rem);
+        padding: 0.3em 0.5em;
     }
 
     & .recipe-image {
@@ -67,6 +62,7 @@
     .recipe-category {
         margin: 0; // keeps text closer together
         width: 85%;
+        font-size: clamp(0.8rem, 1vh, 1.2rem);
     }
 }
 

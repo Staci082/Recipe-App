@@ -4,10 +4,10 @@ import { useAuth } from "../../Context/AuthContext";
 import Theme from "../theme/Theme";
 import { useTheme } from "../../Context/ThemeContext";
 
-import { IoCreateOutline, IoSaveOutline, IoListOutline, IoStarOutline, IoLogOutOutline } from "react-icons/io5";
+import { IoCreateOutline, IoSaveOutline, IoListOutline, IoLogOutOutline } from "react-icons/io5";
 import { LiaRandomSolid } from "react-icons/lia";
 import { AiOutlineBgColors } from "react-icons/ai";
-import { LuClipboardEdit } from "react-icons/lu";
+import { LuClipboardEdit, LuDices } from "react-icons/lu";
 
 function menu({ closeMenu }) {
     const { changeTheme, themes } = useTheme();
@@ -39,7 +39,8 @@ function menu({ closeMenu }) {
         {
             title: "Get Random Recipe",
             href: "/recipe/random",
-            icon: <IoStarOutline />,
+            icon: <LuDices />
+            ,
         },
         {
             title: "Grocery List",
