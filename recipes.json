@@ -1,0 +1,21 @@
+{
+    "_id": {
+      "$oid": "6526d46bb030211929bf67ea"
+    },
+    "name": "Turkey, thyme & leek meatloaf",
+    "ingredients": [
+      "1 tbsp sunflower oil",
+      "4 large leeks, sliced",
+      "500g pack turkey mince",
+      "2 sprigs thyme, leaves removed",
+      "85g fresh breadcrumb",
+      "1 egg, beaten",
+      "2 rashers lean back bacon, fat trimmed, chopped"
+    ],
+    "category": "dinner",
+    "image": "https://images.immediate.co.uk/production/volatile/sites/30/2019/04/turkish-meatloaf-bf5350b.jpg?resize=768,574",
+    "method": [
+      "Heat oven to 220C/fan 200C/gas 7. Heat the oil in a frying pan, then soften the leeks for 5 mins. Line the base of a 28 x 18cm baking tin with greaseproof paper.",
+      "Mix the mince, thyme, two-thirds of the breadcrumbs, leeks and egg together with a little seasoning, then tip into the tin. Press the mixture firmly into the tin, then ruffle the surface with a fork. Mix the remaining breadcrumbs and bacon together and scatter over the top. Cook for 15 mins, then finish under the grill until golden and crisp on top. Serve with boiled potatoes and carrots."
+    ]
+  }

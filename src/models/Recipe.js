@@ -32,7 +32,7 @@ const recipeSchema = new mongoose.Schema({
         required: false
     },
     servingSize: {
-        type: Number,
+        type:String,
         required: false
     },
     prepTime: {
