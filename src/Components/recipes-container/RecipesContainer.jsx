@@ -18,7 +18,7 @@ function RecipesContainer() {
     const [recipes, setRecipes] = useState([]);
 
     const [pageNumber, setPageNumber] = useState(0);
-    const recipesPerPage = 10;
+    const recipesPerPage = 12;
     const pagesVisited = pageNumber * recipesPerPage;
 
     const { isLoggedIn } = useAuth();
