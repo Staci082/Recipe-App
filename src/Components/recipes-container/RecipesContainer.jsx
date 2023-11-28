@@ -96,8 +96,8 @@ function RecipesContainer() {
                 <h1>{results.length > 0 ? `${input} recipes` : `${category} recipes`}</h1>
                 <h2 className="recipes-amount">{recipes && recipes.length}</h2>
             </div>
-
-            <div className="recipe-container">{displayRecipesList}</div>
+            <div className="recipe-wrapper">
+            <div className="recipe-container">{displayRecipesList}</div></div>
 
             {
                 displayRecipesList === null ? null : <Pagination pageCount={pageCount} onPageChange={changePage} /> // hide pagination arrows on empty page

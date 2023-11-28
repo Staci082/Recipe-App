@@ -93,10 +93,10 @@ function menu({ closeMenu }) {
                             </Link>
                         </li>
                     ))}
-                    <li onClick={openConvertModal} className="menuItem menuLink">
+                    {/* <li onClick={openConvertModal} className="menuItem menuLink">
                         <LiaRandomSolid />
                         Converter
-                    </li>
+                    </li> */}
                 </ul>
 
                 <h5>Settings</h5>
