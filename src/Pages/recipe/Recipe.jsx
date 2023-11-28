@@ -139,13 +139,13 @@ function Recipe({ randomRecipe }) {
                                 <ul>
                                     <div className="makeRow">
                                         <li>
-                                            <span className="primaryColor">Servings:&nbsp; </span> 20{recipe.servingSize}
+                                            <span className="primaryColor">Servings:&nbsp; </span> {recipe.servingSize}
                                         </li>
                                         <li>
-                                            <span className="primaryColor">Prep time:&nbsp; </span> 30min{recipe.prepTime}
+                                            <span className="primaryColor">Prep time:&nbsp; </span> {recipe.prepTime}
                                         </li>
                                         <li>
-                                            <span className="primaryColor">Cooking time:&nbsp; </span> 30min{recipe.cookTime}
+                                            <span className="primaryColor">Cooking time:&nbsp; </span>{recipe.cookTime}
                                         </li>
                                     </div>
                                     <div></div>
@@ -156,8 +156,7 @@ function Recipe({ randomRecipe }) {
                                     </li>
                                     <br />
                                     <li>
-                                        <span className="primaryColor">Description:</span> <br /> Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe officiis enim nemo fuga provident quas excepturi voluptatum, voluptatibus dolorum perspiciatis voluptates, temporibus recusandae? Quidem
-                                        earum, corporis cupiditate eligendi consectetur ipsam.{recipe.description}
+                                        <span className="primaryColor">Description:</span> <br />{recipe.description}
                                     </li>
                                 </ul>
                             </TabPanel>
@@ -171,9 +170,10 @@ function Recipe({ randomRecipe }) {
                                 <ul>
                                     {recipe.method &&
                                         recipe.method.map((item, index) => (
-                                            <li key={item}>
+                                            <li key={item} className="method-line-separator">
                                                 <span className="primaryColor">{index + 1}.&nbsp; </span> {item}
                                             </li>
+                                            
                                         ))}
                                 </ul>
                             </TabPanel>
