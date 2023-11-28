@@ -1,12 +1,18 @@
 .recipe-container {
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    grid-template-columns: repeat(5, 1fr);
     width: 90%;
     gap: 2em;
     @include md {
+        width: 100%;
         gap: 0;
     }
+}
+.recipe-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .recipe-container-header {
@@ -22,31 +28,26 @@
     }
 }
 
-.recipe-wrapper {
-width: 99%;
-display: flex; 
-flex-direction: column;
-align-items: center;
-}
-
 .recipe {
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     cursor: pointer;
-    width: 13vw;
-    height: 26vh;
+    width: 210px;
+    height: 210px;
     background: white;
     box-shadow: rgba(149, 157, 165, 0.2) 3px 3px 9px;
     border-radius: 15px;
 
     @include md {
-        transform: scale(0.9);
+        justify-content: space-between;
+        margin: 0.5em;
     }
     @include sm {
-        transform: scale(0.7);
+        transform: scale(0.8);
         margin: -1em;
+
     }
 
     & .recipe-title-container {
@@ -55,7 +56,7 @@ align-items: center;
         flex-direction: column;
         justify-content: space-between;
         height: 35%;
-        padding: 0.6em 1.2em 0.6em .8em;
+        padding: 0.6em 1.2em 0.6em .5em;
     }
 
     & .recipe-image {
@@ -70,7 +71,7 @@ align-items: center;
     .recipe-category {
         margin: 0; // keeps text closer together
         width: 85%;
-        font-size: clamp(0.8rem, 2vh, 1rem);
+        font-size: clamp(0.8rem, 1vh, 1.2rem);
     }
 }
 
