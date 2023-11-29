@@ -47,6 +47,11 @@ function menu({ closeMenu }) {
             href: "/auth/list",
             icon: <IoListOutline />,
         },
+        {
+            title: "Converter",
+            href: "/converter",
+            icon: <LiaRandomSolid/>
+        }
     ];
 
     const handleLogout = () => {
@@ -93,10 +98,6 @@ function menu({ closeMenu }) {
                             </Link>
                         </li>
                     ))}
-                    {/* <li onClick={openConvertModal} className="menuItem menuLink">
-                        <LiaRandomSolid />
-                        Converter
-                    </li> */}
                 </ul>
 
                 <h5>Settings</h5>

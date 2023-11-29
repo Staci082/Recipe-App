@@ -1,0 +1,32 @@
+
+.converter-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+}
+
+
+.converter-container{
+display: flex;
+align-items: start;
+    margin-top: 2em;
+    gap: 3em;
+    & label {
+        @include label;
+        text-align: center;
+    }
+    & input {
+        @include input;
+        width: 100px;
+        background: white;
+    }
+}
+
+.converter-button {
+width: 150px;
+}
+.converter-inner-form {
+    display: flex;
+    flex-direction: column;
+}

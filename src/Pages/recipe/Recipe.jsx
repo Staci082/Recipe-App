@@ -136,8 +136,7 @@ function Recipe({ randomRecipe }) {
                         </TabList>
                         <div className="recipe-details-container">
                             <TabPanel>
-                                <ul>
-                                    <div className="makeRow">
+                                <ul className="recipe-details">
                                         <li>
                                             <span className="primaryColor">Servings:&nbsp; </span> {recipe.servingSize}
                                         </li>
@@ -147,8 +146,6 @@ function Recipe({ randomRecipe }) {
                                         <li>
                                             <span className="primaryColor">Cooking time:&nbsp; </span>{recipe.cookTime}
                                         </li>
-                                    </div>
-                                    <div></div>
                                     <br />
                                     <li>
                                         <span className="primaryColor">Source:&nbsp; </span> <br />

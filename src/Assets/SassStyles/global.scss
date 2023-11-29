@@ -14,8 +14,10 @@
 @import "../../Components/recipes-container/recipes-container";
 @import "../../Components/menu/menu";
 @import "../../Components/theme/theme";
+@import "../../Pages/converter/converter";
 @import "../../Pages/grocery-list/groceryList";
 @import "../../Pages/recipe/recipe";
+
 
 html {
     scroll-behavior: smooth;
@@ -109,4 +111,8 @@ button {
 }
 .primaryColor {
     color: var(--color-primary);
+}
+
+.row {
+    display: flex;
 }

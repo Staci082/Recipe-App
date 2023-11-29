@@ -3,6 +3,7 @@ import { Routes, Route} from "react-router-dom";
 
 import { SearchProvider } from "./Context/SearchContext";
 
+import Converter from "./Pages/converter/Converter"
 import Create from "./Pages/create/Create";
 import Error from "./Pages/error/Error";
 import Edit from "./Pages/edit/Edit";
@@ -41,6 +42,10 @@ const router = [
     {
         path: "/register",
         element: <Register />,
+    },
+    {
+        path: "/converter",
+        element: <Converter />,
     },
     {
         path: "*",
