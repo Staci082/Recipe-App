@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     width: clamp(350px, 70vw, 1000px);
-    background: white;
+    background-color: white;
 
     @include lg {
         width: 100vw;
