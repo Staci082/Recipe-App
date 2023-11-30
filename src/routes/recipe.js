@@ -2,8 +2,6 @@ import express from 'express'
 // import VerifyToken from '../controllers/userController.js'
 import {postRecipe, 
         allRecipes,
-        getSavedRecipesIds,
-        getSavedRecipes,
         singleRecipe, 
         sortRecipes,
         searchRecipes, 
@@ -19,15 +17,6 @@ router.get('/all', allRecipes)
 
 // POST RECIPE FORM DATA
 router.post('/create', postRecipe)
-
-// // // GET SAVED RECIPES IDS 
-// // router.get('/savedRecipes/ids/:userID', getSavedRecipesIds)
-
-// // GET SAVED RECIPES 
-// router.get('/savedRecipes', getSavedRecipes)
-
-// // ADD RECIPE FROM URL
-// router.get('/url', urlRecipe)
 
 // SORT RECIPES BY CATEGORY
 router.get('/:category', sortRecipes)

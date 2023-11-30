@@ -1,0 +1,1001 @@
+[{
+  "_id": {
+    "$oid": "6526d46bb030211929bf680e"
+  },
+  "name": "Salted almond brittle",
+  "ingredients": [
+    "100g bag toasted flaked almond",
+    "100g golden caster sugar",
+    "50g butter, plus extra for greasing",
+    "½ tsp salt"
+  ],
+  "category": "dessert",
+  "image": "https://static01.nyt.com/images/2022/04/06/dining/01Matzorex/merlin_204710154_4b153eca-2f89-4389-9104-3707cb99cdc0-articleLarge.jpg?w=1280&q=75",
+  "method": [
+    "Lightly butter a lipped baking tray and spread the almonds over it in a thin, even layer. Put the sugar, butter, salt and 4 tbsp water into a smooth-bottomed frying pan and heat gently, stirring, until the sugar dissolves. Increase the heat and boil for about 5 mins, or until it starts to turn light golden brown. Stir every now and again as some patches will start to caramelise faster than others. Carefully tip the caramel over the nuts and leave to cool completely.",
+    "Once cold, shatter the caramel. An easy way to get clean sharp pieces is to put the point of a sharp knife vertically onto the caramel and bash the handle with a rolling pin, like a hammer and chisel. Serve on top of the Chocolate amaretti puddings. Keep for up to 2 days in an airtight container, interleaved with non-stick paper, in a cool, dry place (not the fridge)."
+  ],
+  "cookTime": "10 mins",
+  "description": "A surprising topping for desserts - makes them that little bit extra special. Also delicious dipped in chocolate",
+  "prepTime": "2 mins",
+  "servingSize": "8",
+  "source": "https://www.bbcgoodfood.com/recipes/salted-almond-brittle"
+},
+{
+  "_id": {
+    "$oid": "6526d46bb030211929bf6812"
+  },
+  "name": "Smoked salmon kedgeree",
+  "ingredients": [
+    "300g basmati rice",
+    "8 eggs",
+    "400g pack sliced smoked salmon",
+    "knob of butter",
+    "450g red onion, sliced",
+    "8 garlic cloves, sliced",
+    "large knob of fresh ginger, peeled and chopped",
+    "1 tsp each fennel and cumin seeds",
+    "6 cardamom pods",
+    "4 bay leaves",
+    "1 tbsp tomato purée",
+    "1 heaped tsp curry powder",
+    "large bunch coriander, leaves reserved, stalks chopped",
+    "1l chicken stock, preferably fresh",
+    "284ml tub double cream"
+  ],
+  "category": "lunch",
+  "image": "https://cdn.mos.cms.futurecdn.net/QrEG6DANPSH68yRuEEgcLe.jpg",
+  "method": [
+    "To make the sauce, heat the butter in a large pan, then tip in the onions, garlic, ginger, spices and bay. Fry over medium heat for 8-10 mins until the onions colour. Stir in the purée, curry powder and coriander stalks, then cook for a few mins until everything is sticky. Pour in the stock and cream, season, stir well, then bring to the boil. Gently simmer for 15 mins until reduced by half. Strain through a sieve into a container. Keep covered in the fridge for up to two days.",
+    "Rinse the rice in several changes of water, then put in a pan with enough cold water to cover it by 1.5cm. Cover the pan, then place over a high heat. Bring to a fast boil, stir, return the lid, turn heat to minimum, then leave the pan for 2 mins. Turn the heat off; leave for a further 10 mins. If making ahead, cool quickly, then refrigerate.",
+    "On the day, poach the eggs, then set aside. Roughly chop the salmon and coriander leaves. Reheat rice until piping hot. Heat sauce until simmering, then stir in the rice. Stir though salmon and most of the coriander. Spoon into bowls"
+  ],
+  "cookTime": "40 mins",
+  "description": "This kedgeree is totally delicious. Treat everyone to an extra special brunch.",
+  "prepTime": "15 mins",
+  "servingSize": "8",
+  "source": "https://www.bbcgoodfood.com/recipes/smoked-salmon-kedgeree"
+},
+{
+  "_id": {
+    "$oid": "6526d46bb030211929bf6813"
+  },
+  "name": "Tuna & red onion salad",
+  "ingredients": [
+    "tuna",
+    "new potatoes, cooked",
+    "red onion",
+    "capers",
+    "a handful of rocketor watercress"
+  ],
+  "category": "lunch",
+  "image": "https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2020/04/Tuna-Salad-3.jpg",
+  "method": [
+    "Mix canned tuna (drained) with cooked new potatoes, red onion, capers and a handful of rocket or watercress, and toss with a bought fat-free dressing."
+  ],
+  "cookTime": "none",
+  "description": "This simple salad is perfect for a post-Christmas lunch - it makes the most of storecupboard ingredients too.",
+  "prepTime": "20 mins",
+  "servingSize": "1",
+  "source": "https://www.bbcgoodfood.com/recipes/tuna-red-onion-salad"
+},
+{
+  "_id": {
+    "$oid": "6526d46bb030211929bf6815"
+  },
+  "name": "Ham & mushroom turnovers",
+  "ingredients": [
+    "250ml milk",
+    "1 tbsp each butterand flour, mixed to a paste, plus extra for dusting",
+    "140g button mushroom, cut into quarters",
+    "1 tbsp olive oil",
+    "140g ham, chopped into small pieces",
+    "85g leftover cheese(amount will vary according to type - go with your taste buds), cut into small pieces",
+    "1 tbsp chopped herbs- tarragon, parsley and chives all work well",
+    "500g block puff pastry",
+    "1 egg, beaten"
+  ],
+  "category": "appetizer",
+  "image": "https://www.tastingtable.com/img/gallery/mushrooms-provide-a-savory-twist-in-classic-turnovers/l-intro-1695764657.jpg",
+  "method": [
+    "The first thing to do is to make a thick white sauce that will be the base of the turnover filling. Bring the milk to a simmer, then add the butter and flour paste. Whisk the paste into the simmering milk and allow it to boil for 3-4 mins, whisking gently all the time to prevent it from catching. You should now have a very thick white sauce. Cool the sauce in a bowl. Fry the mushrooms in the oil for 3-5 mins until golden, then leave to cool.",
+    "Place the ham, cheese and mushrooms into a bowl, then gradually add the white sauce until everything is well coated. Finally, add the herbs.",
+    "Roll out the pastry on a floured surface to about the thickness of a £1 coin and cut out 4 saucer-size rounds (about 18cm wide), re-rolling the trimmings if you need to. Brush the edges of each round with beaten egg. Spoon the mixture onto 1 side of each round, then fold over and seal the edges well. The turnovers can now be frozen for up to 1 month. Brush the turnover with the remaining egg, then chill for 30 mins.",
+    "Heat oven to 200C/180C fan/gas 6. Place the turnovers on a baking sheet and bake for about 35 mins until puffed up and golden. Leave to cool slightly and enjoy warm."
+  ],
+  "cookTime": "50 mins",
+  "description": "A puff pastry turnover is always a good way of using leftovers - adapt the recipe to whatever cheese you've got",
+  "prepTime": "20 mins",
+  "servingSize": "4",
+  "source": "https://www.bbcgoodfood.com/recipes/ham-cheese-mushroom-turnovers"
+},
+{
+  "_id": {
+    "$oid": "6526d46bb030211929bf6816"
+  },
+  "name": "Crab & avocado sesame toasts",
+  "ingredients": [
+    "100g guacamole",
+    "16 shop-bought crostini",
+    "200g white crabmeat",
+    "2 tbsp sesame seed",
+    "limewedges, to serve"
+  ],
+  "category": "appetizer",
+  "image": "https://sp-ao.shortpixel.ai/client/to_webp,q_lossy,ret_img/https://truenorthseafood.com/wp-content/uploads/2020/11/Crab-a-cado.jpg",
+  "method": [
+    "Divide the guacamole between the crostini. Top each one with a spoonful of crabmeat. Toast the sesame seeds in a pan, then sprinkle over each crostini. Serve with lime wedges."
+  ],
+  "cookTime": "2 mins",
+  "description": "This quick canapé can be prepared in minutes by simply assembling the fish and guacamole on crostini bread",
+  "prepTime": "10 mins",
+  "servingSize": "16",
+  "source": "https://www.bbcgoodfood.com/recipes/crab-avocado-sesame-toasts"
+},
+{
+  "_id": {
+    "$oid": "6526d46bb030211929bf6817"
+  },
+  "name": "Prawn & grapefruit salad",
+  "ingredients": [
+    "2 pink grapefruits, zest and juice from 1, segments cut from the other",
+    "2 tbsp olive oil",
+    "1 tbsp red wine vinegar",
+    "1 tsp caster sugar",
+    "2 tbsp chopped dill",
+    "300g cooked, peeled prawn",
+    "½ cucumber, halved lengthways, seeds scooped out with a teaspoon, diced",
+    "2 shallots, finely chopped",
+    "2 handfuls frisée, torn",
+    "2 handfuls rocket",
+    "100g pack pomegranateseeds"
+  ],
+  "category": "lunch",
+  "image": "https://fodmap-publicsite-us-east-2.s3.amazonaws.com/production/media/images/prawn_salad.original.jpg",
+  "method": [
+    "Whisk together the grapefruit zest and juice, oil, vinegar, sugar and dill to make a dressing. Mix half with the prawns and allow to marinate for 10 mins.",
+    "Just before serving, gently toss the cucumber, shallots, frisée and rocket with the remaining dressing. Add a pile to each of 6 starter plates, along with the prawns and grapefruit segments. Scatter over the pomegranate seeds and serve."
+  ],
+  "cookTime": "none",
+  "description": "Bypass bread croutons and a heavy cream dressing and instead serve up a crispy, fruity salad with shellfish",
+  "prepTime": "20 mins",
+  "servingSize": "6",
+  "source": "https://www.bbcgoodfood.com/recipes/prawn-pomegranate-grapefruit-salad"
+},
+{
+  "_id": {
+    "$oid": "6526d46bb030211929bf6819"
+  },
+  "name": "Sticky Thai pork",
+  "ingredients": [
+    "1 thumb-size piece fresh root ginger",
+    "1 garlic clove, roughly chopped",
+    "2 fat green chillies, seeds left in",
+    "small bunch coriander, stalks finely chopped (or if you can find a bunch with the root intact, chop that instead)",
+    "50g dried shrimp, soaked in water for 10 mins, then drained",
+    "1 tbsp groundnut or vegetable oil",
+    "200g minced pork",
+    "1 tsp fish sauce",
+    "100g palm sugaror light muscovado sugar",
+    "½ pineapple, peeled and sliced very thinly, to serve"
+  ],
+  "category": "dinner",
+  "image": "https://img.taste.com.au/mgkBria3/taste/2017/11/sticky-pork-belly-bites-taste_1980x1320-132894-1.jpg",
+  "method": [
+    "Put the ginger, garlic, chilli, coriander stalks (or root) and shrimp into a food processor and whizz to a paste.",
+    "Heat a wok, add the oil, then add the paste. Fry until fragrant. Add the pork, stir well and fry for 5 mins until cooked through. Stir in the fish sauce and the palm sugar, then cook for a good 10 mins more, until the meat becomes sticky, dark and caramelised. Can be made up to 2 days ahead, then reheated. Cool a little, top each pineapple slice with a teaspoon of the sticky pork and devour."
+  ],
+  "cookTime": "20 mins",
+  "description": "This classic dish, called Mah Hor in Thailand, is served with wafer-thin slices of pineapple, ready to scoop",
+  "prepTime": "10 mins",
+  "servingSize": "6",
+  "source": "https://www.bbcgoodfood.com/recipes/sticky-thai-pork"
+},
+{
+  "_id": {
+    "$oid": "6526d46bb030211929bf681d"
+  },
+  "name": "Triple chocolate mousse",
+  "ingredients": [
+    "butter, for greasing",
+    "425ml double cream",
+    "75g each good-quality milk, white, plain chocolate, broken into pieces",
+    "6 eggs, separated into 2-egg batches",
+    "75g caster sugar",
+    "50g plain chocolate, melted",
+    "icing sugar, single cream, chocolate curls"
+  ],
+  "category": "dessert",
+  "image": "https://i.ytimg.com/vi/4IvISVSNEEk/maxresdefault.jpg",
+  "method": [
+    "For a 1.2 litre terrine, cut a strip of greaseproof paper as long as the tin and wide enough to cover the bottom and come up both long sides, with about 7.5cm to spare. Put the paper in the tin as if to line it, then draw a line across the paper on both sides where it meets the bottom edge, and the top edge, of the tin. Take the paper out of the tin and draw two lines at equal intervals between the bottom and top edge lines you have already drawn. (This will help you make each layer exactly the same depth when filling the tin.) Lightly grease the paper and use to line the tin.",
+    "Whip a third of the cream to just soft peak stage, then chill. Melt the milk chocolate in a heatproof bowl set over a pan of simmering water or microwave on High for 2 mins. Whisk 2 egg yolks and 25g/1oz sugar in a heatproof bowl over a pan of simmering water with a hand-held electric blender for about 2-3 mins until the mixture has at least doubled in volume. Once you have reached this stage, remove the bowl from the heat and keep whisking, adding the melted chocolate – this not only incorporates the chocolate, but also cools the mixture more quickly. Leave to cool for a few minutes, then carefully fold in the whipped cream.",
+    "Quickly whisk two egg whites into soft peaks, making sure the bowl and whisk are spotless to ensure the maximum volume is obtained. Using a large metal spoon, carefully fold the egg white into the chocolate mixture so you don’t knock out too much air.",
+    "Pour mixture into the terrine, filling it to first mark (any extra can be frozen), then freeze for 20-30 mins before starting the white chocolate mixture. Repeat process with white chocolate, then the plain; cover with plastic film and freeze completely. To guarantee a good set, make terrine at least 8-10 hrs or up to 2 days before.",
+    "Dip the tin briefly in a large bowl of hot water. Put a chopping board or flat plate on top and invert the mousse. Gently remove the paper and open freeze for about 10 mins to re-set. To decorate, pipe an outline of melted plain chocolate in a teardrop shape onto each plate. Dust the plates lightly with icing sugar, then carefully fill the teardrop with cream. Slice the mousse, wiping the knife after each cut, and put a slice on each plate. Decorate with chocolate curls and serve at once."
+  ],
+  "cookTime": "none",
+  "description": "A trio of milk, dark and white chocolate combined in a delectable mousse",
+  "prepTime": "1 hr and 15 mins",
+  "servingSize": "10 - 12",
+  "source": "https://www.bbcgoodfood.com/recipes/triple-chocolate-mousse"
+},
+{
+  "_id": {
+    "$oid": "6526d46bb030211929bf6820"
+  },
+  "name": "Chicory salad with blue cheese",
+  "ingredients": [
+    "4 heads of chicory(it's nice to have a mix of 2 red and 2 white)",
+    "4 tbsp olive oil",
+    "200g blue cheese(stilton or similar)",
+    "2 tbsp white wine vinegar",
+    "75ml double cream",
+    "juice ½ lemon",
+    "4 tbsp crème fraîche"
+  ],
+  "category": "vegetarian",
+  "image": "https://www.raymondblanc.com/wp-content/uploads/2018/04/Raymond_Blanc_001-934-1920x1080.jpg",
+  "method": [
+    "Slice the base off each chicory and peel off the leaves until you reach the core, which you can either cut into quarters or leave whole. Arrange the leaves on a platter.",
+    "Drizzle the chicory with a little olive oil and season with salt and pepper. Crumble half the blue cheese over the chicory, then mix the remaining cheese with the vinegar, squashing with a fork to make it creamy. Add the cream, lemon juice and crème fraîche, then whisk together. Adjust the seasoning, spoon over the salad and serve."
+  ],
+  "cookTime": "none",
+  "description": "The chicory gives a bitter contrast to the richness of the cheese in this sophisticated salad recipe",
+  "prepTime": "15 mins",
+  "servingSize": "8",
+  "source": "https://www.bbcgoodfood.com/recipes/chicory-salad-blue-cheese-dressing"
+},
+{
+  "_id": {
+    "$oid": "6526d46bb030211929bf6825"
+  },
+  "name": "Cranberry-pistachio brownies",
+  "ingredients": [
+    "200g butter, diced, plus extra for greasing",
+    "2 x 150g bars plain chocolate (about 40% cocoa solids is fine)",
+    "280g light muscovado sugar",
+    "4 tbsp cranberry juice or milk",
+    "4 medium eggs",
+    "200g plain flour",
+    "½ tsp ground cinnamon",
+    "1 x 75g pack dried cranberries",
+    "100g pistachios, sliced",
+    "icing sugar to dust, optional"
+  ],
+  "category": "dessert",
+  "image": "https://ournourishingtable.com/wp-content/uploads/2018/05/cranberry-pistachio-choc-scaled.jpg",
+  "method": [
+    "Heat the oven to 180C/fan 160C/gas 4. Butter a non-stick baking tin (about 31 x 17 x 3.5cm) or line the base if you prefer. Break the chocolate into a saucepan, add the butter, sugar and juice or milk, then warm gently, stirring frequently until melted and evenly mixed. Allow to cool slightly, then beat in the eggs one at a time. Fold in the flour, cinnamon and cranberries.",
+    "Spread half the mixture into the prepared tin, scatter over the nuts, then gently spread the rest of the mixture on top. Bake for 25-30 mins. Cut into squares while still warm. Will keep in an airtight container for up to a week."
+  ],
+  "cookTime": "30 mins",
+  "description": "Moist, fruity and nutty - what more could you want from a brownie? Ready in under an hour",
+  "prepTime": "15 mins",
+  "servingSize": "18",
+  "source": "https://www.bbcgoodfood.com/recipes/cranberry-pistachio-brownies"
+},
+{
+  "_id": {
+    "$oid": "6526d46bb030211929bf6826"
+  },
+  "name": "Stuffed mushroom bruschettas",
+  "ingredients": [
+    "4 thick slices country-style loaves, white or brown",
+    "2 x 20g/1oz tubs garlic butter or 50g/2oz softened butter beaten with 1 chopped clove of garlic",
+    "4 large flat mushrooms",
+    "200g jar roasted red peppers, either strips in oil or whole peppers in brine",
+    "150g firm goat's cheese"
+  ],
+  "category": "appetizer",
+  "image": "https://static.diabetesfoodhub.org/system/thumbs/system/images/recipes/1710-diabetic-Bruschetta-Stuffed-Mushrooms_Diabetes-Superfoods-Cookbook_010419_3885281428.jpg",
+  "method": [
+    "Preheat the oven to 190C/Gas 5/170C fan. Spread both sides of each slice of bread with garlic butter (no need to remove the crusts). Put the bread slices in one layer on a baking sheet. Put a mushroom on top of each and drizzle with a little olive oil. Sprinkle with salt and pepper.",
+    "Drain the peppers, slice if necessary, and divide between the mushrooms. Cut the goat’s cheese into four slices and put one slice on top of each stack. Bake for 25-30 minutes, until the mushrooms are cooked and the cheese golden. Serve with a mixed salad."
+  ],
+  "cookTime": "30 mins",
+  "description": "The big mushrooms cook to a moist meatiness under their cloak of peppers and melting goat’s cheese, a veggie dish anyone will enjoy.",
+  "prepTime": "15 mins",
+  "servingSize": "2",
+  "source": "https://www.bbcgoodfood.com/recipes/stuffed-mushroom-bruschettas"
+},
+{
+  "_id": {
+    "$oid": "6526d46bb030211929bf6828"
+  },
+  "name": "Honey-roast carrots",
+  "ingredients": [
+    "1kg Chantenay carrot, or large carrots, cut into big chunks",
+    "1 heaped tsp clear honey",
+    "juice 1 large orange",
+    "2 tbsp mild olive oil"
+  ],
+  "category": "side",
+  "image": "https://food-images.files.bbci.co.uk/food/recipes/honey_roast_carrots_07540_16x9.jpg",
+  "method": [
+    "Heat oven to 200C/180C/gas 6. Boil carrots for 5 mins till almost cooked, drain and cool. Mix the rest of the ingredients in a small roasting tray, tip in carrots, season and roast for 20 mins until cooked, but still with a little bite."
+  ],
+  "cookTime": "1 hr - 1 hr and 10 mins",
+  "description": "This simple vegetable side dish is prepared quickly, then slow-roasted in the oven for a sweet and sticky caramelised finish",
+  "prepTime": "5 mins",
+  "servingSize": "6",
+  "source": "https://www.bbcgoodfood.com/recipes/honey-roasted-carrots"
+},
+{
+  "_id": {
+    "$oid": "6526d46bb030211929bf682a"
+  },
+  "name": "Cranberry chicken salad",
+  "ingredients": [
+    "2 skinless chicken breasts",
+    "4 tsp olive oil",
+    "2 red onions, thinly sliced",
+    "200g mixed leaves",
+    "½ cucumber, deseeded and sliced",
+    "25g dried cranberries",
+    "85g/3oz cranberrysauce",
+    "juice 1 lime"
+  ],
+  "category": "lunch",
+  "image": "https://www.nospoonnecessary.com/wp-content/uploads/2019/11/Cranberry-Chicken-Salad-80.jpg",
+  "method": [
+    "Slice each chicken breast in half horizontally to give 4 thin breasts, then rub with half the oil and season. Heat a non-stick frying pan and fry the chicken for 3 mins on each side until cooked through. Set aside on a plate.",
+    "Heat the remaining oil in the pan and fry the onions for 5 mins. Slice the chicken, collecting any juices, and layer up with the onions, leaves, cucumber and dried cranberries. Mix the cranberry sauce, lime juice, 2 tbsp water and any chicken resting juices, and drizzle over the salad."
+  ],
+  "cookTime": "10 mins",
+  "description": "Use up leftover cranberry sauce in this healthy salad. Add a can of cannellini beans if you want to bulk it up",
+  "prepTime": "15 mins",
+  "servingSize": "4",
+  "source": "https://www.bbcgoodfood.com/recipes/cranberry-chicken-salad"
+},
+{
+  "_id": {
+    "$oid": "6526d46bb030211929bf682b"
+  },
+  "name": "Chicken, kale & sprout stir-fry",
+  "ingredients": [
+    "100g soba noodle",
+    "100g shredded curly kale",
+    "2 tsp sesame oil",
+    "2 lean chicken breasts, skin removed and sliced into thin strips",
+    "25g piece fresh ginger, peeled and sliced into matchsticks",
+    "1 red pepper, deseeded and thinly sliced",
+    "handful Brussels sprout, cut into quarters",
+    "1 tbsp low-sodium soy sauce",
+    "2 tbsp rice wine or white wine vinegar",
+    "zest and juice 1 lime"
+  ],
+  "category": "dinner",
+  "image": "https://mamashire.com/wp-content/uploads/Easy-Chicken-Stir-Fry-1-1B.jpg",
+  "method": [
+    "Cook the noodles following pack instructions, then drain and set aside. meanwhile, heat a large wok or frying pan and add the kale along with a good splash of water and cook for 1-2 mins until wilted, with a little bite remaining, then cool under running water to keep the colour.",
+    "Add half the oil and cook the chicken strips until browned, then remove and set aside. Heat the remaining oil and fry the ginger, pepper and sprouts until softened a little. return the chicken and kale and add the noodles.",
+    "Tip in the soy, rice wine and lime zest and juice along with enough water to create a sauce that clings to the ingredients. Serve immediately."
+  ],
+  "cookTime": "20 mins",
+  "description": "Brussels sprouts aren’t just for Christmas – add them to a healthy noodle pot for extra nutrition and crunch",
+  "prepTime": "10 mins",
+  "servingSize": "2",
+  "source": "https://www.bbcgoodfood.com/recipes/chicken-kale-sprout-stir-fry"
+},
+{
+  "_id": {
+    "$oid": "6526d46bb030211929bf682d"
+  },
+  "name": "Spinach, cheese & onion rice torte",
+  "ingredients": [
+    "400g spinach",
+    "2 tbsp olive oil",
+    "1 large onion, finely chopped",
+    "2 garlic cloves, finely chopped",
+    "pinch of chilli flakes",
+    "300g courgette, cubed",
+    "100g risotto rice",
+    "100g mature cheddar, grated",
+    "2 large eggsand 1 medium egg",
+    "1 tbsp Dijon mustard",
+    "500g pack shortcrust pastry",
+    "2 tbsp milk",
+    "2 tsp sesame seed"
+  ],
+  "category": "vegetarian",
+  "image": "https://static01.nyt.com/images/2012/04/10/health/nutrition/10recipehealth/10recipehealth-superJumbo.jpg",
+  "method": [
+    "Wash the spinach and put it in a large saucepan with just the water that clings to its leaves. Heat for 1-2 mins until gently wilted, then tip into a colander and allow to cool. Once cool, squeeze out the excess water and chop finely.",
+    "Heat the oil in a frying pan and gently cook the onion for about 5 mins until softened. Stir in the garlic and chilli flakes, and cook for 1 min more. Tip into a bowl, add the spinach, courgettes, rice and cheese, and toss together.",
+    "Beat the 2 large eggs with the mustard, a pinch of salt and a good grinding of black pepper. Add to the spinach mixture and mix well. Heat oven to 200C/180C fan/gas 6. Put a baking sheet in the oven to preheat. Cut the pastry in half and roll 1 piece out on a lightly floured work surface until you have a sheet that measures 32 x 17cm. Place in a 30 x 15cm tin and prick it well all over the base. Roll out the remaining piece of pastry to the same size.",
+    "Spoon the spinach mixture into the pastry base. Beat together the milk and remaining medium egg, then brush the edges of the pastry with it. Lay the other sheet of pastry over the top and press down gently to seal. Brush the top with a little more beaten egg and sprinkle with the sesame seeds.",
+    "Place the tin on the preheated baking tray and bake for 10 mins, then reduce the temperature to 160C/140C fan/gas 4 and bake for a further 30 mins until the pastry is golden. Leave to cool for 10 mins before cutting into squares."
+  ],
+  "cookTime": "50 mins",
+  "description": "Risotto rice cooks in the filling to give it a creamy texture, which binds the vegetarian ingredients together beautifully",
+  "prepTime": "20 mins",
+  "servingSize": "6",
+  "source": "https://www.bbcgoodfood.com/recipes/spinach-cheese-onion-rice-torte"
+},
+{
+  "_id": {
+    "$oid": "6526d46bb030211929bf6833"
+  },
+  "name": "Lime & coconut dhal",
+  "ingredients": [
+    "1-2 tbsp mild curry paste",
+    "160ml tin coconut cream",
+    "zest of 1 lime, plus a squeeze of juice",
+    "1 heaped tsp brown sugar",
+    "400g tin lentils, drained",
+    "handful chopped coriander, plus extra to serve",
+    "2 warmed naan bread, cut into fingers"
+  ],
+  "category": "vegetarian",
+  "image": "https://ichef.bbci.co.uk/food/ic/food_16x9_832/recipes/sri_lankan_dal_with_59252_16x9.jpg",
+  "method": [
+    "Heat the curry paste in a pan for 1 min. Pour in the coconut cream and stir to combine. Add the lime zest, brown sugar and lentils. Bring to a simmer and cook for 10 mins, adding a squeeze of lime juice and seasoning. Stir through a handful chopped coriander and serve with warmed naan breads. Sprinkle extra coriander on the dhal if you like. Great warm or at room temperature."
+  ],
+  "cookTime": "15 mins",
+  "description": "A vegetarian dip with a fresh zesty flavour, your party guests will hover around this one",
+  "prepTime": "5 mins",
+  "servingSize": "8",
+  "source": "https://www.bbcgoodfood.com/recipes/lime-coconut-dhal"
+},
+{
+  "_id": {
+    "$oid": "6526d46bb030211929bf6834"
+  },
+  "name": "Smoked salmon with lentil salad",
+  "ingredients": [
+    "175g Puy lentils",
+    "1 shallot, finely chopped",
+    "1 tbsp wholegrain mustard",
+    "2 tbsp white wine vinegar",
+    "6 tbsp good olive oil",
+    "3 eggs",
+    "2 tbsp dill, chopped, plus extra fronds to garnish",
+    "12 slices smoked salmon"
+  ],
+  "category": "lunch",
+  "image": "https://img.taste.com.au/5wN3AemM/taste/2016/11/hot-smoked-salmon-lentil-salad-96208-1.jpeg",
+  "method": [
+    "Rinse the lentils, then put them in a pan and cover generously with water. Bring to the boil, then turn down the heat and simmer for 25-30 mins until tender. Drain well and leave to cool. Put the shallot in a bowl with the mustard, vinegar and seasoning. Mix well and whisk in the oil.",
+    "Put the eggs into a small pan and cover with water. Bring to the boil, then simmer for 3 mins. Cool quickly under running cold water and peel off the shells. Put in a bowl of cold water until ready to serve.",
+    "Stir the dill into the dressing and pour it over the lentils. Spoon onto 6 plates, then halve the eggs and put one half on each plate with two slices of smoked salmon. Sprinkle with black pepper, scatter over a few dill fronds and serve."
+  ],
+  "cookTime": "30 mins",
+  "description": "A simply stylish salad that will make an impressive dinner party starter",
+  "prepTime": "15 mins",
+  "servingSize": "6"
+},
+{
+  "_id": {
+    "$oid": "6526d46bb030211929bf6836"
+  },
+  "name": "Peppers filled with corn, chilli & cheese",
+  "ingredients": [
+    "4 peppers, any colour, tops removed and deseeded",
+    "2 tbsp olive oil",
+    "1 red onion, finely chopped",
+    "1 tsp ground cumin",
+    "1 red chilli, deseeded and finely chopped or 1 tsp cayenne pepper",
+    "2 courgettes, diced",
+    "175g frozen sweetcorn",
+    "1 avocado, diced",
+    "50g vegetarian cheddar, grated",
+    "2 tbsp chopped fresh coriander"
+  ],
+  "category": "vegetarian",
+  "image": "https://www.savoryonline.com/app/uploads/recipes/179220/corn-stuffed-peppers.jpg",
+  "method": [
+    "Heat oven to 190C/fan 170C/gas 5. Bring a large pan of water to the boil, then cook the peppers for 5 mins. Remove and drain, cut side down, on some kitchen paper.",
+    "Heat 1 tbsp of the oil in a frying pan and cook the onion for 3 mins until tender. Add the cumin and chilli or cayenne pepper and cook for a further 2-3 mins. Add the courgette, then cook for 4 mins until tender.",
+    "Remove from the heat, then stir in the sweetcorn, avocado, cheese, coriander and seasoning. Spoon the filling into the peppers, then stand them in a baking dish. Drizzle with remaining oil, then bake for 30-35 mins until the peppers are very soft.",
+    "Leave to stand for about 5 mins, then serve warm with soured cream, a chilli bean salad and corn chips."
+  ],
+  "cookTime": "50 mins",
+  "description": "A veggie main, perfect for a satisfying meal",
+  "prepTime": "15 mins",
+  "servingSize": "4",
+  "source": "https://www.bbcgoodfood.com/recipes/peppers-filled-corn-chilli-cheese"
+},
+{
+  "_id": {
+    "$oid": "6526d46bb030211929bf6837"
+  },
+  "name": "Vegan tiffin",
+  "ingredients": [
+    "75g coconut oil, plus extra for the tin",
+    "200g vegan dark chocolate(at least 70%), roughly chopped",
+    "2 tbsp golden syrup",
+    "200g vegan ginger nuts",
+    "100g dried cranberries",
+    "50g pistachios, toasted and chopped"
+  ],
+  "category": "dessert",
+  "image": "https://nourishingamy.com/wp-content/uploads/2021/05/easy-vegan-chocolate-tiffins-5.jpg",
+  "method": [
+    "Lightly oil a 20cm square brownie tin with coconut oil and line the base with baking parchment. Melt the chocolate with the coconut oil and golden syrup in the microwave in 30-second bursts until smooth and glossy.",
+    "Break the ginger nuts into small pieces in a bowl, then add the dried cranberries and pistachios. Scrape in the chocolate mixture and give everything a good mix to combine, then spoon the tiffin into the tin. Use the back of the spoon to smooth out the top and press it down, then chill in the fridge for 2 hrs or until set hard. Once set, cut into 25 mini squares. Will keep for a week in the fridge."
+  ],
+  "cookTime": "3 mins",
+  "description": "Make our vegan tiffin squares as a festive treat, packed with Christmas ingredients like ginger nuts, dried cranberries and pistachios. They're great for a party.",
+  "prepTime": "15 mins",
+  "servingSize": "25 small squares",
+  "source": "https://www.bbcgoodfood.com/recipes/vegan-tiffin"
+},
+{
+  "_id": {
+    "$oid": "6526d46bb030211929bf6838"
+  },
+  "name": "Chinese roast duck",
+  "ingredients": [
+    "2 ducks",
+    "140g caster sugar",
+    "6 star aniseseeds",
+    "large piece ginger, sliced",
+    "small bunch spring onions, roughly chopped",
+    "2 tbsp maltsyrup or maltose (available in most Chinese supermarkets)",
+    "3 tbsp red wine vinegar"
+  ],
+  "category": "dinner",
+  "image": "https://cdn.vox-cdn.com/thumbor/ylBacq6miUUf7D1c37Dm-bSrP2Y=/0x163:1950x1138/fit-in/1200x600/cdn.vox-cdn.com/uploads/chorus_asset/file/19537786/shutterstock_11697397.jpg",
+  "method": [
+    "The day before, soak 4 wooden skewers in water for 20 mins. Wash the ducks inside and out with cold water, drain and pat dry with kitchen paper. Mix together the sugar, star anise, ginger, spring onions and a few good pinches of salt, then use this to fill the cavities. Close the cavities with wooden skewers and set aside.",
+    "In a small bowl, mix the maltose and 2 tbsp of the vinegar. Add the remaining vinegar to a jug of boiling water and pour over the ducks. (The boiling water opens up the pores, while the vinegar helps to strip some of the waxiness from the skin, so it will be more receptive to the maltose, which adds sweetness and a lacquered caramel colour.) Smear the maltose mixture over the ducks, then place them in a large plastic container and put in the fridge overnight, uncovered.",
+    "To cook, heat oven to 220C/200C fan/ gas 7. (Fan ovens are particularly effective for roasting duck.) Put a little water in the bottom of a large roasting tin, place the ducks on a rack over the top and cover with foil. Roast for about 45 mins. Take off the foil and roast for another 45 mins – the duck must be well done, there is no such thing as a rare Chinese roast duck! Take the duck out of the oven and let it rest for a good 20 mins before carving."
+  ],
+  "cookTime": "1 hr and 30 mins",
+  "description": "John Torode's whole crispy duck with maltose marinade makes for an impressive centrepiece. The cavity is stuffed with star anise, spring onion and ginger.",
+  "prepTime": "20 mins",
+  "servingSize": "4",
+  "source": "https://www.bbcgoodfood.com/recipes/chinese-roast-duck"
+},
+{
+  "_id": {
+    "$oid": "6526d46bb030211929bf6839"
+  },
+  "name": "Parsnip gnocchi",
+  "ingredients": [
+    "400g parsnip, peeled and cut into chunks",
+    "600g potatoes, peeled and cut into chunks",
+    "60ml olive oil, plus a drizzle to serve",
+    "3 unpeeled garlic cloves",
+    "1 tsp ground nutmeg(around 1 clove)",
+    "100g ‘00’ flour",
+    "2 tbsp nutritional yeast",
+    "½ small pack thyme, leaves picked, to serve",
+    "30g walnuts, toasted and chopped, to serve"
+  ],
+  "category": "side",
+  "image": "https://www.naturopathy-uk.com/wp-content/uploads/2019/04/RECIPE-Parsnip-gnocchi.jpg",
+  "method": [
+    "Heat oven to 220C/200C fan/gas 7. Toss the parsnips and potatoes in 2 tbsp of the olive oil and tip into a roasting tin along with the garlic cloves. Roast for 40 mins or until the veg is completely soft. Remove from the oven and leave to cool a little. Squeeze the garlic from their skins, then discard the skins. Tip everything into a ",
+    ", along with the nutmeg, flour and nutritional yeast, season well, then pulse until well combined and holding together as a dough.",
+    "Bring a large pan of salted water to the boil. Tip the dough onto a floured surface, cut into four chunks and roll each into a sausage about 35cm long and 2.5cm wide. Use the back of a table knife to cut each sausage into small pillow-shaped gnocchi, each around 2cm long. Cook the gnocchi in batches for 1 min or until they float to the surface. Remove from the water with a slotted spoon and drain on kitchen paper.",
+    "In a frying pan, heat the rest of the oil over a medium heat until shimmering. Add half the gnocchi and fry until lightly golden on each side, around 3-4 mins. Transfer them to a tray using a slotted spoon while you cook the second batch. When all the gnocchi are golden, return them all to the pan to warm through before dividing between four plates. Sprinkle over some black pepper, then top with the thyme leaves, toasted walnuts and a drizzle of olive oil, if you like."
+  ],
+  "cookTime": "55 mins",
+  "description": "Take parsnips to another level by turning them into gnocchi with a crunchy walnut crumb. This moreish dish is vegan, healthy and delicious",
+  "prepTime": "40 mins",
+  "servingSize": "4",
+  "source": "https://www.bbcgoodfood.com/recipes/parsnip-gnocchi"
+},
+{
+  "_id": {
+    "$oid": "6526d46bb030211929bf683a"
+  },
+  "name": "Madeira gravy",
+  "ingredients": [
+    "200ml madeira",
+    "3 tbsp plain flour",
+    "600ml turkey or chicken stock, fresh or made with cubes",
+    "2 tbsp wholegrain mustard",
+    "200ml/7fl oz turkeyjuices, skimmed of all fat (make up with stock if you don't have enough; add it all if you have more)"
+  ],
+  "category": "side",
+  "image": "https://www.oryana.coop/wp-content/uploads/2019/11/gravy-boat-1024x683.jpg",
+  "method": [
+    "Gradually mix the Madeira into the flour until smooth. Heat the stock in a pan, then pour in the flour mixture and mustard, stirring until thickened. Chill until ready to serve, covering the surface with cling film to stop a skin forming. On the day, reheat in a pan with the turkey juices until bubbling."
+  ],
+  "cookTime": "10 mins",
+  "description": "A good gravy is an essential accompaniment for the festive meal. This one's enriched with Madeira (fortified wine)",
+  "prepTime": "5 mins",
+  "servingSize": "8",
+  "source": "https://www.bbcgoodfood.com/recipes/madeira-gravy"
+},
+{
+  "_id": {
+    "$oid": "6526d46bb030211929bf683e"
+  },
+  "name": "Lemon meringue cupcakes",
+  "ingredients": [
+    "200g caster sugar",
+    "100g softened butter",
+    "2 eggs, plus 2 egg whites",
+    "zest 2 lemons, plus 2-3 tbsp lemon juice",
+    "100g self-raising flour",
+    "4 tbsp lemon curd"
+  ],
+  "category": "dessert",
+  "image": "https://glutenfreecuppatea.co.uk/wp-content/uploads/2020/11/gluten-free-lemon-meringue-cupcake-recipe-featured1.jpg",
+  "method": [
+    "Heat oven to 180C/160C fan/gas 4. Beat half the sugar and all the butter until pale, then add whole eggs, one by one, beating in well each time. Stir in the zest and a squeeze of lemon juice, then fold in flour. Check the batter’s consistency; it should softly drop off the end of a spoon. Add more lemon juice if it’s a bit stiff.",
+    "Line a 12-hole bun tin with cake cases and put 1 large tbsp mix in each. Smooth then make a little dip in the centre. Spoon 1 tsp lemon curd into each dip and cover with 1 tbsp cake mix. Bake for 10 mins.",
+    "Meanwhile, place the egg whites into a clean bowl, whisk until stiff peaks form, then whisk in the rest of the sugar a tbsp at a time. Keep whisking until the mixture looks glossy and has thickened a little, like shaving foam. Spoon the mixture into a freezer bag and snip off the end to leave a hole with a 1.5cm diameter.",
+    "Take the cakes out of the oven – tops should be very pale and just firm – then pipe meringue all over the cakes. Return to the oven for 10-15 mins until the cakes are cooked through and meringue lightly browned. Can be made 1 day ahead."
+  ],
+  "cookTime": "25 mins",
+  "description": "These mini meringues will bring a touch of zing to your party, and can be made one day ahead for extra ease",
+  "prepTime": "15 mins",
+  "servingSize": "12",
+  "source": "https://www.bbcgoodfood.com/recipes/lemon-meringue-cupcakes"
+},
+{
+  "_id": {
+    "$oid": "6526d46bb030211929bf6841"
+  },
+  "name": "Hazelnut brownies",
+  "ingredients": [
+    "box of 16 Ferrero Rocherchocolates",
+    "250g pack salted butter, plus extra for greasing",
+    "250g golden caster sugar",
+    "225g light muscovado sugar",
+    "100g cocoa powder",
+    "4 large eggs",
+    "100g self-raising flour",
+    "85g ready-chopped hazelnuts",
+    "4 tbsp Frangelicoor Fratello hazelnut liqueur (or Disaronno)"
+  ],
+  "category": "dessert",
+  "image": "https://www.dixiecrystals.com/sites/default/files/recipe/Nutella-Hazelnut-Brownies-imperial.jpg",
+  "method": [
+    "Unwrap the chocolates, place on a tray and pop in the freezer. Heat oven to 180C/160C fan/gas 4. Lightly grease and line the base and sides of a 21-22cm square tin with baking parchment.",
+    "Put the butter, sugars and cocoa into your largest saucepan and gently melt together, stirring regularly so the mixture doesn’t catch. Once the sugar granules have just about disappeared, take off the heat, tip into a bowl and leave to cool for 5 mins.",
+    "Use a whisk or wooden spoon to beat the eggs, one by one, into the mixture. When they’re completely incorporated and the mixture is smooth and shiny, stir in the flour, hazelnuts and liqueur. Tip the mixture into the prepared tin and bake for 35 mins.",
+    "Remove the tin from the oven and use a cutlery knife to mark the top of the brownies into 16 squares (don’t cut through, it’s just as a guide). Use a teaspoon to push a little dent in the centre of each portion and add a frozen Ferrero Rocher chocolate into each dip. Return to the oven for 3 mins, then remove and leave to cool completely.",
+    "Once cool, cut into 16 squares. Will keep for 3 days in an airtight container."
+  ],
+  "cookTime": "45 mins",
+  "description": "Hazelnut wafer chocolates make an indulgent finishing touch to these fudgy chocolate brownie squares studded with chopped nuts",
+  "prepTime": "15 mins",
+  "servingSize": "16",
+  "source": "https://www.bbcgoodfood.com/recipes/hazelnut-brownies"
+},
+{
+  "_id": {
+    "$oid": "6526d46bb030211929bf6843"
+  },
+  "name": "Hazelnut & Baileys meringue cake",
+  "ingredients": [
+    "sunflower oil, for greasing",
+    "150g toasted hazelnuts",
+    "5 egg whites",
+    "280g golden caster sugar",
+    "1 tbsp white wine vinegar",
+    "300ml pot double cream",
+    "2 tbsp icing sugar, plus extra for dusting",
+    "3 tbsp Baileyscream liqueur (optional)",
+    "200g pack fresh raspberries"
+  ],
+  "category": "dessert",
+  "image": "https://images.immediate.co.uk/production/volatile/sites/30/2023/07/Hazelnut-baileys-meringue-cake-bb10a69.jpg?quality=90&fit=700,466",
+  "method": [
+    "Heat oven to 190C/170C fan/gas 5. Line 2 x 20cm sandwich tins with foil, then lightly oil the foil. Whizz the nuts in a processor until finely ground.",
+    "Whisk the egg whites in a bowl until they form stiff peaks. Whisk in most of the sugar, a spoonful at a time, until the mixture is stiff and glossy. Stir the rest of the sugar into the nuts, then fold into the meringue with the vinegar. Divide between the tins and level the tops.",
+    "Bake for 40-45 mins until firm, then cool in the oven. When the meringues are cold, carefully peel off the foil.",
+    "To serve, whisk the cream, icing sugar and Baileys together until softly stiff. Put one of the meringues, top-side down, on a plate, then spread with the cream and scatter over the raspberries. Put the other meringue layer on top and dust generously with icing sugar."
+  ],
+  "cookTime": "45 mins",
+  "description": "A fantastic combination of sweet nutty meringue, fresh cream and tart raspberries",
+  "prepTime": "20 mins",
+  "servingSize": "6",
+  "source": "https://www.bbcgoodfood.com/recipes/hazelnut-baileys-meringue-cake"
+},
+{
+  "_id": {
+    "$oid": "6526d46bb030211929bf6844"
+  },
+  "name": "Creamed leek tart",
+  "ingredients": [
+    "300g plain flour, plus extra for dusting",
+    "140g unsalted butter, cut into small pieces, plus extra for greasing",
+    "1 medium egg",
+    "4 tbsp iced water",
+    "85g unsalted butter",
+    "800g leek, sliced lengthways then into 2½ cm/1in pieces",
+    "½ tbsp plain flour",
+    "300ml milk",
+    "200ml double cream",
+    "2 medium eggs",
+    "4 medium egg yolks, beaten together with the other eggs",
+    "100g gruyère, grated",
+    "1 tsp English mustard"
+  ],
+  "category": "breakfast",
+  "image": "https://www.greedygourmet.com/wp-content/uploads/2007/11/leek-tart-slice-720x480.jpg",
+  "method": [
+    "Pulse the flour and butter in a food processor until you have fine crumbs. Add the egg yolk and water, and bring together into a ball. Do not knead. Roll the pastry in cling film and chill for at least 1 hr.",
+    "Meanwhile, heat the butter in a pan, then add the leeks. Cook over a low heat for 20-25 mins until soft, stirring often. Season to taste. Stir in the flour, cook for 3-4 mins, stirring, then stir in the milk and cream. Once smooth, simmer for 15 mins to cook out the flour. Season well, then cool. If making ahead, cover the surface with cling film and chill for up to 2 days. Stir the eggs and egg yolks into the mix, along with the grated cheese and the mustard.",
+    "Heat oven to 190C/170C fan/gas 5. Roll out the pastry on a floured surface to about 5mm/¼in thick, and gently lay it over a 23cm loose-bottomed tart tin. Using a small ball of pastry to help, gently press the pastry into the sides of the tin. Trim, leaving a slight overhang. Line the pastry with baking paper, fill with baking beans, then bake for 15 mins. Remove the beans and paper, and bake for 10 mins more or until golden and biscuity. Cool on a wire rack. Turn oven down to 180C/160C fan/gas 4.",
+    "Spoon the leek mix into the case and smooth the top. Bake for 30 mins until set and golden. Rest the tart for 15-20 mins before you slice it, and serve warm. If making ahead, chill the tart. Once cooled, for up to 2 days, or freeze for a week. Defrost in fridge, then warm in the oven for 20 mins before serving."
+  ],
+  "cookTime": "1 hr and 30 mins",
+  "description": "A creamy tart from MasterChef judge John Torode that makes a great centrepiece at any time of year",
+  "prepTime": "30 mins",
+  "servingSize": "10-12 slices",
+  "source": "https://www.bbcgoodfood.com/recipes/creamed-leek-tart"
+},
+{
+  "_id": {
+    "$oid": "6526d46bb030211929bf6847"
+  },
+  "name": "Red wine gravy",
+  "ingredients": [
+    "200ml red wine (we used Merlot)",
+    "3 tbsp cornflour",
+    "600ml turkey or chicken stock, made with cubes or freshly made",
+    "2 tbsp redcurrant jelly",
+    "200ml/7fl oz turkey juices, skimmed of all fat (make up with stock if you don't have enough)"
+  ],
+  "category": "side",
+  "image": "https://food-images.files.bbci.co.uk/food/recipes/red_wine_gravy_75820_16x9.jpg",
+  "method": [
+    "Mix 3 tbsp red wine with the cornflour until smooth, then mix in all the wine. Heat stock in a pan, then pour in the red wine mixture and redcurrant jelly, stirring until thickened. Cover the surface with cling film to stop a skin forming. Chill for up to 2 days. To serve, reheat in a pan until bubbling, then stir in the turkey juices and transfer to a warm gravy boat."
+  ],
+  "cookTime": "10 mins",
+  "description": "Christmas just wouldn't be the same without a full and flavoursome gravy on the table",
+  "prepTime": "5 mins",
+  "servingSize": "10",
+  "source": "https://www.bbcgoodfood.com/recipes/easy-red-wine-gravy"
+},
+{
+  "_id": {
+    "$oid": "6526d46bb030211929bf6848"
+  },
+  "name": "Turkey cacciatore",
+  "ingredients": [
+    "2 small or 1 large onion, chopped",
+    "2 garlic cloves, crushed",
+    "3 tbsp olive oil",
+    "2 tsp dried oregano",
+    "3 x cans chopped tomatoesor cherry tomatoes",
+    "1 tbsp sugar",
+    "little splash vinegar",
+    "about 500g leftover turkey, shredded into chunks",
+    "1 x 125g balls mozzarella",
+    "2 good handfuls fresh breadcrumbs"
+  ],
+  "category": "dinner",
+  "image": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/turkey-cacciatore-rigatoni-1c80ffd8.jpg",
+  "method": [
+    "Fry the onion and garlic in the oil until softened. Add the tomatoes and sugar, a little splash of vinegar and some seasoning, then simmer for 20 mins until really thick. Stir in the turkey and transfer to a baking dish. Heat oven to 220C/200C fan/gas 7.",
+    "Tear over the mozzarella in chunks, then scatter over the breadcrumbs with a bit more ground pepper. Bake for 20 mins until turkey is piping hot through, and the top is golden and bubbling. Eat with mash, jackets, rice or pasta"
+  ],
+  "cookTime": "50 mins",
+  "description": "This tasty Italian cheese and tomato bake is a fab way to use up leftover meat and a true family favourite\n\n",
+  "prepTime": "10 mins",
+  "servingSize": "4",
+  "source": "https://www.bbcgoodfood.com/recipes/turkey-cacciatore-twist"
+},
+{
+  "_id": {
+    "$oid": "6526d46bb030211929bf684a"
+  },
+  "name": "Reindeer cake pops",
+  "ingredients": [
+    "150g chocolate cake",
+    "25g soft butter",
+    "50g icing sugar",
+    "25g plain chocolate",
+    "100g milk chocolate",
+    "small pretzels, broken into large 'antler' shape pieces",
+    "8 small jelly sweets, red chocolatebeans or Smarties",
+    "2 tbsp royal icingcoloured black or purchased black writing icing",
+    "8 cake pop sticksand a polystyrene block to stand up the cake pops",
+    ""
+  ],
+  "category": "dessert",
+  "image": "https://i2.wp.com/thehousewifemodern.com/wp-content/uploads/2014/12/LR_Reideer-Cake-Pops.jpg",
+  "method": [
+    "Crumble the cake into fine crumbs using your hands or in a food processor. Put into a bowl. In another bowl, beat together the butter and icing sugar until creamy.",
+    "Melt the plain chocolate in the microwave or in a bowl over a pan of barely simmering water. Add the melted chocolate to the butter mixture and combine well. Add this to the cake crumbs and mix thoroughly using your hands, until it sticks together. Divide the mixture into eight and shape each one into a smooth ball. Insert a cake pop stick, place on a tray lined with baking parchment and chill for at least 2 hours.",
+    "Melt the milk chocolate in the microwave or in a bowl over a pan of barely simmering water. Take a cake pop and dip in the chocolate. Shake gently until the excess has drained off. Push into a polystyrene block.",
+    "Make two holes in the top of the head and insert a pretzel 'antler' in each one. Press a sweetie nose onto the front and hold for a few seconds until attached. Repeat with all the other cake pops. Leave to set for about 20 mins and then using black icing, pipe on eyes and a mouth."
+  ],
+  "cookTime": "none",
+  "description": "These chocolate cake lollipops are decorated in true festive fashion - have fun making them with the kids this Christmas.",
+  "prepTime": "45 mins",
+  "servingSize": "8",
+  "source": "https://www.bbcgoodfood.com/recipes/reindeer-cake-pops"
+},
+{
+  "_id": {
+    "$oid": "6526d46bb030211929bf684d"
+  },
+  "name": "Celeriac, hazelnut & truffle soup",
+  "ingredients": [
+    "1 tbsp olive oil",
+    "small bunch thyme",
+    "2 bay leaves",
+    "1 onion, chopped",
+    "1 fat garlic clove, chopped",
+    "1 celeriac(about 1kg), peeled and chopped",
+    "1 potato(about 200g), chopped",
+    "1l veg stock(check the label to ensure it’s vegan – we used Marigold)",
+    "100ml soya cream",
+    "50g blanched hazelnuts, toasted and roughly chopped",
+    "1 tbsp truffle oil, plus an extra drizzle to serve"
+  ],
+  "category": "lunch",
+  "image": "https://www.saveur.com/uploads/2019/12/18/DNLWMXWCMNCY5OHNBHJ2W4VD6I.jpg?auto=webp&auto=webp&optimize=high&quality=70&width=1440",
+  "method": [
+    "In a large saucepan, heat the oil over a low heat. Tie the thyme sprigs and bay leaves together with a piece of string and add them to the pan with the onion and a pinch of salt. Cook for about 10 mins until softened but not coloured.",
+    "Stir in the garlic and cook for 1 min more, then tip in the celeriac and potato. Give everything a good stir and season with a big pinch of salt and white pepper. Pour in the stock, bring to the boil, then simmer for around 30 mins until the vegetables are completely soft.",
+    "Discard the herbs, then stir through the cream, remove from the heat and blitz until completely smooth. Stir through 1/2 tbsp truffle oil at a time and taste for seasoning – the strength of the oil will vary, so it’s better to start with less oil and add a little at a time.",
+    "To serve, reheat the soup until piping hot, then ladle into bowls and top with the hazelnuts, some black pepper and an extra drizzle of truffle oil."
+  ],
+  "cookTime": "45 mins",
+  "description": "Rustle up this healthy vegan celeriac and hazelnut soup as a starter on Christmas Day. Truffle oil adds a bit of luxury, or leave it out for a simple supper on a winter's night",
+  "prepTime": "20 mins",
+  "servingSize": "6",
+  "source": "https://www.bbcgoodfood.com/recipes/celeriac-hazelnut-truffle-soup"
+},
+{
+  "_id": {
+    "$oid": "6526d46bb030211929bf6853"
+  },
+  "name": "Risotto with duck & mushrooms",
+  "ingredients": [
+    "2 tbsp butter",
+    "1 onion, finely chopped",
+    "2 carrots, finely chopped",
+    "2 celerysticks, finely chopped",
+    "3 garlic cloves, crushed",
+    "thymesprig, leaves picked",
+    "300g risotto rice",
+    "300ml red wine",
+    "1.4l chicken stock, hot",
+    "about 175g leftover duck, shredded",
+    "200g pack chestnut mushroom, thickly sliced",
+    "handful flat-leaf parsley, chopped"
+  ],
+  "category": "dinner",
+  "image": "https://images.squarespace-cdn.com/content/v1/5e3b571c57c3897ac7789b45/1617942930871-4SVLS9MBAAK3NR8I79XW/2021_AB_DuckBreast_MushroomRisotto_Website-1.jpg",
+  "method": [
+    "Heat 1 tbsp butter in a wide saucepan, then add the onion, carrots and celery. Cover, then gently cook for 10 mins until soft. Tip in two-thirds of the garlic, fry for 1 min, turn up the heat, then add the thyme and rice. Stir for a few mins, then add the wine and let it reduce to almost nothing.",
+    "Stir in the stock over a medium heat, ladle by ladle, waiting for each addition to absorb before adding the next. Keep the heat on medium – too hot and the stock will evaporate rather than be absorbed by the rice. When the rice is creamy and justcooked, take off the heat, add the duck, then cover for 5 mins to heat through.",
+    "Melt the remaining butter in another wide pan, add the mushrooms, then fry them on a high heat for about 3 mins until golden. Add the remaining garlic, fry for 1 min more, then season. Stir the mushrooms into the risotto, then scatter with parsley and serve."
+  ],
+  "cookTime": "30 mins",
+  "description": "A great way to use up leftover duck in a rich, luxurious supper dish",
+  "prepTime": "10 mins",
+  "servingSize": "4",
+  "source": "https://www.bbcgoodfood.com/recipes/red-wine-risotto-duck-garlicky-mushrooms"
+},
+{
+  "_id": {
+    "$oid": "6526d46bb030211929bf6854"
+  },
+  "name": "Cauliflower cakes & green yogurt sauce",
+  "ingredients": [
+    "1 small cauliflower(600g), trimmed and finely chopped",
+    "1 garlic clove, crushed",
+    "4 spring onions, finely sliced",
+    "1 red chilli, deseeded and chopped",
+    "75g parmesan(or vegetarian alternative), grated",
+    "1 lemon, zested (save the juice for the sauce)",
+    "150g fresh brown breadcrumbs, toasted",
+    "4 tbsp plain flour",
+    "1 egg, beaten",
+    "olive oilspray, for baking",
+    "rocketsalad, to serve",
+    "1 anchovy, rinsed and finely chopped",
+    "3 tbsp low-fat mayonnaise",
+    "200g Greek yogurt",
+    "½ small pack flat-leaf parsley",
+    "2 tsp Worcestershire sauce",
+    "lemon juice(from above)"
+  ],
+  "category": "appetizer",
+  "image": "https://www.babaganosh.org/wp-content/uploads/2015/08/cauliflower-fritters-6.jpg.webp",
+  "method": [
+    "Heat oven to 220C/200C fan/gas 7. Boil the cauliflower in salted water for 5 mins until soft. Drain, put back in the pan to steam off the excess water, then tip into a bowl to cool. Add the garlic, spring onions, chilli, parmesan, lemon zest, 50g of the toasted breadcrumbs, the flour, egg, and some seasoning. Shape into 16 cakes, then roll in the remaining breadcrumbs. Put on a plate and chill for at least 1 hr, or overnight, before cooking.",
+    "To make the sauce, put all the ingredients in a food processor or blender. Add some seasoning and blend until smooth. Pour into a serving bowl and set aside. Can be made a day ahead.",
+    "Liberally spray a large baking sheet with the oil. Put the cauliflower cakes on top and spray well again. Bake for 25 mins until golden and crisp. Serve with the sauce and some rocket salad."
+  ],
+  "cookTime": "25 mins",
+  "description": "The taste of cauliflower shines through in these baked vegetable cakes served with our zingy yogurt sauce for dipping. Great for grazing party guests",
+  "prepTime": "25 mins",
+  "servingSize": "6 - 8",
+  "source": "https://www.bbcgoodfood.com/recipes/cauliflower-cakes-green-yogurt-sauce"
+},
+{
+  "_id": {
+    "$oid": "6526d46bb030211929bf6857"
+  },
+  "name": "Feta & cucumber bites",
+  "ingredients": [
+    "1 garlic clove, crushed",
+    "200g feta cheese",
+    "100g ricotta",
+    "4 tbsp chopped dill, plus extra fronds, to garnish",
+    "1 large cucumber, halved lengthways, seeds scooped out and discarded",
+    "cracked black pepper, to serve"
+  ],
+  "category": "appetizer",
+  "image": "https://mamalikestocook.com/wp-content/uploads/2019/10/feature-stuffed-cucumber-appetizer.jpg",
+  "method": [
+    "Add the garlic, feta, ricotta and dill to a food processor and whizz until smooth but thick.",
+    "Fill the middle of the cucumber with the cheese mix and smooth over. Cut into 3cm-thick slices. Sprinkle with cracked pepper and garnish with the dill fronds."
+  ],
+  "cookTime": "none",
+  "description": "These decorative canapés look impressive when laid out - flavour your ricotta cheese filling with dill and garlic",
+  "prepTime": "10 mins",
+  "servingSize": "24",
+  "source": "https://www.bbcgoodfood.com/recipes/feta-cucumber-bites"
+},
+{
+  "_id": {
+    "$oid": "6526d46bb030211929bf6858"
+  },
+  "name": "Mincemeat samosas",
+  "ingredients": [
+    "1 cooking apple, peeled, cored and finely chopped",
+    "zest and juice 1 orange",
+    "50g dried ready-to-eat apricots, chopped",
+    "25g shelled pistachios",
+    "50g dried cranberries",
+    "175g sultanas",
+    "1 tsp cinnamon",
+    "½ tsp grated nutmeg",
+    "2 tbsp brandy",
+    "1 tbsp clear honey",
+    "50g butter, melted and kept warm",
+    "6 sheets filo pastry(270g pack)",
+    "icing sugar, to decorate"
+  ],
+  "category": "dinner",
+  "image": "https://cdn.cdkitchen.com/recipes/images/2016/03/34347-4868-mx.jpg",
+  "method": [
+    "Mix together the fruit, dried fruit, nuts, spices and brandy. Leave the mixture in the fridge for 30 mins to allow the flavours to develop, then stir in the honey. Heat oven to 200C/180C fan/gas 6. Arrange the filo sheets with the short side facing you and, using scissors, cut the stack in 3 vertically, to make long strips. Brush the top 3 strips with melted butter.",
+    "Working quickly, put 1 heaped spoonful of mincemeat at the top of the first strip. Fold one corner of the pastry over it to form a triangle, then continue folding alternately left and right to form a triangular package, until you’ve used up all the strip. Repeat with the other strips, brushing with butter before folding.",
+    "Place on a baking sheet and brush each one with more melted butter. Bake for 15-20 mins until crisp and golden. Dust with icing sugar and serve warm (reheat later in a low oven if necessary)."
+  ],
+  "cookTime": "15 mins - 20 mins",
+  "description": "Give mince pies a makeover with this alternative recipe - all the festive flavour wrapped up in sheets of filo pastry and baked until crisp",
+  "prepTime": "1 hr and 30 mins",
+  "servingSize": "18",
+  "source": "https://www.bbcgoodfood.com/recipes/mincemeat-samosas"
+},
+{
+  "_id": {
+    "$oid": "6526d46bb030211929bf6859"
+  },
+  "name": "Sole goujons with mango & lime dip",
+  "ingredients": [
+    "4 skinless sole or plaicefillets, each about 85g",
+    "50g plain flour",
+    "2 large eggs",
+    "200g panko or coarse dried breadcrumbs",
+    "4 tsp medium curry powder",
+    "½ tsp fine sea salt",
+    "spray oil",
+    "100g half-fat crème fraîche",
+    "4 tbsp mayonnaise",
+    "2 tbsp mango chutney",
+    "finely grated zest 1 lime",
+    "juice 1 lime",
+    "small pack coriander, leaves only, finely chopped"
+  ],
+  "category": "appetizer",
+  "image": "https://cdn.mos.cms.futurecdn.net/rAWPzatc2ZVxkYao7zD7zB.jpg",
+  "method": [
+    "Put the fish on a board and cut each fillet on the diagonal into about 12 slivers. You should end up with around 48 finger-sized pieces of fish. Put the flour in a bowl and season.",
+    "Beat the eggs in a medium bowl. Sprinkle half the breadcrumbs into a large bowl and stir in half the curry powder. Toss the fish pieces with the seasoned flour, then take one at a time and dip into the beaten egg, then coat in breadcrumbs evenly.",
+    "Put on a tray lined with baking parchment while the rest are prepared, adding the reserved breadcrumbs and remaining curry powder to the large bowl after coating roughly half the fish pieces. Spray all the fish generously with oil and season again. Can be covered with cling film at this stage and kept in the fridge for up to 8 hrs before baking (or to freeze, see tips below, left.",
+    "Heat oven to 220C/200C fan/gas 7. Bake the goujons for 8-10 mins until golden and crisp. To make the dipping sauce, mix all the ingredients in a bowl, then soon into a serving dish or dishes."
+  ],
+  "cookTime": "10 mins",
+  "description": "Coat strips of white fish fillets with breadcrumbs, then bake for a delicious make-ahead canapé, perfect for entertaining or a party buffet",
+  "prepTime": "30 mins",
+  "servingSize": "12",
+  "source": "https://www.bbcgoodfood.com/recipes/sole-goujons-mango-lime-dip"
+}]
